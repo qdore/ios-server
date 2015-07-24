@@ -11,47 +11,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Allcolumns',
+            name='HomePage',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('column_id', models.IntegerField()),
-                ('title', models.CharField(max_length=30)),
-                ('description', models.CharField(max_length=100)),
-                ('date', models.DateField(null=True, blank=True)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Homeads',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('image', models.ImageField(upload_to=b'photos')),
-                ('add_date', models.DateField(null=True, blank=True)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Infodetail',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('column_id', models.IntegerField()),
-                ('category_id', models.IntegerField(blank=True)),
-                ('title', models.CharField(max_length=30)),
-                ('content', models.CharField(max_length=100)),
-                ('add_date', models.DateField(null=True, blank=True)),
-                ('image', models.ImageField(upload_to=b'photos')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Maincolumns',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('column_id', models.IntegerField()),
-                ('image', models.ImageField(upload_to=b'photos')),
-                ('title', models.CharField(max_length=30)),
-                ('description', models.CharField(max_length=100)),
-                ('date', models.DateField(null=True, blank=True)),
+                ('image_1', models.ImageField(upload_to=b'media/%Y/%m/%d', null=True, verbose_name=b'\xe9\xa6\x96\xe9\xa1\xb5\xe6\xb5\xb7\xe6\x8a\xa5\xe5\x9b\xbe1')),
+                ('url_1', models.CharField(max_length=1000, verbose_name=b'\xe9\xa6\x96\xe9\xa1\xb5\xe6\xb5\xb7\xe6\x8a\xa5\xe5\x9b\xbe1\xe9\x93\xbe\xe6\x8e\xa5')),
             ],
             options={
-                'ordering': ['title'],
+                'verbose_name': '\u9996\u9875\u8bbe\u7f6e',
+                'verbose_name_plural': '\u9996\u9875\u8bbe\u7f6e',
             },
         ),
     ]

@@ -66,17 +66,13 @@ USE_TZ = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 def cur_file_dir():
-     #获取脚本路径
      path = sys.path[0]
-     #判断为脚本文件还是py2exe编译后的文件，如果是脚本文件，则返回的是脚本的目录，如果是py2exe编译后的文件，则返回的是编译后的文件路径
      if os.path.isdir(path):
          return path
      elif os.path.isfile(path):
          return os.path.dirname(path)
-def root_dir():
-    return os.path.dirname(os.path.dirname(cur_file_dir()));
 
-MEDIA_ROOT = root_dir() + '/fumeng/media/'
+MEDIA_ROOT = cur_file_dir() + '/fumeng/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -208,6 +204,6 @@ CACHES = {
 }
 
 TOKEN = 'kidney'
-STATIC_PATH = root_dir() + "/static"
+STATIC_PATH = cur_file_dir() + "/static"
 
 
