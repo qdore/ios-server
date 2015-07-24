@@ -102,6 +102,4 @@ class HomePage(models.Model):
     class Meta:
         verbose_name = u'首页设置'
         verbose_name_plural = u'首页设置'
-    def __unicode__(self):
-        return u'%s %s' % (self.image, self.add_date)
 
