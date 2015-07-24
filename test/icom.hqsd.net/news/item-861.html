@@ -1,0 +1,407 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】110期</h1>
+                <h2>
+                    <a>发布日期：2012/11/30 14:22:11</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">"</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">聚香港<span>"</span>上线打造一站式旅游购物<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>天府早报<span><span class="Apple-converted-space">&nbsp;</span>2012-11-22</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">聚划算和淘宝旅行联手打造的“聚香港”今日整体上线。在香港贸易发展局的大力支持下，“聚香港”将有</span><span style="background:white;color:black;font-size:9pt;"><span>500</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">款商品服务同时在线展示，涵盖机票、酒店、旅游景点、吃喝玩乐以及全球名品，打造</span><span style="background:white;color:black;font-size:9pt;"><span>O2O</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">（线上到线下）一站式旅游购物体验。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">重庆首个<span>"</span>胶囊饭店<span>"</span>成旅行者新宠</span></b><b><span style="font-family:宋体;color:#333333;font-size:12pt;"></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">文新传媒<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-11-22</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>近日，重庆首家以“胶囊饭店”为卖点的迷你酒店成为前来重庆出差、旅游等外地旅行者的新选择。这家名叫重庆七星太空舱宾馆的“胶囊饭店”位于重庆市江北区观音桥核心商圈附近。记者在宾馆内看到，在一间不到２０平方米的房间里整齐地放置着上下两层，共１０个像太空舱一样的迷你“房间”。进入这些“房间”，里面的设施可谓一应俱全。有电视、小桌板、镜子、照明灯、挂钩，枕头、被子和床单也都干净整洁。而在公共空间里，厨房设施、洗衣机和无线网络等服务也都免费为客人提供。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">江西谋划旅游经济增长点<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>中国税务报<span><span class="Apple-converted-space">&nbsp;</span>2012-11-23</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>江西省旅游资源丰富，但多数景点有待进一步开发。继“新科状元”三清山风景区在<span>2011</span>年跻身国家<span>5A</span>景区后，近日江西旅游业再度发力，共推出<span>145</span>个生态旅游产业项目对外招商，总投资达<span>1314</span>亿元，涵盖旅游景区、旅游设施和温泉旅游等方面。在新推的旅游招商项目中，浮梁县茶文化主题公园、新余市“七仙女下凡”的大型情爱文化为背景的主题公园以及瑞金长征文化等主题公园引起关注。而领跑全国红色旅游的井冈山等老牌景区则希望通过丰富旅游产品让游客玩得更尽兴。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">房地产</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国<span>70</span>城市<span>2012</span>年<span>10</span>月房价环比微涨<span>0.06%</span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国新闻网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-11-23</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">上海易居房地产研究院本周发布的《<span>10</span>月份新建商品住宅价格指数研究报告》显示，<span>10</span>月份<span>70</span>个大中城市新建商品住宅价格比<span>9</span>月上升了<span>0.06%</span>，涨幅有所扩大，<span>70</span>个大中城市房价已连续五个月小幅微涨。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2013-2022</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">年中国国内将有<span>120</span>亿平方米住宅需求<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国经济网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-11-23</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;<span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">“未来十年，国内将有<span>120</span>亿平方米住宅需求，相当于<span>2011</span>年销售面积的<span>10</span>倍以上。”全国工商联房地产商会会长聂梅生在<span>22</span>日举办的“中国城市与资本市长论坛”上作上述表述。她认为，在我国快速城镇化背景下，住宅需求量将不断增加，房价调控压力将随之增大，因此房价增速应该低于<span>GDP</span>增速，才能形成合理房价。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国住建部将调整保障房结构<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>21</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">世纪经济报道</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-11-23</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">财政部财科所所长贾康日前表示，实际运营期间，经济适用房、限价商品房等产权性住房由于概念模糊、具有大量的牟利空间，常易出现分配不公、设租寻租等问题。<span>11</span>月<span>22</span>日，一位接近住建部的人士接受本报记者采访称，住建部正在统筹研究<span>2013</span>年保障房的建设规模，从产品类型和区域差异上，为保障房做结构调整。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">经济</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2012</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">年前<span>3</span>季度中国<span>29</span>省份农民收入增速跑赢城镇</span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">搜狐财经</span><span style="background:white;color:black;font-size:9pt;"><span><span class="Apple-converted-space">&nbsp;</span>2012-11-23</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">十八大报告明确提出确保到<span>2020</span>年实现全面建成小康社会宏伟目标，实现国内生产总值和城乡居民人均收入比<span>2010</span>年翻一番。本报<span>20</span>日报道了<span>28</span>个地区城镇人均可支配收入增速跑赢了当地的<span>GDP</span>增速。然而，农村居民人均现金收入的增速更为引人注意。本报记者在进一步调查中，发现今年前三季度<span>31</span>个省份农村居民人均现金收入增速全部跑赢了当地的<span>GDP</span>增速，并有<span>29</span>省份农村居民人均现金收入增速超过了城镇居民人均可支配收入增速，释放出农村居民收入增长的积极信号。</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">　<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国文化产业需破税收瓶颈<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">第一财经<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-11-23</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span><span>&nbsp;&nbsp;</span>21</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日，《第一财经日报》记者从上海文化发展论坛上获悉，税收等相关政策正制约文化产业的发展。曾经在多国考察过的上海文化广播影视集团副总裁何建华指出，欧美日等发达经济体对文化产业实行零关税优惠，实行包括土地、税收、人才等系列的税收补贴优惠政策，值得借鉴。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">到<span>2020</span>年中国新车年销售将达<span>2200</span>万辆<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Calibri, sans-serif;background:white;color:black;font-size:9pt;">21CN</span><span style="background:white;color:black;font-size:9pt;"><span>新闻</span></span><span style="font-family:Calibri, sans-serif;background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-11-23</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>全球知名咨询公司麦肯锡</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">21</span><span style="background:white;color:black;font-size:9pt;"><span>日发布报告预测，从现在到</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">2020</span><span style="background:white;color:black;font-size:9pt;"><span>年，中国汽车市场虽增速放缓至年均</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">8%</span><span style="background:white;color:black;font-size:9pt;"><span>，但中国市场新车销量预计仍将超过欧洲市场和北美市场，达到年销售</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">2200</span><span style="background:white;color:black;font-size:9pt;"><span>万辆，贡献全球汽车市场增长量的</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">35%</span><span><span style="background:white;color:black;font-size:9pt;">。</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">艾肯观点</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">我国新增<span>43</span>处国家水利风景区 总数达<span>518</span>个<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">第一旅游网<span><span class="Apple-converted-space">&nbsp;</span>2012-11-23</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">日前甘肃省玛曲县黄河首曲、江苏省淮安市古淮河等</span><span style="background:white;color:black;font-size:9pt;"><span>43</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">处水利特色突出、文化品位高的景区被批准为国家水利风景区。至此，国家水利风景区总数达到</span><span style="background:white;color:black;font-size:9pt;"><span>518</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">个，加之千余个省级水利风景区，已形成涵盖全国主要江河湖库、重点灌区、水土流失治理区的水利风景区群落。这是记者从此前召开的全国水利风景区建设与管理工作会议上获悉的。水利部副部长胡四一在会上说，下一步，我国将加快水利风景区基础理论体系建设，强化顶层设计与人员培训，建立水利风景区动态监管和退出机制，不断提升水利风景区的建设与管理水平。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">观点：我国传统的水主题旅游产品，多为河流、湖波等自然景观或是古镇、园林等人文景观中的水网、水系等元素利用，近些年兴起的水主题公园，虽然也一定程度的体现了由静态观赏到动态体验的过程，但整体来说仍处于对水的自然属性的局部运用。艾肯认为，水是人类文明之源，而对水的开发利用也一定程度上成就了人类文明的发展。因此，以古今水利工程为对象的主题旅游产品开发具有重要意义。目前我国唯都江堰和三峡具有相对较高的知名度，而绝大部分的水利风景区仍需借鉴前者经验，从自然景观和文化内涵两方面入手，塑造自身特色，打出响亮品牌。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><a href="http://www.come23.com/news.asp?id=900&amp;action=Detailed" target="_blank">【海南】星华集团游艇产业园项目与白石岭项目合同签订</a></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-862.html">
+                        上一篇:<span class="on">【艾肯周讯】109期</span></a>
+                    </li>
+                    <li><a href="/news/item-860.html">
+                        下一篇:<span>【艾肯周讯】111期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

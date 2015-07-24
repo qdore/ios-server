@@ -1,0 +1,318 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class="her"
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class=""
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newslist">
+                <ul>
+                    
+                            <li>
+                         
+                                <span>
+                                    <h1>
+                                        <p>
+                                            <a href="/news/item-437.html">
+                                                【海南】双大集团保亭项目阶段性成果汇报圆满结束</a></p>
+                                        <p class="time">
+                                            2012/2/15 10:35:52</p>
+                                    </h1>
+                                    <b>
+                                        关键词：海南双大 易能武   旅游策划   旅游规划   项目评价               8月30日上午，海南双大集团保亭项目阶段性成果汇报会在双大集团总部召开。双大集团执行总裁林琦先生，保亭项目总经理吴迪先生，以及双大集团高层共20余人，听取了我公司董事副总经理易能武先生所做的…
+                                    </b></span></li>
+                        
+                            <li>
+                         
+                                <span>
+                                    <h1>
+                                        <p>
+                                            <a href="/news/item-438.html">
+                                                【艾肯】艾肯应邀参加2011中国旅游产业节</a></p>
+                                        <p class="time">
+                                            2012/2/15 10:32:54</p>
+                                    </h1>
+                                    <b>
+                                        关键词：中国旅游产业节 秦晓琪   国家旅游局  产业节论坛           8月31日，应国家旅游局的邀请，我公司秦晓琪董事长赴天津参加2011中国旅游产业节论坛。同时，张冠群总监也带领团队参加本次产业节会展，届时，将在天津梅江会展中心N1展览大厅N1119展台恭候，热忱欢迎各界同…
+                                    </b></span></li>
+                        
+                            <li>
+                         
+                                <span>
+                                    <h1>
+                                        <p>
+                                            <a href="/news/item-439.html">
+                                                【艾肯】2011旅游+地产高级实战研修班第二期火热报名中！</a></p>
+                                        <p class="time">
+                                            2012/2/15 10:30:36</p>
+                                    </h1>
+                                    <b>
+                                        2011旅游+地产高级实战研修班是由艾肯机构联合多家知名企业共同搭建的一个平台，旨在帮助各级政府及开发商解决在区域开发、旅游地产开发过程中遇到的最实际的问题，帮助您创造土地价值的最大升值空间。第二期将延续实战、实际、实用的特点，兼顾政策变化，专注于如何实现价值的…
+                                    </b></span></li>
+                        
+                            <li>
+                         
+                                <span>
+                                    <h1>
+                                        <p>
+                                            <a href="/news/item-440.html">
+                                                【湖南】太阳山旅游总体策划项目初次汇报结束，艾肯弘扬拔得头筹</a></p>
+                                        <p class="time">
+                                            2012/2/15 10:27:14</p>
+                                    </h1>
+                                    <b>
+                                        8月20日，我公司副总经理王振良先生、项目总监刘峰与设计部副经理吴春发赴湖南省常德市就太阳山旅游项目做出初次汇报，与3家策划公司进行了激烈PK，并以总分第一的成绩脱颖而出。       我公司项目总监刘峰从太阳山项目的主题定位、功能分区、旅游路线设计等方面进行了项目汇报…
+                                    </b></span></li>
+                        
+                            <li>
+                         
+                                <span>
+                                    <h1>
+                                        <p>
+                                            <a href="/news/item-441.html">
+                                                【贵州】贵州多彩城项目总体汇报获得一致好评</a></p>
+                                        <p class="time">
+                                            2012/2/15 10:25:06</p>
+                                    </h1>
+                                    <b>
+                                        8月3日，我公司董事总经理秦晓琪先生、董事副总易能武先生、董事副总苏影先生一行，赴贵州省贵阳市，向来自贵州省委、省国土资源局、省住房建设厅、省旅游局、贵阳市市委、贵阳市环保局、南明区等各级部门的领导及相关专家汇报了贵州多彩城项目的总体方案。贵州省常委副书记王…
+                                    </b></span></li>
+                        
+                            
+                        
+                </ul>
+                <div class="page team_page">
+                    
+<span class="pre"><a href="/news/aikenxinwen/page_68.html"><</a></span>
+ <span><a href="/news/aikenxinwen/page_67.html">67</a></span>  <span><a href="/news/aikenxinwen/page_68.html">68</a></span>  <span><a class="hover" href="/news/aikenxinwen/page_69.html">69</a></span> <span><a href="/news/aikenxinwen/page_70.html">70</a></span>  <span><a href="/news/aikenxinwen/page_71.html">71</a></span> 
+<span class="next"><a href="/news/aikenxinwen/page_70.html">></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--item end-->
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

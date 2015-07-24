@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sorcl.css' %}" />
+    <script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script_side.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jPages.js' %}"></script>
+    <title>
+	艾肯弘扬-首页
+</title>
+    <script type="text/javascript">
+
+        $(document).ready(function (e) {
+            TencentArticl.tabId = "sildPicBar1"
+            TencentArticl.tabDot = "dot1";
+            TencentArticl.tabBox = "cnt-wrap1";
+            TencentArticl.tabSilder = "cnt1";
+            TencentArticl.ints();
+            $(".tabPanel dl dd").click(function () {
+                var i = $(this).index() + 1;
+                TencentArticl.tabId = "sildPicBar" + i;
+                TencentArticl.tabDot = "dot" + i;
+                TencentArticl.tabBox = "cnt-wrap" + i;
+                TencentArticl.tabSilder = "cnt" + i;
+                TencentArticl.ints();
+            })
+        });
+        $(function () {
+            $("div.holder").jPages({
+                containerID: "itemContainer",
+                previous: "",
+                next: "",
+                perPage: 4
+            });
+        });
+        //**鼠标悬停替换另一张图片  
+        $(document).ready(function () {
+            // 判断img轮转，实现a跳转
+            // 推荐品牌滑动翻转效果
+            brandPicTurn();
+        });
+        function brandPicTurn() {
+            $(".brand_detail").hide();
+            $(".i_serList ul li").hover(
+		function () {
+		    $(this).find(".brand_name").hide();
+		    $(this).find(".brand_detail").show();
+		}
+		, function () {
+		    $(this).find(".brand_detail").hide();
+		    $(this).find(".brand_name").show();
+		}
+	);
+        }
+    </script>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <div class="st_box">
+        <div class="flexslider">
+            <ul class="slides">
+                
+                        <li style="background: url(/upload/201504/15/201504150929557861.jpg) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+                    
+                        <li style="background: url(/upload/201506/11/201506111536309030.jpg) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+                    
+                        <li style="background: url(/upload/201506/11/201506111537168657.jpg) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+                    
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    directionNav: true,
+                    pauseOnAction: false
+                });
+            });
+        </script>
+        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+        <!--banner end-->
+        <div class="wrap">
+            <div class="i_about">
+                <div class="i_title">
+                    <p class="ti about_title">
+                        about us</p>
+                    <p>
+                        <i></i><span>关于我们</span><i></i></p>
+                </div>
+                <p class="aboutAd">
+                    <img src="{% static 'images/i_aboutAd.jpg' %}" width="719" height="66" alt="" /></p>
+                <span class="i_aboutC">国家级旅游规划资质单位——深圳市艾肯弘扬咨询管理有限公司是一家专业的景区旅游策划、旅游规划公司，为旅游景区和区域开发项目提供实操性强的全过程、全方位咨询顾问服务。公司高层管理人员均曾在国内最著名的旅游景区从事过十年以上高层管理工作，具有最权威最经得起实践考验的旅游规划、旅游策划的管理经验，是中国主题公园发展变迁的亲历者和管理者，中国旅游业的中流砥柱。</span>
+                <div class="view">
+                    <i></i><span><a href="/about/">查看详情 &gt;</a></span><i></i></div>
+            </div>
+            <!--index_about end-->
+        </div>
+        <div class="i_case">
+            <div class="i_case_box">
+                <div class="i_title i_title1">
+                    <p class="ti case_title">
+                        The successful case</p>
+                    <p>
+                        <i></i><span>成功案例</span><i></i></p>
+                </div>
+            </div>
+            <div class="wrap i_caseTab">
+                <div class="tabPanel">
+                    <dl>
+                        
+                                <dd class="hit" style="">
+                                    <a class=" " href="javascript:void(0)">
+                                        综合体旅游</a></dd>
+                            
+                                <dd class="" style="">
+                                    <a class=" " href="javascript:void(0)">
+                                        生态旅游</a></dd>
+                            
+                                <dd class="" style="">
+                                    <a class=" " href="javascript:void(0)">
+                                        主题公园</a></dd>
+                            
+                                <dd class="" style="">
+                                    <a class=" " href="javascript:void(0)">
+                                        湿地旅游</a></dd>
+                            
+                    </dl>
+                    <div class="panes">
+                        
+                                <div class="pane" style="display: block">
+                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+                                        <div class="bd">
+                                            <div class="cnt-wrap" id="cnt-wrap1">
+                                                <div class="cnt" id="cnt1">
+                                                    <ul>
+                                                        
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-99.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-99.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-99.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-99.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-99.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-98.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-98.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-98.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-98.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-98.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-97.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-97.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-97.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-97.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-97.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-96.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-96.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-96.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-96.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-96.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-93.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-93.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-93.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-93.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-93.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-6.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/201504/11/201504111044105125.png' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-6.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-6.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-6.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-6.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hd">
+                                            <div class="sildPicBar" id="sildPicBar1">
+                                                <span class="pre"><</span>
+                                                <ul id="dot1">
+                                                </ul>
+                                                <span class="next">></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="pane" style="display: none">
+                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+                                        <div class="bd">
+                                            <div class="cnt-wrap" id="cnt-wrap2">
+                                                <div class="cnt" id="cnt2">
+                                                    <ul>
+                                                        
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-102.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-102.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-102.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-102.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-102.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-101.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-101.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-101.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-101.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-101.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-100.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-100.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-100.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-100.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-100.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-5.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/201504/11/201504111044105125.png' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-5.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-5.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-5.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-5.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hd">
+                                            <div class="sildPicBar" id="sildPicBar2">
+                                                <span class="pre"><</span>
+                                                <ul id="dot2">
+                                                </ul>
+                                                <span class="next">></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="pane" style="display: none">
+                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+                                        <div class="bd">
+                                            <div class="cnt-wrap" id="cnt-wrap3">
+                                                <div class="cnt" id="cnt3">
+                                                    <ul>
+                                                        
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-105.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-105.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-105.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-105.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-105.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-104.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-104.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-104.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-104.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-104.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-103.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-103.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-103.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-103.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-103.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <a href="/case/item-7.html"
+                                                                            target="_blank">
+                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                    <div class="text">
+                                                                        <p>
+                                                                            <a href="/case/item-7.html">
+                                                                                <p>
+                                                                                    <a href="/case/item-7.html">
+                                                                                        名称：太极湖生态文化旅游区</a></p>
+                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
+                                                                                <a class="view" href="/case/item-7.html">
+                                                                                    READ MORE</a> </a><a class="view" href="/case/item-7.html">
+                                                                                        READ MORE</a>
+                                                                    </div>
+                                                                </li>
+                                                            
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hd">
+                                            <div class="sildPicBar" id="sildPicBar3">
+                                                <span class="pre"><</span>
+                                                <ul id="dot3">
+                                                </ul>
+                                                <span class="next">></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="pane" style="display: none">
+                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+                                        <div class="bd">
+                                            <div class="cnt-wrap" id="cnt-wrap4">
+                                                <div class="cnt" id="cnt4">
+                                                    <ul>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hd">
+                                            <div class="sildPicBar" id="sildPicBar4">
+                                                <span class="pre"><</span>
+                                                <ul id="dot4">
+                                                </ul>
+                                                <span class="next">></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--index_service end-->
+        <!--index_case end-->
+        <div class="wrap i_service">
+            <div class="i_title i_title2">
+                <p class="ti ser_title">
+                    service</p>
+                <p>
+                    <i></i><span>服务项目</span><i></i></p>
+            </div>
+            <div class="i_serList">
+                <ul>
+                    <li>
+                        <div class="img">
+                            <a class="brand_name" href="news/">
+                                <img src="{% static 'images/upload/images/1.png' %}" /></a> <a class="brand_detail" href="news/">
+                                    <img src="{% static 'images/upload/images/1-1.png' %}" /></a>
+                        </div>
+                        <span>
+                            <h2>
+                                <a href="news/">旅游策划</a></h2>
+                            <p>
+                                Travel Planning</p>
+                        </span></li>
+                    <li>
+                        <div class="img">
+                            <a class="brand_name" href="case/">
+                                <img src="{% static 'images/upload/images/2.png' %}" /></a> <a class="brand_detail" href="case/">
+                                    <img src="{% static 'images/upload/images/2-2.png' %}" /></a>
+                        </div>
+                        <span>
+                            <h2>
+                                <a href="case/">旅游规划</a></h2>
+                            <p>
+                                Travel Planning</p>
+                        </span></li>
+                    <li>
+                        <div class="img">
+                            <a class="brand_name" href="server/">
+                                <img src="{% static 'images/upload/images/3.png' %}" /></a> <a class="brand_detail" href="server/">
+                                    <img src="{% static 'images/upload/images/3-3.png' %}" /></a>
+                        </div>
+                        <span>
+                            <h2>
+                                <a href="server/">土地运营</a></h2>
+                            <p>
+                                Travel Planning</p>
+                        </span></li>
+                    <li>
+                        <div class="img">
+                            <a class="brand_name" href="train/">
+                                <img src="{% static 'images/upload/images/4.png' %}" /></a> <a class="brand_detail" href="train/">
+                                    <img src="{% static 'images/upload/images/4-4.png' %}" /></a>
+                        </div>
+                        <span>
+                            <h2>
+                                <a href="train/">ICOM培训</a></h2>
+                            <p>
+                                Travel Planning</p>
+                        </span></li>
+                    <li>
+                        <div class="img">
+                            <a class="brand_name" href="team/">
+                                <img src="{% static 'images/upload/images/5.png' %}" /></a> <a class="brand_detail" href="team/">
+                                    <img src="{% static 'images/upload/images/5-5.png' %}" /></a>
+                        </div>
+                        <span>
+                            <h2>
+                                <a href="team/">咨询顾问</a></h2>
+                            <p>
+                                Travel Planning</p>
+                        </span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="i_team">
+            <div class="i_title i_title2">
+                <p class="ti team_title">
+                    Our team</p>
+                <p>
+                    <i></i><span>我们的团队</span><i></i></p>
+            </div>
+            <div class="wrap content">
+                <div class="drama-poster">
+                    <ul>
+                        
+                                <li class="show-poster-3"><a href="/team/item-83.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151536499113.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-83.html">
+                                            秦晓琪</a></p>
+                                    <p class="p100">
+                                        艾肯机构董事长</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-81.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151535011300.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-81.html">
+                                            易能武</a></p>
+                                    <p class="p100">
+                                        董事总经理</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-80.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151533590675.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-80.html">
+                                            张宪洪</a></p>
+                                    <p class="p100">
+                                        执行董事、集团技术副总裁</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-78.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/29/201504291723392147.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-78.html">
+                                            黄飞翔</a></p>
+                                    <p class="p100">
+                                        景区资深管理营销专家</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-79.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151532494015.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-79.html">
+                                            王振良</a></p>
+                                    <p class="p100">
+                                        景区资深管理营销专家</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-77.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151527225938.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-77.html">
+                                            王文华</a></p>
+                                    <p class="p100">
+                                        资深媒体人</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-76.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151526143439.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-76.html">
+                                            郑东</a></p>
+                                    <p class="p100">
+                                        商业领域资深专家</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                                <li class="show-poster-3"><a href="/team/item-830.html"
+                                    class="img">
+                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/29/201504291729050897.jpg' %}" />
+                                </a><span class="price">
+                                    <p>
+                                        <a href="/team/item-830.html">
+                                            林晓明</a></p>
+                                    <p class="p100">
+                                        旅游项目设计施工管理专家</p>
+                                </span><span class="arrow"></span></li>
+                                <span class="arrow"></span>
+                            
+                    </ul>
+                </div>
+                <ul class="drama-slide">
+                    <li class="prev"><a href="javascript:void(null)" title="上翻">&lt;</a></li>
+                    <li class="next"><a href="javascript:void(null)" title="下翻">&gt;</a></li>
+                </ul>
+            </div>
+            <div class="i_team_mor">
+                <a href="/team/">MORE ></a>
+            </div>
+        </div>
+        <!--index_train end-->
+        <div class="i_new">
+            <div class="i_title i_title2">
+                <p class="ti news_title">
+                    news Center</p>
+                <p>
+                    <i></i><span>新闻中心</span><i></i></p>
+            </div>
+            <div class="i_newBox">
+                <div id="tabs1" class="wrap wid180">
+                    <div class="menu1box tab">
+                        <ul id="menu1">
+                            <li class="hover" onmouseover="setTab(1,0)"><a href="javascript:void(0)">艾肯新闻</a></li>
+                            <li onmouseover="setTab(1,1)"><a href="javascript:void(0)">专题研究</a></li>
+                            <li onmouseover="setTab(1,2)"><a href="javascript:void(0)">行业资讯</a></li>
+                        </ul>
+                    </div>
+                    <div class="main1box">
+                        <div class="main" id="main1">
+                            
+                                    <ul class="block" style="display: block">
+                                        <li>
+                                            <div class="scrll_f1">
+                                                <dl class="scrll_lisrt">
+                                                    
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-833.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-833.html">
+                                                                            【福建】福建石狮市旅游及服装城旅游项目合同签订及前期考察顺利结束</a></h2>
+                                                                    <span>
+                                                                        4月初，我公司与石狮市文体旅游新闻出版局、石狮服装城管理办公室就石狮市旅游和石狮市服装城旅游项目签订总体策划合同。</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-832.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292251421873.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-832.html">
+                                                                            【山东】祝贺青岛藏马山国家旅游度假区五一开门迎客——深圳艾肯咨询机构全程服务合作项目</a></h2>
+                                                                    <span>
+                                                                        由青岛隆海集团耗时7年之久，斥资136亿元，由深圳艾肯咨询机构全程参与策划管理的青岛藏马山国际旅游度假区，将于2015年5月1日正式开园纳客。</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-117.html">
+                                                                        <img src="{% static 'images/upload/201504/20/201504201150023111.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-117.html">
+                                                                            【吉林】吉林松花湖项目上海汇报圆满成功</a></h2>
+                                                                    <span>
+                                                                        4月13日，我司艾肯弘扬总经理易能武先生、艾肯卓悦副总经理王振良先生和项目经理王灿组成的吉林松花湖项目汇报团队飞赴上海，并就吉林松花湖项目总体方案进行二次政府汇报。</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-115.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504291720196522.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-115.html">
+                                                                            【湖北】艾肯助力香港卫视成功签约襄阳鱼梁洲项目</a></h2>
+                                                                    <span>
+                                                                        3月13日，襄阳市政府与香港卫视国际传媒集团签署汉水文化旅游展示区项目战略合作协议，香港卫视华中总部落户襄阳。</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-114.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292152264217.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-114.html">
+                                                                            【湖北】湖北郧阳岛水上游项目考察顺利结束</a></h2>
+                                                                    <span>
+                                                                        3月初，我公司与湖北郧阳岛水上游乐有限公司就湖北郧阳岛水上游项目签订策划合同，为该项目提供旅游产品策划和水上游线设计等服务事宜。</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-108.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292306399686.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-108.html">
+                                                                            【湖北】祝贺武当山-太极湖项目获中国五百强单位山东高速投资</a></h2>
+                                                                    <span>
+                                                                        近日，山东高速集团、武当山特区政府、太极湖旅游集团共同签署正式合同，投资开发大武当文化旅游，2015年元月全面启动。</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                </dl>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                
+                                    <ul class="block" style="display: none">
+                                        <li>
+                                            <div class="scrll_f1">
+                                                <dl class="scrll_lisrt">
+                                                    
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-723.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-723.html">
+                                                                            【艾肯周讯】173期</a></h2>
+                                                                    <span>
+                                                                        旅游西藏30多年间累计接待1000多个外国登山团队新华网  2014-11-19据西藏自治区体育局统计，自1980年以来的30多年间，西藏通过接待国外登山团队创造经济收入，用于支持“中国西藏攀登世界14座海拔8000米</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-722.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-722.html">
+                                                                            【艾肯周讯】175期</a></h2>
+                                                                    <span>
+                                                                        旅游2014福布斯中国大陆旅游业最发达城市榜单 北京蝉联榜首福布斯中文网2014-12-162014年12月15日，上海——福布斯中文版第三次发布2014年中国大陆旅游业最发达城市榜单。北京、上海、重应名列前三。今年重</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-721.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-721.html">
+                                                                            【艾肯周讯】174期</a></h2>
+                                                                    <span>
+                                                                        旅游厦门将滨海旅游作为海洋经济重点国家旅游局2014-12-06近日，厦门市重大项目领导小组召开会议，研究《厦门市海洋经济发展工作方案》，明确了未来6年厦门海洋经济的发展目标，滨海旅游建设作为海洋经济发展的重点之一。目</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-720.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-720.html">
+                                                                            【艾肯周讯】176期</a></h2>
+                                                                    <span>
+                                                                        旅游内蒙古构建&quot;四区一带&quot;旅游产业布局中国产经新闻报2014-12-26据了解，内蒙古将积极构建“四区一带”旅游产业布局。“四区一带”包括以海拉尔、满洲里、额尔古纳、阿尔山为核心的呼伦贝尔兴安草原风</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-719.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-719.html">
+                                                                            【艾肯周讯】177期</a></h2>
+                                                                    <span>
+                                                                        旅游国家旅游局：游客达80%最大承载量应停售门票新京报2015-01-10昨天，记者从国家旅游局获悉，该局发布行业标准《景区最大承载量核定导则》，该标准将于4月1日起实施，要求景区内旅游者数量达到最大承载量80%时，应</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                            <dd>
+                                                                <div class="img">
+                                                                    <a href="/news/item-718.html">
+                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <h2>
+                                                                        <a href="/news/item-718.html">
+                                                                            【艾肯周讯】178期</a></h2>
+                                                                    <span>
+                                                                        旅游遵化“亚太首届草莓文化节”即将拉开序幕河北新闻网2015-01-14据悉，2015年1月17日至6月30日，遵化将在团瓢庄乡山里各庄村举办“亚太首届草莓文化节”。本届文化节期间，将通过举办摄影大赛、书画艺术展览、诗</span>
+                                                                </div>
+                                                            </dd>
+                                                        
+                                                </dl>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                
+                                    <ul class="block" style="display: none">
+                                        <li>
+                                            <div class="scrll_f1">
+                                                <dl class="scrll_lisrt">
+                                                    
+                                                </dl>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="i_team_mor">
+                    <a href="/news/">MORE ></a>
+                </div>
+            </div>
+        </div>
+        <!--index_news end-->
+        <div class="i_train">
+            <div class="i_title">
+                <p class="ti train_title">
+                    Aiken training</p>
+                <p>
+                    <i></i><span>艾肯培训</span><i></i></p>
+            </div>
+            <div class="adaptiveroll" id="adaptiveid">
+                <div style="width: 1000%">
+                    <ul>
+                        
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-92.html">
+                                            <img src="{% static 'images/upload/201504/27/201504271200397030.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-92.html">
+                                                【艾肯】旅游+地产实战高级研修班第一期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-92.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-91.html">
+                                            <img src="{% static 'images/upload/201504/17/201504171404561425.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-91.html">
+                                                【艾肯】"旅游+地产"实战高级研修班第二期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-91.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-90.html">
+                                            <img src="{% static 'images/upload/201504/17/201504171405084382.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-90.html">
+                                                【艾肯】旅游+地产实战高级研修班第三期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-90.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-88.html">
+                                            <img src="{% static 'images/upload/201504/17/201504171405197979.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-88.html">
+                                                【艾肯】旅游+地产实战高级研修班第四期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-88.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-831.html">
+                                            <img src="{% static 'images/upload/201504/30/201504301410255623.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-831.html">
+                                                【艾肯】2012 旅游+地产实战高级研修班第四期——休闲养生论坛圆满成功></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-831.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-705.html">
+                                            <img src="" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-705.html">
+                                                【艾肯】2011旅游+地产实战高级研修班第一期圆满成功></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-705.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                    </ul>
+                    <ul>
+                        
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-92.html">
+                                            <img src="{% static 'images/upload/201504/27/201504271200397030.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-92.html">
+                                                【艾肯】旅游+地产实战高级研修班第一期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-92.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-91.html">
+                                            <img src="{% static 'images/upload/201504/17/201504171404561425.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-91.html">
+                                                【艾肯】"旅游+地产"实战高级研修班第二期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-91.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-90.html">
+                                            <img src="{% static 'images/upload/201504/17/201504171405084382.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-90.html">
+                                                【艾肯】旅游+地产实战高级研修班第三期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-90.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-88.html">
+                                            <img src="{% static 'images/upload/201504/17/201504171405197979.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-88.html">
+                                                【艾肯】旅游+地产实战高级研修班第四期></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-88.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-831.html">
+                                            <img src="{% static 'images/upload/201504/30/201504301410255623.jpg' %}" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-831.html">
+                                                【艾肯】2012 旅游+地产实战高级研修班第四期——休闲养生论坛圆满成功></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-831.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="img">
+                                        <a href="/train/item-705.html">
+                                            <img src="" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            <a href="/train/item-705.html">
+                                                【艾肯】2011旅游+地产实战高级研修班第一期圆满成功></a></h2>
+                                        <i></i><span></span><a class="more" href="/train/item-705.html">
+                                            more</a>
+                                    </div>
+                                </li>
+                            
+                    </ul>
+                </div>
+            </div>
+            <div class="focus_btn">
+                <span>
+                    <div class="btn bleft" id="bleft">
+                        &lt;</div>
+                    <div class="btn bright" id="bright">
+                        &gt;</div>
+                </span>
+            </div>
+        </div>
+        <!--index_link end-->
+        <div class="i_link">
+            <div class="i_title i_title2">
+                <p class="ti link_title">
+                    Cooperation Center</p>
+                <p>
+                    <i></i><span>合作中心</span><i></i></p>
+            </div>
+            <div class="i_linkBox">
+                <div id="main3" class="wrap">
+                    <div id="geren_menu3">
+                        <ul id="tab3">
+                            <li id="li_1" onmouseover="change('1')" class="selectd1"><a href="javascript:void(0)">
+                                服务企业</a></li>
+                            <li id="li_2" onmouseover="change('2')" class="normal1"><a href="javascript:void(0)">
+                                战略合作伙伴</a></li>
+                        </ul>
+                    </div>
+                    <div id="div1" style="display: block;" class="neirong1">
+                        <div class="i_likList">
+                            <ul>
+                                
+                                        <li><a href="/service/item-707.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251438240103.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-708.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251438470415.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-709.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251439040103.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-710.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251439161822.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-711.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251439286353.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-712.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251441394165.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-713.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251441546509.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-714.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251442294947.png' %}" width="209" height="99" /></a> </li>
+                                    
+                                        <li><a href="/service/item-715.html"
+                                            target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251442551509.png' %}" width="209" height="99" /></a> </li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="div2" style="display: none;" class="neirong1">
+                        <div class="i_likList">
+                            <ul>
+                                
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425530259.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425444478.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425364947.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425280103.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                                        <li><a href="#" target="_blank">
+                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link_mor">
+                        <a href="/server/">更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="{% static 'images/fot_ico_f1.png' %}" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="{% static 'images/fot_ico_f2.png' %}" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="{% static 'images/fot_ico_f3.png' %}" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="{% static 'images/fot_ico_f3.png' %}" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="{% static 'images/tel_btn.png' %}" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="{% static 'images/tel_img.png' %}" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="{% static 'images/weixin_btn.png' %}" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="{% static 'images/weixin_img.jpg' %}" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="{% static 'images/goTop.png' %}" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#nav li:last").css("padding", "0");
+            $(".tabPanel dl dd:last").css("margin-right", "0")
+            $(".main ul:first").css("display", "block")
+        })
+        //**首页成功案例选项卡
+        $(function () {
+            $('.tabPanel dl dd').click(function () {
+                $(this).addClass('hit').siblings().removeClass('hit');
+                $('.panes>div:eq(' + $(this).index() + ')').show().siblings().hide();
+            })
+        })
+
+        //**首页新闻中心选项卡
+        function setTab(m, n) {
+            var tli = document.getElementById("menu" + m).getElementsByTagName("li");
+            var mli = document.getElementById("main" + m).getElementsByTagName("ul");
+            for (i = 0; i < tli.length; i++) {
+                tli[i].className = i == n ? "hover" : "";
+                mli[i].style.display = i == n ? "block" : "none";
+            }
+        };
+        //**首页合作中心选项卡
+        function change(a) {
+            for (i = 1; i <= 2; i++) {
+                document.getElementById("li_" + i).className = "normal1";
+                document.getElementById("li_" + a).className = "selectd1";
+                document.getElementById("div" + i).style.display = "none";
+
+            }
+            document.getElementById("div" + a).style.display = "block"
+
+        };
+        //**自适应宽度切换脚本
+        var oWrap = $("#adaptiveid");
+        var oRoll = oWrap.find("ul");
+        var iStepw = oRoll.find("li").outerWidth(true);
+        var timer = null, speed = 500000;
+        var iUlw; //= $("#adaptiveid ul li").length * iStepw;
+        var oBtnL = $('#bleft'), oBtnR = $('#bright');
+        oRoll.width(iUlw);
+        //*向左切换
+        var i = 0;
+        oWrap.scrollLeft(0);
+        function fscrollL() {
+            i++;
+            if (i > $("#adaptiveid ul li").length / 2 - 1) i = 0;
+            oWrap.stop().animate({ "scrollLeft": iStepw * i }, 1000);
+        }
+
+
+        if (iUlw > oWrap.width()) { timer = setTimeout(fscrollL, speed); }
+
+        oWrap.hover(function () {
+            oWrap.stop(true, true);
+            clearTimeout(timer);
+        }, function () {
+            if (iUlw > oWrap.width()) { timer = setTimeout(fscrollL, speed); }
+        })
+        //*向右切换
+        function fscrollR() {
+            i--;
+            if (i < 0) i = $("#adaptiveid ul li").length / 2 - 1;
+            oWrap.stop().animate({ "scrollLeft": iStepw * i }, 1000);
+        }
+
+
+        if (iUlw > oWrap.width()) { timer = setTimeout(fscrollR, speed); }
+
+        oWrap.hover(function () {
+            oWrap.stop(true, true);
+            clearTimeout(timer);
+        }, function () {
+            if (iUlw > oWrap.width()) { timer = setTimeout(fscrollR, speed); }
+        })
+        //鼠标悬停显示文本
+        $(function () {
+            $(".adaptiveroll ul li").hover(function () {
+                $(this).find("div.img a img").animate({ "opacity": "1" }, "slow");
+                $(this).find("div.text").stop(true, false).slideDown("slow");
+            },
+function () {
+    $(this).find("div.img a img").animate({ "opacity": "0.5" }, "slow");
+    $(this).find("div.text").stop(true, false).slideUp("slow");
+})
+        })
+        //**绑定左右切换按钮
+        oBtnL.bind('click', function () { fscrollL() });
+        oBtnR.bind('click', function () { fscrollR() });
+
+    </script>
+</body>
+</html>

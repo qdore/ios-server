@@ -1,0 +1,434 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】111期</h1>
+                <h2>
+                    <a>发布日期：2012/12/10 14:21:10</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国国家林业局局长表示森林旅游发展仍大有空间<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>中国证券网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-12-06</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">国家林业局网站</span><span style="background:white;color:black;font-size:9pt;"><span>12</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月</span><span style="background:white;color:black;font-size:9pt;"><span>6</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日消息，林业局局长赵树丛日前在接受采访时表示，森林旅游发展仍大有空间。赵树丛介绍，今后一个时期，将加快森林旅游发展，力争到</span><span style="background:white;color:black;font-size:9pt;"><span>2015</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">年，全国森林公园总数达到</span><span style="background:white;color:black;font-size:9pt;"><span>3000</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">处，其中国家级森林公园达到</span><span style="background:white;color:black;font-size:9pt;"><span>800</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">处，森林公园年旅游人数达到</span><span style="background:white;color:black;font-size:9pt;"><span>6</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">亿人次，森林旅游直接收入达到</span><span style="background:white;color:black;font-size:9pt;"><span>700</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">亿元，社会综合产值达</span><span style="background:white;color:black;font-size:9pt;"><span>4000</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">亿元。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">福建漳浦台农民创业园将打造成独具特色的旅游区</span></b><b><span style="font-family:宋体;color:#333333;font-size:12pt;"></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>中国台湾网<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-12-06</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">漳浦台湾农民创业园将打造成漳州地区乃至闽南地区独具特色的旅游区。日前，《漳浦台湾农民创业园东南花都核心区发展规划局部修编》已经通过评审会。据了解，这次规划目标是充分利用台湾农民创业园和东南花都核心区所处区域的山水环境和花博园的特色产业，以“山、水、园”为主题。规划修编的区域东起</span><span style="background:white;color:black;font-size:9pt;"><span>324</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">国道，西至规划中的水南路，南临溪坂村，北依自然山林。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">辽宁提前<span>1</span>个月炒热冬季旅游<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>东北新闻网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-11-06</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>冰雪温泉游、冰雪民俗游、冰雪庙会游、冰雪海鲜游……<span>12</span>月<span>5</span>日，由省旅游局、辽阳市人民政府主办的“<span>2012</span>辽宁冰雪温泉季<span>.</span>欢乐嘉年华”活动正式启动，辽宁提前<span>1</span>个月炒热冬季旅游市场。从<span>2012</span>年<span>12</span>月<span>1</span>日至<span>2013</span>年<span>2</span>月底，全省将举办<span>10</span>余项精彩纷呈的冰雪旅游活动，各地还将结合当地旅游特色资源，举行冰雪、温泉、冬捕、乡村、文化等各具特色的旅游节活动。届时，全省<span>30</span>余家冰雪温泉旅游企业将同步推出优惠措施。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国房产交易环节征税将简并</span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国新闻网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-12-05</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">财政部<span>2</span>日透露，财政部部长谢旭人称，下一步税收制度改革的重点将包括对房地产交易环节征收的有关税种进行简并，并研究逐步在全国推开房产税等。专家分析称，财政部此番表态意味着未来我国房产交易环节税负有可能下降。谢旭人表示，今后一个时期完善税收制度的主要目标是健全以流转税和所得税为主体税种，财产税、环境资源税及其他特定目的税相协调，多税种、多环节、多层次调节的税收体系，充分发挥税收筹集国家财政收入的主渠道作用和调控经济、调节收入分配的职能作用。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国十大城市房价<span>2012</span>年内首现双涨<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中金在线</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-12-05</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;<span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国指数研究院<span>3</span>日公布的数据显示，<span>11</span>月百城住宅均价连续第六个月环比上涨，其中，北京、上海等十大重点城市今年以来首次出现同比、环比双上涨，部分重点城市房价甚至超过调控前。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国国土部市场预期出现分化和地价增速微幅回调<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">新浪网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-12-06</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span><span>&nbsp;</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">国土资源部近日发布<span>2012</span>年第三季度全国主要城市地价监测报告，报告指出，三季度，全国地价水平总体平稳，同比增速持续放缓。由于国家房地产市场调控政策持续从紧，部分地方政府房地产市场微调政策相继出台，市场预期出现分化，地价增速微幅回调。对于房地产及地价的后期走势，国土部认为，四季度土地供需将双向增加，市场活跃度有所上升，全年土地市场整体将处于盘整态势，地价不会出现大幅涨跌。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">经济</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">"</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">十二五<span>"</span>期间中国海洋新兴产业增加值将翻番</span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中证网</span><span style="background:white;color:black;font-size:9pt;"><span><span class="Apple-converted-space">&nbsp;</span>2012-12-07</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">已获国务院批准实施的《国家“十二五”海洋经济发展规划》提出，“十二五”期间，海洋新兴产业增加值将较“十一五”期间翻一番。另有报道披露，目前国家海洋局正在与国家发改委沟通，争取将七八个海洋新兴产业、<span>10</span>多个城市纳入国家高新技术产业基地。如今，“赶海”也似乎成了各地方政府的潮流。日前，国务院密集批复了包括福建、天津、河北、辽宁、江苏、浙江、山东、广西等八省区市海洋功能区划。截至目前已明确发展目标的<span>9</span>个沿海省市，<span>2015</span>年海洋经济产值总额将高达<span>70472</span>亿元。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">　<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国城乡收入差距将重新测算<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">华讯财经<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-12-07</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span><span>&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">据《</span><span style="background:white;color:black;font-size:9pt;"><span>21</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">世纪经济报道》透露，国家统计局已经启动在今年</span><span style="background:white;color:black;font-size:9pt;"><span>12</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月</span><span style="background:white;color:black;font-size:9pt;"><span>1</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日已经启动城乡一体化住户调查，按照统一的指标和测算方法，对城乡居民收入指标进行新的住户调查。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span><span>&nbsp;&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">其中，城镇居民居住自有房屋，将计算租金净收入，即自己目前房租按照市场价出租的收入去掉过去购房分摊的成本，即增值的部分。该部分将纳入城镇人均可支配收入。而农村人均可支配收入，将在原先人均纯收入的基础上减去转移性支出和财产性支出。另外，过去农村人均纯收入指标将被人均可支配收入指标代替，与城镇人均可支配收入具有可比性。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">"</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">十二五<span>"</span>中国绿色投资将达<span>8</span>万亿元人民币<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>中国台湾网</span></span><span style="font-family:Calibri, sans-serif;background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;</span>2012-12-07</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>十八大报告突出生态文明，融经济、政治、社会、文化、生态为一体，铸造美丽中国。在这场深刻的经济转型和产业升级中，蕴含着巨大的投资空间和投资机会。据清华大学国情研究院院长胡鞍钢教授估算，“十二五”期间，中国绿色投资将达到</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">8</span><span style="background:white;color:black;font-size:9pt;"><span>万亿元人民币。胡鞍钢说：“目前对‘十二五’时期</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">8</span><span><span style="background:white;color:black;font-size:9pt;">万亿元绿色投资的估算还是保守的估计，仅包括政府主导的公共投资，还不包括社会资本，因为还没有明确的统计口径和统计体系来核算非公部门的绿色投资总额。”</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">艾肯观点</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国<span>2013</span>年推广海洋旅游主题<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">北京商报网<span><span class="Apple-converted-space">&nbsp;</span>2012-12-06</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">记者</span><span style="background:white;color:black;font-size:9pt;"><span>12</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月</span><span style="background:white;color:black;font-size:9pt;"><span>5</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日从国家旅游局获悉，中国明年的旅游主题确定为“</span><span style="background:white;color:black;font-size:9pt;"><span>2013</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国海洋旅游年”，以“体验海洋，游览中国”、“海洋旅游，引领未来”、“海洋旅游，精彩无限”等为宣传口号向外推广。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">国家旅游局相关负责人表示，将借鉴“奥运旅游年”、“世博旅游年”等的成功经验，发挥旅游主题年在市场宣传推广和产品开发领域的引领作用。通过对海洋旅游资源的开发，打造海洋旅游拳头产品，以此丰富中国旅游产品种类、提升旅游国际竞争力。同时，进一步吸引海外游客游览中国，推动入境旅游增长。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">据悉，全国各地将加强海洋及江河、湖泊等水资源旅游产品与历史文化、自然风光、乡村生态、民俗风情等跨区域旅游产品的组合；加强旅游宣传品制作、广告投入、参展促销等宣传推广方面的区域联合。同时，加大邮轮旅游、休闲度假、体育健身、创意文化等新产品开发。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">观点：由上世纪八十年代起，海洋旅游就与我国现代旅游业伴生并同步发展，至今已成为环渤海、长三角、珠三角等滨海旅游区域的支柱产业，并催生了青岛、上海、厦门、海南等热门滨海旅游目的地。艾肯认为，目前我国海洋旅游产品形式仍集中于观光旅游，应通过对海洋文化和海洋生态的深入研究、积极保护和大力开发，丰富海洋旅游产品。海洋文化与海洋生态文明是我国促进文化繁荣发展和推进生态文明建设不可或缺的重要组成部分，通过推广海洋旅游，将海洋文化与海洋生态文明建设融入十八大提出的“经济建设、政治建设、文化建设、社会建设”的各方面和全过程具有重要意义。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><a href="http://www.come23.com/news.asp?id=905&amp;action=Detailed" target="_blank">【江苏】江苏省扬州市瓜洲古镇项目招商推介会圆满落幕</a></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-861.html">
+                        上一篇:<span class="on">【艾肯周讯】110期</span></a>
+                    </li>
+                    <li><a href="/news/item-859.html">
+                        下一篇:<span>【艾肯周讯】112期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

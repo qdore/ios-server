@@ -1,0 +1,269 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class=""
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    旅游策划篇:如何利用网络提升景区旅游形象</h1>
+                <h2>
+                    <a>发布日期：2013/11/11 16:16:36</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p>
+	　　通过网络对景区旅游形象进行提升主要包括两方面内容，一是通过网络工具掌握网民对景区的评价和态度，二是通过网络有效提升景区正面品牌形象。
+</p>
+<p>
+	　　有了互联网，景区的很多“动作”都被放大，这既有利于景区品牌的快速传播，但是对于景区长久维持品牌口碑也增大了难度。例如，景区通过举办人体彩绘活动并利用微博进行营销，在微博上发一张裸体彩绘的照片可能会引发大量的转发，仅仅从微博被转发的数量上来看效果是不错的，但是这种传播是否能激发游客到景区旅游的愿望就值得商榷了，并且引发大量转发。
+</p>
+<p>
+	　　部分景区委托所谓的网络营销公司开展微博营销，以微博粉丝数量作为评价标准，这是极为片面的衡量标准，因为利用技术和人工手段，快速为景区微博增加数以万计的粉丝并不是难事，但稍加留意就能发现，这些粉丝都是不活跃的，甚至根本就是通过技术造出来的的。这样的微博根本不能作为景区推广的工具，也无法辨别出网民对景区的真实评价和态度。
+</p>
+<p>
+	　　随着社会化媒体的发展，旅游景区有了更多了自我宣传营销的平台，而且很多平台是不需要支付广告费用就可以发布信息的。不过免费的平台不一定是真正的免费，景区还需要安排专门的人员去维护相关信息，并通过一些有偿的互动方式保持和网民的互动。从这个角度来看，在免费的平台上开展网络营销活动对专业性的要求更高。
+</p>
+<p>
+	　　本文【旅游策划篇:如何利用网络提升景区旅游形象】由<strong><a href="http://www.come23.com/" target="_blank">旅游策划</a></strong>公司深圳艾肯弘扬专业整理提供，了解更多这方面资讯请访问艾肯旅游官网：<a href="http://www.come23.com/">http://www.come23.com/</a>。
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-777.html">
+                        上一篇:<span class="on">旅游景区如何策划旅游品牌形象</span></a>
+                    </li>
+                    <li><a href="/news/item-775.html">
+                        下一篇:<span>旅游策划容易出现的错误有哪些?</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

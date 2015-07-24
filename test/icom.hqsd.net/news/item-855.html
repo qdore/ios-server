@@ -1,0 +1,430 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】116期</h1>
+                <h2>
+                    <a>发布日期：2013/3/15 14:16:54</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国国家旅游局官员透露旅游法有望<span>2013</span>年上半年出台<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中金在线</span></span><span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-05</span></span><span style="font-family:宋体;color:#333333;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-indent:18pt;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">国家旅游局监督管理司副司长蔡家成日前在接受人民网专访时透露，《旅游法》有望于今年上半年出台，今年下半年或者明年将实施，将为整个旅游产业和休闲产业的发展提供法律支撑。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:10.5pt;">&nbsp;</span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国游艇市场年复合增长率曾高达<span>732%</span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">南方日报</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-07</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span style="font-family:Arial, sans-serif;color:black;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-indent:18pt;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">“漂浮在黄金水道上的巨大商机”，随着“美丽中国”的提出，越来越多行业受益，游艇业就是其中的代表之一。旅游业的迅速发展，带动游艇业增长率节节攀升，顺势抢跑。“</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2006</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年至</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2011</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年，我国游艇市场的年复合增长率达到惊人的</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>732%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">，随着政策利好和需求驱动，未来几年我国游艇市场有望由此释放出数千亿元的商机。”广东省游艇行业协会会长武田在</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>6</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">日举行的</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2013</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中国（广州）国际游艇产业博览会新闻发布会上表示。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-align:center;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="center">
+	<span style="font-family:Arial, sans-serif;color:black;font-size:10pt;">&nbsp;</span> 
+</p>
+<p style="text-indent:0px;background:white;color:#ff6600;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">上海迪士尼公布首张整体模型图<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">东方网</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-07</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span style="font-family:Arial, sans-serif;color:black;font-size:10pt;">&nbsp;</span> 
+</p>
+<p style="text-indent:18pt;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">上海迪士尼度假区管理公司于</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>7</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">日上午发布了一张全新的度假区整体概念图，发布的图片展现了上海迪士尼乐园模型的一部分，包括首次呈现的位于主题乐园中央占地</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>11</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">公顷的美丽绿地，以及乐园的标志性景点，具有独特设计和规模的“奇幻童话城堡”的近距离效果。在开幕当日，整个度假区将包括上海迪士尼乐园、两家主题酒店、占地</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>46000</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">平方米的零售餐饮娱乐区、休闲设施、人工湖以及配套的停车场和交通枢纽。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<span style="font-family:Arial, sans-serif;color:black;font-size:10pt;">&nbsp;</span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国新国五条一周内出详细解读<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">燕赵都市报</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-06</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-indent:18pt;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">全国政协委员、住建部副部长齐骥表示，城乡和住房建设部对各地房价控制目标没有指导意见，但要求保持房价基本稳定。他透露说，针对新的国务院调控的文件，一个星期内会有详细的信息解读。而各地方的调控目标需要各地方政府制定并发布，预计</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>3</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月底地方政府细则将会出台。齐骥表示，“二手房交易按照增值额</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>20%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">征收个税”本意是打击投机，不是伤及刚需。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">深圳暂无房地产税收调整计划<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中证网</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-07</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-indent:18pt;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">“国五条”于</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>3</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月初出台，市场掀起激烈的讨论，其中“</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>20%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">计征个人所得税”相关内容尤其引人注目。日前，有传言称，深圳在</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>3</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月底将有“严控”措施出台，引起市场阵阵猜疑。有商业机构表示，</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>3</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月份还会诞生深圳房地产交易市场的所谓“天量”。昨日，市地税局相关人士对记者表示，目前没有税收调整的相关信息，地税部门也没有调整计划。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国多房企<span>2013</span>年<span>2</span>月业绩飘红加速去库存化<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中金在线</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-08</span></span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-align:left;text-indent:18pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">“新国五条”来袭时，房企陆续交出的</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月份业绩报告颇为抢眼。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>3</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>6</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">日，融创中国公布，截至</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2013</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月底，共实现合约销售金额</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>71.5</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">亿元，在去年同期</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>27.1</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">亿元的基础上增长</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>164%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">；实现合约销售面积约</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>34.1</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">万平方米，合约销售均价约</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2.1</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">万元</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>/</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">平方米，在去年同期</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>1.59</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">万元</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>/</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">平米的基础涨</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>32%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">。此外，包括万科、恒大、越秀、合景泰富等多家房企公布的</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">月份业绩简报都是一片飘红。“这得益于市池暖趋势的保持及购房者入市热情依然不减等因素。”易居房地产研究院研究员严跃进向《每日经济新闻》记者指出。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<table style="width:202.5pt;border-collapse:collapse;color:#ff6600;" class="MsoNormalTable ke-zeroborder" border="0" cellspacing="0" cellpadding="0" width="270" align="left">
+	<tbody>
+		<tr>
+			<td style="background-color:transparent;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;">
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="background:white;color:#ff6600;font-size:10.5pt;"><span>&nbsp;</span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国对外文化贸易呈现良好势头<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中金在线</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-07</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:华文细黑;color:black;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="text-align:left;text-indent:22.4pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">前不久出版的《中国对外文化贸易年度报告</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>(2012)</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">》一书披露，在政府的大力扶持下，我国对外文化贸易额持续增长。据不完全统计，我国</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2009</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年文化产品核心内容的对外贸易额为</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>97882.52</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">万美元，</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2010</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年为</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>135083.25</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">万美元，</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2011</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年达到了</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>145170.65</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">万美元，年复合增长率在</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>20%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">以上。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="background:white;color:#ff6600;font-size:10.5pt;"><span>&nbsp;</span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国财政部将续发行<span>220</span>亿记账式附息国债<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中国金融网</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-07</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<span style="color:#333333;font-size:10.5pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-align:left;text-indent:22.4pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">据财政部网站消息，财政部决定第一次续发行</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2013</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">年记账式附息（一期）国债，已完成招标工作。本次国债计划续发行</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>220</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">亿元，实际续发行面值金额</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>220</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">亿元。</span></span><span class="apple-style-span"><span style="font-size:9pt;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国资金面短期仍相对宽松<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">金融界</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-08</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:华文细黑;color:black;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="text-align:left;text-indent:22.4pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">央行网站信息显示，央行昨日以利率招标方式开展了</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>28</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">天期正回购操作，交易量为</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>50</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">亿元，中标利率为</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>2.75%</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">。由于周二央行未进行任何品种的回购操作，加之本周也没有央票和回购品种到期，因此本周央行从公开市场净回笼资金</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>50</span></span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">亿元，这是央行春节以来连续第三周实现资金净回笼。业内人士表示，通常银行在年初前两个月的信贷冲刺后限制信贷规模，因此一季度末银行间的资金面较宽松，预计短期内央行将根据资金面状况适度进行回笼或投放操作。</span></span><span class="apple-style-span"><span style="font-size:9pt;"></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">艾肯观点</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">旅游新规<span>:</span>一日游不得购物<span></span></span></b> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">第一旅游网</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"><span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-03-07</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="text-align:left;text-indent:22.4pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">国家旅游局与国家工商总局联合发布《国内旅游“一日游”合同（示范文本）》</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-align:left;text-indent:13.5pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">“一日游”不得安排指定购物点购物！上周，国家旅游局与国家工商行政管理总局联合发布了《国内旅游“一日游”合同（示范文本）》（下简称“一日游”合同），规范“一日游”的市场秩序。记者昨日从佛山市旅游局旅游质量监督所获悉，佛山市各大旅行社一直使用的是适用面更广的广东省版国内游合同，并没有为“一日游”设立单独合同。该所负责人称，目前还没有收到广东省旅游局相关的正式通知。佛山市各大旅行社对“一日游”合同文本议论纷纷，在肯定“一日游”合同对旅行社的责任划分更明晰的同时，业界对该合同部分条款的可操作性也提出了异议。</span></span><span class="apple-style-span"><span style="color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="text-align:left;text-indent:13.5pt;background:white;color:#ff6600;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="color:black;font-size:9pt;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">观点：“一日游”因其价格实惠、方便自由等优点，一直是大众游客尤其是散客旅游的首选方式之一。然而过快过热的发展必然引发负面效果，旅行社利用低价招揽游客，出游时强行加点、强迫购物、收取回扣等违反行业规则的事件时有发生。艾肯认为，禁止一日游购物一定程度上体现了相关部门整顿市场的决心，但这种“一刀切”做法的科学性、合理性和可行性仍然值得商榷。首先是对“一日游”的合同细则需要进一步明确，而区分购物点设置与购物行为的性质亦十分重要。因为衍生消费本就是游客获得充足旅游体验的重要环节，而前往香港等地的游客中更有相当部分将消费购物作为首要目的。如何区分对待游客自发意愿和旅行社强迫购物，仍须更具体可行的规范。</span></span> 
+</p>
+<p style="text-indent:0px;color:#ff6600;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;"></span></span><span class="apple-style-span"><span style="font-size:9pt;"><a href="http://www.come23.com/news.asp?id=939&amp;action=Detailed" target="_blank">【艾肯】城市规划和城市旅游规划之间的关系</a></span></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-856.html">
+                        上一篇:<span class="on">【艾肯周讯】115期</span></a>
+                    </li>
+                    <li><a href="/news/item-854.html">
+                        下一篇:<span>【艾肯周讯】117期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

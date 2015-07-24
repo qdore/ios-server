@@ -1,0 +1,425 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】139期</h1>
+                <h2>
+                    <a>发布日期：2013/12/30 16:25:27</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">到<span>2030</span>年中国将有望成为全球最大的国内旅游市场<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国财经报<span>2013-12-11</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>根据调查数据和预测，到<span>2030</span>年，中国游客将占亚洲出境游客总数的<span>40</span>％左右。届时，中国将有望成为全球最大的国内旅游市场。具体而言，到<span>2030</span>年，中国城市游客每年进行的国内游和出境游总数将从当前的<span>5</span>亿次增至<span>17</span>亿次，他们的旅游消费支出将达到<span>1</span>．<span>8</span>万亿美元<span>——</span>几乎是当前水平的<span>7</span>倍。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">昆明将创建<span>2-3</span>条中国著名商业街<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>云南网<span>2013-12-12</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">12</span><span style="font-family:宋体;">月<span>12</span>日，昆明商务局对外通报称，将利用<span>3-5</span>年时间，在全培育一批集聚效应显著、文化底蕴深厚、建筑风格鲜明、基础设施完备、拉动消费明显的特色文化旅游商业街区。到<span>2017</span>年底，建设级命名的特色文化旅游商业街<span>15</span>条以上，力争创建<span>2-3</span>条国家命名的中著名商业街。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国<span>"</span>购物游<span>"</span>解冻激活出境市场<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京商报<span>2013-12-19</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>旅游业恐将再次迎来变化。国家旅游局日前发布《关于严格执行〈旅游法〉第三十五条有关规定的通知》，首次对《旅游法》条款进行解读，明确在协商一致的原则下，可以指定具体购物场所和安排另行付费旅游项目。在境外游产品近段时间销售下滑的大背景下，这无疑将是对行业的一次正面激活。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">任志强表示中国土地流转或可平抑房价不改房企格局<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中金在线<span>2013-12-18</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>任志强告诉《东地产》，房价或可平抑，但不改楼市格局。在<span>11</span>月<span>27</span>日举行的主题为<span>“</span>变局<span>·</span>中国<span>”</span>的<span>2013</span>福卡经济论坛上，华远地产股份有限公司董事长任志强讲述了十八届三中全会对市场产生的影响，并谈到了土地改革问题。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">大连房屋置换模式将在国内<span>12</span>个城市复制<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>半岛晨报<span>2013-12-19</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>昨日，大连北方房屋置换交易中心与北京明德天盛投资管理中心正式签署上市辅导协议，该交易中心由此迈出上市第一步。借助于资本市场杠杆撬动，致力于中低收入家庭房屋置换的易居宝模式将加速向全国复制。而随着国家鼓励政策的不断出台，以北方房屋置换交易中心为代表的本市一大批创新型企业也正加速上市步伐。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">2013</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">年<span>11</span>月中国<span>70</span>个大中城市住宅销售价格变动情况<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>银川晚报<span>2013-12-20</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>昨日，国家统计局网站公布<span>11</span>月全国<span>70</span>个大中城市住宅销售价格变动情况，<span>66</span>个城市房价环比上涨。银川上月房价较<span>10</span>月上涨<span>0.7</span>个百分点。数据显示，<span>70</span>个大中城市中，温州房价环比下降，唐山、金华、韶关三市房价环比持平。西北五省区省会<span>(</span>首府<span>)</span>城市中，西安上涨<span>0.3%</span>、兰州上涨<span>0.4%</span>、乌鲁木齐上涨<span>0.4%</span>、西宁上涨<span>0.5%</span>、银川上涨<span>0.7%</span>，与去年同期相比，上月我市房价上涨<span>8.3%</span>。另外，<span>70</span>个大中城市中，<span>11</span>月房价环比涨幅最大的是桂林和福州，涨幅达<span>1.3%</span>。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">广西江州区土地流转<span>"</span>刷新<span>"</span>收入模式<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>广西日报<span>2013-12-19</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:华文细黑;">12</span><span style="font-family:华文细黑;">月<span>8</span>日，崇左市江州区新和镇庆合村孔香屯万亩连片的甘蔗示范基地里，蔗农们正忙着砍蔗。<span>“</span>亩产<span>10</span>吨没问题，今年又是一个丰收年！<span>”</span>蔗农喜悦地说。当日，出席第十五期广西发展论坛的百名专家学者在这里目睹了土地流转所激发的勃勃生机。今年前三季度，该区土地流转项目区农民人均现金收入超过万元，比非项目区农民增加了<span>1/3</span>。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国新型城镇化要格外重视传承文化<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京日报<span>2013-12-20</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>近日，中央城镇化工作会议召开。会议从促进中国特色新型工业化、信息化、城镇化、农业现代化同步发展的高度，分析城镇化发展形势，明确指导思想、主要目标、基本原则、重点任务，论述当前工作着力点，提出走中国特色、科学发展的新型城镇化道路，并作出了一系列具体部署。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国国有资产转让需要公平竞争机制<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:华文细黑;">21CN</span><span style="font-family:华文细黑;">新闻<span>2013-12-20</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中欧陆家嘴国际金融研究院执行副院长刘胜军<span>12</span>月<span>20</span>日在中国国际广播电台环球资讯广播《早间第一资讯》节目中称，国有资本从国有企业中退出，也就是<span>“</span>国退民进<span>”</span>是一个非常重要的步骤，但在十年前曾经有过一次国退民进的浪潮，当时遇到了关于国有资产流失的指责，所以被迫停止了。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">上海迪士尼新规划总建筑规模约<span>700</span>万平米<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中证网<span>2013-12-17</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:26.25pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>上海国际旅游度假区规划以上海迪士尼项目为核心，形成<span>“</span>一核、五片<span>”</span>的空间发展格局，总建筑规模约为<span>700</span>万平方米。其中，核心区约为<span>200</span>万平方米；发展功能区约为<span>500</span>万平方米，建设迪士尼直接配套、多样化旅游娱乐和其他带动功能等三类设施，各占约三分之一。发展功能区范围内，规划建设用地约<span>9.4</span>平方公里，非建设用地约<span>8.3</span>平方公里。<span></span></span></span> 
+</p>
+<p style="text-indent:26.25pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"><span>观点：上海迪斯尼的规划在规模上远大于<span>2005</span>年在香港所建的迪斯尼，艾肯认为，其在长三角市场的介入，不仅将对原本已经竞争激烈的长三角主题公园市场产生巨大冲击，作为迪士尼全球战略的重要部署，其也将对亚洲主题公园的发展格局产生影响。而对于上海的城市发展而言，主题公园本身即对地区商业，服务业，交通运输业有重大的拉动作用，而作为国际顶尖品牌的介入，也将为上海的国际化道路增添新亮点。</span><a name="_GoBack"></a><span></span></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-758.html">
+                        上一篇:<span class="on">【艾肯周讯】138期</span></a>
+                    </li>
+                    <li><a href="/news/item-756.html">
+                        下一篇:<span>【艾肯周讯】140期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

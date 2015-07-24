@@ -1,0 +1,450 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】095期</h1>
+                <h2>
+                    <a>发布日期：2012/7/13 14:49:32</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="text-align:center;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:微软雅黑;color:#ff6600;font-size:18pt;font-weight:bold;">艾肯周讯</span><span style="font-family:微软雅黑;color:#ff6600;font-size:18pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#ff6600;font-size:15pt;font-weight:bold;">旅游</span><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;font-weight:bold;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">中国国家旅游局鼓励民间资本投资旅游业</span><span style="font-family:华文细黑;color:#0000ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;color:#000000;font-size:9pt;" class="15">21CN新闻&nbsp;&nbsp;&nbsp;2012-07-03</span><span style="font-family:宋体;color:#000000;font-size:9pt;" class="15"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;color:#000000;font-size:9pt;" class="15">&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;color:#000000;font-size:9pt;" class="15"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">国家旅游局近日发布《关于鼓励和引导民间资本投资旅游业的实施意见》。分析人士认为，意见的发布有利于进一步促进民间资本进入旅游行业，对旅游板块形成正面带动。政策旅游业全方位向民资开放意见提出，坚持旅游业向民间资本全方位开放，鼓励各类社会资本公平参与旅游业发展，鼓励各种所有制企业依法投资旅游产业。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">山东完善旅游接待统计体系</span><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;color:#000000;font-size:9pt;" class="15">中国旅游报</span><span style="font-family:宋体;color:#000000;font-size:10pt;" class="15">&nbsp;2012-07-06</span><span style="font-family:宋体;font-size:9pt;"><br />
+</span><span style="font-family:Tahoma;color:#000000;font-size:10pt;" class="15">　　</span><span style="font-family:'Times New Roman';color:#000000;font-size:10pt;" class="15"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">由山东省旅游局和山东省统计局联合开展的山东旅游接待统计体系建设工作日前全面启动。作为此次统计体系建设的核心，山东将对住宿设施和游览区点进行全面盘点和调查，并以各地住宿单位名录库数据中的“过夜人数”为依据，考核旅游排名。</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">成都文旅集团与川大携手共同培养文化旅游人才</span><span style="font-family:瀹嬩綋;color:#000000;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">四川在线&nbsp;&nbsp;2012-07-07</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今日，由四川大学文学与新闻学院、成都文旅集团联合主办的“当代艺术生产与文化旅游产业发展研讨会”在蓉举行。研讨会上，成都文旅集团与四川大学文学与新闻学院签订了战略合作协议，就人才培养、文化旅游的成果转化和应用、文化旅游重大专题项目申报及实施重大文化旅游项目合作等方面达成合作意向。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:10.5pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#ff6600;font-size:15pt;font-weight:bold;">房地产</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">房地产交易多重上市服务系统"在深圳通过验收评审</span><span style="font-family:Calibri;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><a href="http://www.soufun.com/"><span style="font-family:宋体;font-size:9pt;">新浪网</span></a></span><span style="font-family:宋体;font-size:9pt;">&nbsp;&nbsp;2012-07-05</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#000000;font-size:10pt;" class="15"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">7月4日，住房和城乡建设部信息中心在深圳召开了科学技术项目“房地产交易多重上市服务系统(MLS)”验收会议。该系统可对房地产经纪机构、房地产经纪人员、房地产基础数据、房地产交易过程进行数据归集与应用设计，形成了具有唯一性的房源验证标识，完成了房地产交易系统的数据交换及传输规范，实现了房源和交易的真实化。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:21pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:10.5pt;"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">中国央行个人住房贷款利率浮动区间不作调整</span><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">华龙网&nbsp;&nbsp;2012-07-05</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#000000;font-size:10pt;" class="15"></span>
+</p>
+<p style="text-align:justify;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:10.5pt;">&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;font-size:9pt;">中国人民银行网站7月5日消息显示，中国人民银行决定自2012年7月6日起下调金融机构人民币存贷款基准利率，但个人住房贷款利率浮动区间不作调整。央行强调，金融机构要继续严格执行差别化的各项住房信贷政策，继续抑制投机投资性购房。</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">中国上市房企2012年6月销售集体飘红</span><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">21CN新闻&nbsp;&nbsp;2012-07-06</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-align:justify;background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">截至5日，包括龙湖、万科、华润、绿城、碧桂园、融创中国在内的多家标杆房企纷纷晒出“期中成绩单”。其中，大部分企业完成了年度目标的50%以上。万科的业绩遥遥领先，上半年累计实现销售金额625.4亿元，其中6月单月贡献133.2亿元，为今年卖得最好的一个月。而昨日发布业绩的龙湖地产称，上半年销售金额为174.6亿元，6月单月实现合同销售金额45.4亿元，环比增35.5%。</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#ff6600;font-size:15pt;font-weight:bold;">经济</span><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">中国文化产业投资基金拟向文化传媒企业投资10多亿</span><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">中证网&nbsp;&nbsp;2012-07-08</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;font-size:9pt;">新华社记者从日前举行的“文化产业发展趋势与投资策略暨中国文化产业投资基金成立一周年高层论坛”上获悉，中国文化产业投资基金未来六个月，拟斥资10多亿元人民币，对国内多家文化传媒企业进行投资。目前，中国文化产业投资基金已相继投资中央重点新闻网站“新华网”、国家级大型出版发行机构“中国出版集团”等５家重量级文化企业。投资范围主要圈定在传统媒体、新媒体和文化关联行业三个领域。</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">人民币成为国际支付货币的进程正在加快</span><span style="font-family:Calibri;color:#0066ff;font-size:12pt;font-weight:bold;">&nbsp;</span><span style="font-family:Calibri;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">中国经济网&nbsp;&nbsp;2012-07-08</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#000000;font-size:10pt;" class="15"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">刚刚结束对中国访问的伦敦金融城政策与资源委员会主席包墨凯在接受新华社记者采访时说，人民币国际化进程已进入快速道，人民币正朝着成为国际支付货币之一的方向迈进。他说，人民币国际化有利于增加中国同其他国家之间的贸易和投资，人民币离岸市场使英国和欧洲其他国家的跨国公司在开展对华贸易时更容易操作，同时也创造了更多贸易机会，为投资者提供了投资人民币产品的机会。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:24pt;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span>
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">江苏无锡举办海峡两岸ICT合作交流会</span><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">科技日报&nbsp;&nbsp;2012-07-08</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#000000;font-size:10pt;" class="15"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">日前，来自海峡两岸的100多家物联网、云计算、软件及现代服务业企业等，共同出席“海峡两岸ICT合作交流会”，探讨产业发展方向与对接交流。据了解，无锡是国家集成电路设计产业化基地，是国家物联网创新示范区。</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;color:#000000;font-size:10.5pt;"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#ff6600;font-size:15pt;font-weight:bold;">艾肯观点</span><span style="font-family:宋体;color:#000000;font-size:10.5pt;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;">国内最大健康养老主题园落户桐乡&nbsp;民资试水养老产业</span><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;font-weight:bold;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">中国日报网&nbsp;&nbsp;&nbsp;2012-07-04</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:华文细黑;color:#000000;font-size:10pt;" class="15"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">6万平方米的医疗公园、1万个养老床位、60个班级的老年大学、德国医疗专家量身打造的健康生活模式……不久的将来，一座国内功能最全、设施最先进、模式最多样、规模容量最大的复合休闲健康养老主题园区将在乌镇呈现。</span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">这个总投资超百亿的产业园，是中国首个国家社保基金参与投资的综合性健康养老产业园区，目前已被列入2012年浙江省重点建设项目和服务业重大项目。“这个项目不仅将为乌镇的旅游产业增加一枚金制砝码，也为桐乡打造未来中国休闲养生目的地迈出了坚实的一步。”对于该项目的前景，桐乡市委书记卢跃东信心十足。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span><span style="font-family:宋体;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:宋体;font-size:9pt;">观点：中国目前已经进入老龄化社会，研究数据显示，&nbsp;2015年后，中国老年抚养比将远超青年抚养比。艾肯认为，老龄化压力的到来也伴随着银发市场的蓬勃，而旅游与地产都将成为养生养老产业迅速崛起的发力点。近两年全国房地产企业投身养老地产的热情高涨，市场表现活跃，养生养老地产俨然成为宏观调控环境下房地产业的一大破局点。而同样的，人们对健康养生需求的日益强烈也为养生主题的旅游与休闲度假产品提供广阔的发展空间，促进中国旅游产业向更多元、更健康的方向发展。</span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-877.html">
+                        上一篇:<span class="on">【艾肯周讯】094期</span></a>
+                    </li>
+                    <li><a href="/news/item-875.html">
+                        下一篇:<span>【艾肯周讯】096期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】109期</h1>
+                <h2>
+                    <a>发布日期：2012/11/26 14:24:03</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国出入境游均居世界第三<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>福建日报<span><span class="Apple-converted-space">&nbsp;</span>2012-11-15</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">国家旅游局相关负责人１４日在２０１２中国国际旅游交易会组委会新闻发布会上说，我国已成为世界第三大入境旅游接待国和出境旅游消费国，正形成全球最大的国内旅游市场。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">云南华侨城建设进入新阶段</span></b><b><span style="font-family:宋体;color:#333333;font-size:12pt;"></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">云南日报<span><span class="Apple-converted-space">&nbsp;</span>2012-11-16</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>备受期待的云南华侨城重点项目之一的圣托里尼大酒店<span>11</span>月<span>1</span>日<span>A</span>、<span>B</span>区顺利封顶。该酒店的封顶也标志着云南华侨城的建设进入新阶段。据悉，圣托里尼大酒店计划将完成主体建筑施工，明年转入室内装修及前期筹备，预计将于<span>2014</span>年正式营业。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2012</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国国际旅游交易会在上海开幕<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>湖南日报<span><span class="Apple-converted-space">&nbsp;</span>2012-11-16</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>作为亚太地区规模最大、影响最广泛的综合性旅游展会之一，<span>2012</span>中国国际旅游交易会昨晚在上海开幕。本届交易会展台总数达<span>2514</span>个，参展国家及地区<span>104</span>个，为历届旅交会规模之最。湖南展台以“锦绣潇湘，快乐湖南”的主题，主打好美、好奇、好玩的“三好”湖南和高铁产品。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">房地产</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">香港铜锣湾成全球最贵零售地段</span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">人民网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-11-15</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">香港一家物业顾问公司的报告显示，地处港岛中部的铜锣湾租金已超越纽约第五大道，成为全球最昂贵的购物地段。报告指出，铜锣湾租金今年增长近<span>35%</span>，每年每平方英尺<span>2630</span>美元。巴黎香榭丽舍大道则超越东京银座，在全球最昂贵购物地段排名第<span>3</span>。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">深圳万科或连续第二年无法完成年度目标<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">新浪网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-11-15</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;<span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">近来，众多上市房企公布前十个月销售业绩，在已公布的<span>10</span>大上市房企中，中海、保利、招商等<span>6</span>家上市房企提前完成<span>2012</span>年度销售目标，而万科等<span>4</span>家房企未能提前完成，但万科还是以<span>1100.2</span>亿元的销售业绩占据排行榜第一位，而其去年就未能完成年度目标，同样占据第一位。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国新城镇以<span>2.79</span>亿拍卖上海罗店土地<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中证网</span><span><span style="background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-11-16</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span><span>&nbsp;</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国新城镇（<span>01278</span>）公布，已成功拍卖位于上海罗店项目的<span>E4-1</span>地块的土地使用权。该土地占地面积约为<span>3.45</span>万平方米，其容积率约为<span>1</span>倍。该地块以<span>2.79</span>亿元（人民币，下同）卖出，折合每平方米占地面积及建筑面积平均售价约<span>8080.69</span>元。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">经济</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">江苏连云港保障房成省级绿色建筑示范</span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">中国建设报</span><span style="background:white;color:black;font-size:9pt;"><span><span class="Apple-converted-space">&nbsp;</span>2012-11-12</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日前，江苏省连云港市住房保障中心负责建设的市区经济适用住房小区被评为</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">2012</span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">年度江苏省级绿色建筑示范项目，获得建筑节能专项引导资金</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">249</span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">万元。这是连云港市首次获得保障性住房小区绿色建筑示范项目。</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">　<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国<span>"</span>美丽中国<span>"</span>五年撬动<span>8</span>万亿绿色投资<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">经济参考报<span><span class="Apple-converted-space">&nbsp;</span>2012-11-13</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;&nbsp;<span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span><span>&nbsp;</span></span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">十八大报告专门辟出一个章节，论述“大力推进生态文明建设”，为未来勾画出一个天蓝、地绿、水净，人与自然和谐发展的“美丽中国”。这是十八大报告关于全面建成小康社会新要求中的一大亮点。面对资源约束趋紧、环境污染严重、生态系统退化的严峻形势，以不断消耗资源和制造二氧化碳为代价的传统发展模式已经难以为继。从全球范围看，节能、循环、低碳正成为新的发展方式，“绿色工业革命”已然拉开帷幕。快速发展中的中国，也必须通过推进生态文明建设，转向资源节约型和环境友好型的产业结构、增长方式、消费模式，实现中华民族的永续发展。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">青岛西海岸开展<span>27</span>项改革试点任务<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="background:white;color:black;font-size:9pt;"><span>青岛财经日报</span></span><span style="font-family:Calibri, sans-serif;background:white;color:black;font-size:9pt;"><span class="Apple-converted-space">&nbsp;</span>2012-11-16</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">“西海岸新区是否向国家申请升级为国家级新区了？是否有可能被批为和浦东一样的国家级新区？”针对网友的这一问题，任振刚解释说，西海岸经济新区是我市经济社会发展的重要一极，目前国家正在研究管理办法，规范控制新城新区设立。现阶段，我市正在争取国家发改委批复西海岸经济新区发展规划。</span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">艾肯观点</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">湖南芒果网推<span>"1</span>元<span>"</span>促销旅游产品<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span><span style="background:white;color:black;font-size:9pt;">北京商报网<span><span class="Apple-converted-space">&nbsp;</span>2012-11-15</span></span><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">记者从芒果网获悉，芒果网“双</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">”大促消将延续到</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月</span><span style="background:white;color:black;font-size:9pt;"><span>18</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日。消费者可在芒果网抢购</span><span style="background:white;color:black;font-size:9pt;"><span>1</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>111</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>1111</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>11111</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元的特惠旅游产品。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">据介绍，芒果网推出了“旅游狂欢节”，包含</span><span style="background:white;color:black;font-size:9pt;"><span>1</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>111</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>1111</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元、</span><span style="background:white;color:black;font-size:9pt;"><span>11111</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">元五种价位的特惠旅游产品。旅游产品内容涵盖酒店、机票、租车、旅游线路等。与往年相比，今年“双</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">”促销战线明显拉长。业内人士认为，由于淘宝“双</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">”的火爆，众多电商未针对</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日当天特别宣传，更多的是将促销时间拉长，重点放在</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">日前后。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">芒果网市场营销部助理总经理何京京表示，芒果网借“双</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">”打造</span><span style="background:white;color:black;font-size:9pt;"><span>11</span></span><span style="font-family:宋体;background:white;color:black;font-size:9pt;">月“旅游狂欢月”，后续还将推出春节机票“早鸟计划”、圣诞新年优惠出行等促销活动。</span><span style="background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="background:white;color:black;font-size:9pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;">观点：以往商家对于节假日活动的策划与执行的周期通常较短，容易导致促销活动扎堆，行业同质化竞争加剧，总体效果打折。此次商家将精力投入到节假日的前后，开展促销“持久战”，这显然更符合市场需要，也吻合消费者的期待，其收益也会有明显增加。艾肯认为，旅游促销也可以多采取“拉长线”的方式，不仅在时间上面延展，更要在景点和线路方面扩张。如今年深圳华侨城各主题公园的“万圣节”活动就将周期扩大到近两个月，并分别呈现不同形式的主题游乐活动，使消费者不仅能有更多选择的时间，也能选择更多的目的地，而商家也能在此类的促销中得到更多的收益。</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"></span>&nbsp;
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;background:white;color:black;font-size:9pt;"><a href="http://www.come23.com/news.asp?id=894&amp;action=Detailed" target="_blank">【陕西】热烈祝贺汤峪温泉项目获得“中国最美小镇”荣誉称号</a></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-863.html">
+                        上一篇:<span class="on">【艾肯周讯】108期</span></a>
+                    </li>
+                    <li><a href="/news/item-861.html">
+                        下一篇:<span>【艾肯周讯】110期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

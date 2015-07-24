@@ -1,0 +1,422 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】156期</h1>
+                <h2>
+                    <a>发布日期：2014/6/9 16:15:39</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span>旅游<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>广西工业旅游节邀客“尝鲜”<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>中国旅游报<span><span>&nbsp; </span>2014-05-30</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">为期两个月的广西<span>—</span>东盟经济技术开发区“<span>2014</span>年工业旅游节”日前开幕，这也是广西首次举办工业旅游节。主办方推出的时尚工业游、诗意田园游、侨乡风情游三条线路让游客倍感新鲜。据了解，此次工业旅游节期间，旅游者可以走进企业场区内参观，观看到日常所接触到的食品的生产线；参观珠江啤酒、双汇食品、伊利冷冻食品等企业的生产线，免费品尝到最新鲜的啤酒、饮料、火腿肠、冰淇淋，来一场“舌尖上的旅游”；还可以参观全国最大的华侨农场并领略广西特有的侨乡风情。<span style="color:black;"> </span></span><span style="font-family:宋体;"></span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>海上观日公海游渐行渐近上海将推广邮轮体验休闲项目<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>东方网<span><span>&nbsp; </span>2014-05-29</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:Simsun;color:black;">&nbsp;&nbsp;<span>&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:black;">记者昨日从上海中国邮轮旅游发展实验区联席会议上获悉，上海有望试点邮轮无目的地航线经营活动，交通部水运局已原则上同意。此外，上海机场实行的</span><span style="font-family:Simsun;color:black;">72</span><span style="font-family:宋体;color:black;">小时过境免签政策，也有望扩展至邮轮口岸，吸引更多邮轮游客上岸旅游。市交通委主任孙建平介绍，上海正重点推进有条件地试点邮轮公司经营无目的地航线</span><span style="font-family:Simsun;color:black;">(</span><span style="font-family:宋体;color:black;">公海游</span><span style="font-family:Simsun;color:black;">)</span><span style="font-family:宋体;color:black;">，争取交通运输部和相关口岸部门支持，选择有条件的港口企业和邮轮公司试点“邮轮体验”、“海上观日出”等休闲项目。同时，鼓励邮轮公司开发多港挂靠航线，以及包括台湾、香港和其他境外港口的混合航线。</span><span style="font-family:Simsun;color:black;"></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>牙买加正式对中国游客免签<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>东方卫报<span><span>&nbsp; </span>2014-05-29</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">牙买加外交部<span>27</span>日宣布，正式开始实施对中国游客的免签政策。牙买加外交部在通告中说，根据免签方案，中国公民凭有效护照、返程机票或船票、入住酒店信息及足够的旅费入境牙买加可免办签证，停留时间不超过<span>30</span>天。但入境目的仅限于旅游，在牙买加境内居留、工作、学习、经商等仍需提前办理签证。加勒比海岛国牙买加是世界知名度假胜地，以阳光沙滩、蓝山咖啡和雷鬼音乐闻名。<span>2013</span>年，牙买加接待国外游客超过<span>200</span>万人次，以欧美游客为主。</span><span style="font-family:宋体;"></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span>房地产<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>专业细分市场成中国地产行业发展趋势<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>中国经济时报<span><span>&nbsp; </span>2014-05-29</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span><span></span></span></span></span>&nbsp;
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">近年来，随着住宅市场遭遇频繁调控，风险及不确定性不断增加，房企开始纷纷寻找住宅市场之外新的盈利点。同时，随着行业发展，细分化成为必然趋势，例如商业地产、旅游地产、养老产品、企业会所产品、高端豪宅产品等等细分市场开始成为房企关注的新领域。</span><span style="font-family:Simsun;color:black;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:Simsun;color:black;"><span><span>&nbsp; </span></span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>中国资金面困难将深化楼市调整<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>经济参考报<span><span>&nbsp; </span>2014-06-03</span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">资金面始终是楼市周期性调整的基本动因。今年年初以来，我国多家房地产开发企业因资金面承压或资金链条断裂，经营出现困境乃至于面临破产威胁。随着实体经济经营风险向金融领域加速传导，全社会风险偏好呈下降态势，将对楼市资金面形成有效制约，楼市周期性调整进程有可能会继续深化。</span><span style="font-family:宋体;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>深圳限购政策短期内难松动<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>深圳特区报<span><span>&nbsp; </span>2014-05-29</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">部分城市出台措施放开限购引发关注。深圳会否放松限购？记者从相关部门了解到，深圳短期内暂不会出台楼市分类调控政策。市场分析人士认为，深圳楼市供求关系、结构仍处于健康水平，没有取消限购的动力，短期内，深圳楼市的限购难以松绑。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<a name="_GoBack"></a><span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span>经济<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>发改委表示中国区域规划和政策不存在过多过滥问题<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>成都日报<span><span>&nbsp; </span>2014-05-29</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">针对我国区域规划过多、过滥的质疑，国家发展和改革委员会副秘书长范恒山<span>28</span>日说，我国幅员辽阔、人口众多，各地的自然经济、社会发展条件差异明显。从各个区域板块的实际出发，制定相对独立的区域政策和区域规划，有利于发挥比较优势，增强区域核心竞争力。我国区域规划和政策文件不存在过多、过滥和遍地开花的问题。 </span><span style="font-family:宋体;"></span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>国家发改委表示正酝酿支持东北经济发展一系列政策措施<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>东北新闻网<span><span>&nbsp; </span>2014-05-29</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:Simsun;color:black;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">据介绍，发改委将考虑在以下方面加大工作力度：进一步深化改革，推动各级政府转变政府职能，深化国企改革，扶持非公有制经济发展，最大限度释放改革红利。加快产业转型升级，进一步发挥科技创新的支撑作用，提升传统产业，发展战略性新兴产业，大力发展生产性服务业，特别是推进工业化和信息化的融合发展<span>;</span>提升城镇化的质量，完善城市群和城镇布局，提高城市综合功能，还要加快城区老工业区的改造，推进资源枯竭城市转型和独立工矿区改造搬迁。</span><span style="font-family:宋体;color:black;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span><span><span>&nbsp;&nbsp; </span></span></span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>上海推进产业园区转型<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>经济日报<span><span>&nbsp; </span>2014-06-03</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:15.75pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">在日前举办的<span>2014</span>上海智慧园区发展论坛上，上海市经济和信息化委员会宣布开展临港产业园、上海国际旅游度假区、上海世博园等首批<span>12</span>家智慧园区试点建设，年内将依托行业组织开展试点园区的规划研讨、项目对接、跟踪推进、经验交流等活动，聚焦推进一批园区信息化应用重点项目。</span><span style="font-family:宋体;color:black;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:Simsun;color:black;"><span>&nbsp;&nbsp; </span></span><span style="font-family:华文细黑;"></span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span>艾肯观点<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span>长三角水公园密集扎堆 各景区纷打“戏水牌”吸眼球<span></span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span><span>中国新闻网<span><span>&nbsp; </span>2014-06-02</span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;"><span>&nbsp;&nbsp;&nbsp; </span>5</span><span style="font-family:宋体;">月末的长三角地区气温节节攀升，与提早入夏的气温同样火热的，还有长三角各大景区推出的各种眼花缭乱的暑期“水产品”。据了解，<span>5</span>月<span>31</span>日，华东最大的主题公园中华恐龙园鲁布拉巅峰水世界将正式开放，而紧随其后的，还有上海欢乐谷、芜湖方特等长三角数十个主题公园纷纷推出的水上乐园产品，并有众多新项目扎堆启用，一时间今夏长三角地区“水上抢客争夺战”的序幕已悄然拉开</span><span style="font-family:宋体;">。</span><span style="font-family:宋体;"></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">观点：近三年，华东多地纷纷上马水上乐园项目，据不完全统计，华东地区建成已开放的水上乐园项目就达到数十家。旅游业内专家表示，水上乐园产品有较强的地域性，且市场以本地及周边为主，主要覆盖的是短途玩水人群。艾肯认为，水上乐园是当下都市旅游的热点，但常常面临季节性强、辐射范围小等经营难题。不少水上乐园的游乐项目大同小异</span><span><span>,</span></span><span style="font-family:宋体;">差异化不大。水上乐园的发展需走差异化路线，产品发展从单一到综合，在丰富本身经营内容的同时，增加更多的游乐项目，提高亲水文化内涵，以全方位的服务和完善的配套设施为依托，成为一个综合的旅游服务提供者。这样对游客来说</span><span><span>,</span></span><span style="font-family:宋体;">长距离的出行才有动力。</span></span><span></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-741.html">
+                        上一篇:<span class="on">【艾肯周讯】155期</span></a>
+                    </li>
+                    <li><a href="/news/item-739.html">
+                        下一篇:<span>【艾肯周讯】157期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

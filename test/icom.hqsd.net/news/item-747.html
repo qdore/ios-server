@@ -1,0 +1,434 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】149期</h1>
+                <h2>
+                    <a>发布日期：2014/4/17 16:35:24</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">2014</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">年中国在线旅游价格战还将升级<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:华文细黑;">21CN</span><span style="font-family:华文细黑;">新闻<span>2014-04-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">在线旅游业价格战愈发激烈，行业格局也是频繁出现变动。近日，香港上市企业香港中旅宣布出售旗下亏损的芒果网以及两家旅行社。剔除利息等收入，芒果网集团自开业后连续八年持续亏损。数据显示，去年中国在线旅游市场交易规模为</span><span><span>2204.6</span></span><span style="font-family:宋体;">亿元，同比增长</span><span><span>29.0%</span></span><span style="font-family:宋体;">。分析指出，在线旅游企业价格战持续，随着阿里、腾讯、百度加速布局在线旅游市场，未来行业格局也将进一步变化。</span><span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">2014</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">年<span>1</span>季度中国旅游总收入预计同比增长<span>15.2%</span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>消费日报<span>2014-04-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">中国旅游研究院</span><span><span>4</span></span><span style="font-family:宋体;">月</span><span><span>10</span></span><span style="font-family:宋体;">日在京发布报告称，</span><span><span>2014</span></span><span style="font-family:宋体;">年第一季度旅游经济平稳增长，中端市场及基于互联网的产业创新活跃，旅游者消费更加理性；预计一季度接待总人数逾</span><span><span>11.5</span></span><span style="font-family:宋体;">亿人次，同比增长</span><span><span>11.8%</span></span><span style="font-family:宋体;">，旅游总收入达</span><span><span>9630</span></span><span style="font-family:宋体;">亿元，同比增长</span><span><span>15.2%</span></span><span style="font-family:宋体;">。</span><span style="font-family:'Simsun','serif';color:black;">?</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">山东打造滨海度假综合体样板区<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京商报网<span>2014-03-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:'Simsun','serif';color:black;">??</span><span style="font-family:宋体;color:black;">山东省“仙境海岸”度假产品日前正式上线，海阳以此为契机探索打造以文化主题、度假休闲、康体运动、养生理疗“四位一体”为主线的“海阳模式”，将成为“仙境海岸”滨海度假综合体的样板在山东省推广。据山东省旅游局介绍，“仙境海岸”度假综合体是以度假酒店等接待设施为核心，通过完善餐饮、娱乐等服务功能，整合半个小时车程内的旅游服务、休闲娱乐配套设施以及景区养生修学等资源，打造可以提供２－７天以“仙居、道宴、逍遥游、养生修学”为主体的度假综合体。</span><span style="font-family:'Simsun','serif';color:black;"></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中小房企一线城市高价抢地<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>证券日报<span>2014-04-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">最新数据显示，万科、保利等</span><span><span>16</span></span><span style="font-family:宋体;">家标杆房企今年首季拿地总金额环比降幅高</span><span><span>37</span></span><span style="font-family:宋体;">％，而中小房企成为土地市场的主角。昨日上海土地市场出让的三幅土地中，有两幅均被中小房企拿下。三幅地块总成交价约</span><span><span>38</span></span><span style="font-family:宋体;">亿元。其中，信达地产以</span><span><span>13.13</span></span><span style="font-family:宋体;">亿元竞得其中一块，溢价高达</span><span><span>100.15</span></span><span style="font-family:宋体;">％。而另一块被同为中小房企的建发股份溢价</span><span><span>55.2</span></span><span style="font-family:宋体;">％拿下。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">环京楼市高烧不停　开发商扬言房价还要涨<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国新闻网<span>2014-04-11</span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">近来，围绕“京津冀一体化”概念的讨论持续升温，战略规划辐射中的廊坊、保定、涿州等地的房价上涨明显，很多楼盘甚至声称下次开盘房价还要上调，最高达</span><span><span>800</span></span><span style="font-family:宋体;">元／平米。目前，“京津冀一体化”战略尚未落实相关细节，针对当前环首都城市楼市的躁动，有专家认为，保定、固安等地房价不会持续暴涨，在实际战略规划未落地前应谨慎购房。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">房价下降楼市被看空　<span>4</span>月首周<span>54</span>城住宅成交跌<span>32</span>％<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国新闻网<span>2014-04-10</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>中原地产报告数据显示，<span>4</span>月首周全国主要<span>54</span>城市合计住宅签约套数为<span>3.84</span>万套，同比下降比例达<span>32</span>％，环比<span>3</span>月同期下降比例为<span>17</span>％。<span>4</span>月初市场延续了一季度的冷清局面。与此同时，北京在二手房和新建住宅成交上均未见起色。上海易居房地产研究院研究员严跃进告诉记者，有<span>20</span>个城市房地产库存创下近<span>5</span>年的历史新高。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">经济风险加剧<span>IMF</span>再吁加强国际合作<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京商报<span>2014-04-11</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">国际货币基金组织（</span><span><span>IMF</span></span><span style="font-family:宋体;">）春季会议今日正式开始，全球经济却仍旧“乍暖还寒”。也正是在这样的背景下，随着博鳌亚洲论坛今日闭幕，预计国际社会的目光将由海南转移到华盛顿，据悉，</span><span><span>188</span></span><span style="font-family:宋体;">个成员国的代表、官员将齐聚</span><span><span>IMF</span></span><span style="font-family:宋体;">总部，就未来世界经济和金融形势展开讨论，美联储</span><span><span>QE</span></span><span style="font-family:宋体;">退出后的溢出效应、欧元区低通胀的潜在风险等都是值得本次会议关注的重要议题。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国<span>"</span>政策红利期<span>"</span>已过文化产业转投无形资产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>搜狐财经<span>2014-04-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>在文化投资</span><a name="_GoBack"></a><span>持续推进下，</span></span><span><span style="font-family:'Simsun','serif';color:black;">2012</span><span style="font-family:宋体;color:black;">年，我国文化产业法人单位实现增加值</span><span style="font-family:'Simsun','serif';color:black;">18071</span><span style="font-family:宋体;color:black;">亿元，占到</span><span style="font-family:'Simsun','serif';color:black;">GDD</span><span style="font-family:宋体;color:black;">的</span><span style="font-family:'Simsun','serif';color:black;">3.48%.</span><span style="font-family:宋体;color:black;">。但从历年文化投资趋势来看，公共财政资金实现政府职能主导文化公共产品投资，拉动了文化艺术服务和文化休闲娱乐服务行业的固定资产投资，同时，以规模较大的固定资产投资为主的文化地产、文化旅游项目成为文化产业投资的热点行业。业内诸多专家认为，政策红利所带来的文化产业投资热潮在一些领域已经产生了“结构性过剩”，文化产业的发展势必要以“市场”为主导，政府也要懂得如何放手，如何把握这个度，而金融行业也要研究适应“无形资产”的信贷模式。</span><span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">沃尔玛在中国以退为进关多家旧店扩张三四线<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>网易<span>2014-04-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">近一两年来沃尔玛频频关店。近日，沃尔玛公关部在给《每日经济新闻》记者的一份书面资料显示，成都又一家门店即将关闭。与此同时，沃尔玛表示将扩张在四川三、四线城市的份额。对此，沃尔玛大卖场营运高级总监（云贵川渝）吴丛表示，改善业态组合是为了跟随中国城镇化步伐，适应新型城市商圈，“确保公司在市场发展的正确轨道上”。而商务部研究院消费经济研究部副主任赵萍对《每日经济新闻》记者表示，沃尔玛加码三、四线城市或许为其</span><span style="font-family:'Simsun','serif';color:black;">O2O</span><span style="font-family:宋体;color:black;">战略布局，是一种以退为进的战略。</span><span style="font-family:华文细黑;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">福建茶乡武夷与陶都宜兴携手壶茶文化旅游交流合作<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>海南日报<span>2014-04-02</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span><span>4</span></span><span style="font-family:宋体;">月</span><span><span>13</span></span><span style="font-family:宋体;">日下午，茶乡武夷</span><span><span>--</span></span><span style="font-family:宋体;">陶都宜兴壶茶文化交流旅游合作协议，在中国陶都陶瓷艺术国际博览中心正式签约，两地政府领导就各自文化旅游建设介绍了经验，畅谈了下一步的发展前景与规划，标志着具有悠久历史的两座文化城市，建立联合联动、信息共享等机制，共同探索合作模式，提升城市文化品牌形象，进入全新的相互促进发展阶段。</span><span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">观点：这次携手签约，为茶乡武夷、陶都宜兴缔结文化旅游姊妹城市搭起了桥梁，使双方品牌资源深度整合嫁接，实现两地公共品牌价值提升、文化融合传播，推动双方旅游文化项目的深度发展。艾肯认为，</span><span style="font-family:宋体;">武夷和宜兴的的携手合作是强强联合，旅游共赢。这种以文化为纽带的旅游资源整合形式，打破了地域限制，是对区域旅游资源整合模式的创新，为其他旅游文化资源整合提供了良好借鉴。</span><span style="font-family:'Simsun','serif';color:black;"></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-748.html">
+                        上一篇:<span class="on">【艾肯周讯】148期</span></a>
+                    </li>
+                    <li><a href="/news/item-746.html">
+                        下一篇:<span>【艾肯周讯】150期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】125期</h1>
+                <h2>
+                    <a>发布日期：2013/8/23 10:38:42</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="text-align:left;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游</span></b> 
+</p>
+<p style="text-align:left;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span></span></span></b>&nbsp;
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">厦门居全国游艇产业发展之首<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">福建日报<span>2013-08-13</span></span> 
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">近日出炉的《<span>2012</span>－<span>2013</span>中国游艇产业报告》对中国游艇城市发展状况做出评估，在国内<span>14</span>个参评城市中，厦门力压海口、三亚、深圳等地，位居榜首。考察内容涉及自然环境、政府管理竞争力、游艇工业竞争力、游艇服务竞争力等四大板块。结果显示，厦门已成为中国游艇经济发展的热点城市。<span></span></span> 
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">据统计，<span>2012</span>年，厦门五缘湾游艇港游艇销售<span>158</span>艘，其中小型游艇销售量占全年的<span>85%</span>。今年上半年，五缘湾游艇港销售游艇<span>41</span>艘。在售出的游艇中，<span>40</span>以下的小型游艇持续热销。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">2015</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">年江苏省级以上旅游度假区将无线全覆盖<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">新华网<span>2013-08-13</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">在度假区随时随地可以无线上网；开发主题游乐、邮轮游艇等项目吸引游客过夜<span>……</span>昨天，江苏省政府办公厅印发了关于推进旅游度假区发展的意见，其中描绘的度假方式值得期待。据悉，江苏将探索利用沿海滩涂、无居民海岛和荒山、荒地、荒滩等土地资源发展旅游度假项目。到<span>2015</span>年，省级以上旅游度假区将实现无线网络覆盖。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">山东邹城市旅游局开通官方旅游微信<span>"</span>邹城旅游<span>"</span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">新华网<span>2013-08-15</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">山东省邹城市旅游局开通了官方旅游微信<span>“</span>邹城旅游<span>”</span>，这是继新浪、腾讯微博开通后，与网友之间建立起来的又一新型沟通互动方式，也是开启<span>“</span>智慧旅游营销<span>”</span>的一次尝试。通过该微信平台，网友可以第一时间获取最新的旅游资讯、节庆活动、旅游团购、自驾线路、当季主题旅游、旅游攻略等消息。同时，还可以通过官方微信，分享旅行途中的所见所闻、所思所感，并参与互动交流，对邹城旅游发展提供宝贵的建议和意见。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p style="text-align:left;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产</span></b> 
+</p>
+<p style="text-align:left;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span></span></span></b>&nbsp;
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">上海发行<span>13</span>亿元首笔保障房私募债<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">中证网<span>2013-08-12</span></span> 
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">该三年期私募债发行利率<span>6%</span>，将专项用于上海市保障房建设规划的曹路保障性住房项目。据称，与传统融资渠道相比，私募债等债务融资工具更受保障房建设企业欢迎，因它具有期限灵活成本低、总额大、使用限制少等特点。<span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><br />
+<br />
+</span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">澳洲最大开发商进军中国市场<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">中证网<span>2013-08-13</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">澳大利亚开发商逐渐认识到中国买家持续而强大的购买力，不约而同地进军中国市场。据悉，以建造悉尼歌剧院、马来西亚双子塔、伦敦奥运会场等闻名的澳洲最大开发商联盛集团联手澳洲最大的综合性房地产投资服务商鼎丰集团首次来到中国，<span>8</span>月<span>31</span>日，将在上海（楼盘）四季酒店展销世界顶级海湾豪宅<span>—</span>悉尼<span>Barangaroo</span>布朗格鲁。值得一提的是，第一期的<span>Barangaroo</span>布朗格鲁<span>159</span>套平均价格估计为人民币<span>11</span>万元一平方米。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国二手房交易资金监管新规催热垫资<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">金融界<span>2013-08-15</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">“</span><span style="font-family:宋体;font-size:9pt;">若办完过户才能拿到首付款，银行解抵押的<span>60</span>万元，我去哪里找辙呢？<span>”</span>望着<span>120</span>万元首付款却不能动，市民秦先生很纠结。本月起本市<span>12</span>个区县执行二手房交易资金监管，中介经手的买卖，房子不过完户，卖房人拿不到首付款。面对银行仍有欠款、需要解抵押的业主，不得不面对垫资业务，记者了解到，中介、典当行、担保公司的垫资都是高利贷，利息都远超央行相关规定。<span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p style="text-align:left;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济</span></b> 
+</p>
+<p style="text-align:left;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span></span></span></b>&nbsp;
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国互联网巨头抢滩金融业<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">人民网<span>2013-08-13</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">近期互联网巨头抢滩金融市场，阿里巴巴、新浪相继发布<span>“</span>余额宝<span>”</span>、<span>“</span>微银行<span>”</span>，微信<span>5.0</span>与<span>“</span>财付通<span>”</span>打通，现代科技行业正在成为传统金融行业的直接对手。以余额宝为例，上线仅仅<span>18</span>天，累计用户数已达<span>251.56</span>万，累计转入资金规模<span>66.01</span>亿元。据统计，截至今年<span>7</span>月，央行网站显示已有<span>250</span>家企业获得第三方支付牌照。专家分析称，当前，我国的金融创新仍然不足，已有的金融体系还比较僵化，还是应该鼓励探索创新，但监管也要同时跟进。<span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">广州易方达微信新添<span>"</span>微理财<span>"</span>功能<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">四川在线<span>2013-08-15</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">据悉，易方达昨日在微信上推出<span>“</span>易方达微理财<span>”</span>服务号并上线菜单式<span>“</span>微理财<span>”</span>功能，投资者可在手机上通过微信操作易方达旗下全部基金的申购赎回、账户查询、货币基金<span>T+0</span>赎回等指令。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">2013</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">年上半年日本企业对东盟投资远超对中国投资<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">财政部<span>2013-08-15</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">日本国际收支统计数据显示，<span>2013</span>年<span>1</span>～<span>6</span>月，日本对海外直接投资达<span>5.4285</span>万亿日元，同比增长<span>13</span>％。其中，日本对东盟直接投资达<span>9986</span>亿日元（约合人民币<span>639</span>亿元），同比扩大<span>4.2</span>倍，为<span>2005</span>年以来最高水平；对中国直接投资下降<span>18</span>％，仅为<span>4701</span>亿日元。日本对东盟投资额达对中国投资的<span>2</span>倍，显示日本企业对外直接投资（包括在海外建厂等）正加速转向东盟国家。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点</span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span></span></span></b>&nbsp;
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国互联网巨头加入加速在线旅游行业成熟<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">北京商报网<span>2013-08-15</span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<p style="text-indent:18pt;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">今年百度、阿里和腾讯等互联网巨头都加紧了在线旅游行业的布局，甚至传出了腾讯<span>60</span>亿美元收购携程的夸张传闻，巨头的加入某种程度上加速了整个行业的成熟，也让整个行业达到一个空前繁荣的阶段。在线旅游其实从来没有像今天一样有如此之多的公司和角色参与。创业公司都会有自己的核心竞争力，这是不可替代的。因此，公司要更专注于核心产品，这不是短时间内依靠品牌或是资金就完全能够形成的。<span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;"></span>
+</p>
+<span style="font-family:宋体;font-size:9pt;">观点：近年来，互联网与房地产业的巨头大鳄几乎是同步踏上了进军旅游产业开拓新市场的征途。究其原因，艾肯认为，随着各行业市场成熟与开放程度的提高，市场需求结构的多元化发展趋势的凸显，积极寻求产业联动与融合，是不同市场主体提升综合竞争力，助力自身产业转型的上善之选。旅游产业作为现代服务业的代表近些年来发展迅猛，且其产业包容性强的特点备受关注。国家旅游局局长邵琪伟表示，要用最短的时间使旅游企业经营活动全面信息化，全国多个省市也相继提出了开启“智慧旅游”时代的倡议。互联网产业的平台资源优势与旅游产业的实体消费需求由此迎来战略互补<a name="_GoBack"></a>的机遇。然而，在线旅游行业从萌芽发展到成长成熟，除了互联网巨头的助推力量，还需要一个重要的保障——即一个积极健康的竞争环境。</span>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-847.html">
+                        上一篇:<span class="on">【艾肯周讯】123期</span></a>
+                    </li>
+                    <li><a href="/news/item-845.html">
+                        下一篇:<span>【艾肯周讯】126期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

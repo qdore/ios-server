@@ -1,0 +1,428 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】133期</h1>
+                <h2>
+                    <a>发布日期：2013/11/1 15:26:06</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">深圳将整合资源建旅游数据库<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>南方都市报<span>2013-10-21</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>深圳仅四成旅游企业和旅行社拥有独立网站，旅游景点仅一成多有独立网站，深圳市文体旅游局近日答复政协委员提案时称，为提高旅游监管工作效率，已组织开发旅游监管系统。并通过信息采集整合旅游信息资源，将建立深圳旅游资源数据库。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">广西财政筹资<span>3</span>亿元促全区旅游业发展<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国房地产报<span>2013-10-21</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>近日，为贯彻落实广西壮族自治区旅游发展大会精神及《广西壮族自治区党委及自治区人民政府关于加快旅游业跨越发展的决定》、《广西壮族自治区人民政府关于印发加快旅游业跨越发展若干政策的通知》要求，广西壮族自治区财政多渠道筹集<span>2013</span>年全区旅游发展专项资金<span>3</span>亿元，以期大力推进全区旅游业跨越发展。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国旅游业正步入黄金发展期<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国质量报<span>2013-10-21</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>当前，在内需启动、消费升级以及国民收入不断提高的背景下，中国旅游业正步入黄金发展期。市场基本面呈现<span>“</span>两高一降<span>”</span>，产业和区域运行受宏观经济等发展环境影响结构调整明显加快，市场主体博弈加剧。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">南京首现小产权房转正<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>新华日报<span>2013-10-18</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>昨日，有媒体报道南京小产权房楼盘七彩星城或转正的消息，并称此举属违规。记者昨日采访南京住建、国土及购房人等获知，七彩星城是为解决历史遗留问题有条件的<span>“</span>转正<span>”</span>，而绝非南京<span>“</span>小产权房<span>”</span>要放开的信号。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国警惕房产商铺售后包租陷阱<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>新浪财经<span>2013-10-21</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>近日有报道称，为抢夺<span>“</span>金九银十<span>”</span>大餐，诸多开发企业近来纷纷推出众多项目，这其中，也包括为投资者提供的众多商业地产项目。中国最大商业地产服务机构<span>RET</span>睿意德最新调研发现，近些年在海景房、度假式酒店、产权式公寓等类别项目上红火过一阵子的<span>“</span>售后包租<span>”</span>手法，随着商铺项目的入市而更多地出现。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">浙江温州调整限购政策未改房价跌势<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>新民网<span>2013-10-23</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>据国家统计局统计，<span>9</span>月在全国<span>70</span>个大中城市中，温州是唯一一个新建商品住宅价格同比下降的城市，也是仅有的两个价格环比下降的城市之一。<span>8</span>月，温州曾调整住房限购政策，允许已购买一套住宅的本地户籍家庭再购买一套住宅，名下无房产的可以再购买两套。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国房地产政策可不限购而限转卖<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京商报<span>2013-10-10</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>著名经济学家厉以宁教授日前在广州发表演讲时表示，他对很多城市已推行多年的购房限购令提出质疑。他认为，公民有购买房屋的权利，不能有地区歧视，房子不能够限购，老百姓的需求不能压制，限购导致人们的住房需求得不到满足。厉以宁认为，国家应该把限购改为限售，学新加坡的经验，买房子可以，但是买了之后再卖就要受限制。卖得越早，交的税越高。把限售做好，限购根据情况来定。同时，他认为小产权房转正将缓解城市住房问题。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国企业境外投资审批权限<span>90%</span>已下放<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>新民网<span>2013-10-24</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>近年来，很多国内车企走出国门着手投资兼并海外资产，而政府审批是必经之路。在本届全球汽车论坛上，商务部对外投资和经济合作司商务参赞陈林表示，对于企业境外投资，商务部已经将<span>90%</span>的权限都下放到省级，需要由商务部批准的项目时限也只有<span>15</span>天。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国人民币国际化稳步推进<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>上海金融报<span>2013-10-25</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">10</span><span style="font-family:宋体;">月<span>22</span>日，中新双边合作联合委员会第十次会议在新加坡举行。中方将人民币合格境外机构投资者<span>(RQFII)</span>试点范围拓展到新加坡，投资额度<span>500</span>亿元人民币；在条件成熟时，将试点开展人民币合格境内机构投资者投资新加坡市场。双方还在两国银行间外汇市场推出人民币对新加坡元直接交易。中方还支持苏州工业园和天津生态城开展与新加坡之间的跨境人民币创新业务。这些是人民币国际化进程中的一步又一步，也是新加坡与中国在发展离岸人民币业务方面的进一步合作。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">全国<span>30</span>多家旅行社在云南成立战略联盟<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>新华网<span>2013-10-21</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">21</span><span style="font-family:宋体;">日，全国<span>30</span>多家旅行社在云南省昆明市发起成立了<span>“</span>云美旅游战略联盟<span>”</span>，旨在通过整合旅游资源，提升旅游服务品质，规范经营行为。为此，联盟已为旗下<span>180</span>多名专职导游办理了<span>“</span>阳光工资卡<span>”</span>，解决了长期以来导游无底薪、无保障的问题。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"><span>观点：战略联盟的成立是继《旅游法》颁布实施之后旅游行业的一次变革，将进一步完善旅游市场，激发导游的服务热情，全面提升游客的满意度，重塑导游行业的新风。艾肯认为，导游作为旅游行业最直接面对消费者的岗位，可以说是旅游行业的先锋代表。在今天的休闲度假时代，同时也伴随着大众旅游时代的到来，其角色也将从传统的引导服务转变为更专业、更现代、更全面的旅游顾问，更多的为游客进行出行规划策划，方案提供，让游客在有限的资金与时间内获得最大的游玩享受，同时加深、更新对新时代旅游的认识，激发更广的旅游需求。</span><a name="_GoBack"></a><span></span></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-839.html">
+                        上一篇:<span class="on">【艾肯周讯】132期</span></a>
+                    </li>
+                    <li><a href="/news/item-837.html">
+                        下一篇:<span>【艾肯周讯】134期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

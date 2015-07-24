@@ -1,0 +1,428 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】135期</h1>
+                <h2>
+                    <a>发布日期：2013/11/22 14:14:19</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">评论中国旅游业应摆脱同质化的发展模式<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国新闻网<span>2013-11-05</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>首先要摆脱同质化的发展模式<span>,</span>打造旅游<span>“</span>全产业链<span>”,</span>促进二次、三次消费。其次<span>,</span>也需要将旅游业与相关产业融合发展<span>,</span>并与现代科技、信息网络等新技术的应用结合<span>,</span>提高旅游业的品质<span>,</span>真正做到<span>“</span>文化是旅游的灵魂<span>,</span>旅游是文化的载体<span>”</span>。在旅游产品打造方面<span>,</span>增加消费者的文化体验相当重要<span>,</span>增加游客的主动参与<span>,</span>比如<span>,</span>一些经典的历史故事或场景<span>,</span>可以让游客亲身扮演体验<span>,</span>这比纯粹的走马观花效果会更好。某种意义上<span>,</span>旅游是一种精神消费<span>,</span>需要文化的深度介入<span>,</span>这也是体现竞争力和差异化的关键。唯此<span>,</span>我们才会让<span>“</span>世界第一大旅游经济体<span>”</span>名副其实。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">香港影星广东惠州办企开放工业旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:华文细黑;">21CN</span><span style="font-family:华文细黑;">新闻<span>2013-11-06</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>在劲家庄<span>(</span>惠州<span>)</span>健康食品有限公司，市民可以在走廊透过玻璃参观生产流水线，可以在展厅了解健康养生知识，还设有品尝食品区和购物区。何家劲介绍，食品安全问题近年来困扰国民，该公司开放工业旅游，可以让消费者更多地了解健康养生的知识，同时也能把工厂生产线透明化，建立起消费者对产品的信赖感。工厂云集的惠州近期发力工业旅游，<span>8</span>家知名企业创建广东省工业旅游示范基地。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">陕西旅行社瞅准商机<span>"</span>脱光游<span>"</span>线路出炉<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>三秦都市报<span>2013-11-10</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>如今的<span>“</span>光棍节<span>”</span>，不仅仅是光棍们在行动了。一些旅行社也瞅准商机。某旅行社推出<span>“</span>脱光旅游<span>”</span>线路，当天针对单身、恋人以及三口之家出游有不同程度的优惠，比如<span>“</span>单身<span>”</span>游客专享的<span>“1111</span>脱光之旅系列<span>”</span>，东南亚单人自助游最高立减<span>1111</span>元；针对恋人的<span>“2222</span>系列<span>”</span>，预订欧美方向线路每<span>2</span>人立减<span>2222</span>元，吸引了不少游客。航空公司也不甘落后，亚洲航空推出<span>“</span>让爱飞行<span>”</span>活动，提供由西安飞往东南亚多个目的地的免费往返机票。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">经适房取消中国保障房进入<span>"</span>租时代<span>"</span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国新闻网<span>2013-11-08</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>经适房的问题到底出在哪里？经适房始于上世界<span>90</span>年代，但是出现的种种怪现象，导致要求停建经适房的呼声一直不断。实施保障房并轨，将经适房逐出保障房的供给，将会使得政府的投入更有效率，也会减少公权借机寻租的机会。国家住建部近日透露，经济适用房供应将逐步减少直至在全国全部取消，公共租赁住房将成为住房保障的主体。这项重大决策很快引发了全国关注。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">上海二套房贷首付比例上调至七成<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国台湾网<span>2013-11-09</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">8</span><span style="font-family:宋体;">日，上海市住房保障和房屋管理局发布《进一步严格执行国家房地产市场调控政策相关措施》（简称<span>“</span>沪七条<span>”</span>），其中重要措施包括，居民家庭向商业银行贷款购买第二套住房的，其首付款比例从<span>60%</span>提高至不得低于<span>70%</span>及以上；调整非本市户籍居民家庭购房缴纳税收或社保费年限，从能提供自购房之日起算的前<span>2</span>年内在上海市累计缴纳<span>1</span>年以上，调整为能提供自购房之日起算的前<span>3</span>年内在上海市累计缴纳<span>2</span>年以上。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国以房养老保险最快<span>2014</span>年<span>1</span>月推出市民不<span>"</span>感冒<span>"</span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国经济网<span>2013-11-10</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">“</span><span style="font-family:宋体;">以房养老<span>”</span>首倡者、幸福人寿保险监事会主席孟晓苏表示<span>,</span>老年人住房反向抵押养老保险产品最快将在明年一月份推出<span>,“</span>最近得到消息<span>,</span>让我们在<span>12</span>月拿出以房养老方案<span>,</span>明年一季度要把这个产品推出来。<span>”</span>业内人士指出<span>,</span>房价波动较大、国人传统的住房观念都是<span>“</span>以房养老<span>”</span>推行的拦路虎<span>,“</span>就算今后推出来<span>,</span>市民的接受程度能有多大都有待观察。<span>”“</span>以房养老<span>”</span>保险产品最快或在明年正式推出。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国改革户籍创造人口新红利<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>经济参考报<span>2013-11-08</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>中国社科院学部委员、人口与劳动经济研究所所长蔡对《经济参考报》记者表示，人口红利是中国经济增长的可持续源泉，随着人口红利的消失，政府可通过改革户籍制度，立竿见影释放制度红利，提高潜在增长率。他同时赞成对计划生育政策进行调整。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国新一届政府力推新城镇化<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>搜狐网<span>2013-11-08</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>新一届政府成立以来，多次强调<span>“</span>城镇化是最大的内需潜力所在<span>”</span>、<span>“</span>要推进以人为核心的新型城镇化<span>”</span>。外界普遍预期，城镇化发展规划或将于十八届三中全会之后出台，今年有望成为中国推进城镇化的破题之年。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">新工具助力中国货币政策精准发力<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国经济网<span>2013-11-10</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;">6</span><span style="font-family:宋体;">日<span>,</span>人民银行网站新增<span>“</span>常备借贷便利<span>(SLF)”</span>栏目<span>,</span>数据显示<span>,6</span>月、<span>7</span>月、<span>8</span>月及<span>9</span>月<span>SLF</span>余额分别为<span>4160</span>亿、<span>3960</span>亿、<span>4100</span>亿和<span>3860</span>亿元。这也是中国央行首次披露<span>SLF</span>余额数据。据了解<span>,</span>今年<span>6</span>月流动性紧张时<span>,</span>央行曾表示<span>,</span>要根据市场流动性的实际状况<span>,</span>积极运用公开市场操作、再贷款、再贴现及短期流动性调节工具<span>(SLO)</span>、常备借贷便利<span>(SLF)</span>等创新工具组合<span>,</span>适时调节银行体系流动性<span>,</span>平抑短期异常波动<span>,</span>稳定市场预期<span>,</span>保持货币市场稳定<span>,</span>为金融市场平稳运行和经济结构调整、转型升级创造良好货币条件。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">安徽政通梦幻王国项目开工建设<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>淮北日报<span>2013-11-06</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>政通梦幻王国相山区重点商贸项目<span>,</span>位于古城东路以北、龙山路以西<span>,</span>由安徽政通投资有限公司投资。总建筑面积<span>8</span>万平方米<span>,</span>包括<span>1.5</span>万平方米梦幻王国文化科技主题公园<span>,6.5</span>万平方米特色文化街区<span>,</span>建设周期为<span>20</span>个月。该项目建成后<span>,</span>将成为国内首家以文化为核心、科技为手段、以青少年儿童为主体、家庭为单位的儿童文化旅游娱乐中心<span>,</span>对于丰富淮北市文化旅游内涵<span>,</span>满足淮北及周边城市群众文化旅游消费需求等具有深远意义。该项目可直接创造<span>300</span>多个就业岗位<span>,</span>每年由旅游产生的直接税收将达<span>300</span>多万元<span>,</span>由配套商业产生的间接税收将达<span>6500</span>万元。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"><span>观点：主题公园作为现代旅游的热点项目，在我国市场需求巨大，但目前的供给仍严重不足，且地区分布失衡。艾肯认为，在经历了以规范引导为内在诉求的“禁令风波”之后，主题公园仍然会成为城市文化旅游建设的重点项目，并更好的发挥其经济、文化、社会功用。而前提必须是在投建之前的规划阶段即立足于对市场实际情况，对主题公园的类型、模式进行创意且科学的</span><a name="_GoBack"></a><span>定位与策划，做好发展的战略规划，确保景区运营的成功与发展的持续性，坚决不可盲目的模仿与照搬</span></span><span style="font-family:宋体;"><span>。</span></span><span style="font-family:宋体;"></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-837.html">
+                        上一篇:<span class="on">【艾肯周讯】134期</span></a>
+                    </li>
+                    <li><a href="/news/item-835.html">
+                        下一篇:<span>【艾肯周讯】136期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

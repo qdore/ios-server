@@ -1,0 +1,425 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】163期</h1>
+                <h2>
+                    <a>发布日期：2014/8/6 16:54:49</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">昆明长水国际机场<span>72</span>小时免签申请获批 中转游客可游昆明<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国新闻网<span>2014-07-19</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>记者<span>17</span>日从云南机场集团获悉，昆明长水国际机场<span>72</span>小时过境免签政策申请已正式获得国务院批准，进入最后落地阶段。届时，国外旅客在中转时可以用三天的时间短途游昆明。<span>72</span>小时过境免签政策落地昆明后，外籍人士从一国经过中国昆明转机过境前往第三国时，不必申请过境国签证即可过境，并可在昆明进行<span>72</span>小时停留。而在这<span>72</span>小时内，外籍人士就可以在昆明购物、游玩，对昆明旅游将形成带动作用。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">世界最大免税店<span>9</span>月中国开业 韩国紧张<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>人民网<span>2014-07-18</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p style="text-indent:21.75pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>中国免税品<span>(</span>集团<span>)</span>有限责任公司在有着东方夏威夷美誉的三亚海棠湾建设的世界最大国际购物中心已完工，营业面积<span>7</span>万平方米，计划<span>9</span>月<span>1</span>日试营业。购物中心里免税店面积多达<span>4.5</span>万平方米，为世界最大，是韩国最大免税店的<span>4</span>倍。韩国国内免税店对这一强势竞争者的出现非常紧张，因为中国游客的消费在韩国免税店销售额中所占比例高达<span>60%</span>。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">全国铁路暑运两周客流破亿 单日客流<span>800</span>万人次<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>法制日报<span>2014-07-17</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>据中国铁路总公司数据显示<span>,7</span>月<span>1</span>日至<span>14</span>日<span>,</span>全国铁路累计发送旅客<span>10579.3</span>万人次<span>,</span>日均达到<span>755.7</span>万人次<span>,</span>同比增幅高达<span>13.8%</span>。两周来<span>,</span>铁路客流全面超过去年同期水平。其中<span>,7</span>月<span>12</span>日旅客发送量达到<span>819.3</span>万人次<span>,</span>创历年暑运单日客流新高<span>,</span>也是铁路暑运单日客流首次突破<span>800</span>万人次。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国三四线城市空城化不可避免<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国广播网<span>2014-07-18</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">据经济之声《天下财经》报道，“三四线城市空城化不可避免”，这是国务院发展研究中心宏观经济研究部研究员张立群发表的最新观点。张立群说，过去几年房地产企业迫于一二线城市开发压力，转向三四线城市进行“造城运动”，新建了很多楼盘，但之后实体经济增速减慢，导致楼盘销售困难。三四线城市出现空城化不可避免。</span><span style="font-family:'Simsun','serif';color:black;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:'Simsun','serif';color:black;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国<span>70</span>城市<span>2014</span>年<span>6</span>月二手房近<span>9</span>成同比上涨<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国新闻网<span>2014-07-18</span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>国家统计局今日发布<span>70</span>城市房价变动情况，数据显示，与上月相比，<span>70</span>个大中城市中，二手房价格下降的城市有<span>52</span>个，持平的城市有<span>11</span>个，上涨的城市有<span>7</span>个。环比价格变动中，最高涨幅为<span>0.1%</span>，最低为下降<span>1.5%</span>。其中北京二手房价格环比下降<span>1.3%</span>，牡丹江环比降<span>1.5%</span>。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">6</span><span style="font-family:宋体;">月份，同比价格变动中，最高涨幅为深圳<span>9.1%</span>，最低为下降温州的<span>9.6%</span>。。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">成都海口被传解除楼市限购<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京晨报<span>2014-07-25</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>央视财经官方微博昨日发布消息称，“记者从成都多家开发商处证实，限购已经放开，虽然没有官方的通知，但已经有了成功操作的案例，现在仅凭一张身份证就可以上传房管局资料，消费者就可以直接买房了。”就在成都传出已经取消限购的前一天，消息显示，海口已下发文件，终止执行商品房限购政策，不再要求购房者提供住房套数证明，但海口市相关部门官方网站并未披露此份文件。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">上海自贸区上半年用电量同比增一成<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>每日经济新闻<span>2014-07-22</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>昨日（<span>7</span>月<span>21</span>日），《每日经济新闻》记者从国家电网上海浦东供电公司最新统计数据中获悉，今年<span>1~6</span>月，自贸区整体售电量<span>8.27</span>亿千瓦时，同比增长<span>10.19%</span>，而整个上海上半年用电量增长不足<span>2%</span>。这表明，上海自贸区建设发展迅猛，经济活跃度上升。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">市县空间规划改革试点即将上报国务院限定城市边界<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>每日经济新闻<span>2014-07-15</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:'Simsun','serif';color:black;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>第一财经独家获悉，市县空间规划改革试点即将上报国务院，将限定城市边界并试水“多规合一”。自国家新型城镇化规划<span>3</span>月发布后，新型城镇化并未在细化政策上取得明显进展。随着日程表进入下半年，这一领域的政策出台速度将加快。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">IMF</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">：中国今年经济增速降至<span>7.4%</span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>第一财经日报<span>2014-07-15</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">7</span><span style="font-family:宋体;color:black;">月<span>24</span>日，国际货币基金组织（<span>IMF</span>）发布最新一期《世界经济展望》（<span>WEO</span>）更新报告。<span>IMF</span>下调今年全球增长预测<span>0.3</span>个百分点，降至<span>3.4%</span>。其中，<span>IMF</span>预计今年中国经济增速为<span>7.4%</span>，较<span>4</span>月份的预测值下调<span>0.2</span>个百分点。<span>2015</span>年，尽管经济前景仍在很大程度上取决于政府目标，但随着经济过渡到更可持续的增长路径，预计增长将减缓到<span>7.1%</span>。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">网曝《后会无期》拍摄地东极岛已成旅游热点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>人民网<span>2014-07-25</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span>
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>韩寒的《后会无期》已经上映，作为电影主要取景地的浙江省舟山市东极岛已经火了。一票难求、小游艇坐地起价等成了目前东极岛最新的关键词，记者从普陀交通运输局官网了解到，本月底东极船票将试行实名制销售，同时每天东极四岛游客总量将限制在<span>2000</span>人左右，进岛游客最多<span>1600</span>人，想去东极岛游玩的游客可要提前做好排队的心理准备了。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">观点：正在热映的电影《后会无期》捧红了舟山东极岛，文艺青年们前赴后继登岛观光，远离城市嘈杂，体验当地居民的生活。东极岛</span><span style="font-family:宋体;">同时也暴露了应对能力不足的问题，游客量超过了承受能力。</span><span style="font-family:宋体;">艾肯认为，影视作品引发旅游热是旅游策划的一种行之有效的方式，《泰囧》的泰国旅游热、《爸爸去哪了》的乡村旅游热已经成为经典的成功案例。成功的影视作品旅游策划必须要有系统性策划和长期性规划。系统性策划是要深谙旅游和影视文化的关系，找准卖点，把握时间点，然后再去刺激兴奋点；长期性规划是不能局限于一时之热，要乘势提高层<a name="_GoBack"></a>次、丰富内容、完善配套，形成持续的热点。</span></span><span></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-734.html">
+                        上一篇:<span class="on">【艾肯周讯】162期</span></a>
+                    </li>
+                    <li><a href="/news/item-732.html">
+                        下一篇:<span>【艾肯周讯】164期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

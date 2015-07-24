@@ -1,0 +1,1226 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>widget</title>
+    <link href="css/freeue.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>1 按钮 Button</h1>
+    <h2 id="cate_10">1.1 独立按钮</h2>
+    <h3>1.1.1 不同功能的按钮</h3>
+    <a class="mala-btn mala-btn-primary mala-mr">主要按钮</a>
+    <a class="mala-btn mala-btn-success mala-mr">成功按钮</a>
+    <a class="mala-btn mala-btn-danger mala-mr">警告按钮</a>
+    <a class="mala-btn mala-btn-default mala-mr">默认按钮</a>
+    <h3>1.1.2 不同尺寸的按钮</h3>
+    <a class="mala-btn mala-btn-primary mala-btn-smaller mala-mr">超小按钮</a>
+    <a class="mala-btn mala-btn-primary mala-btn-small mala-mr">较小按钮</a>
+    <a class="mala-btn mala-btn-primary mala-mr">一般按钮</a>
+    <a class="mala-btn mala-btn-primary mala-btn-large mala-mr">较大按钮</a>
+    <a class="mala-btn mala-btn-primary mala-btn-larger mala-mr">特大按钮</a>
+    <h2 id="cate_11">1.2 按钮组</h2>
+    <div class="mala-btn-group mala-mr"> <a class="mala-btn mala-btn-default">修改类别</a><a class="mala-btn mala-btn-default">刷新列表</a><a class="mala-btn mala-btn-default">修改状态</a>
+    </div>
+    <h2 id="cate_12">1.3 按钮式下拉菜单</h2>
+    <div class="mala-fake-select">
+        <span class="mala-select-title js-fake-select">筛选项目</span> <i class="mala-arrow mala-arrow-down"></i>
+        <ul class="mala-select-list js-list">
+            <li class="mala-select-item js-select-item active">筛选项目</li>
+            <li class="mala-select-item js-select-item">发生的发生</li>
+            <li class="mala-select-item js-select-item">发生的发生</li>
+        </ul>
+        <ul class="mala-select-list-fix">
+            <li class="mala-select-item">筛选项目</li>
+            <li class="mala-select-item">发生的发生</li>
+            <li class="mala-select-item">发生的发生</li>
+        </ul>
+    </div>
+    <h1>2 导航菜单 Nav</h1>
+    <h2 id="cate_13">2.1 水平导航菜单</h2>
+    <!--页面头部 style删除后可以做固定布局-->
+    <header id="js-header" class="mala-header mala-header-fix" style="position: relative; top: 0;">
+        <div class="mala-clearfix ">
+            <a href="mala-0101.html" class="mala-logo mala-fl"></a>
+            <div class="mala-user-info mala-fr js-header-dropmenu">
+                <span class="mala-username">Hi, Baiduer!<i class="mala-arrow mala-arrow-down  mala-ml"></i>
+                </span>
+                <ul class="mala-header-dropdown-list js-header-list">
+                    <li class="mala-header-dropdown-item"><a href="mala-0202.html" class="mala-link">个人中心</a>  <i class="mala-arrow mala-arrow-up" style="right:10px;"></i>
+                    </li>
+                    <li class="mala-header-dropdown-item"><a href="mala-0202.html" class="mala-link">退出</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="mala-avatar mala-fr">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <nav class="mala-fr">
+                <ul class="mala-nav-list mala-clearfix">
+                    <li class="mala-nav-item mala-fl"> <a href="mala-0201.html" class="mala-nav-link">首页</a> 
+                    </li>
+                    <li class="mala-nav-item mala-fl js-header-dropmenu">
+                        <span class="mala-nav-link">测试数据<i class="mala-arrow mala-arrow-down  mala-ml"></i>
+                        </span>
+                        <ul class="mala-header-dropdown-list js-header-list">
+                            <li class="mala-header-dropdown-item"> <a href="mala-0202.html" class="mala-link">线上数据</a>  <i class="mala-arrow mala-arrow-up" style="right:20px;"></i> 
+                            </li>
+                            <li class="mala-header-dropdown-item"> <a href="mala-0205.html" class="mala-link">数据弹窗</a> 
+                            </li>
+                            <li class="mala-header-dropdown-item"> <a href="mala-0202.html" class="mala-link">线上数据</a> 
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mala-nav-item mala-fl"> <a href="mala-0203.html" class="mala-nav-link">API接口</a> 
+                    </li>
+                    <li class="mala-nav-item mala-fl"> <a href="mala-0204.html" class="mala-nav-link">关于我们</a> 
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2 id="cate_14">2.2 垂直导航</h2>
+    <!--左侧树状菜单 style删除后可以做固定布局-->
+    <nav id="js-aside" class="mala-aside" style="position: relative; top: 0;">
+        <h3 class="mala-subnavi-title">全局设置</h3>
+        <ul class="mala-subnavi-list">
+            <li class="mala-subnavi-item">
+                <a href="" class="mala-subnavi-link"> <i class="fa fa-taxi fa-fw"></i> </i>速度summary</a>
+            </li>
+            <li class="mala-subnavi-item">
+                <div class="mala-subnavi-lead mala-clearfix"> <i class="fa fa-exchange fa-fw"></i> 线上预警
+                    <span class="mala-arrow mala-arrow-down mala-fr"></span>
+                </div>
+                <ul class="mala-thirdnavi-list">
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">交互查询</a> 
+                    </li>
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">metric信息</a> 
+                    </li>
+                </ul>
+            </li>
+            <li class="mala-subnavi-item">
+                <div class="mala-subnavi-lead mala-clearfix"> <i class="fa fa-coffee fa-fw"></i> 速度报表
+                    <span class="mala-arrow mala-arrow-down mala-fr"></span>
+                </div>
+                <ul class="mala-thirdnavi-list">
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">交互查询</a> 
+                    </li>
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">metric信息</a> 
+                    </li>
+                </ul>
+            </li>
+            <li class="mala-subnavi-item">
+                <div class="mala-subnavi-lead mala-clearfix"> <i class="fa fa-database fa-fw"></i> 交互查询
+                    <span class="mala-arrow mala-arrow-down mala-fr"></span>
+                </div>
+                <ul class="mala-thirdnavi-list">
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">交互查询</a> 
+                    </li>
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">metric信息</a> 
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3 class="mala-subnavi-title">性能设置</h3>
+        <ul class="mala-subnavi-list">
+            <li class="mala-subnavi-item">
+                <a href="" class="mala-subnavi-link"> <i class="fa fa-cube fa-fw"></i>UE MODULE</a>
+            </li>
+            <li class="mala-subnavi-item">
+                <div class="mala-subnavi-lead mala-clearfix"> <i class="fa fa-exchange fa-fw"></i> 线上预警
+                    <span class="mala-arrow mala-arrow-down mala-fr"></span>
+                </div>
+                <ul class="mala-thirdnavi-list">
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">交互查询</a> 
+                    </li>
+                    <li class="mala-thirdnavi-item"> <a href="" class="mala-thirdnavi-link">metric信息</a> 
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>3 列表 List</h1>
+    <h2 id="cate_15">3.1 标题列表</h2>
+    <ul class="mala-list">
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-time mala-fr">2014-05-04</span>
+            <span class="mala-list-title"><a href="#">山西省委附近发生发生发生发生法发生法</a>
+            </span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-time mala-fr">2014-05-04</span>
+            <span class="mala-list-title"><a href="#">山西省委附近发生发生发生发生法发生法</a>
+            </span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-time mala-fr">2014-05-04</span>
+            <span class="mala-list-title"><a href="#">山西省委附近发生发生发生发生法发生法</a>
+            </span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-time mala-fr">2014-05-04</span>
+            <span class="mala-list-title "><a href="#">山西省委附近发生发生发生发生法发生法</a>
+            </span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-time mala-fr">2014-05-04</span>
+            <span class="mala-list-title"><a href="#">山西省委附近发生发生发生发生法发生法</a>
+            </span>
+        </li>
+    </ul>
+    <h2 id="cate_17">3.3 摘要列表（上下结构）</h2>
+    <ul class="mala-list">
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-list-summary-title">这里是标题位置</span>
+            <span class="mala-list-summary-desc">这里是描述的位置这里是描述的位置</span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-list-summary-title">这里是标题位置</span>
+            <span class="mala-list-summary-desc">这里是描述的位置这里是描述的位置</span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-list-summary-title">这里是标题位置</span>
+            <span class="mala-list-summary-desc">这里是描述的位置这里是描述的位置</span>
+        </li>
+        <li class="mala-list-item mala-clearfix">
+            <span class="mala-list-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-list-summary-title">这里是标题位置</span>
+            <span class="mala-list-summary-desc">这里是描述的位置这里是描述的位置</span>
+        </li>
+    </ul>
+
+    <h2 id="cate_18">3.4 表格列表</h2>
+    <table id="js-mytable" class="mala-table">
+        <thead>
+            <tr>
+                <th class="mala-th" width="5%">
+                    <input type="checkbox" class="mala-ml-small">
+                </th>
+                <th class="mala-th">标题</th>
+                <th class="mala-th" width="10%">所属类别</th>
+                <th class="mala-th" width="10%">状态</th>
+                <th class="mala-th" width="10%">作者</th>
+                <th class="mala-th" width="20%">发布时间</th>
+                <th class="mala-th" width="13%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+            <tr class="mala-tr">
+                <td class="mala-td">
+                    <input type="checkbox" class="mala-ml-small">
+                </td>
+                <td class="mala-td mala-td-title"><a href="">北京的发生发生的发生</a>
+                </td>
+                <td class="mala-td">喜剧</td>
+                <td class="mala-td">发布中</td>
+                <td class="mala-td">小雨</td>
+                <td class="mala-td">2014-10-03 14:00</td>
+                <td class="mala-td"><a href="" class="mala-mr js-edit">编辑</a>  <a href="" class="mala-mr">预览</a>  <a href="">删除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="cate_19">3.5 图片列表</h2>
+    <ul class="mala-grid mala-clearfix">
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+        <li class="mala-grid-item ">
+            <span class="mala-grid-summary-photo">
+                <img src="images/demo-photo.jpg">
+            </span>
+            <span class="mala-grid-summary-title">这里是标题位置</span>
+        </li>
+    </ul>
+    <h2 id="cate_20">3.6 翻页列表</h2>
+    <div class="mala-pager">
+        <span class="mala-paginate-link">
+            <span class="mala-caret mala-caret-prev"></span>
+        </span> <a href="" class="mala-paginate-link">1</a>  <a href="" class="mala-paginate-link">2</a>  <a href="" class="mala-paginate-link">3</a>  <a href="" class="mala-paginate-link">4</a>  <a href="" class="mala-paginate-link">5</a>  <a href="" class="mala-paginate-link active">6</a>  <a href="" class="mala-paginate-link">7</a>  <a href="" class="mala-paginate-link">8</a>  <a href="" class="mala-paginate-link">9</a> 
+        <span class="mala-paginate-link">
+            <span class="mala-caret mala-caret-next"></span>
+        </span>
+    </div>
+    <h1>4 表单 Form</h1>
+    <h2 id="cate_21">4.1 文本框</h2>
+    <input type="text" class="mala-input mala-mr" placeholder="请输入关键字">
+    <input type="text" class="mala-input mala-input-large mala-mr" placeholder="请输入关键字">
+    <h2 id="cate_22">4.2文本区</h2>
+    <textarea name="" class="mala-textarea" rows="4"></textarea>
+    <h2 id="cate_23">4.3 选择列表</h2>
+    <select name="" class="mala-select mala-mr">
+        <option value="">请选择分类</option>
+    </select>
+    <h2 id="cate_24">4.4 单选</h2>
+    <h3>4.4.1 单行单选</h3>
+    <input type="radio" name="RadioGroup1">满意
+    <input type="radio" name="RadioGroup1" class="mala-ml">一般
+    <input type="radio" name="RadioGroup1" class="mala-ml">不满意
+    <h3>4.5.2 多行勾选</h3>
+    <h3>4.4.2 多行单选</h3>
+    <p>
+        <input type="radio" name="RadioGroup2">满意</p>
+    <p>
+        <input type="radio" name="RadioGroup2">一般</p>
+    <p>
+        <input type="radio" name="RadioGroup2">不满意</p>
+    <h2 id="cate_25">4.5勾选</h2>
+    <h3>4.5.1 单行勾选</h3>
+    <input type="checkbox">苹果
+    <input type="checkbox" class="mala-ml">香蕉
+    <input type="checkbox" class="mala-ml">橙子
+    <h3>4.5.2 多行勾选</h3>
+    <p>
+        <input type="checkbox">苹果</p>
+    <p>
+        <input type="checkbox">香蕉</p>
+    <p>
+        <input type="checkbox">橙子</p>
+    <h2 id="cate_26">4.6 表单</h2>
+    <form action="">
+        <div class="mala-container-fluid">
+            <div class="mala-form">
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>课程名称</label>
+                    </div>
+                    <div class="mala-col-md-6">
+                        <input type="text" class="mala-input mala-form-control">
+                    </div>
+                    <div class="mala-col-md-3">
+                        <span class="mala-tiper mala-form-fix">此处的分类是课程显示在百度中</span>
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>课程分类</label>
+                    </div>
+                    <div class="mala-col-md-3">
+                        <select name="" id="" class="mala-select mala-form-control">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="mala-col-md-3">
+                        <select name="" id="" class="mala-select mala-form-control">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="mala-col-md-3">
+                        <span class="mala-tiper mala-form-fix">此处的分类是课程显示在百度中</span>
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>课程助教</label>
+                    </div>
+                    <div class="mala-col-md-6">
+                        <input type="text" class="mala-input mala-form-control">
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>课程简介</label>
+                    </div>
+                    <div class="mala-col-md-6">
+                        <textarea name="" class="mala-textarea mala-form-control" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>讲师简介</label>
+                    </div>
+                    <div class="mala-col-md-6">
+                        <textarea name="" class="mala-textarea mala-form-control" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>课程详述</label>
+                    </div>
+                    <div class="mala-col-md-6">
+                        <textarea name="" class="mala-textarea mala-form-control" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">
+                            <span class="mala-required">*</span>设置封面</label>
+                    </div>
+                    <div class="mala-col-md-3"><a class="mala-btn mala-btn-default mala-btn-block ">上传封面</a>
+                        <br>
+                        <img src="images/slide1.jpg" class="mala-form-photo">
+                    </div>
+                </div>
+                <div class="mala-form-item mala-row">
+                    <div class="mala-col-md-3">
+                        <label for="" class="mala-label mala-form-fix">&nbsp;</label>
+                    </div>
+                    <div class="mala-col-md-3">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class=" mala-form-opt">
+            <input type="submit" class="mala-btn mala-btn-primary mala-btn-large mala-mr" value="保存">
+            <input type="reset" class="mala-btn mala-btn-default mala-btn-large" value="取消">
+        </div>
+    </form>
+    <h1>5 icons图标</h1>
+    <h2 id="cate_27">5.1 深色图标</h2>
+    <div>
+        <i class="fa fa-glass"></i>
+        <i class="fa fa-music"></i>
+        <i class="fa fa-search"></i>
+        <i class="fa fa-envelope-o"></i>
+        <i class="fa fa-heart"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-user"></i>
+        <i class="fa fa-film"></i>
+        <i class="fa fa-th-large"></i>
+        <i class="fa fa-th"></i>
+        <i class="fa fa-th-list"></i>
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <i class="fa fa-search-plus"></i>
+        <i class="fa fa-search-minus"></i>
+        <i class="fa fa-power-off"></i>
+        <i class="fa fa-signal"></i>
+        <i class="fa fa-gear"></i>
+        <i class="fa fa-cog"></i>
+        <i class="fa fa-trash-o"></i>
+        <i class="fa fa-home"></i>
+        <i class="fa fa-file-o"></i>
+        <i class="fa fa-clock-o"></i>
+        <i class="fa fa-road"></i>
+        <i class="fa fa-download"></i>
+        <i class="fa fa-arrow-circle-o-down"></i>
+        <i class="fa fa-arrow-circle-o-up"></i>
+        <i class="fa fa-inbox"></i>
+        <i class="fa fa-play-circle-o"></i>
+        <i class="fa fa-rotate-right"></i>
+        <i class="fa fa-repeat"></i>
+        <i class="fa fa-refresh"></i>
+        <i class="fa fa-list-alt"></i>
+        <i class="fa fa-lock"></i>
+        <i class="fa fa-flag"></i>
+        <i class="fa fa-headphones"></i>
+        <i class="fa fa-volume-off"></i>
+        <i class="fa fa-volume-down"></i>
+        <i class="fa fa-volume-up"></i>
+        <i class="fa fa-qrcode"></i>
+        <i class="fa fa-barcode"></i>
+        <i class="fa fa-tag"></i>
+        <i class="fa fa-tags"></i>
+        <i class="fa fa-book"></i>
+        <i class="fa fa-bookmark"></i>
+        <i class="fa fa-print"></i>
+        <i class="fa fa-camera"></i>
+        <i class="fa fa-font"></i>
+        <i class="fa fa-bold"></i>
+        <i class="fa fa-italic"></i>
+        <i class="fa fa-text-height"></i>
+        <i class="fa fa-text-width"></i>
+        <i class="fa fa-align-left"></i>
+        <i class="fa fa-align-center"></i>
+        <i class="fa fa-align-right"></i>
+        <i class="fa fa-align-justify"></i>
+        <i class="fa fa-list"></i>
+        <i class="fa fa-dedent"></i>
+        <i class="fa fa-outdent"></i>
+        <i class="fa fa-indent"></i>
+        <i class="fa fa-video-camera"></i>
+        <i class="fa fa-photo"></i>
+        <i class="fa fa-image"></i>
+        <i class="fa fa-picture-o"></i>
+        <i class="fa fa-pencil"></i>
+        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-adjust"></i>
+        <i class="fa fa-tint"></i>
+        <i class="fa fa-edit"></i>
+        <i class="fa fa-pencil-square-o"></i>
+        <i class="fa fa-share-square-o"></i>
+        <i class="fa fa-check-square-o"></i>
+        <i class="fa fa-arrows"></i>
+        <i class="fa fa-step-backward"></i>
+        <i class="fa fa-fast-backward"></i>
+        <i class="fa fa-backward"></i>
+        <i class="fa fa-play"></i>
+        <i class="fa fa-pause"></i>
+        <i class="fa fa-stop"></i>
+        <i class="fa fa-forward"></i>
+        <i class="fa fa-fast-forward"></i>
+        <i class="fa fa-step-forward"></i>
+        <i class="fa fa-eject"></i>
+        <i class="fa fa-chevron-left"></i>
+        <i class="fa fa-chevron-right"></i>
+        <i class="fa fa-plus-circle"></i>
+        <i class="fa fa-minus-circle"></i>
+        <i class="fa fa-times-circle"></i>
+        <i class="fa fa-check-circle"></i>
+        <i class="fa fa-question-circle"></i>
+        <i class="fa fa-info-circle"></i>
+        <i class="fa fa-crosshairs"></i>
+        <i class="fa fa-times-circle-o"></i>
+        <i class="fa fa-check-circle-o"></i>
+        <i class="fa fa-ban"></i>
+        <i class="fa fa-arrow-left"></i>
+        <i class="fa fa-arrow-right"></i>
+        <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-down"></i>
+        <i class="fa fa-mail-forward"></i>
+        <i class="fa fa-share"></i>
+        <i class="fa fa-expand"></i>
+        <i class="fa fa-compress"></i>
+        <i class="fa fa-plus"></i>
+        <i class="fa fa-minus"></i>
+        <i class="fa fa-asterisk"></i>
+        <i class="fa fa-exclamation-circle"></i>
+        <i class="fa fa-gift"></i>
+        <i class="fa fa-leaf"></i>
+        <i class="fa fa-fire"></i>
+        <i class="fa fa-eye"></i>
+        <i class="fa fa-eye-slash"></i>
+        <i class="fa fa-warning"></i>
+        <i class="fa fa-exclamation-triangle"></i>
+        <i class="fa fa-plane"></i>
+        <i class="fa fa-calendar"></i>
+        <i class="fa fa-random"></i>
+        <i class="fa fa-comment"></i>
+        <i class="fa fa-magnet"></i>
+        <i class="fa fa-chevron-up"></i>
+        <i class="fa fa-chevron-down"></i>
+        <i class="fa fa-retweet"></i>
+        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-folder"></i>
+        <i class="fa fa-folder-open"></i>
+        <i class="fa fa-arrows-v"></i>
+        <i class="fa fa-arrows-h"></i>
+        <i class="fa fa-bar-chart-o"></i>
+        <i class="fa fa-twitter-square"></i>
+        <i class="fa fa-facebook-square"></i>
+        <i class="fa fa-camera-retro"></i>
+        <i class="fa fa-key"></i>
+        <i class="fa fa-gears"></i>
+        <i class="fa fa-cogs"></i>
+        <i class="fa fa-comments"></i>
+        <i class="fa fa-thumbs-o-up"></i>
+        <i class="fa fa-thumbs-o-down"></i>
+        <i class="fa fa-star-half"></i>
+        <i class="fa fa-heart-o"></i>
+        <i class="fa fa-sign-out"></i>
+        <i class="fa fa-linkedin-square"></i>
+        <i class="fa fa-thumb-tack"></i>
+        <i class="fa fa-external-link"></i>
+        <i class="fa fa-sign-in"></i>
+        <i class="fa fa-trophy"></i>
+        <i class="fa fa-github-square"></i>
+        <i class="fa fa-upload"></i>
+        <i class="fa fa-lemon-o"></i>
+        <i class="fa fa-phone"></i>
+        <i class="fa fa-square-o"></i>
+        <i class="fa fa-bookmark-o"></i>
+        <i class="fa fa-phone-square"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-github"></i>
+        <i class="fa fa-unlock"></i>
+        <i class="fa fa-credit-card"></i>
+        <i class="fa fa-rss"></i>
+        <i class="fa fa-hdd-o"></i>
+        <i class="fa fa-bullhorn"></i>
+        <i class="fa fa-bell"></i>
+        <i class="fa fa-certificate"></i>
+        <i class="fa fa-hand-o-right"></i>
+        <i class="fa fa-hand-o-left"></i>
+        <i class="fa fa-hand-o-up"></i>
+        <i class="fa fa-hand-o-down"></i>
+        <i class="fa fa-arrow-circle-left"></i>
+        <i class="fa fa-arrow-circle-right"></i>
+        <i class="fa fa-arrow-circle-up"></i>
+        <i class="fa fa-arrow-circle-down"></i>
+        <i class="fa fa-globe"></i>
+        <i class="fa fa-wrench"></i>
+        <i class="fa fa-tasks"></i>
+        <i class="fa fa-filter"></i>
+        <i class="fa fa-briefcase"></i>
+        <i class="fa fa-arrows-alt"></i>
+        <i class="fa fa-group"></i>
+        <i class="fa fa-users"></i>
+        <i class="fa fa-chain"></i>
+        <i class="fa fa-link"></i>
+        <i class="fa fa-cloud"></i>
+        <i class="fa fa-flask"></i>
+        <i class="fa fa-cut"></i>
+        <i class="fa fa-scissors"></i>
+        <i class="fa fa-copy"></i>
+        <i class="fa fa-files-o"></i>
+        <i class="fa fa-paperclip"></i>
+        <i class="fa fa-save"></i>
+        <i class="fa fa-floppy-o"></i>
+        <i class="fa fa-square"></i>
+        <i class="fa fa-navicon"></i>
+        <i class="fa fa-reorder"></i>
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-list-ul"></i>
+        <i class="fa fa-list-ol"></i>
+        <i class="fa fa-strikethrough"></i>
+        <i class="fa fa-underline"></i>
+        <i class="fa fa-table"></i>
+        <i class="fa fa-magic"></i>
+        <i class="fa fa-truck"></i>
+        <i class="fa fa-pinterest"></i>
+        <i class="fa fa-pinterest-square"></i>
+        <i class="fa fa-google-plus-square"></i>
+        <i class="fa fa-google-plus"></i>
+        <i class="fa fa-money"></i>
+        <i class="fa fa-caret-down"></i>
+        <i class="fa fa-caret-up"></i>
+        <i class="fa fa-caret-left"></i>
+        <i class="fa fa-caret-right"></i>
+        <i class="fa fa-columns"></i>
+        <i class="fa fa-unsorted"></i>
+        <i class="fa fa-sort"></i>
+        <i class="fa fa-sort-down"></i>
+        <i class="fa fa-sort-desc"></i>
+        <i class="fa fa-sort-up"></i>
+        <i class="fa fa-sort-asc"></i>
+        <i class="fa fa-envelope"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-rotate-left"></i>
+        <i class="fa fa-undo"></i>
+        <i class="fa fa-legal"></i>
+        <i class="fa fa-gavel"></i>
+        <i class="fa fa-dashboard"></i>
+        <i class="fa fa-tachometer"></i>
+        <i class="fa fa-comment-o"></i>
+        <i class="fa fa-comments-o"></i>
+        <i class="fa fa-flash"></i>
+        <i class="fa fa-bolt"></i>
+        <i class="fa fa-sitemap"></i>
+        <i class="fa fa-umbrella"></i>
+        <i class="fa fa-paste"></i>
+        <i class="fa fa-clipboard"></i>
+        <i class="fa fa-lightbulb-o"></i>
+        <i class="fa fa-exchange"></i>
+        <i class="fa fa-cloud-download"></i>
+        <i class="fa fa-cloud-upload"></i>
+        <i class="fa fa-user-md"></i>
+        <i class="fa fa-stethoscope"></i>
+        <i class="fa fa-suitcase"></i>
+        <i class="fa fa-bell-o"></i>
+        <i class="fa fa-coffee"></i>
+        <i class="fa fa-cutlery"></i>
+        <i class="fa fa-file-text-o"></i>
+        <i class="fa fa-building-o"></i>
+        <i class="fa fa-hospital-o"></i>
+        <i class="fa fa-ambulance"></i>
+        <i class="fa fa-medkit"></i>
+        <i class="fa fa-fighter-jet"></i>
+        <i class="fa fa-beer"></i>
+        <i class="fa fa-h-square"></i>
+        <i class="fa fa-plus-square"></i>
+        <i class="fa fa-angle-double-left"></i>
+        <i class="fa fa-angle-double-right"></i>
+        <i class="fa fa-angle-double-up"></i>
+        <i class="fa fa-angle-double-down"></i>
+        <i class="fa fa-angle-left"></i>
+        <i class="fa fa-angle-right"></i>
+        <i class="fa fa-angle-up"></i>
+        <i class="fa fa-angle-down"></i>
+        <i class="fa fa-desktop"></i>
+        <i class="fa fa-laptop"></i>
+        <i class="fa fa-tablet"></i>
+        <i class="fa fa-mobile-phone"></i>
+        <i class="fa fa-mobile"></i>
+        <i class="fa fa-circle-o"></i>
+        <i class="fa fa-quote-left"></i>
+        <i class="fa fa-quote-right"></i>
+        <i class="fa fa-spinner"></i>
+        <i class="fa fa-circle"></i>
+        <i class="fa fa-mail-reply"></i>
+        <i class="fa fa-reply"></i>
+        <i class="fa fa-github-alt"></i>
+        <i class="fa fa-folder-o"></i>
+        <i class="fa fa-folder-open-o"></i>
+        <i class="fa fa-smile-o"></i>
+        <i class="fa fa-frown-o"></i>
+        <i class="fa fa-meh-o"></i>
+        <i class="fa fa-gamepad"></i>
+        <i class="fa fa-keyboard-o"></i>
+        <i class="fa fa-flag-o"></i>
+        <i class="fa fa-flag-checkered"></i>
+        <i class="fa fa-terminal"></i>
+        <i class="fa fa-code"></i>
+        <i class="fa fa-mail-reply-all"></i>
+        <i class="fa fa-reply-all"></i>
+        <i class="fa fa-star-half-empty"></i>
+        <i class="fa fa-star-half-full"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-location-arrow"></i>
+        <i class="fa fa-crop"></i>
+        <i class="fa fa-code-fork"></i>
+        <i class="fa fa-unlink"></i>
+        <i class="fa fa-chain-broken"></i>
+        <i class="fa fa-question"></i>
+        <i class="fa fa-info"></i>
+        <i class="fa fa-exclamation"></i>
+        <i class="fa fa-superscript"></i>
+        <i class="fa fa-subscript"></i>
+        <i class="fa fa-eraser"></i>
+        <i class="fa fa-puzzle-piece"></i>
+        <i class="fa fa-microphone"></i>
+        <i class="fa fa-microphone-slash"></i>
+        <i class="fa fa-shield"></i>
+        <i class="fa fa-calendar-o"></i>
+        <i class="fa fa-fire-extinguisher"></i>
+        <i class="fa fa-rocket"></i>
+        <i class="fa fa-maxcdn"></i>
+        <i class="fa fa-chevron-circle-left"></i>
+        <i class="fa fa-chevron-circle-right"></i>
+        <i class="fa fa-chevron-circle-up"></i>
+        <i class="fa fa-chevron-circle-down"></i>
+        <i class="fa fa-html5"></i>
+        <i class="fa fa-css3"></i>
+        <i class="fa fa-anchor"></i>
+        <i class="fa fa-unlock-alt"></i>
+        <i class="fa fa-bullseye"></i>
+        <i class="fa fa-ellipsis-h"></i>
+        <i class="fa fa-ellipsis-v"></i>
+        <i class="fa fa-rss-square"></i>
+        <i class="fa fa-play-circle"></i>
+        <i class="fa fa-ticket"></i>
+        <i class="fa fa-minus-square"></i>
+        <i class="fa fa-minus-square-o"></i>
+        <i class="fa fa-level-up"></i>
+        <i class="fa fa-level-down"></i>
+        <i class="fa fa-check-square"></i>
+        <i class="fa fa-pencil-square"></i>
+        <i class="fa fa-external-link-square"></i>
+        <i class="fa fa-share-square"></i>
+        <i class="fa fa-compass"></i>
+        <i class="fa fa-toggle-down"></i>
+        <i class="fa fa-caret-square-o-down"></i>
+        <i class="fa fa-toggle-up"></i>
+        <i class="fa fa-caret-square-o-up"></i>
+        <i class="fa fa-toggle-right"></i>
+        <i class="fa fa-caret-square-o-right"></i>
+        <i class="fa fa-euro"></i>
+        <i class="fa fa-eur"></i>
+        <i class="fa fa-gbp"></i>
+        <i class="fa fa-dollar"></i>
+        <i class="fa fa-usd"></i>
+        <i class="fa fa-rupee"></i>
+        <i class="fa fa-inr"></i>
+        <i class="fa fa-cny"></i>
+        <i class="fa fa-rmb"></i>
+        <i class="fa fa-yen"></i>
+        <i class="fa fa-jpy"></i>
+        <i class="fa fa-ruble"></i>
+        <i class="fa fa-rouble"></i>
+        <i class="fa fa-rub"></i>
+        <i class="fa fa-won"></i>
+        <i class="fa fa-krw"></i>
+        <i class="fa fa-bitcoin"></i>
+        <i class="fa fa-btc"></i>
+        <i class="fa fa-file"></i>
+        <i class="fa fa-file-text"></i>
+        <i class="fa fa-sort-alpha-asc"></i>
+        <i class="fa fa-sort-alpha-desc"></i>
+        <i class="fa fa-sort-amount-asc"></i>
+        <i class="fa fa-sort-amount-desc"></i>
+        <i class="fa fa-sort-numeric-asc"></i>
+        <i class="fa fa-sort-numeric-desc"></i>
+        <i class="fa fa-thumbs-up"></i>
+        <i class="fa fa-thumbs-down"></i>
+        <i class="fa fa-youtube-square"></i>
+        <i class="fa fa-youtube"></i>
+        <i class="fa fa-xing"></i>
+        <i class="fa fa-xing-square"></i>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-dropbox"></i>
+        <i class="fa fa-stack-overflow"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-flickr"></i>
+        <i class="fa fa-adn"></i>
+        <i class="fa fa-bitbucket"></i>
+        <i class="fa fa-bitbucket-square"></i>
+        <i class="fa fa-tumblr"></i>
+        <i class="fa fa-tumblr-square"></i>
+        <i class="fa fa-long-arrow-down"></i>
+        <i class="fa fa-long-arrow-up"></i>
+        <i class="fa fa-long-arrow-left"></i>
+        <i class="fa fa-long-arrow-right"></i>
+        <i class="fa fa-apple"></i>
+        <i class="fa fa-windows"></i>
+        <i class="fa fa-android"></i>
+        <i class="fa fa-linux"></i>
+        <i class="fa fa-dribbble"></i>
+        <i class="fa fa-skype"></i>
+        <i class="fa fa-foursquare"></i>
+        <i class="fa fa-trello"></i>
+        <i class="fa fa-female"></i>
+        <i class="fa fa-male"></i>
+        <i class="fa fa-gittip"></i>
+        <i class="fa fa-sun-o"></i>
+        <i class="fa fa-moon-o"></i>
+        <i class="fa fa-archive"></i>
+        <i class="fa fa-bug"></i>
+        <i class="fa fa-vk"></i>
+        <i class="fa fa-weibo"></i>
+        <i class="fa fa-renren"></i>
+        <i class="fa fa-pagelines"></i>
+        <i class="fa fa-stack-exchange"></i>
+        <i class="fa fa-arrow-circle-o-right"></i>
+        <i class="fa fa-arrow-circle-o-left"></i>
+        <i class="fa fa-toggle-left"></i>
+        <i class="fa fa-caret-square-o-left"></i>
+        <i class="fa fa-dot-circle-o"></i>
+        <i class="fa fa-wheelchair"></i>
+        <i class="fa fa-vimeo-square"></i>
+        <i class="fa fa-turkish-lira"></i>
+        <i class="fa fa-try"></i>
+        <i class="fa fa-plus-square-o"></i>
+        <i class="fa fa-space-shuttle"></i>
+        <i class="fa fa-slack"></i>
+        <i class="fa fa-envelope-square"></i>
+        <i class="fa fa-wordpress"></i>
+        <i class="fa fa-openid"></i>
+        <i class="fa fa-institution"></i>
+        <i class="fa fa-bank"></i>
+        <i class="fa fa-university"></i>
+        <i class="fa fa-mortar-board"></i>
+        <i class="fa fa-graduation-cap"></i>
+        <i class="fa fa-yahoo"></i>
+        <i class="fa fa-google"></i>
+        <i class="fa fa-reddit"></i>
+        <i class="fa fa-reddit-square"></i>
+        <i class="fa fa-stumbleupon-circle"></i>
+        <i class="fa fa-stumbleupon"></i>
+        <i class="fa fa-delicious"></i>
+        <i class="fa fa-digg"></i>
+        <i class="fa fa-pied-piper-square"></i>
+        <i class="fa fa-pied-piper"></i>
+        <i class="fa fa-pied-piper-alt"></i>
+        <i class="fa fa-drupal"></i>
+        <i class="fa fa-joomla"></i>
+        <i class="fa fa-language"></i>
+        <i class="fa fa-fax"></i>
+        <i class="fa fa-building"></i>
+        <i class="fa fa-child"></i>
+        <i class="fa fa-paw"></i>
+        <i class="fa fa-spoon"></i>
+        <i class="fa fa-cube"></i>
+        <i class="fa fa-cubes"></i>
+        <i class="fa fa-behance"></i>
+        <i class="fa fa-behance-square"></i>
+        <i class="fa fa-steam"></i>
+        <i class="fa fa-steam-square"></i>
+        <i class="fa fa-recycle"></i>
+        <i class="fa fa-automobile"></i>
+        <i class="fa fa-car"></i>
+        <i class="fa fa-cab"></i>
+        <i class="fa fa-taxi"></i>
+        <i class="fa fa-tree"></i>
+        <i class="fa fa-spotify"></i>
+        <i class="fa fa-deviantart"></i>
+        <i class="fa fa-soundcloud"></i>
+        <i class="fa fa-database"></i>
+        <i class="fa fa-file-pdf-o"></i>
+        <i class="fa fa-file-word-o"></i>
+        <i class="fa fa-file-excel-o"></i>
+        <i class="fa fa-file-powerpoint-o"></i>
+        <i class="fa fa-file-photo-o"></i>
+        <i class="fa fa-file-picture-o"></i>
+        <i class="fa fa-file-image-o"></i>
+        <i class="fa fa-file-zip-o"></i>
+        <i class="fa fa-file-archive-o"></i>
+        <i class="fa fa-file-sound-o"></i>
+        <i class="fa fa-file-audio-o"></i>
+        <i class="fa fa-file-movie-o"></i>
+        <i class="fa fa-file-video-o"></i>
+        <i class="fa fa-file-code-o"></i>
+        <i class="fa fa-vine"></i>
+        <i class="fa fa-codepen"></i>
+        <i class="fa fa-jsfiddle"></i>
+        <i class="fa fa-life-bouy"></i>
+        <i class="fa fa-life-saver"></i>
+        <i class="fa fa-support"></i>
+        <i class="fa fa-life-ring"></i>
+        <i class="fa fa-circle-o-notch"></i>
+        <i class="fa fa-ra"></i>
+        <i class="fa fa-rebel"></i>
+        <i class="fa fa-ge"></i>
+        <i class="fa fa-empire"></i>
+        <i class="fa fa-git-square"></i>
+        <i class="fa fa-git"></i>
+        <i class="fa fa-hacker-news"></i>
+        <i class="fa fa-tencent-weibo"></i>
+        <i class="fa fa-qq"></i>
+        <i class="fa fa-wechat"></i>
+        <i class="fa fa-weixin"></i>
+        <i class="fa fa-send"></i>
+        <i class="fa fa-paper-plane"></i>
+        <i class="fa fa-send-o"></i>
+        <i class="fa fa-paper-plane-o"></i>
+        <i class="fa fa-history"></i>
+        <i class="fa fa-circle-thin"></i>
+        <i class="fa fa-header"></i>
+        <i class="fa fa-paragraph"></i>
+        <i class="fa fa-sliders"></i>
+        <i class="fa fa-share-alt"></i>
+        <i class="fa fa-share-alt-square"></i>
+        <i class="fa fa-bomb"></i>
+    </div>
+    <h1>6 面版 Panel</h1>
+    <h2 id="cate_28">6.1 基本面版</h2>
+    <div class="mala-panel">
+        <div class="mala-panel-heading mala-clearfix"> <a href="#" class="mala-fr mala-panel-more">更多</a>
+            <h3 class="mala-panel-title">最新动态</h3>
+        </div>
+        <div class="mala-panel-body">
+            这里是面板内容
+        </div>
+    </div>
+    <h2 id="cate_31">6.4 带选项卡的面板</h2>
+    <ul class="mala-tab-navi-bar mala-clearfix">
+        <li class="mala-tab-navi-item mala-fl mala-mr active">查询动态</li>
+        <li class="mala-tab-navi-item mala-fl">我的查询</li>
+    </ul>
+    <h2 id="cate_32">6.5 弹窗样式</h2>
+    <!-- 模拟弹窗 -->
+    <div id="malaModal" class="<!--mala-modal fade-->" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="mala-modal-dialog">
+            <div class="mala-modal-content">
+                <div class="mala-modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="mala-modal-title" id="myModalLabel">编辑信息</h4>
+                </div>
+                <div class="mala-modal-body">
+                    <div class="mala-form" style="width:100%">
+                        <div class="mala-form-item mala-row">
+                            <div class="mala-col-md-3">
+                                <label for="" class="mala-label mala-form-fix">
+                                    <span class="mala-required">*</span>课程名称</label>
+                            </div>
+                            <div class="mala-col-md-6">
+                                <input type="text" class="mala-input mala-form-control">
+                            </div>
+                        </div>
+                        <div class="mala-form-item mala-row">
+                            <div class="mala-col-md-3">
+                                <label for="" class="mala-label mala-form-fix">
+                                    <span class="mala-required">*</span>课程分类</label>
+                            </div>
+                            <div class="mala-col-md-3">
+                                <select name="" id="" class="mala-select mala-form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <div class="mala-col-md-3">
+                                <select name="" id="" class="mala-select mala-form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mala-form-item mala-row">
+                            <div class="mala-col-md-3">
+                                <label for="" class="mala-label mala-form-fix">
+                                    <span class="mala-required">*</span>课程助教</label>
+                            </div>
+                            <div class="mala-col-md-6">
+                                <input type="text" class="mala-input mala-form-control">
+                            </div>
+                        </div>
+                        <div class="mala-form-item mala-row">
+                            <div class="mala-col-md-3">
+                                <label for="" class="mala-label mala-form-fix">
+                                    <span class="mala-required">*</span>课程简介</label>
+                            </div>
+                            <div class="mala-col-md-6">
+                                <textarea name="" class="mala-textarea mala-form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="mala-form-item mala-row">
+                            <div class="mala-col-md-3">
+                                <label for="" class="mala-label mala-form-fix">
+                                    <span class="mala-required">*</span>讲师简介</label>
+                            </div>
+                            <div class="mala-col-md-6">
+                                <textarea name="" class="mala-textarea mala-form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mala-modal-footer">
+                    <button type="button" class="mala-btn mala-btn-default mala-btn-wide mala-mr" data-dismiss="modal">取消</button>
+                    <button type="button" class="mala-btn mala-btn-primary mala-btn-wide">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 id="cate_33">6.6 提醒模块</h2>
+    <h3>6.6.1 一般提醒</h3>
+    <div class="mala-alert">这是一个一般提醒</div>
+    <h3>6.6.2 主要提醒</h3>
+    <div class="mala-alert mala-alert-primary">这是一个主要提醒</div>
+    <h3>6.6.3 成功提醒</h3>
+    <div class="mala-alert mala-alert-success">这是一个成功提醒</div>
+    <h3>6.6.4 危险提醒</h3>
+    <div class="mala-alert mala-alert-danger">这是一个危险提醒</div>
+    <h3>6.6.5 欢迎提醒</h3>
+    <div class="mala-overview-bar">
+        <div class="mala-welcome">你好！欢迎登陆百度云平台。</div>
+        <div class="mala-login-time">上次登录时间：
+            <time>2014-06-07</time>
+        </div>
+        <div class="mala-statistic-list">
+            <div class="mala-row">
+                <div class="mala-col-md-2">
+                    <div class="mala-statistic-item">
+                        <span class="mala-circle-title">268</span>
+                        <br>
+                        <span class="mala-circle-desc">发布信息</span>
+                    </div>
+                </div>
+                <div class="mala-col-md-2">
+                    <div class="mala-statistic-item">
+                        <span class="mala-circle-title">268</span>
+                        <br>
+                        <span class="mala-circle-desc">发布信息</span>
+                    </div>
+                </div>
+                <div class="mala-col-md-2">
+                    <div class="mala-statistic-item">
+                        <span class="mala-circle-title">268</span>
+                        <br>
+                        <span class="mala-circle-desc">发布信息</span>
+                    </div>
+                </div>
+                <div class="mala-col-md-2">
+                    <div class="mala-statistic-item">
+                        <span class="mala-circle-title">268</span>
+                        <br>
+                        <span class="mala-circle-desc">发布信息</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 id="cate_39">9.2 页面标题</h2>
+    <h1 class="mala-title-bar">系统概况</h1>
+    <h2 id="cate_40">9.3 搜索栏</h2>
+    <div class="mala-search-bar">
+        <select name="" class="mala-select mala-mr">
+            <option value="">请选择分类</option>
+        </select>
+        <select name="" class="mala-select mala-mr">
+            <option value="">请选择分类</option>
+        </select>
+        <input type="text" class="mala-input mala-input-large mala-mr" placeholder="请输入关键字"><a class="mala-btn mala-btn-default mala-btn-small ">搜索</a> 
+    </div>
+    <h2 id="cate_41">9.4批量操作&排序</h2>
+    <div class="mala-opt-bar mala-clearfix">
+        <div class="mala-btn-group mala-mr"><a class="mala-btn mala-btn-primary" data-toggle="modal" data-target="#malaModal">新建内容</a>
+        </div>
+        <div class="mala-btn-group mala-mr"> <a class="mala-btn mala-btn-default">修改类别</a><a class="mala-btn mala-btn-default">刷新列表</a><a class="mala-btn mala-btn-default">修改状态</a>
+        </div>
+        <div class="mala-btn-group "><a class="mala-btn mala-btn-danger">批量删除</a>
+        </div>
+        <div class="mala-fake-select mala-fr">
+            <span class="mala-select-title js-fake-select">筛选项目</span> <i class="mala-arrow mala-arrow-down"></i>
+            <ul class="mala-select-list js-list">
+                <li class="mala-select-item js-select-item active">筛选项目</li>
+                <li class="mala-select-item js-select-item">发生的发生</li>
+                <li class="mala-select-item js-select-item">发生的发生</li>
+            </ul>
+            <ul class="mala-select-list-fix">
+                <li class="mala-select-item">筛选项目</li>
+                <li class="mala-select-item">发生的发生</li>
+                <li class="mala-select-item">发生的发生</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

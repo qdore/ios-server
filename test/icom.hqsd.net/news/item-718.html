@@ -1,0 +1,425 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】178期</h1>
+                <h2>
+                    <a>发布日期：2015/1/23 14:15:12</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">遵化“亚太首届草莓文化节”即将拉开序幕<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>河北新闻网<span>2015-01-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-align:left;text-indent:21pt;background:white;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;"><span>据悉，<span>2015</span>年<span>1</span>月<span>17</span>日至<span>6</span>月<span>30</span>日，遵化将在团瓢庄乡山里各庄村举办“亚太首届草莓文化节”。本届文化节期间，将通过举办摄影大赛、书画艺术展览、诗词春联大赛、<span>2.14</span>爱情周、京东传统民俗体验月、我是大明星<span>---</span>亚太草莓站、亲子踏青游、农耕体验月等<span>8</span>项大型文化活动，把现代农业、特色采摘、传统民俗、观光旅游、农耕体验等诸多文化元素深度融合起来，打造遵化新型农业经济经营主题模式和农业文化产业。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">仅<span>1.8%</span>青年从不旅行旅游已成年轻人生活成分<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中国青年报<span>2015-01-12</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"></span> 
+</p>
+<p style="text-indent:21.75pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>中国青年报社会调查中心最新调查显示，旅游已成为年轻人日常生活的一部分。<span>25.3%</span>的受访者经常旅行，<span>55.1%</span>的受访者有时会，只有<span>17.9%</span>的受访者很少旅行，从不出门旅行的青年更是“稀有”，比例仅为<span>1.8%</span>。<span>61.1%</span>的受访青年旅游出行前会制作攻略。<span></span></span></span> 
+</p>
+<p style="text-indent:21.75pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国特色体验旅游产品走热<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>北京商报<span>2015-01-15</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>北京商报记者近日发现，很多旅游网站以及旅行社除了推出传统热门旅游线路外，不少打出新概念，比如蚂蜂窝网站推出的广西巴马自助行，以让游客在这里得到身体和心灵的放松；还有的网站推出杭州禅院禅修养生之旅。近期有调查显示，景点与购物对我国游客的吸引力越来越小，相对他们对生态旅游、医疗旅游、养生度假、教育培训旅游、海外游学、户外运动等兴趣越来越浓。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">发改委：房地产未现危机<span> 2015</span>年将稳定住房消费<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>观点地产网<span>2015-01-19</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">国家发改委副主任朱之鑫在首次举行的国务院政策例行吹风会上表示，国内房地产并没有出现危机，房价适当波动是在挤出投机性需求，</span><span style="font-family:'Simsun','serif';color:black;">2015</span><span style="font-family:宋体;color:black;">年将稳定住房消费。朱之鑫认为，刚过去的</span><span style="font-family:'Simsun','serif';color:black;">2014</span><span style="font-family:宋体;color:black;">年，宏观经济情况比预料的要困难。具体而言，在过去一年里，经济的下行压力较大，结构调整的阵痛显现，企业生产经营困难增多，一些风险也在显现，都超出了原来的预料。</span><span style="font-family:'Simsun','serif';color:black;"></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:'Simsun','serif';color:black;"></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">万达商业推“轻资产”模式 签约<span>4</span>机构投资<span>240</span>亿建设约<span>20</span>座<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>南方都市报<span>2015-01-16</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>在传统“以租养售”模式面临掣肘的情况下，万达商业多次强调将谋划金融方向的转型。<span>14</span>日晚，万达商业地产宣布展开实际行动，与光大安石、嘉实基金、四川信托和快钱公司签署投资框架协议，<span>4</span>家机构拟投资<span>240</span>亿元人民币，建设约<span>20</span>座万达广场。万达有关负责人向南都记者表示，这标志着万达商业地产将走上“轻重并举”的发展道路，开创全新的商业模式。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">“松限”药效渐失 风向标杭州再现“亏本卖房”<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>每日经济新闻<span>2015-01-14</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"><span>进入<span>2015</span>年，在市场有所回暖的背景下，杭州又有楼盘“亏本卖房”。令人大跌眼镜的是，这次喊出降价的并不是德信房产那样的中小民营房企，而是两家实力房企——华润和新鸿基合作的项目“之江九里”打出了“亏本卖房”的口号；另一家香港地产巨头的项目“云荷廷”也以<span>1.9</span>万元<span>/</span>平方米的价格对外销售。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">宁波港或成“一带一路”海铁联运桥头堡<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>上海证券报<span>2015-01-16</span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;">15</span><span style="font-family:宋体;color:black;">日，中国社会科学院工业经济研究所研究员、中国区域经济学会副理事长兼秘书长陈耀在接受上证报记者专访时表示，“一带一路”对于中国相关省份和产业板块都会产生重大影响。具体到港口来看，如何统筹规划安排好各个港口资源非常重要，以便让各个港口发挥各自优势。在海陆联运方面，宁波港更具优势，值得关注。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">一带一路规划将正式出台新疆及连云港率先突破<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>中财网<span>2015-01-13</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>记者昨日获悉，“一带一路”规划已经获批即将正式出台，新疆以及连云港两大起始点将率先突破。一名权威人士对记者透露，“规划已经印制完毕，在小范围下发，即将正式出台。”作为跨越千年丝绸之路的新疆，更会得到格外关照。“今年是新疆维吾尔自治区成立<span>60</span>周年，围绕丝绸之路核心区建设，中央将给予新疆政策大礼包。”该人士说。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国国家设立<span>400</span>亿元新兴产业创投引导基金<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>经济参考报<span>2015-01-15</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:'Simsun','serif';color:black;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>国务院总理李克强<span>1</span>月<span>14</span>日主持召开国务院常务会议，决定设立国家新兴产业创业投资引导基金，助力创业创新和产业升级；部署加快发展服务贸易，以结构优化拓展发展空间；审议通过《博物馆条例（草案）》。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span><span style="font-family:宋体;color:black;"><span>??? </span></span><span style="font-family:宋体;color:black;">会议认为，设立国家新兴产业创业投资引导基金，重点支持处于“蹒跚”起步阶段的创新型企业，对于促进技术与市场融合、创新与产业对接，孵化和培育面向未来的新兴产业，推动经济迈向中高端水平，具有重要意义。<span></span></span></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国与东盟国家发展跨境自驾游<span></span></span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"><span>新华网<span>2015-01-03</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:华文细黑;"></span> 
+</p>
+<p style="text-indent:21pt;" class="MsoNormal">
+	<span style="font-family:宋体;"><span>泰国洛坤府副府尹司利帕在广西南宁举行的凭祥市中国－东盟跨国旅游暨跨境自驾游总部基地推介会上表示：“我们将带更多的企业家和政府人士来广西进行考察、参观，深化中泰双方在跨境旅游项目上的合作，并在此基础上加强往来，进一步深化在旅游产业等领域的合作。”作为第十一届中国－东盟博览会的活动之一，该会议旨在推出中国－东盟跨境自驾游等旅游项目，架构中国与东盟各国多层次、深领域交流与合作的桥梁。会议上，来自中国及东盟的近百名代表就共推跨境旅游展开了讨论。<span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;color:black;"><span>观点：随着中国和东盟国家交流的日益频繁，凭祥市近年来跨境旅游发展迅速，已形成了凭祥－越南河内－下龙湾－顺化－岘港－芽庄－西贡跨境旅游精品线路，形成了<span>5</span>国自驾游等出境东盟国家自驾游线路。艾肯认为</span><a name="_GoBack"></a><span>，因为有三大因素的推动，</span></span><span style="font-family:宋体;"><span>中国－东盟自驾游热将会继续高烧下去。一是私家车的保有量因生活水平的提高，将大量增加；二是东盟有着丰富的旅游资源，中国旅游的发展支持汽车自驾游，支持和东盟地区进行跨区域合作；三是在一路一带战略的推动下，中国和东盟的关系越来越密切，道路基础设施将更加完善，通关政策将更加方面。为此，中国和东盟边境将会掀起一股汽车营地建设热潮，不断完善汽车旅馆、汽车露营地、游客服务中心、汽车服务区等设施。<span style="color:black;"></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;color:black;"></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-719.html">
+                        上一篇:<span class="on">【艾肯周讯】177期</span></a>
+                    </li>
+                    <li><a href="javascript:alert('没有更多消息。')">
+                        下一篇:<span>没有了</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

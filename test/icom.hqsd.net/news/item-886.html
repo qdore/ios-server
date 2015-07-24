@@ -1,0 +1,369 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】085期</h1>
+                <h2>
+                    <a>发布日期：2012/5/4 14:59:14</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">2011</span></b><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">年全国景区吸金<span>2658</span>亿 庐山井冈山九华山列前三<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">人民网·旅游频道<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;&nbsp;</span>2012-04-24</span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">国家旅游局发布《<span>2011</span>年全国<span>A</span>级旅游景区发展报告》，报告中指出<span>2011</span>年全国<span>A</span>级旅游景区接待旅客达到<span>25.54</span>亿人次，营业收入达到<span>2658.60</span>亿元，门票收入达到<span>1149.9</span>亿元。营业收入前<span>10</span>名的全国<span>A</span>级旅游景区分别是，九江市庐山风景名胜区、吉安市井冈山风景旅游区、池州市九华山风景区、黄坡木兰天池、沂州市五台山景区、杭州市清河坊历史街区、三清山风景名胜区、三亚市南山文化旅游区、十堰市武当山风景区、黄山市黄山风景区。</span><span style="font-family:Tahoma, sans-serif;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">全国旅游规划发展工作会议在四川省召开</span></b><span style="font-family:Tahoma, sans-serif;"></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">中国旅游新闻网<span><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-04-25</span></span><span style="font-family:宋体;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">4</span><span style="font-family:宋体;font-size:9pt;">月<span>23</span>至<span>24</span>日，全国旅游规划发展工作会议在四川省成都市召开。会议主要任务是贯彻落实《国务院关于加快发展旅游业的意见》和<span>2012</span>年全国旅游工作会议精神，突出旅游规划财务职能，分析当前及今后旅游发展形势，部署全国旅游规划发展与财务工作，充分发挥规划产业对实现“两大战略目标”的基础性和保障性作用。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<a name="OLE_LINK5"></a><a name="OLE_LINK4"></a><span><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">国家海洋局同意海南省在西沙、南沙填海建码头<span></span></span></b></span></a> 
+</p>
+<span style="background-color:#ffffff;color:#000000;"></span><span style="background-color:#ffffff;color:#000000;"></span><span style="background-color:#ffffff;color:#000000;"></span> 
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">第一旅游网<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;&nbsp;</span>2012-04-26</span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">国家海洋局原则同意海南省海洋与渔业厅对西沙晋卿岛综合补给基地码头项目用海进行审核。项目拟用海域面积<span>5000</span>多亩，由一家民营企业投资建设，建成后可为南海旅游和渔业开发提供补给保障。南海海域综合补给基地码头项目正在论证中。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">媒体称住建部筹划将刚需购房优惠制度化<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">中房网<span><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-04-23</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<a name="OLE_LINK2"></a><a name="OLE_LINK1"></a><span><span style="font-family:宋体;font-size:9pt;">在宏观经济走势开始变得十分复杂与不确定之时，住房和城乡建设部已经开始研究将目前针对首套住房的阶段性优惠政策常态化的可能性。据悉，住建部已经要求地方政府加快对中低价位、中小套型普通商品房的审批，以增加普通商品房供给。与此同时，支持中低价位、中小套型普通商品房建设、供应的相关政策，也在抓紧研究当中。住建部考虑协调和配合相关部门，将针对居民首套购房的优惠政策常态化、制度化，并以此为契机，研究建立一套保证合理、非投机投资住房消费的长效政策机制。<span></span></span></span></a> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span><span><b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">多个城市豪宅价格跳水 或引领楼市降价第二波<span></span></span></b></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span><span><span style="font-family:宋体;font-size:9pt;">网易·房地产频道<span><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-04-25</span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span><span><span style="font-family:宋体;font-size:9pt;">监测数据显示，进入二季度，一线城市豪宅项目入市量环比将大幅增长。以北京为例，二季度将有紫御华府、京禧阁、凯德锦绣等<span>10</span>余个公寓豪宅项目计划入市，另外还有中骏绿洲庄园、碧海方舟（国颂）、老莊等大面积顶级别墅取得预售许可。这些高端楼盘多位于四、五环周边，计划售价普遍在<span>5</span>万元以上。从供应量看，二季度预计入市的豪宅套数环比将增加<span>70%</span>以上。业内人士指出，<span>3</span>月以来，各地豪宅项目纷纷开始降价，目前虽然未形成燎原之势，但不少豪宅的降幅十分惊人。<span></span></span></span></span> 
+</p>
+<span style="background-color:#ffffff;color:#000000;"></span><span style="background-color:#ffffff;color:#000000;"></span><span style="background-color:#ffffff;color:#000000;"></span> 
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中国慈善榜<span>:</span>房地产与垄断行业仍然是捐赠主力<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">搜房网<span><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-04-28</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">2012</span><span style="font-family:宋体;font-size:9pt;">年中国慈善排行榜昨天在京发布，今年共有<span>231</span>位企业家上榜，曹德旺因在<span>2011</span>年捐赠价值<span>35.49</span>亿元的等值股票而蝉联中国“首善”称号。从企业捐赠的性质看，房地产企业与垄断行业的捐赠仍是主力，在<span>2011</span>年度超亿元的企业捐赠中，房地产及关联行业个人及企业捐赠，约为<span>48</span>亿元，位居所有行业第一。不过无论是上榜数量还是捐赠总量，民营企业都遥遥领先，在<span>605</span>家上榜企业中，民营企业达<span>392</span>家，捐赠总额为<span>52.4778</span>亿元。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">自<span>2011</span>年实施经济刺激政策以来央行首提稳定价格总水平<span></span></span></b> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">中财网<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;&nbsp;</span>2012-04-23</span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">23</span><span style="font-family:宋体;font-size:9pt;">日人民银行发布的《<span>2010</span>年一季度中国宏观经济形势分析》报告指出，<span>2010</span>年中国经济开局良好，对外贸易加快恢复，国内工业生产快速增长，消费增长较快，固定资产投资增幅回落，消费价格基本稳定，货币信贷调控初见成效，经济回升向好势头更加巩固。下一阶段，应继续加强流动性管理，保持货币信贷适度增长，努力稳定价格总水平，处理好保持经济平稳较快发展、调整经济结构和管理通胀预期的关系。这是自去年实施经济刺激政策以来，央行首次提出稳定价格总水平。报告指出，一季度对<span>CPI</span>影响较大的仍然是食品价格。<span>PPI</span>中原材料、燃料动力购进价格从<span>2009</span>年<span>10</span>月份的负增长<span>8.4</span>％，迅速回升到<span>3</span>月份增长<span>11.5</span>％。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">中央部门公开预算 住房保障支出显著增加<span></span></span></b> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">赛迪网<span><span>&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2012-04-24</span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">24</span><span style="font-family:宋体;font-size:9pt;">日，财政部、国家发改委、国资委、证监会、国土资源部等多家政府部门纷纷向社会公开了各自<span>2012</span>年的部门预算，由此拉开了今年中央各部委推进预算公开的大幕。数据显示，财政部<span>2012</span>年收支总预算<span>393018.94</span>万元，比<span>2011</span>年增加<span>132890.03</span>万元。而财政部核定国务院国资委<span>2012</span>年公共预算收入和支出均为<span>40.58</span>亿元。按照财政部制定的《<span>2012</span>年政府收支分类科目》划分，“资源勘探电力信息等事务—国有资产监管”支出一项计<span>7.999</span>亿元，占<span>2012</span>年财政拨款支出的<span>49.66%</span>，用于国资委机关及直属直管单位经费支出。“住房保障支出—住房改革”支出一项计<span>8830</span>万元，占<span>2012</span>年财政拨款支出的<span>5.48%</span>，用于按照国家政策规定安排的住房公积金、提租补贴和购房补贴支出。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">今年地方债务到期压力加大 本金额或超过<span>3</span>万亿元<span></span></span></b> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;font-size:9pt;">中证网<span class="Apple-converted-space">&nbsp;</span><span><span>&nbsp;&nbsp;</span>2012-04-29</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">按照审计署公告，<span>2011</span>年<span>~2012</span>年将是我国地方政府债务集中到期的高峰时间段，我国地方政府债务风险将集中体现。<span>2011</span>年我国地方政府债务到期额为<span>26246.49</span>亿元，占全部债务总额的<span>24.49%</span>；<span>2012</span>年地方政府债务到期额为<span>18402.48</span>亿元，占全部债务总额的<span>17.17%</span>。由于<span>2011</span>年到期债务大部分将以再融资方式周转到<span>2012</span>年，我们预计<span>2012</span>年到期债务本金额或超过<span>3</span>万亿，加上进入新年度后利息调整，<span>2012</span>年是地方政府债务风险最大的时期。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;">艾肯观点<a name="_GoBack"></a><span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;">电影带旺旅游业 城市“电影名片”两三百万一张<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">广州日报<span>2012-04-23</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">电影《云上太阳》将于<span>4</span>月<span>27</span>日上映，早前该片在广州举行了一场试片活动，受到了“驴友们”追捧。这部讲述一个法国女画家在贵州黔东南丹寨县的经历，丹寨县在近日邀请了不少旅游方面的专家，希望能够制定出一些尽量不损害当地自然环境的旅游路线，这部电影俨然已成为丹寨县的一张“城市名片”。年来，越来越多风景秀美的地区希望通过投资拍摄电影而达到旅游开发的目标。仅仅<span>2010</span>年至今，就有包括《郎在对门唱山歌》、《芳香之城》、《赵氏孤儿》、《唐山大地震》等多部地方参与投资的影片上映，电影似乎已经变成了性价比最高的“城市名片”。<span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;font-size:9pt;">观点：</span><span style="font-family:宋体;font-size:9pt;">电影对外景地的影响是双面的：既有带旺当地旅游经济，促进社会经济发展积极的一面，成功者如上个世纪<span>80</span>年代电影《庐山恋》的热映对庐山旅游的拉动效应；另一方面，如若对于电影的拍摄及后续大规模游客的涌入没有合理应对方案，亦将对当地生态、文化环境造成破坏。艾肯认为：旅游开发与资源保护之间并不存在悖论，关键在于正确地处理两者之间的关系。电影是旅游宣传及旅游形象塑造重要而有效的工具之一，借势开发者须有长远眼光，把对旅游资源的保护放在首位，继而进行适度、科学、合理地开发，再将旅游发展带来的效益更多地应用到对当地自然景观、原生态建筑民俗等资源的修缮与保护上，形成一种“保护—开发—再保护”保护与开发有机结合的良性循环发展模式。<span></span></span> 
+</p>
+<p style="text-align:left;background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal" align="left">
+	<span><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:Tahoma, sans-serif;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><i><span><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span><span class="apple-style-span"><span style="color:black;font-size:10.5pt;"><span><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><strong><img border="0" src="http://www.come23.com/Uploadfile/WebEditor/2010722154346521.jpg" /></strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></i></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+</p>
+<span style="background-color:#ffffff;"><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:Tahoma, sans-serif;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><i><span><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span><span class="apple-style-span"><span style="color:black;font-size:10.5pt;"><span><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"> 
+<p class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:Tahoma, sans-serif;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><i><span><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span><span class="apple-style-span"><span style="color:black;font-size:10.5pt;"><span><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:Tahoma, sans-serif;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span class="apple-style-span"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:华文细黑;color:#0066ff;font-size:12pt;"><span style="color:black;"><span style="font-family:宋体;"><i><span><span style="font-family:宋体;"><span class="apple-style-span"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;color:black;"><span><span class="apple-style-span"><span style="color:black;font-size:10.5pt;"><span><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:华文细黑;color:#ff6600;font-size:15pt;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;"><span style="font-family:宋体;color:#333333;font-size:12pt;"><span style="font-family:宋体;color:black;"><span style="font-family:宋体;"><i><span><span><i><span><span><i><span>战略顾问部出品</span></i></span></span></i></span></span></i></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></i></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></i></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+</p>
+</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></i></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-887.html">
+                        上一篇:<span class="on">【艾肯周讯】084期</span></a>
+                    </li>
+                    <li><a href="/news/item-885.html">
+                        下一篇:<span>【艾肯周讯】086期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

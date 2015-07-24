@@ -1,0 +1,430 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+    <script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/skin/js/Drop_down.js"></script>
+    <title>艾肯弘扬-新闻资讯详情</title>
+</head>
+<body>
+    
+<div class="st_top">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/home/"></a>
+        </div>
+        <ul id="nav">
+            <li><a href="/about/">ICOM弘扬</a></li><li><a href="/news/" class="on">ICOM新闻</a></li><li><a href="/case/">经典案例</a></li><li><a href="/server/">ICOM服务</a></li><li><a href="/team/">ICOM团队</a></li><li><a href="/train/">ICOM培训</a></li><li><a href="/contact/">联系我们</a></li><li><a href="/branch/">分支机构</a></li>
+        </ul>
+        <div id="search_btn" onclick="return click_a('divOne_1')">
+            搜索</div>
+        <div class="language">
+            <p>
+                <a class="her" href="">CN</a></p>
+            <p>
+                <a href="">En</a></p>
+        </div>
+        <div id="divOne_1" class="searchIpt">
+            <input type="text" class="search_txt" onfocus="if(this.value=='搜索关键字'){this.value='';this.className='search_txt';}"
+                onblur="if(this.value==''){this.value='搜索关键字';this.className='search_txt';}"
+                placeholder="搜索关键字" value="" />
+            <p>
+                <input type="submit" class="search_btn" value="搜索" /></p>
+        </div>
+        <script type="text/javascript">
+            $(".searchIpt p").click(function () {
+                var search = $(".searchIpt input").val();
+                if (search == null || search == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                if (search.trim() == null || search.trim() == "") {
+                    alert("请输入要查询的关键字！");
+                    $(".searchIpt input").focus();
+                    return false;
+                }
+
+                var regx = /^\d*([\u4e00-\u9fa5]|[a-zA-Z])+\d*$/;
+                if (!regx.test(search)) {
+                    alert("请勿输入除中文，英文，数字之外的关键字！");
+                    return;
+                }
+
+
+                location.href = "/search/key_" + search + "/";
+            }) 
+        </script>
+    </div>
+</div>
+<script type="text/javascript">
+    function click_a(divDisplay) {
+        if (document.getElementById(divDisplay).style.display != "block") {
+            document.getElementById(divDisplay).style.display = "block";
+        }
+        else {
+            document.getElementById(divDisplay).style.display = "none";
+        }
+    }
+   
+</script>
+
+    <!--top end-->
+    <div class="top_cle">
+        <div class="wrap top_ico">
+            <h2 class="news_ico">
+                case</h2>
+            <ul>
+                
+                        <li><a class=""
+                            href="/news/aikenxinwen/">
+                            艾肯新闻</a></li>
+                    
+                        <li><a class="her"
+                            href="/news/zhuantiyanjiu/">
+                            专题研究</a></li>
+                    
+                        <li><a class=""
+                            href="/news/xingyezixun/">
+                            行业资讯</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="st_box">
+        <div class="wrap">
+            <div class="newsInfo_title">
+                <h1>
+                    【艾肯周讯】121期</h1>
+                <h2>
+                    <a>发布日期：2013/4/19 11:50:00</a> <a>本文来自:admin</a></h2>
+            </div>
+            <div class="newsInfo">
+                <p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">旅游<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2013</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">年<span>1</span>季度中国国内旅游将达<span>10</span>亿人次<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">经济日报<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-13</span></span></span><span style="font-family:宋体;color:#333333;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">国家旅游局发布数据显示，一季度，我国旅游经济总体保持持续平稳发展格局，旅游市场呈现“两增一平”的特点，国内和出境旅游市场均实现较快增长，预计旅游总收入约为<span>8350</span>亿元，比上年同期增长<span>15.8%</span>。出境旅游快速发展，境外消费大幅增长，预计出境旅游人数约<span>2260</span>万人次，比上年同期增长<span>16%</span>。<span></span></span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<span style="color:black;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">云南西双版纳将投资<span>15</span>亿建中老免税购物街<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">云南网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-14</span></span></span><span class="apple-style-span"><span style="font-family:宋体;font-size:9pt;"></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:Arial, sans-serif;color:black;font-size:10pt;">&nbsp;</span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">第十六届澜沧江<span>.</span>湄公河次区域经济合作西双版纳边境贸易旅游交易会在西双版纳国际会议展览中心开幕，本届边交会首次邀请到尼泊尔、巴基斯坦、阿富汗等南亚国家和美国厂商参加，首日签订意向性投资项目<span>16</span>个，总投资超过<span>117</span>亿元。磨憨经济开发区和西双版纳冠城职业有限公司达成协议，将由后者投资<span>15</span>亿元，在磨憨建设中国、老挝免税购物一条街，其中包含大型免税购物商城、中老购物一条街，以及国际五星级度假酒店。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:21pt;color:#000000;" class="MsoNormal">
+	<span style="color:black;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">湖北十堰与香港英皇联手打造亚洲最大武术文化创意旅游景点<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">新华网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-14</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:Arial, sans-serif;color:black;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">12</span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">日，十堰市与香港英皇集团签订合作意向书，选址丹江口市凤凰岛建设英皇<span>.</span>武动十堰项目，打造亚洲最大规模武术文化创意旅游景点。该项目占地约<span>2000</span>亩，概算总投资<span>50</span>亿元，将按照武术运动、文化创意、制作、教育、消闲等五大概念建设七大主题区域，成为国内主要武术与影视展览、培训及表演中心。据介绍，七大主题区域分别是中国太极博览区、综合性文化演艺区、影视会议展览区、影视特技制作区、影视巨星区、英皇娱乐演艺创意校园区、影视主题公园消闲区。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:21pt;color:#000000;" class="MsoNormal">
+	<span style="color:black;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">房地产<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">中国住建部表示适当上调收入线标准扩大保障范围<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">21CN</span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">新闻<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-12</span></span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">住建部最新发布《关于做好<span>2013</span>年城镇保障性安居工程工作的通知》，对今年城镇住房保障工作进行了要求：各地要适当上调收入线标准，有序扩大住房保障覆盖范围。今年底前，地级以上城市要明确外来务工人员申请住房保障的条件、程序和轮候规则。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">&nbsp;</span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">报告称中国游艇房地产业或成投资热点</span></b><span style="color:black;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">新华网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-12</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">据<span>2012</span>年中国游艇市场总容量约<span>17.5</span>亿元人民币，相关的游艇服务业增长潜力巨大，而最大的投资价值则来源于码头，<span>4</span>月<span>12</span>日发布的《中国游艇报告》称，“游艇房地产业”或将成为未来投资热点。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">由财富品质研究院发布的该报告称，游艇产业与房地产业的良好互动关系，使游艇房地产业得到一些地方青睐。目前，上海、山东、福建、辽宁、浙江、广东等东部沿海省份纷纷制定游艇产业的相关规划，大量水域将有望放开，配套设施也将逐步跟上，产业环境条件正逐步优化，极大地促进了当地游艇产业的发展。该报告同时发布了中国游艇城市发展指数，该指数不仅代表该城市目前游艇产业发展现状，也一定程度表明了该城市发展游艇产业的现有资源状况和未来发展潜力。在该榜单中，上海，三亚，青岛分居前三名，大连，厦门，天津等城市亦被指潜力巨大。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:宋体;color:#333333;"><span>&nbsp;</span></span> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">"</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">十二五<span>"</span>末中国家庭户均拥有住房可能会达到<span>1.08</span>套<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中国经济网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-14</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:华文细黑;color:black;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">日前，国务院发展研究中心相关负责人表示，房改以来大规模的住房建设，使我国住房市场发生了深刻的变化。根据数据推算，目前全国累积的存量住房约<span>179</span>亿平方米、<span>2.2</span>亿套，户均约<span>1.02</span>套住房。到<span>2015</span>年，“十二五”末，我国家庭户均拥有住房可能会达到<span>1.08</span>套。然而，不少人对此表示质疑，认为自己“被平均”了，生活中很多家庭仍在为何时拥有一套自己的房子而发愁。<span></span></span></span> 
+</p>
+<table style="background-color:#ffffff;width:202.5pt;border-collapse:collapse;color:#000000;" class="MsoNormalTable ke-zeroborder" border="0" cellspacing="0" cellpadding="0" width="270" align="left">
+	<tbody>
+		<tr>
+			<td style="background-color:transparent;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;">
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="background:white;color:#ff6600;font-size:10.5pt;"><span>&nbsp;</span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">经济<span></span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2012</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">年旅游业对全球经济的贡献为<span>6.6</span>万亿美元<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">安徽日报<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-10</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:华文细黑;color:black;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="p0">
+	<span><span class="apple-style-span"><span style="color:black;font-size:9pt;">世界旅游及旅行理事会<span>9</span>日发布报告称，去年旅游业对全球经济的贡献为<span>6.6</span>万亿美元，约占全球经济总量的<span>9%</span>。这份名为《<span>2013</span>年旅游业的经济影响》的报告说，过去三年旅游业对全球经济的贡献持续增长，目前全球有<span>2</span>．<span>6</span>亿个工作岗位与旅游业相关。世界旅游理事会总裁兼首席执行官大卫<span>.</span>斯克斯尔说，<span>2012</span>年旅游业对经济的影响进一步增大，其增幅强于制造业、零售业和金融服务业等行业。</span></span><span class="apple-style-span"><span style="color:black;"></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">&nbsp;</span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2013</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">年第<span>1</span>季度中国人民币新增贷款<span>2.76</span>万亿元<span></span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">经济日报<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-12</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:华文细黑;color:black;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中国人民银行今天发布的数据显示，<span>3</span>月份我国新增人民币贷款<span>1.06</span>万亿元，同比多增<span>515</span>亿元。至此，一季度新增人民币贷款达<span>2.76</span>万亿元，同比多增<span>2949</span>亿元。数据显示，<span>3</span>月份人民币存款增加<span>4.22</span>万亿元，同比多增<span>1.27</span>万亿元。一季度人民币存款增加<span>6.11</span>万亿元，同比多增<span>2.35</span>万亿元。截至<span>3</span>月末，国家外汇储备余额为<span>3.44</span>万亿美元。此外，一季度跨境贸易人民币结算业务发生<span>1</span>万亿元，直接投资人民币结算业务发生<span>854</span>亿元。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="background:white;color:#ff6600;font-size:10.5pt;"><span>&nbsp;</span></span></b> 
+</p>
+<p style="text-align:left;text-indent:0px;background:white;color:#000000;" class="MsoNormal" align="left">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">2013</span></b><b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">年<span>3</span>月中国<span>CPI</span>重回<span>"2</span>时代<span>"</span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">中国经济网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-14</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<span style="color:#333333;font-size:10.5pt;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">国家统计局<span>9</span>日发布<span>3</span>月份居民消费价格变动情况，<span>3</span>月份，全国居民消费价格总水平同比上涨<span>2.1%</span>。其中，食品价格上涨<span>2.7%</span>，与上月相比有了大幅下降。此前市场普遍预测，由于食品价格下跌和春节因素消失的影响，<span>CPI</span>增长或至<span>2.5%</span>左右，通胀压力降至四年来最低点。不过，业内分析称，<span>CPI</span>涨幅呈现回落趋势可能是临时的状态，整体还是向上的趋势。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="p0">
+	<b><span style="font-family:华文细黑;background:white;color:#ff6600;font-size:15pt;">艾肯观点</span></b><span style="font-family:Verdana, sans-serif;background:white;color:black;font-size:9pt;"></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<b><span style="font-family:华文细黑;background:white;color:#0066ff;font-size:12pt;">湖南凤凰古城顶风推出<span>"</span>门票新政<span>"</span></span></b> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">新华网<span><span>&nbsp;<span class="Apple-converted-space">&nbsp;</span></span>2013-04-12</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:0px;color:#000000;" class="MsoNormal">
+	<span style="font-family:Arial, sans-serif;color:black;"><span>&nbsp;</span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">10</span></span><span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">日起，凤凰古城风景名胜区的古城景区与神凤文化景区两个<span>4A</span>级景区整合为一个产品，价格按每人次<span>148</span>元执行，此后，每个踏进古城的游客，不管是否参观景点，都将收取<span>148</span>元门票。<span></span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">收费消息一出，网络一片唏嘘。不少游客认为这是“偷换概念”，他们质疑：以前在古城漫步不要钱，现在为什么“进城”就要收费了呢？这样的“一票制”使得消费者的选择权被完全剥夺，无异于一种强制消费和变相涨价。<span></span></span></span> 
+</p>
+<p style="text-align:left;text-indent:15.75pt;background:white;color:#000000;" class="MsoNormal" align="left">
+	<span class="apple-style-span"><span style="color:black;"><span>&nbsp;</span></span></span> 
+</p>
+<p style="background-color:#ffffff;text-indent:18pt;color:#000000;" class="MsoNormal">
+	<span class="apple-style-span"><span style="font-family:宋体;color:black;font-size:9pt;">观点：凤凰古城收费事件可谓“一石激起千层浪”，引发了旅游爱好者、旅游行业内外各方人士的探讨，且其所引发的争论已不仅局限于收费事件本身的合理性问题，而是更多的关注于其所折射出的国内景区过度依赖“门票经济”的痼疾以及旅游项目中政府与经营者相互关系与操作行为性质的界定等。艾肯认为，随着旅游市场化成熟度的不断提高，“门票经济”必然也必须走向式微之路。然而就现阶段而言，面对日益增长的游客量及其对古城建筑等文化资源的破坏，加大维护保养的资金投入也是一种现实需要。而相关资金的筹措，是否只能以“封闭式一票制”收取，能否借鉴丽江的古城维护费等形式；门票收入如何投入古城的维护与建设以及公众能以何种形式监督，或应得到相关部门更明晰的解释。</span></span> 
+</p>
+            </div>
+            <div class="news_f2">
+                <ul>
+                    <li><a href="/news/item-850.html">
+                        上一篇:<span class="on">【艾肯周讯】120期</span></a>
+                    </li>
+                    <li><a href="/news/item-848.html">
+                        下一篇:<span>【艾肯周讯】122期</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="st_fot">
+    <div class="wrap fotIno">
+        <div class="fot_ico">
+            <ul>
+                <li><a href="http://t.qq.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f1.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://im.qq.com/index.shtml" target="_blank">
+                    <img src="/skin/images/fot_ico_f2.png" width="34" height="34" alt="" /></a></li>
+                <li><a href="http://d.weibo.com/" target="_blank">
+                    <img src="/skin/images/fot_ico_f3.png" width="34" height="34" alt="" /></a></li>
+            </ul>
+        </div>
+        <ul class="fot_nav">
+            <li><a href="index.aspx/" target="_blank">艾肯首页</a></li>
+            <li><a href="/about/" target="_blank">关于我们</a></li>
+            <li><a href="/join/" target="_blank">人才招聘</a></li>
+            <li><a href="/news/" target="_blank">艾肯新闻</a></li>
+            <li><a href="/contact/">联系我们</a></li>
+            <li><a href="http://map.baidu.com/?newmap=1&shareurl=1&force=newsample&l=19&tn=B_NORMAL_MAP&c=12683004,2561614&s=s%26da_src%3Dpcmappg.searchBox.sugg%26wd%3D艾肯弘扬咨询管理公司%26c%3D340%26src%3D0%26wd2%3D深圳市南山区%26sug%3D1%26l%3D19%26from%3Dwebmap%26force%3Dnewsample%26sug_forward%3D75cc911df63638b026e0a043 ">
+                公司地图</a></li>
+        </ul>
+        <ul class="fot_link">
+            <h2>
+                友情连接</h2>
+            
+                    <li><a href="http://www.icanjoy.com" target="_blank">
+                        艾肯卓悦景区管理</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文华传播</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯文商商业策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        艾肯天下旅游建设</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游规划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        旅游策划</a></li>
+                
+                    <li><a href="http://szhqsd.com" target="_blank">
+                        深圳艾肯咨询机构</a></li>
+                
+        </ul>
+        <div class="fot_corInfo">
+            <span>商务部：
+                0755——83497735<br />
+                培训部：
+                0755——86645259<br />
+                传真：0755——86644567<br />
+                邮箱地址：huzehua@szhqsd.com<br />
+                公司地址：深圳市南山区南山大道3838号深圳设计 产业园水栋5楼<br />
+            </span>
+        </div>
+    </div>
+    <div class="fot_copy">
+        <p>
+            Copyright by 2006-2013 深圳市艾肯弘扬咨询管理有限公司 版权所有 粤ICP备09018042号</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#nav li:last").css("padding", "0")
+    })
+</script>
+<div class="go-top dn" id="go-top">
+    <div class="uc-2vm uc-2vm1">
+        <a href="" target="_blank">
+            <img src="/skin/images/shouce.png" title="下载手册" width="16" height="16" alt=""></a>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+        <img src="/skin/images/tel_btn.png" width="16" height="16" alt="" />
+        <div class="uc-2vm-pop2 dn">
+            <div class="logo-2wm-box">
+                <img src="/skin/images/tel_img.png" width="192" height="60" />
+            </div>
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+        <img src="/skin/images/weixin_btn.png" width="14" height="14" alt="" /></div>
+    <div class="uc-2vm-pop3 dn">
+        <div class="logo-2wm-box">
+            <img src="/skin/images/weixin_img.jpg" width="190" height="190" alt="" />
+        </div>
+    </div>
+    <div href="javascript:void(0);" class="go">
+        <img src="/skin/images/goTop.png" width="22" height="12" alt="" /></div>
+</div>
+<script>
+    $(function () {
+        $(window).on('scroll', function () {
+            var st = $(document).scrollTop();
+            if (st > 0) {
+                if ($('#main-container').length != 0) {
+                    var w = $(window).width(), mw = $('#main-container').width();
+                    if ((w - mw) / 2 > 70)
+                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                    else {
+                        $('#go-top').css({ 'left': 'auto' });
+                    }
+                }
+                $('#go-top').fadeIn(function () {
+                    $(this).removeClass('dn');
+                });
+            } else {
+                $('#go-top').fadeOut(function () {
+                    $(this).addClass('dn');
+                });
+            }
+        });
+        $('#go-top .go').on('click', function () {
+            $('html,body').animate({ 'scrollTop': 0 }, 500);
+        });
+
+
+        $('#go-top .uc-2vm2').hover(function () {
+            $('#go-top .uc-2vm-pop2').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop2').addClass('dn');
+        });
+        $('#go-top .uc-2vm3').hover(function () {
+            $('#go-top .uc-2vm-pop3').removeClass('dn');
+        }, function () {
+            $('#go-top .uc-2vm-pop3').addClass('dn');
+        });
+    });
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>
