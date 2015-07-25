@@ -3,9 +3,9 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 NEWS_TYPES = (
-    ('福梦新闻', '福梦新闻'),
-    ('地区动态', '地区动态'),
-    ('媒体关注', '媒体关注'),
+    ('fumengxinwen', '福梦新闻'),
+    ('diqudongtai', '地区动态'),
+    ('meitiguanzhu', '媒体关注'),
 )
 
 # 新闻
@@ -14,7 +14,7 @@ class News(models.Model):
             max_length = 500)
     news_type = models.CharField(verbose_name = u"新闻类型",
             choices = NEWS_TYPES,
-            max_length = 30)
+            max_length = 100)
     add_time = models.DateTimeField(verbose_name = u"添加日期",
             auto_now_add = True)
     add_by = models.CharField(verbose_name = u"本文来自",
