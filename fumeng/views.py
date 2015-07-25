@@ -55,10 +55,12 @@ def about_progress(request):
     return render(request, 'fumeng/about_progress.html',context)
 
 	
-def news(request):
-    job_list = {}
+def get_news_detail(request,title):
+    title = str(title)
+    new = News.objects.get(title=title)
+    print new.content
     context = RequestContext(request, {
-    'job_list':job_list,              
+    'new':new,              
     })  
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-news-detail.html',context)

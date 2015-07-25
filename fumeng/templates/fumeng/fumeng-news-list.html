@@ -48,18 +48,18 @@
 </div>
 <div class="st_box">
     <div class="wrap">
-        <div class="newslist">
+        <div class="newslist" style="word-wrap:break-word;">
             <ul>
                 {% for item in news%}
                     <li>
                         <span>
                             <h1>
                                 <p>
-                                    <a href="{{ item.title}}">{{item.title}}</a></p>
-                                <p class="time">{{item. add_time}}</p>
+                                    <a href="/fumeng/news/list/{{ item.title}}">{{item.title}}</a></p>
+                                <p class="time">{{item.add_time|date:"Y-m-d H:i:s"}}</p>
                             </h1>
                             <b>
-                                {{item.content}}
+                                {{item.content|safe}}
                             </b>
                         </span>
                     </li>
