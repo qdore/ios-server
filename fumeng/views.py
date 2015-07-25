@@ -60,15 +60,15 @@ def news(request):
     'job_list':job_list,              
     })  
     #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-news.html',context)
+    return render(request, 'fumeng/fumeng-news-detail.html',context)
 
-def news_news(request):
+def news_list(request):
     job_list = {}
     context = RequestContext(request, {
     'job_list':job_list,              
     })  
     #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/news_news.html',context)
+    return render(request, 'fumeng/fumeng-news-list.html',context)
 	
 def news_dynamic(request):
     job_list = {}

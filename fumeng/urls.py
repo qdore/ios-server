@@ -16,7 +16,7 @@ urlpatterns = patterns(
     url(r'^about/strategy/$', views.about_strategy,name='about_strategy'),
     url(r'^about/advantage/$', views.about_advantage,name='about_advantage'),
     url(r'^about/progress/$', views.about_progress,name='about_progress'),
-    url(r'^news/news/$', views.news_news,name='news_news'),
+    url(r'^news/list/$', views.news_list),
     url(r'^news/dynamic/$', views.news_dynamic,name='news_dynamic'),
     url(r'^news/map/$', views.news_map,name='news_map'),
     url(r'^news/attention/$', views.news_attention,name='news_attention'),
