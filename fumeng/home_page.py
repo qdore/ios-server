@@ -7,7 +7,6 @@ class HomePage(models.Model):
     upload_to="media/%Y/%m/%d",
             null=True)
     url_1 = models.CharField(verbose_name="首页海报图1链接", max_length = 1000)
-    """
     image_2 = models.ImageField(verbose_name="首页海报图2",
             upload_to="media/%Y/%m/%d",
             null=True)
@@ -99,7 +98,6 @@ class HomePage(models.Model):
             null=True)
     data_kuangchanziyuan_4 = models.CharField(verbose_name="矿产资源简介4", max_length = 1000)
     url_kuangchanziyuan_4 = models.CharField(verbose_name="矿产资源简介4链接", max_length = 1000)
-    """
 
     class Meta:
         verbose_name = u'首页设置'

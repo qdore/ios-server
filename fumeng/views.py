@@ -3,6 +3,9 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.template import Context
+
+import home_page
+
 # Create your views here.
 def home(request):
     job_list = {}
