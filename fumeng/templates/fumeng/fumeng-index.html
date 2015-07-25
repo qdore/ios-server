@@ -127,11 +127,13 @@
         <div class="flexslider">
             <ul class="slides">
                 
-                        <li style="background: url(/upload/201504/15/201504150929557861.jpg) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+                        <li style="background: url({{home.image_1}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
                     
-                        <li style="background: url(/upload/201506/11/201506111536309030.jpg) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+                        <li style="background: url({{home.image_2}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
                     
-                        <li style="background: url(/upload/201506/11/201506111537168657.jpg) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+                        <li style="background: url({{home.image_3}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+
+                        <li style="background: url({{home.image_4}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
                     
             </ul>
         </div>
@@ -154,10 +156,10 @@
                         <i></i><span>关于我们</span><i></i></p>
                 </div>
                 <p class="aboutAd">
-                    <img src="{% static 'images/i_aboutAd.jpg' %}" width="719" height="66" alt="" /></p>
-                <span class="i_aboutC">国家级旅游规划资质单位——深圳市艾肯弘扬咨询管理有限公司是一家专业的景区旅游策划、旅游规划公司，为旅游景区和区域开发项目提供实操性强的全过程、全方位咨询顾问服务。公司高层管理人员均曾在国内最著名的旅游景区从事过十年以上高层管理工作，具有最权威最经得起实践考验的旅游规划、旅游策划的管理经验，是中国主题公园发展变迁的亲历者和管理者，中国旅游业的中流砥柱。</span>
+                    <img src="{{ home.image_about}}" width="719" height="66" alt="" /></p>
+                <span class="i_aboutC">{{home.data_about}}</span>
                 <div class="view">
-                    <i></i><span><a href="/about/">查看详情 &gt;</a></span><i></i></div>
+                    <i></i><span><a href="{{home.url_about}}">查看详情 &gt;</a></span><i></i></div>
             </div>
             <!--index_about end-->
         </div>
@@ -176,19 +178,16 @@
                         
                                 <dd class="hit" style="">
                                     <a class=" " href="javascript:void(0)">
-                                        综合体旅游</a></dd>
+                                        生态养殖</a></dd>
                             
                                 <dd class="" style="">
                                     <a class=" " href="javascript:void(0)">
-                                        生态旅游</a></dd>
+                                        生态种植</a></dd>
                             
                                 <dd class="" style="">
                                     <a class=" " href="javascript:void(0)">
-                                        主题公园</a></dd>
-                            
-                                <dd class="" style="">
-                                    <a class=" " href="javascript:void(0)">
-                                        湿地旅游</a></dd>
+                                        矿产资源</a></dd>
+
                             
                     </dl>
                     <div class="panes">
@@ -202,112 +201,75 @@
                                                         
                                                                 <li>
                                                                     <div class="img">
-                                                                        <a href="/case/item-99.html"
+                                                                        <a href="{{home.url_shengtaizhongzhi_1}}"
                                                                             target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
                                                                     <div class="text">
                                                                         <p>
-                                                                            <a href="/case/item-99.html">
+                                                                            <a href="{{home.url_shengtaizhongzhi_1}}">
                                                                                 <p>
-                                                                                    <a href="/case/item-99.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-99.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-99.html">
+                                                                                    <a href="{{home.url_shengtaizhongzhi_1}}">
+                                                                                        名称：生态种植</a></p>
+                                                                                <p>{{home.data_shengtaizhongzhi_1}}</p>
+                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_1}}">
+                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_1}}">
                                                                                         READ MORE</a>
                                                                     </div>
                                                                 </li>
                                                             
                                                                 <li>
                                                                     <div class="img">
-                                                                        <a href="/case/item-98.html"
+                                                                        <a href="{{home.url_shengtaizhongzhi_2}}"
                                                                             target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
                                                                     <div class="text">
                                                                         <p>
-                                                                            <a href="/case/item-98.html">
+                                                                            <a href="{{home.url_shengtaizhongzhi_2}}">
                                                                                 <p>
-                                                                                    <a href="/case/item-98.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-98.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-98.html">
+                                                                                    <a href="{{home.url_shengtaizhongzhi_2}}">
+                                                                                        名称：生态种植</a></p>
+                                                                                <p>{{home.data_shengtaizhongzhi_2}}</p>
+                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_2}}">
+                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_2}}">
                                                                                         READ MORE</a>
                                                                     </div>
                                                                 </li>
                                                             
                                                                 <li>
                                                                     <div class="img">
-                                                                        <a href="/case/item-97.html"
+                                                                        <a href="{{home.url_shengtaizhongzhi_3}}"
                                                                             target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
                                                                     <div class="text">
                                                                         <p>
-                                                                            <a href="/case/item-97.html">
+                                                                            <a href="{{home.url_shengtaizhongzhi_3}}">
                                                                                 <p>
-                                                                                    <a href="/case/item-97.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-97.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-97.html">
+                                                                                    <a href="{{home.url_shengtaizhongzhi_3}}">
+                                                                                        名称：生态种植</a></p>
+                                                                                <p>{{home.data_shengtaizhongzhi_3}}</p>
+                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_3}}">
+                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_3}}">
                                                                                         READ MORE</a>
                                                                     </div>
                                                                 </li>
                                                             
                                                                 <li>
                                                                     <div class="img">
-                                                                        <a href="/case/item-96.html"
+                                                                        <a href="{{home.url_shengtaizhongzhi_4}}"
                                                                             target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
+                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
                                                                     <div class="text">
                                                                         <p>
-                                                                            <a href="/case/item-96.html">
+                                                                            <a href="{{home.url_shengtaizhongzhi_4}}">
                                                                                 <p>
-                                                                                    <a href="/case/item-96.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-96.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-96.html">
+                                                                                    <a href="{{home.url_shengtaizhongzhi_4}}">
+                                                                                        名称：生态种植</a></p>
+                                                                                <p>{{home.data_shengtaizhongzhi_4}}</p>
+                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_4}}">
+                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_4}}">
                                                                                         READ MORE</a>
                                                                     </div>
                                                                 </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-93.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
-                                                                        <p>
-                                                                            <a href="/case/item-93.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-93.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-93.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-93.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-6.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/201504/11/201504111044105125.png' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
-                                                                        <p>
-                                                                            <a href="/case/item-6.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-6.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-6.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-6.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
                                                     </ul>
                                                 </div>
                                             </div>
@@ -329,79 +291,78 @@
                                             <div class="cnt-wrap" id="cnt-wrap2">
                                                 <div class="cnt" id="cnt2">
                                                     <ul>
-                                                        
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-102.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_shengtaiyangzhi_1}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_shengtaiyangzhi_1}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_shengtaiyangzhi_1}}">
                                                                         <p>
-                                                                            <a href="/case/item-102.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-102.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-102.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-102.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-101.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+                                                                            <a href="{{home.url_shengtaiyangzhi_1}}">
+                                                                                名称：生态养殖</a></p>
+                                                                        <p>{{home.data_shengtaiyangzhi_1}}</p>
+                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_1}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_1}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_shengtaiyangzhi_2}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_shengtaiyangzhi_2}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_shengtaiyangzhi_2}}">
                                                                         <p>
-                                                                            <a href="/case/item-101.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-101.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-101.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-101.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-100.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+                                                                            <a href="{{home.url_shengtaiyangzhi_2}}">
+                                                                                名称：生态养殖</a></p>
+                                                                        <p>{{home.data_shengtaiyangzhi_1}}</p>
+                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_2}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_2}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_shengtaiyangzhi_3}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_shengtaiyangzhi_3}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_shengtaiyangzhi_3}}">
                                                                         <p>
-                                                                            <a href="/case/item-100.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-100.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-100.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-100.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-5.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/201504/11/201504111044105125.png' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+                                                                            <a href="{{home.url_shengtaiyangzhi_3}}">
+                                                                                名称：生态养殖</a></p>
+                                                                        <p>{{home.data_shengtaiyangzhi_3}}</p>
+                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_3}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_3}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_shengtaiyangzhi_4}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_shengtaiyangzhi_4}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_shengtaiyangzhi_4}}">
                                                                         <p>
-                                                                            <a href="/case/item-5.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-5.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-5.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-5.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
+                                                                            <a href="{{home.url_shengtaiyangzhi_4}}">
+                                                                                名称：生态养殖</a></p>
+                                                                        <p>{{home.data_shengtaiyangzhi_4}}</p>
+                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_4}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_4}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -423,79 +384,77 @@
                                             <div class="cnt-wrap" id="cnt-wrap3">
                                                 <div class="cnt" id="cnt3">
                                                     <ul>
-                                                        
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-105.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_kuangchanziyuan_1}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_kuangchanziyuan_1}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_kuangchanziyuan_1}}">
                                                                         <p>
-                                                                            <a href="/case/item-105.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-105.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-105.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-105.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-104.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+                                                                            <a href="{{home.url_kuangchanziyuan_1}}">
+                                                                                名称：矿产资源</a></p>
+                                                                        <p>{{home.data_kuangchanziyuan_1}}</p>
+                                                                        <a class="view" href="{{home.url_kuangchanziyuan_1}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_1}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_kuangchanziyuan_2}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_kuangchanziyuan_2}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_kuangchanziyuan_2}}">
                                                                         <p>
-                                                                            <a href="/case/item-104.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-104.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-104.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-104.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-103.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+                                                                            <a href="{{home.url_kuangchanziyuan_2}}">
+                                                                                名称：矿产资源</a></p>
+                                                                        <p>{{home.data_kuangchanziyuan_2}}</p>
+                                                                        <a class="view" href="{{home.url_kuangchanziyuan_2}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_2}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_kuangchanziyuan_3}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_kuangchanziyuan_3}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_kuangchanziyuan_3}}">
                                                                         <p>
-                                                                            <a href="/case/item-103.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-103.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-103.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-103.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="/case/item-7.html"
-                                                                            target="_blank">
-                                                                            <img src="{% static 'images/upload/images/i_aboutAd.jpg' %}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
+                                                                            <a href="{{home.url_kuangchanziyuan_3}}">
+                                                                                名称：矿产资源</a></p>
+                                                                        <p>{{home.data_kuangchanziyuan_3}}</p>
+                                                                        <a class="view" href="{{home.url_kuangchanziyuan_3}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_3}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="img">
+                                                                <a href="{{home.url_kuangchanziyuan_4}}"
+                                                                   target="_blank">
+                                                                    <img src="{{home.image_kuangchanziyuan_4}}" width="260" height="250" alt=""></a></div>
+                                                            <div class="text">
+                                                                <p>
+                                                                    <a href="{{home.url_kuangchanziyuan_4}}">
                                                                         <p>
-                                                                            <a href="/case/item-7.html">
-                                                                                <p>
-                                                                                    <a href="/case/item-7.html">
-                                                                                        名称：太极湖生态文化旅游区</a></p>
-                                                                                <p>项目简介：开发商：太极湖集团项目简介：创建基于中国风景文化、人文生态和自然生态和谐发展的中国国家重点风…</p>
-                                                                                <a class="view" href="/case/item-7.html">
-                                                                                    READ MORE</a> </a><a class="view" href="/case/item-7.html">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
+                                                                            <a href="{{home.url_kuangchanziyuan_4}}">
+                                                                                名称：矿产资源</a></p>
+                                                                        <p>{{home.data_kuangchanziyuan_4}}</p>
+                                                                        <a class="view" href="{{home.url_kuangchanziyuan_4}}">
+                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_4}}">
+                                                                    READ MORE</a>
+                                                            </div>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -755,11 +714,7 @@
                                                 <dl class="scrll_lisrt">
                                                     
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-833.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-833.html">
@@ -770,11 +725,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-832.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292251421873.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-832.html">
@@ -785,11 +736,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-117.html">
-                                                                        <img src="{% static 'images/upload/201504/20/201504201150023111.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-117.html">
@@ -800,11 +747,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-115.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504291720196522.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-115.html">
@@ -815,11 +758,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-114.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292152264217.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-114.html">
@@ -830,11 +769,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-108.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292306399686.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-108.html">
@@ -855,11 +790,7 @@
                                                 <dl class="scrll_lisrt">
                                                     
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-723.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-723.html">
@@ -870,11 +801,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-722.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-722.html">
@@ -885,11 +812,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-721.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-721.html">
@@ -900,11 +823,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-720.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-720.html">
@@ -915,11 +834,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-719.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-719.html">
@@ -930,11 +845,7 @@
                                                             </dd>
                                                         
                                                             <dd>
-                                                                <div class="img">
-                                                                    <a href="/news/item-718.html">
-                                                                        <img src="{% static 'images/upload/201504/29/201504292300407655.jpg' %}" width="140" height="130" alt="" />
-                                                                    </a>
-                                                                </div>
+
                                                                 <div class="text">
                                                                     <h2>
                                                                         <a href="/news/item-718.html">

@@ -1,10 +1,11 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1">
+    {% load staticfiles %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/sorcl.css' %}" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/sorcl.css' %}"  rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/script_side.js' %}"></script>

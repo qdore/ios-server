@@ -3,15 +3,19 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.template import Context
+from fumeng.home_page import *
+
 
 import home_page
 
 # Create your views here.
 def home(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,
-    })
+    home_list = HomePage.objects.all()
+    for key in home_list:
+        context = RequestContext(request, {
+            'home':key,
+        })
+    print key.image_1
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-index.html',context)
 	
