@@ -1,3 +1,4 @@
+# coding:utf-8
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
@@ -8,12 +9,12 @@ from fumeng.models.home_page import HomePage
 # Create your views here.
 def home(request):
     home_list = HomePage.objects.all()
+    if len(home_list) == 0:
+        raise Exception(u"首页还没有配置呢！")
     for key in home_list:
         context = RequestContext(request, {
             'home':key,
         })
-    print key.image_1
-    #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-index.html',context)
 	
 def about(request):
