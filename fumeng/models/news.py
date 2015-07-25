@@ -5,7 +5,6 @@ from ckeditor.fields import RichTextField
 NEWS_TYPES = (
     ('福梦新闻', '福梦新闻'),
     ('地区动态', '地区动态'),
-    ('下属公司', '下属公司'),
     ('媒体关注', '媒体关注'),
 )
 
