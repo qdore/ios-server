@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.template import Context
 from fumeng.models.home_page import HomePage
+from fumeng.models.news import News
 
 # Create your views here.
 def home(request):
@@ -63,10 +64,13 @@ def news(request):
     return render(request, 'fumeng/fumeng-news-detail.html',context)
 
 def news_list(request):
-    job_list = {}
+    news_list = News.objects.all()
+    print news_list
+    if len(news_list) == 0:
+        raise Exception(u"新闻还没有配置呢！")
     context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
+        'news':news_list,
+    })
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-news-list.html',context)
 	
