@@ -158,6 +158,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'fumeng',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
@@ -205,5 +206,14 @@ CACHES = {
 
 TOKEN = 'kidney'
 STATIC_PATH = cur_file_dir() + "/static"
+
+STATIC_ROOT = STATIC_PATH + "/root"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width': 700,
+        'language': 'zh-cn',
+    },
+}
 
 

@@ -3,10 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.template import Context
-from fumeng.home_page import *
-
-
-import home_page
+from fumeng.models.home_page import HomePage
 
 # Create your views here.
 def home(request):
