@@ -2,1200 +2,1194 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1">
-    {% load staticfiles %}
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/sorcl.css' %}"  rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/script_side.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jPages.js' %}"></script>
-    <title>
-	艾肯弘扬-首页
+{% load staticfiles %}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/sorcl.css' %}"  rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/script_side.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jPages.js' %}"></script>
+<title>
+艾肯弘扬-首页
 </title>
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        $(document).ready(function (e) {
-            TencentArticl.tabId = "sildPicBar1"
-            TencentArticl.tabDot = "dot1";
-            TencentArticl.tabBox = "cnt-wrap1";
-            TencentArticl.tabSilder = "cnt1";
-            TencentArticl.ints();
-            $(".tabPanel dl dd").click(function () {
+$(document).ready(function (e) {
+        TencentArticl.tabId = "sildPicBar1"
+        TencentArticl.tabDot = "dot1";
+        TencentArticl.tabBox = "cnt-wrap1";
+        TencentArticl.tabSilder = "cnt1";
+        TencentArticl.ints();
+        $(".tabPanel dl dd").click(function () {
                 var i = $(this).index() + 1;
                 TencentArticl.tabId = "sildPicBar" + i;
                 TencentArticl.tabDot = "dot" + i;
                 TencentArticl.tabBox = "cnt-wrap" + i;
                 TencentArticl.tabSilder = "cnt" + i;
                 TencentArticl.ints();
-            })
+                })
         });
-        $(function () {
-            $("div.holder").jPages({
-                containerID: "itemContainer",
-                previous: "",
-                next: "",
-                perPage: 4
-            });
+$(function () {
+        $("div.holder").jPages({
+containerID: "itemContainer",
+previous: "",
+next: "",
+perPage: 4
+});
         });
-        //**鼠标悬停替换另一张图片  
-        $(document).ready(function () {
-            // 判断img轮转，实现a跳转
-            // 推荐品牌滑动翻转效果
-            brandPicTurn();
+//**鼠标悬停替换另一张图片  
+$(document).ready(function () {
+        // 判断img轮转，实现a跳转
+        // 推荐品牌滑动翻转效果
+        brandPicTurn();
         });
-        function brandPicTurn() {
-            $(".brand_detail").hide();
-            $(".i_serList ul li").hover(
-		function () {
-		    $(this).find(".brand_name").hide();
-		    $(this).find(".brand_detail").show();
-		}
-		, function () {
-		    $(this).find(".brand_detail").hide();
-		    $(this).find(".brand_name").show();
-		}
-	);
-        }
-    </script>
+function brandPicTurn() {
+    $(".brand_detail").hide();
+    $(".i_serList ul li").hover(
+            function () {
+            $(this).find(".brand_name").hide();
+            $(this).find(".brand_detail").show();
+            }
+            , function () {
+            $(this).find(".brand_detail").hide();
+            $(this).find(".brand_name").show();
+            }
+            );
+}
+</script>
 </head>
 <body>
-    
+
 {% include "fumeng/title.html"%}
 <script type="text/javascript">
-    function click_a(divDisplay) {
-        if (document.getElementById(divDisplay).style.display != "block") {
-            document.getElementById(divDisplay).style.display = "block";
-        }
-        else {
-            document.getElementById(divDisplay).style.display = "none";
-        }
+function click_a(divDisplay) {
+    if (document.getElementById(divDisplay).style.display != "block") {
+        document.getElementById(divDisplay).style.display = "block";
     }
-   
+    else {
+        document.getElementById(divDisplay).style.display = "none";
+    }
+}
+
 </script>
 
-    <div class="st_box">
-        <div class="flexslider">
-            <ul class="slides">
-                
-                        <li style="background: url({{home.image_1}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
-                    
-                        <li style="background: url({{home.image_2}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
-                    
-                        <li style="background: url({{home.image_3}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
+<div class="st_box">
+<div class="flexslider">
+<ul class="slides">
 
-                        <li style="background: url({{home.image_4}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
-                    
-            </ul>
-        </div>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('.flexslider').flexslider({
-                    directionNav: true,
-                    pauseOnAction: false
-                });
-            });
-        </script>
-        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-        <!--banner end-->
-        <div class="wrap">
-            <div class="i_about">
-                <div class="i_title">
-                    <p class="ti about_title">
-                        about us</p>
-                    <p>
-                        <i></i><span>关于我们</span><i></i></p>
-                </div>
-                <p class="aboutAd">
-                    <img src="{{ home.image_about}}" width="719" height="66" alt="" /></p>
-                <span class="i_aboutC">{{home.data_about}}</span>
-                <div class="view">
-                    <i></i><span><a href="{{home.url_about}}">查看详情 &gt;</a></span><i></i></div>
-            </div>
-            <!--index_about end-->
-        </div>
-        <div class="i_case">
-            <div class="i_case_box">
-                <div class="i_title i_title1">
-                    <p class="ti case_title">
-                        The Fumeng Business</p>
-                    <p>
-                        <i></i><span>福梦业务</span><i></i></p>
-                </div>
-            </div>
-            <div class="wrap i_caseTab">
-                <div class="tabPanel">
-                    <dl>
-                        
-                                <dd class="hit" style="margin-left:80px;">
-                                    <a class=" " href="javascript:void(0)">
-                                        生态种植</a></dd>
-                            
-                                <dd class="" style="">
-                                    <a class=" " href="javascript:void(0)">
-                                        生态养殖</a></dd>
-                            
-                                <dd class="" style="">
-                                    <a class=" " href="javascript:void(0)">
-                                        矿产资源</a></dd>
+<li style="background: url({{home.image_1}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
 
-                            
-                    </dl>
-                    <div class="panes">
-                        
-                                <div class="pane" style="display: block">
-                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
-                                        <div class="bd">
-                                            <div class="cnt-wrap" id="cnt-wrap1">
-                                                <div class="cnt" id="cnt1">
-                                                    <ul>
-                                                        
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="{{home.url_shengtaizhongzhi_1}}"
-                                                                            target="_blank">
-                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaizhongzhi_1}}">
-                                                                                <p>
-                                                                                    <a href="{{home.url_shengtaizhongzhi_1}}">
-                                                                                        名称：生态种植</a></p>
-                                                                                <p>{{home.data_shengtaizhongzhi_1}}</p>
-                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_1}}">
-                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_1}}">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="{{home.url_shengtaizhongzhi_2}}"
-                                                                            target="_blank">
-                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaizhongzhi_2}}">
-                                                                                <p>
-                                                                                    <a href="{{home.url_shengtaizhongzhi_2}}">
-                                                                                        名称：生态种植</a></p>
-                                                                                <p>{{home.data_shengtaizhongzhi_2}}</p>
-                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_2}}">
-                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_2}}">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="{{home.url_shengtaizhongzhi_3}}"
-                                                                            target="_blank">
-                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaizhongzhi_3}}">
-                                                                                <p>
-                                                                                    <a href="{{home.url_shengtaizhongzhi_3}}">
-                                                                                        名称：生态种植</a></p>
-                                                                                <p>{{home.data_shengtaizhongzhi_3}}</p>
-                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_3}}">
-                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_3}}">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                            
-                                                                <li>
-                                                                    <div class="img">
-                                                                        <a href="{{home.url_shengtaizhongzhi_4}}"
-                                                                            target="_blank">
-                                                                            <img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
-                                                                    <div class="text">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaizhongzhi_4}}">
-                                                                                <p>
-                                                                                    <a href="{{home.url_shengtaizhongzhi_4}}">
-                                                                                        名称：生态种植</a></p>
-                                                                                <p>{{home.data_shengtaizhongzhi_4}}</p>
-                                                                                <a class="view" href="{{home.url_shengtaizhongzhi_4}}">
-                                                                                    READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_4}}">
-                                                                                        READ MORE</a>
-                                                                    </div>
-                                                                </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hd">
-                                            <div class="sildPicBar" id="sildPicBar1">
-                                                <span class="pre"><</span>
-                                                <ul id="dot1">
-                                                </ul>
-                                                <span class="next">></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="pane" style="display: none">
-                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
-                                        <div class="bd">
-                                            <div class="cnt-wrap" id="cnt-wrap2">
-                                                <div class="cnt" id="cnt2">
-                                                    <ul>
+<li style="background: url({{home.image_2}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_shengtaiyangzhi_1}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_shengtaiyangzhi_1}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_shengtaiyangzhi_1}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaiyangzhi_1}}">
-                                                                                名称：生态养殖</a></p>
-                                                                        <p>{{home.data_shengtaiyangzhi_1}}</p>
-                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_1}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_1}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
+<li style="background: url({{home.image_3}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_shengtaiyangzhi_2}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_shengtaiyangzhi_2}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_shengtaiyangzhi_2}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaiyangzhi_2}}">
-                                                                                名称：生态养殖</a></p>
-                                                                        <p>{{home.data_shengtaiyangzhi_1}}</p>
-                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_2}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_2}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
+<li style="background: url({{home.image_4}}) 50% 0 no-repeat;"><a href="" target="_blank"></a></li>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_shengtaiyangzhi_3}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_shengtaiyangzhi_3}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_shengtaiyangzhi_3}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaiyangzhi_3}}">
-                                                                                名称：生态养殖</a></p>
-                                                                        <p>{{home.data_shengtaiyangzhi_3}}</p>
-                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_3}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_3}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
+</ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+        $('.flexslider').flexslider({
+directionNav: true,
+pauseOnAction: false
+});
+        });
+</script>
+<script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+<!--banner end-->
+<div class="wrap">
+<div class="i_about">
+<div class="i_title">
+<p class="ti about_title">
+about us</p>
+<p>
+<i></i><span>关于我们</span><i></i></p>
+</div>
+<p class="aboutAd">
+<img src="{{ home.image_about}}" width="719" height="66" alt="" /></p>
+<span class="i_aboutC">{{home.data_about}}</span>
+<div class="view">
+<i></i><span><a href="{{home.url_about}}">查看详情 &gt;</a></span><i></i></div>
+</div>
+<!--index_about end-->
+</div>
+<div class="i_case">
+<div class="i_case_box">
+<div class="i_title i_title1">
+<p class="ti case_title">
+The Fumeng Business</p>
+<p>
+<i></i><span>福梦业务</span><i></i></p>
+</div>
+</div>
+<div class="wrap i_caseTab">
+<div class="tabPanel">
+<dl>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_shengtaiyangzhi_4}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_shengtaiyangzhi_4}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_shengtaiyangzhi_4}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_shengtaiyangzhi_4}}">
-                                                                                名称：生态养殖</a></p>
-                                                                        <p>{{home.data_shengtaiyangzhi_4}}</p>
-                                                                        <a class="view" href="{{home.url_shengtaiyangzhi_4}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_4}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hd">
-                                            <div class="sildPicBar" id="sildPicBar2">
-                                                <span class="pre"><</span>
-                                                <ul id="dot2">
-                                                </ul>
-                                                <span class="next">></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="pane" style="display: none">
-                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
-                                        <div class="bd">
-                                            <div class="cnt-wrap" id="cnt-wrap3">
-                                                <div class="cnt" id="cnt3">
-                                                    <ul>
+<dd class="hit" style="margin-left:80px;">
+<a class=" " href="javascript:void(0)">
+生态种植</a></dd>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_kuangchanziyuan_1}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_kuangchanziyuan_1}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_kuangchanziyuan_1}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_kuangchanziyuan_1}}">
-                                                                                名称：矿产资源</a></p>
-                                                                        <p>{{home.data_kuangchanziyuan_1}}</p>
-                                                                        <a class="view" href="{{home.url_kuangchanziyuan_1}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_1}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
+<dd class="" style="">
+<a class=" " href="javascript:void(0)">
+生态养殖</a></dd>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_kuangchanziyuan_2}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_kuangchanziyuan_2}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_kuangchanziyuan_2}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_kuangchanziyuan_2}}">
-                                                                                名称：矿产资源</a></p>
-                                                                        <p>{{home.data_kuangchanziyuan_2}}</p>
-                                                                        <a class="view" href="{{home.url_kuangchanziyuan_2}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_2}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
+<dd class="" style="">
+<a class=" " href="javascript:void(0)">
+矿产资源</a></dd>
 
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_kuangchanziyuan_3}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_kuangchanziyuan_3}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_kuangchanziyuan_3}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_kuangchanziyuan_3}}">
-                                                                                名称：矿产资源</a></p>
-                                                                        <p>{{home.data_kuangchanziyuan_3}}</p>
-                                                                        <a class="view" href="{{home.url_kuangchanziyuan_3}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_3}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="img">
-                                                                <a href="{{home.url_kuangchanziyuan_4}}"
-                                                                   target="_blank">
-                                                                    <img src="{{home.image_kuangchanziyuan_4}}" width="260" height="250" alt=""></a></div>
-                                                            <div class="text">
-                                                                <p>
-                                                                    <a href="{{home.url_kuangchanziyuan_4}}">
-                                                                        <p>
-                                                                            <a href="{{home.url_kuangchanziyuan_4}}">
-                                                                                名称：矿产资源</a></p>
-                                                                        <p>{{home.data_kuangchanziyuan_4}}</p>
-                                                                        <a class="view" href="{{home.url_kuangchanziyuan_4}}">
-                                                                            READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_4}}">
-                                                                    READ MORE</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hd">
-                                            <div class="sildPicBar" id="sildPicBar3">
-                                                <span class="pre"><</span>
-                                                <ul id="dot3">
-                                                </ul>
-                                                <span class="next">></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="pane" style="display: none">
-                                    <div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
-                                        <div class="bd">
-                                            <div class="cnt-wrap" id="cnt-wrap4">
-                                                <div class="cnt" id="cnt4">
-                                                    <ul>
-                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hd">
-                                            <div class="sildPicBar" id="sildPicBar4">
-                                                <span class="pre"><</span>
-                                                <ul id="dot4">
-                                                </ul>
-                                                <span class="next">></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--index_service end-->
-        <!--index_case end-->
-        <div class="wrap i_service">
-            <div class="i_title i_title2">
-                <p class="ti ser_title">
-                    service</p>
-                <p>
-                    <i></i><span>服务项目</span><i></i></p>
-            </div>
-            <div class="i_serList">
-                <ul>
-                    <li>
-                        <div class="img">
-                            <a class="brand_name" href="news/">
-                                <img src="{% static 'images/upload/images/1.png' %}" /></a> <a class="brand_detail" href="news/">
-                                    <img src="{% static 'images/upload/images/1-1.png' %}" /></a>
-                        </div>
-                        <span>
-                            <h2>
-                                <a href="news/">旅游策划</a></h2>
-                            <p>
-                                Travel Planning</p>
-                        </span></li>
-                    <li>
-                        <div class="img">
-                            <a class="brand_name" href="case/">
-                                <img src="{% static 'images/upload/images/2.png' %}" /></a> <a class="brand_detail" href="case/">
-                                    <img src="{% static 'images/upload/images/2-2.png' %}" /></a>
-                        </div>
-                        <span>
-                            <h2>
-                                <a href="case/">旅游规划</a></h2>
-                            <p>
-                                Travel Planning</p>
-                        </span></li>
-                    <li>
-                        <div class="img">
-                            <a class="brand_name" href="server/">
-                                <img src="{% static 'images/upload/images/3.png' %}" /></a> <a class="brand_detail" href="server/">
-                                    <img src="{% static 'images/upload/images/3-3.png' %}" /></a>
-                        </div>
-                        <span>
-                            <h2>
-                                <a href="server/">土地运营</a></h2>
-                            <p>
-                                Travel Planning</p>
-                        </span></li>
-                    <li>
-                        <div class="img">
-                            <a class="brand_name" href="train/">
-                                <img src="{% static 'images/upload/images/4.png' %}" /></a> <a class="brand_detail" href="train/">
-                                    <img src="{% static 'images/upload/images/4-4.png' %}" /></a>
-                        </div>
-                        <span>
-                            <h2>
-                                <a href="train/">ICOM培训</a></h2>
-                            <p>
-                                Travel Planning</p>
-                        </span></li>
-                    <li>
-                        <div class="img">
-                            <a class="brand_name" href="team/">
-                                <img src="{% static 'images/upload/images/5.png' %}" /></a> <a class="brand_detail" href="team/">
-                                    <img src="{% static 'images/upload/images/5-5.png' %}" /></a>
-                        </div>
-                        <span>
-                            <h2>
-                                <a href="team/">咨询顾问</a></h2>
-                            <p>
-                                Travel Planning</p>
-                        </span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="i_team">
-            <div class="i_title i_title2">
-                <p class="ti team_title">
-                    Our team</p>
-                <p>
-                    <i></i><span>我们的团队</span><i></i></p>
-            </div>
-            <div class="wrap content">
-                <div class="drama-poster">
-                    <ul>
-                        
-                                <li class="show-poster-3"><a href="/team/item-83.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151536499113.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-83.html">
-                                            秦晓琪</a></p>
-                                    <p class="p100">
-                                        艾肯机构董事长</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-81.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151535011300.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-81.html">
-                                            易能武</a></p>
-                                    <p class="p100">
-                                        董事总经理</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-80.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151533590675.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-80.html">
-                                            张宪洪</a></p>
-                                    <p class="p100">
-                                        执行董事、集团技术副总裁</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-78.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/29/201504291723392147.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-78.html">
-                                            黄飞翔</a></p>
-                                    <p class="p100">
-                                        景区资深管理营销专家</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-79.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151532494015.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-79.html">
-                                            王振良</a></p>
-                                    <p class="p100">
-                                        景区资深管理营销专家</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-77.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151527225938.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-77.html">
-                                            王文华</a></p>
-                                    <p class="p100">
-                                        资深媒体人</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-76.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151526143439.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-76.html">
-                                            郑东</a></p>
-                                    <p class="p100">
-                                        商业领域资深专家</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                                <li class="show-poster-3"><a href="/team/item-830.html"
-                                    class="img">
-                                    <img style="display: inline-block;" src="{% static 'images/upload/201504/29/201504291729050897.jpg' %}" />
-                                </a><span class="price">
-                                    <p>
-                                        <a href="/team/item-830.html">
-                                            林晓明</a></p>
-                                    <p class="p100">
-                                        旅游项目设计施工管理专家</p>
-                                </span><span class="arrow"></span></li>
-                                <span class="arrow"></span>
-                            
-                    </ul>
-                </div>
-                <ul class="drama-slide">
-                    <li class="prev"><a href="javascript:void(null)" title="上翻">&lt;</a></li>
-                    <li class="next"><a href="javascript:void(null)" title="下翻">&gt;</a></li>
-                </ul>
-            </div>
-            <div class="i_team_mor">
-                <a href="/team/">MORE ></a>
-            </div>
-        </div>
-        <!--index_train end-->
-        <div class="i_new">
-            <div class="i_title i_title2">
-                <p class="ti news_title">
-                    news Center</p>
-                <p>
-                    <i></i><span>新闻中心</span><i></i></p>
-            </div>
-            <div class="i_newBox">
-                <div id="tabs1" class="wrap wid180">
-                    <div class="menu1box tab">
-                        <ul id="menu1">
-                            <li class="hover" onmouseover="setTab(1,0)"><a href="javascript:void(0)">福梦新闻</a></li>
-                            <li onmouseover="setTab(1,1)"><a href="javascript:void(0)">地区动态</a></li>
-                            <li onmouseover="setTab(1,2)"><a href="javascript:void(0)">媒体关注</a></li>
-                        </ul>
-                    </div>
-                    <div class="main1box">
-                        <div class="main" id="main1">
-                                    <ul class="block" style="display: none">
-                                        <li>
-                                            <div class="scrll_f1">
-                                                <dl class="scrll_lisrt">
-                                                    {% for item in fumeng_news_list %}
-                                                        <dd>
 
-                                                            <div class="text">
-                                                                <h2>
-                                                                    <a href="/news/item-723.html">
-                                                                        {{item.title}}</a></h2>
-                                                                        <span>{{item.content}}</span>
-                                                            </div>
-                                                        </dd>
-                                                    {% endfor %}
-                                                </dl>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                
-                                    <ul class="block" style="display: none">
-                                        <li>
-                                            <div class="scrll_f1">
-                                                <dl class="scrll_lisrt">
-                                                    {% for item in area_list %}
-                                                    <dd>
+</dl>
+<div class="panes">
 
-                                                        <div class="text">
-                                                            <h2>
-                                                                <a href="/news/item-723.html">
-                                                                    {{item.title}}</a></h2>
-                                                            <span>{{item.content}}</span>
-                                                        </div>
-                                                    </dd>
-                                                    {% endfor %}
-                                                </dl>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <ul class="block" style="display: none">
-                                        <li>
-                                            <div class="scrll_f1">
-                                                <dl class="scrll_lisrt">
-                                                    {% for item in media_list %}
-                                                    <dd>
+<div class="pane" style="display: block">
+<div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+<div class="bd">
+<div class="cnt-wrap" id="cnt-wrap1">
+<div class="cnt" id="cnt1">
+<ul>
 
-                                                        <div class="text">
-                                                            <h2>
-                                                                <a href="/news/item-723.html">
-                                                                    {{item.title}}</a></h2>
-                                                            <span>{{item.content}}</span>
-                                                        </div>
-                                                    </dd>
-                                                    {% endfor %}
-                                                </dl>
-                                            </div>
-                                        </li>
-                                    </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="i_team_mor">
-                    <a href="/news/">MORE ></a>
-                </div>
-            </div>
-        </div>
-        <!--index_news end-->
-        <div class="i_train">
-            <div class="i_title">
-                <p class="ti train_title">
-                    Aiken training</p>
-                <p>
-                    <i></i><span>艾肯培训</span><i></i></p>
-            </div>
-            <div class="adaptiveroll" id="adaptiveid">
-                <div style="width: 1000%">
-                    <ul>
-                        
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-92.html">
-                                            <img src="{% static 'images/upload/201504/27/201504271200397030.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-92.html">
-                                                【艾肯】旅游+地产实战高级研修班第一期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-92.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-91.html">
-                                            <img src="{% static 'images/upload/201504/17/201504171404561425.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-91.html">
-                                                【艾肯】"旅游+地产"实战高级研修班第二期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-91.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-90.html">
-                                            <img src="{% static 'images/upload/201504/17/201504171405084382.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-90.html">
-                                                【艾肯】旅游+地产实战高级研修班第三期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-90.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-88.html">
-                                            <img src="{% static 'images/upload/201504/17/201504171405197979.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-88.html">
-                                                【艾肯】旅游+地产实战高级研修班第四期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-88.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-831.html">
-                                            <img src="{% static 'images/upload/201504/30/201504301410255623.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-831.html">
-                                                【艾肯】2012 旅游+地产实战高级研修班第四期——休闲养生论坛圆满成功></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-831.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-705.html">
-                                            <img src="" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-705.html">
-                                                【艾肯】2011旅游+地产实战高级研修班第一期圆满成功></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-705.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                    </ul>
-                    <ul>
-                        
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-92.html">
-                                            <img src="{% static 'images/upload/201504/27/201504271200397030.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-92.html">
-                                                【艾肯】旅游+地产实战高级研修班第一期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-92.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-91.html">
-                                            <img src="{% static 'images/upload/201504/17/201504171404561425.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-91.html">
-                                                【艾肯】"旅游+地产"实战高级研修班第二期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-91.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-90.html">
-                                            <img src="{% static 'images/upload/201504/17/201504171405084382.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-90.html">
-                                                【艾肯】旅游+地产实战高级研修班第三期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-90.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-88.html">
-                                            <img src="{% static 'images/upload/201504/17/201504171405197979.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-88.html">
-                                                【艾肯】旅游+地产实战高级研修班第四期></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-88.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-831.html">
-                                            <img src="{% static 'images/upload/201504/30/201504301410255623.jpg' %}" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-831.html">
-                                                【艾肯】2012 旅游+地产实战高级研修班第四期——休闲养生论坛圆满成功></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-831.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                                <li>
-                                    <div class="img">
-                                        <a href="/train/item-705.html">
-                                            <img src="" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h2>
-                                            <a href="/train/item-705.html">
-                                                【艾肯】2011旅游+地产实战高级研修班第一期圆满成功></a></h2>
-                                        <i></i><span></span><a class="more" href="/train/item-705.html">
-                                            more</a>
-                                    </div>
-                                </li>
-                            
-                    </ul>
-                </div>
-            </div>
-            <div class="focus_btn">
-                <span>
-                    <div class="btn bleft" id="bleft">
-                        &lt;</div>
-                    <div class="btn bright" id="bright">
-                        &gt;</div>
-                </span>
-            </div>
-        </div>
-        <!--index_link end-->
-        <div class="i_link">
-            <div class="i_title i_title2">
-                <p class="ti link_title">
-                    Cooperation Center</p>
-                <p>
-                    <i></i><span>合作中心</span><i></i></p>
-            </div>
-            <div class="i_linkBox">
-                <div id="main3" class="wrap">
-                    <div id="geren_menu3">
-                        <ul id="tab3">
-                            <li id="li_1" onmouseover="change('1')" class="selectd1"><a href="javascript:void(0)">
-                                服务企业</a></li>
-                            <li id="li_2" onmouseover="change('2')" class="normal1"><a href="javascript:void(0)">
-                                战略合作伙伴</a></li>
-                        </ul>
-                    </div>
-                    <div id="div1" style="display: block;" class="neirong1">
-                        <div class="i_likList">
-                            <ul>
-                                
-                                        <li><a href="/service/item-707.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251438240103.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-708.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251438470415.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-709.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251439040103.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-710.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251439161822.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-711.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251439286353.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-712.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251441394165.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-713.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251441546509.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-714.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251442294947.png' %}" width="209" height="99" /></a> </li>
-                                    
-                                        <li><a href="/service/item-715.html"
-                                            target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251442551509.png' %}" width="209" height="99" /></a> </li>
-                                    
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="div2" style="display: none;" class="neirong1">
-                        <div class="i_likList">
-                            <ul>
-                                
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425530259.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425444478.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425364947.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425280103.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                                        <li><a href="#" target="_blank">
-                                            <img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
-                                    
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="link_mor">
-                        <a href="/server/">更多</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+<li>
+<div class="img">
+<a href="{{home.url_shengtaizhongzhi_1}}"
+target="_blank">
+<img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaizhongzhi_1}}">
+<p>
+<a href="{{home.url_shengtaizhongzhi_1}}">
+{{home.data_shengtaizhongzhi_1}}</a></p>
+<a class="view" href="{{home.url_shengtaizhongzhi_1}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_1}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaizhongzhi_2}}"
+target="_blank">
+<img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaizhongzhi_2}}">
+<p>
+<a href="{{home.url_shengtaizhongzhi_2}}">
+{{home.data_shengtaizhongzhi_2}}</a></p>
+<a class="view" href="{{home.url_shengtaizhongzhi_2}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_2}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaizhongzhi_3}}"
+target="_blank">
+<img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaizhongzhi_3}}">
+<p>
+<a href="{{home.url_shengtaizhongzhi_3}}">
+{{home.data_shengtaizhongzhi_3}}</a></p>
+<a class="view" href="{{home.url_shengtaizhongzhi_3}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_3}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaizhongzhi_4}}"
+target="_blank">
+<img src="{{home.image_shengtaizhongzhi_1}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaizhongzhi_4}}">
+<p>
+<a href="{{home.url_shengtaizhongzhi_4}}">
+{{home.data_shengtaizhongzhi_4}}</a></p>
+<a class="view" href="{{home.url_shengtaizhongzhi_4}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaizhongzhi_4}}">
+READ MORE</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="hd">
+<div class="sildPicBar" id="sildPicBar1">
+<span class="pre"></span>
+<ul id="dot1">
+</ul>
+<span class="next"></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pane" style="display: none">
+<div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+<div class="bd">
+<div class="cnt-wrap" id="cnt-wrap2">
+<div class="cnt" id="cnt2">
+<ul>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaiyangzhi_1}}"
+target="_blank">
+<img src="{{home.image_shengtaiyangzhi_1}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaiyangzhi_1}}">
+<p>
+<a href="{{home.url_shengtaiyangzhi_1}}">
+</a>{{home.data_shengtaiyangzhi_1}}</p>
+<a class="view" href="{{home.url_shengtaiyangzhi_1}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_1}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaiyangzhi_2}}"
+target="_blank">
+<img src="{{home.image_shengtaiyangzhi_2}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaiyangzhi_2}}">
+<p>
+<a href="{{home.url_shengtaiyangzhi_2}}">{{home.data_shengtaiyangzhi_1}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_shengtaiyangzhi_2}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_2}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaiyangzhi_3}}"
+target="_blank">
+<img src="{{home.image_shengtaiyangzhi_3}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaiyangzhi_3}}">
+<p>
+<a href="{{home.url_shengtaiyangzhi_3}}">
+{{home.data_shengtaiyangzhi_3}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_shengtaiyangzhi_3}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_3}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_shengtaiyangzhi_4}}"
+target="_blank">
+<img src="{{home.image_shengtaiyangzhi_4}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_shengtaiyangzhi_4}}">
+<p>
+<a href="{{home.url_shengtaiyangzhi_4}}">
+{{home.data_shengtaiyangzhi_4}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_shengtaiyangzhi_4}}">
+READ MORE</a> </a><a class="view" href="{{home.url_shengtaiyangzhi_4}}">
+READ MORE</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="hd">
+<div class="sildPicBar" id="sildPicBar2">
+<span class="pre"><</span>
+<ul id="dot2">
+</ul>
+<span class="next">></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pane" style="display: none">
+<div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+<div class="bd">
+<div class="cnt-wrap" id="cnt-wrap3">
+<div class="cnt" id="cnt3">
+<ul>
+
+<li>
+<div class="img">
+<a href="{{home.url_kuangchanziyuan_1}}"
+target="_blank">
+<img src="{{home.image_kuangchanziyuan_1}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_kuangchanziyuan_1}}">
+<p>
+<a href="{{home.url_kuangchanziyuan_1}}">
+{{home.data_kuangchanziyuan_1}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_kuangchanziyuan_1}}">
+READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_1}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_kuangchanziyuan_2}}"
+target="_blank">
+<img src="{{home.image_kuangchanziyuan_2}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_kuangchanziyuan_2}}">
+<p>
+<a href="{{home.url_kuangchanziyuan_2}}">
+{{home.data_kuangchanziyuan_2}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_kuangchanziyuan_2}}">
+READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_2}}">
+READ MORE</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="{{home.url_kuangchanziyuan_3}}"
+target="_blank">
+<img src="{{home.image_kuangchanziyuan_3}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_kuangchanziyuan_3}}">
+<p>
+<a href="{{home.url_kuangchanziyuan_3}}">
+{{home.data_kuangchanziyuan_3}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_kuangchanziyuan_3}}">
+READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_3}}">
+READ MORE</a>
+</div>
+</li>
+<li>
+<div class="img">
+<a href="{{home.url_kuangchanziyuan_4}}"
+target="_blank">
+<img src="{{home.image_kuangchanziyuan_4}}" width="260" height="250" alt=""></a></div>
+<div class="text">
+<p>
+<a href="{{home.url_kuangchanziyuan_4}}">
+<p>
+<a href="{{home.url_kuangchanziyuan_4}}">
+{{home.data_kuangchanziyuan_4}}</a></p>
+<p></p>
+<a class="view" href="{{home.url_kuangchanziyuan_4}}">
+READ MORE</a> </a><a class="view" href="{{home.url_kuangchanziyuan_4}}">
+READ MORE</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="hd">
+<div class="sildPicBar" id="sildPicBar3">
+<span class="pre"></span>
+<ul id="dot3">
+</ul>
+<span class="next"></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pane" style="display: none">
+<div class="mod-left bottom-Article-QQ sildPic-Article-QQ">
+<div class="bd">
+<div class="cnt-wrap" id="cnt-wrap4">
+<div class="cnt" id="cnt4">
+<ul>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="hd">
+<div class="sildPicBar" id="sildPicBar4">
+<span class="pre"></span>
+<ul id="dot4">
+</ul>
+<span class="next"></span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!--index_service end-->
+<!--index_case end-->
+<div class="wrap i_service">
+<div class="i_title i_title2">
+<p class="ti ser_title">
+service</p>
+<p>
+<i></i><span>服务项目</span><i></i></p>
+</div>
+<div class="i_serList">
+<ul>
+<li>
+<div class="img">
+<a class="brand_name" href="news/">
+<img src="{% static 'images/upload/images/1.png' %}" /></a> <a class="brand_detail" href="news/">
+<img src="{% static 'images/upload/images/1-1.png' %}" /></a>
+</div>
+<span>
+<h2>
+<a href="news/">旅游策划</a></h2>
+<p>
+Travel Planning</p>
+</span></li>
+<li>
+<div class="img">
+<a class="brand_name" href="case/">
+<img src="{% static 'images/upload/images/2.png' %}" /></a> <a class="brand_detail" href="case/">
+<img src="{% static 'images/upload/images/2-2.png' %}" /></a>
+</div>
+<span>
+<h2>
+<a href="case/">旅游规划</a></h2>
+<p>
+Travel Planning</p>
+</span></li>
+<li>
+<div class="img">
+<a class="brand_name" href="server/">
+<img src="{% static 'images/upload/images/3.png' %}" /></a> <a class="brand_detail" href="server/">
+<img src="{% static 'images/upload/images/3-3.png' %}" /></a>
+</div>
+<span>
+<h2>
+<a href="server/">土地运营</a></h2>
+<p>
+Travel Planning</p>
+</span></li>
+<li>
+<div class="img">
+<a class="brand_name" href="train/">
+<img src="{% static 'images/upload/images/4.png' %}" /></a> <a class="brand_detail" href="train/">
+<img src="{% static 'images/upload/images/4-4.png' %}" /></a>
+</div>
+<span>
+<h2>
+<a href="train/">ICOM培训</a></h2>
+<p>
+Travel Planning</p>
+</span></li>
+<li>
+<div class="img">
+<a class="brand_name" href="team/">
+<img src="{% static 'images/upload/images/5.png' %}" /></a> <a class="brand_detail" href="team/">
+<img src="{% static 'images/upload/images/5-5.png' %}" /></a>
+</div>
+<span>
+<h2>
+<a href="team/">咨询顾问</a></h2>
+<p>
+Travel Planning</p>
+</span></li>
+</ul>
+</div>
+</div>
+<div class="i_team">
+<div class="i_title i_title2">
+<p class="ti team_title">
+Our team</p>
+<p>
+<i></i><span>我们的团队</span><i></i></p>
+</div>
+<div class="wrap content">
+<div class="drama-poster">
+<ul>
+
+<li class="show-poster-3"><a href="/team/item-83.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151536499113.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-83.html">
+秦晓琪</a></p>
+<p class="p100">
+艾肯机构董事长</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-81.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151535011300.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-81.html">
+易能武</a></p>
+<p class="p100">
+董事总经理</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-80.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151533590675.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-80.html">
+张宪洪</a></p>
+<p class="p100">
+执行董事、集团技术副总裁</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-78.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/29/201504291723392147.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-78.html">
+黄飞翔</a></p>
+<p class="p100">
+景区资深管理营销专家</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-79.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151532494015.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-79.html">
+王振良</a></p>
+<p class="p100">
+景区资深管理营销专家</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-77.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151527225938.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-77.html">
+王文华</a></p>
+<p class="p100">
+资深媒体人</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-76.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/15/201504151526143439.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-76.html">
+郑东</a></p>
+<p class="p100">
+商业领域资深专家</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+<li class="show-poster-3"><a href="/team/item-830.html"
+class="img">
+<img style="display: inline-block;" src="{% static 'images/upload/201504/29/201504291729050897.jpg' %}" />
+</a><span class="price">
+<p>
+<a href="/team/item-830.html">
+林晓明</a></p>
+<p class="p100">
+旅游项目设计施工管理专家</p>
+</span><span class="arrow"></span></li>
+<span class="arrow"></span>
+
+</ul>
+</div>
+<ul class="drama-slide">
+<li class="prev"><a href="javascript:void(null)" title="上翻">&lt;</a></li>
+<li class="next"><a href="javascript:void(null)" title="下翻">&gt;</a></li>
+</ul>
+</div>
+<div class="i_team_mor">
+<a href="/team/">MORE ></a>
+</div>
+</div>
+<!--index_train end-->
+<div class="i_new">
+<div class="i_title i_title2">
+<p class="ti news_title">
+news Center</p>
+<p>
+<i></i><span>新闻中心</span><i></i></p>
+</div>
+<div class="i_newBox">
+<div id="tabs1" class="wrap wid180">
+<div class="menu1box tab">
+<ul id="menu1">
+<li class="hover" onmouseover="setTab(1,0)"><a href="javascript:void(0)">福梦新闻</a></li>
+<li onmouseover="setTab(1,1)"><a href="javascript:void(0)">地区动态</a></li>
+<li onmouseover="setTab(1,2)"><a href="javascript:void(0)">媒体关注</a></li>
+</ul>
+</div>
+<div class="main1box">
+<div class="main" id="main1">
+<ul class="block" style="display: none">
+<li>
+<div class="scrll_f1">
+<dl class="scrll_lisrt">
+{% for item in fumeng_news_list %}
+<dd>
+
+<div class="text">
+<h2>
+<a href="/news/item-723.html">
+{{item.title}}</a></h2>
+<span>{{item.content}}</span>
+</div>
+</dd>
+{% endfor %}
+</dl>
+</div>
+</li>
+</ul>
+
+<ul class="block" style="display: none">
+<li>
+<div class="scrll_f1">
+<dl class="scrll_lisrt">
+{% for item in area_list %}
+<dd>
+
+<div class="text">
+<h2>
+<a href="/news/item-723.html">
+{{item.title}}</a></h2>
+<span>{{item.content}}</span>
+</div>
+</dd>
+{% endfor %}
+</dl>
+</div>
+</li>
+</ul>
+<ul class="block" style="display: none">
+<li>
+<div class="scrll_f1">
+<dl class="scrll_lisrt">
+{% for item in media_list %}
+<dd>
+
+<div class="text">
+<h2>
+<a href="/news/item-723.html">
+{{item.title}}</a></h2>
+<span>{{item.content}}</span>
+</div>
+</dd>
+{% endfor %}
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="i_team_mor">
+<a href="/news/">MORE ></a>
+</div>
+</div>
+</div>
+<!--index_news end-->
+<div class="i_train">
+<div class="i_title">
+<p class="ti train_title">
+Aiken training</p>
+<p>
+<i></i><span>艾肯培训</span><i></i></p>
+</div>
+<div class="adaptiveroll" id="adaptiveid">
+<div style="width: 1000%">
+<ul>
+
+<li>
+<div class="img">
+<a href="/train/item-92.html">
+<img src="{% static 'images/upload/201504/27/201504271200397030.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-92.html">
+【艾肯】旅游+地产实战高级研修班第一期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-92.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-91.html">
+<img src="{% static 'images/upload/201504/17/201504171404561425.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-91.html">
+【艾肯】"旅游+地产"实战高级研修班第二期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-91.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-90.html">
+<img src="{% static 'images/upload/201504/17/201504171405084382.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-90.html">
+【艾肯】旅游+地产实战高级研修班第三期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-90.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-88.html">
+<img src="{% static 'images/upload/201504/17/201504171405197979.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-88.html">
+【艾肯】旅游+地产实战高级研修班第四期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-88.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-831.html">
+<img src="{% static 'images/upload/201504/30/201504301410255623.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-831.html">
+【艾肯】2012 旅游+地产实战高级研修班第四期——休闲养生论坛圆满成功></a></h2>
+<i></i><span></span><a class="more" href="/train/item-831.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-705.html">
+<img src="" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-705.html">
+【艾肯】2011旅游+地产实战高级研修班第一期圆满成功></a></h2>
+<i></i><span></span><a class="more" href="/train/item-705.html">
+more</a>
+</div>
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div class="img">
+<a href="/train/item-92.html">
+<img src="{% static 'images/upload/201504/27/201504271200397030.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-92.html">
+【艾肯】旅游+地产实战高级研修班第一期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-92.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-91.html">
+<img src="{% static 'images/upload/201504/17/201504171404561425.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-91.html">
+【艾肯】"旅游+地产"实战高级研修班第二期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-91.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-90.html">
+<img src="{% static 'images/upload/201504/17/201504171405084382.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-90.html">
+【艾肯】旅游+地产实战高级研修班第三期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-90.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-88.html">
+<img src="{% static 'images/upload/201504/17/201504171405197979.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-88.html">
+【艾肯】旅游+地产实战高级研修班第四期></a></h2>
+<i></i><span></span><a class="more" href="/train/item-88.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-831.html">
+<img src="{% static 'images/upload/201504/30/201504301410255623.jpg' %}" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-831.html">
+【艾肯】2012 旅游+地产实战高级研修班第四期——休闲养生论坛圆满成功></a></h2>
+<i></i><span></span><a class="more" href="/train/item-831.html">
+more</a>
+</div>
+</li>
+
+<li>
+<div class="img">
+<a href="/train/item-705.html">
+<img src="" alt="" />
+</a>
+</div>
+<div class="text">
+<h2>
+<a href="/train/item-705.html">
+【艾肯】2011旅游+地产实战高级研修班第一期圆满成功></a></h2>
+<i></i><span></span><a class="more" href="/train/item-705.html">
+more</a>
+</div>
+</li>
+
+</ul>
+</div>
+</div>
+<div class="focus_btn">
+<span>
+<div class="btn bleft" id="bleft">
+&lt;</div>
+<div class="btn bright" id="bright">
+&gt;</div>
+</span>
+</div>
+</div>
+<!--index_link end-->
+<div class="i_link">
+<div class="i_title i_title2">
+<p class="ti link_title">
+Cooperation Center</p>
+<p>
+<i></i><span>合作中心</span><i></i></p>
+</div>
+<div class="i_linkBox">
+<div id="main3" class="wrap">
+<div id="geren_menu3">
+<ul id="tab3">
+<li id="li_1" onmouseover="change('1')" class="selectd1"><a href="javascript:void(0)">
+服务企业</a></li>
+<li id="li_2" onmouseover="change('2')" class="normal1"><a href="javascript:void(0)">
+战略合作伙伴</a></li>
+</ul>
+</div>
+<div id="div1" style="display: block;" class="neirong1">
+<div class="i_likList">
+<ul>
+
+<li><a href="/service/item-707.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251438240103.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-708.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251438470415.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-709.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251439040103.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-710.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251439161822.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-711.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251439286353.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-712.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251441394165.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-713.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251441546509.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-714.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251442294947.png' %}" width="209" height="99" /></a> </li>
+
+<li><a href="/service/item-715.html"
+target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251442551509.png' %}" width="209" height="99" /></a> </li>
+
+</ul>
+</div>
+</div>
+<div id="div2" style="display: none;" class="neirong1">
+<div class="i_likList">
+<ul>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425530259.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425444478.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425364947.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425280103.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+
+<li><a href="#" target="_blank">
+<img src="{% static 'images/upload/201504/25/201504251425160103.jpg' %}" width="219" height="99" /></a> </li>
+
+</ul>
+</div>
+</div>
+<div class="link_mor">
+<a href="/server/">更多</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 {% include "fumeng/footer.html"%}
 <script type="text/javascript">
-    $(function () {
+$(function () {
         $("#nav li:last").css("padding", "0")
-    })
+        })
 </script>
 <div class="go-top dn" id="go-top">
-    <div class="uc-2vm uc-2vm1">
-        <a href="" target="_blank">
-            <img src="{% static 'images/fot_ico_f3.png' %}" title="下载手册" width="16" height="16" alt=""></a>
-    </div>
-    <div href="javascript:void(0);" class="uc-2vm uc-2vm2">
-        <img src="{% static 'images/tel_btn.png' %}" width="16" height="16" alt="" />
-        <div class="uc-2vm-pop2 dn">
-            <div class="logo-2wm-box">
-                <img src="{% static 'images/tel_img.png' %}" width="192" height="60" />
-            </div>
-        </div>
-    </div>
-    <div href="javascript:void(0);" class="uc-2vm uc-2vm3">
-        <img src="{% static 'images/weixin_btn.png' %}" width="14" height="14" alt="" /></div>
-    <div class="uc-2vm-pop3 dn">
-        <div class="logo-2wm-box">
-            <img src="{% static 'images/weixin_img.jpg' %}" width="190" height="190" alt="" />
-        </div>
-    </div>
-    <div href="javascript:void(0);" class="go">
-        <img src="{% static 'images/goTop.png' %}" width="22" height="12" alt="" /></div>
+<div class="uc-2vm uc-2vm1">
+<a href="" target="_blank">
+<img src="{% static 'images/fot_ico_f3.png' %}" title="下载手册" width="16" height="16" alt=""></a>
+</div>
+<div href="javascript:void(0);" class="uc-2vm uc-2vm2">
+<img src="{% static 'images/tel_btn.png' %}" width="16" height="16" alt="" />
+<div class="uc-2vm-pop2 dn">
+<div class="logo-2wm-box">
+<img src="{% static 'images/tel_img.png' %}" width="192" height="60" />
+</div>
+</div>
+</div>
+<div href="javascript:void(0);" class="uc-2vm uc-2vm3">
+<img src="{% static 'images/weixin_btn.png' %}" width="14" height="14" alt="" /></div>
+<div class="uc-2vm-pop3 dn">
+<div class="logo-2wm-box">
+<img src="{% static 'images/weixin_img.jpg' %}" width="190" height="190" alt="" />
+</div>
+</div>
+<div href="javascript:void(0);" class="go">
+<img src="{% static 'images/goTop.png' %}" width="22" height="12" alt="" /></div>
 </div>
 <script>
-    $(function () {
+$(function () {
         $(window).on('scroll', function () {
-            var st = $(document).scrollTop();
-            if (st > 0) {
+                var st = $(document).scrollTop();
+                if (st > 0) {
                 if ($('#main-container').length != 0) {
-                    var w = $(window).width(), mw = $('#main-container').width();
-                    if ((w - mw) / 2 > 70)
-                        $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
-                    else {
-                        $('#go-top').css({ 'left': 'auto' });
-                    }
+                var w = $(window).width(), mw = $('#main-container').width();
+                if ((w - mw) / 2 > 70)
+                $('#go-top').css({ 'left': (w - mw) / 2 + mw + 20 });
+                else {
+                $('#go-top').css({ 'left': 'auto' });
+                }
                 }
                 $('#go-top').fadeIn(function () {
-                    $(this).removeClass('dn');
-                });
-            } else {
+                        $(this).removeClass('dn');
+                        });
+                } else {
                 $('#go-top').fadeOut(function () {
-                    $(this).addClass('dn');
+                        $(this).addClass('dn');
+                        });
+                }
                 });
-            }
-        });
         $('#go-top .go').on('click', function () {
-            $('html,body').animate({ 'scrollTop': 0 }, 500);
-        });
+                $('html,body').animate({ 'scrollTop': 0 }, 500);
+                });
 
 
         $('#go-top .uc-2vm2').hover(function () {
-            $('#go-top .uc-2vm-pop2').removeClass('dn');
-        }, function () {
-            $('#go-top .uc-2vm-pop2').addClass('dn');
-        });
+                $('#go-top .uc-2vm-pop2').removeClass('dn');
+                }, function () {
+                $('#go-top .uc-2vm-pop2').addClass('dn');
+                });
         $('#go-top .uc-2vm3').hover(function () {
-            $('#go-top .uc-2vm-pop3').removeClass('dn');
-        }, function () {
-            $('#go-top .uc-2vm-pop3').addClass('dn');
-        });
-    });
+                $('#go-top .uc-2vm-pop3').removeClass('dn');
+                }, function () {
+                $('#go-top .uc-2vm-pop3').addClass('dn');
+                });
+});
 </script>
 <!-- 代码 结束 -->
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        $(function () {
-            $("#nav li:last").css("padding", "0");
-            $(".tabPanel dl dd:last").css("margin-right", "0")
-            $(".main ul:first").css("display", "block")
+$(function () {
+        $("#nav li:last").css("padding", "0");
+        $(".tabPanel dl dd:last").css("margin-right", "0")
+        $(".main ul:first").css("display", "block")
         })
-        //**首页成功案例选项卡
-        $(function () {
-            $('.tabPanel dl dd').click(function () {
+//**首页成功案例选项卡
+$(function () {
+        $('.tabPanel dl dd').click(function () {
                 $(this).addClass('hit').siblings().removeClass('hit');
                 $('.panes>div:eq(' + $(this).index() + ')').show().siblings().hide();
-            })
-        })
+                        })
+                })
 
         //**首页新闻中心选项卡
         function setTab(m, n) {
-            var tli = document.getElementById("menu" + m).getElementsByTagName("li");
-            var mli = document.getElementById("main" + m).getElementsByTagName("ul");
-            for (i = 0; i < tli.length; i++) {
-                tli[i].className = i == n ? "hover" : "";
-                mli[i].style.display = i == n ? "block" : "none";
-            }
+        var tli = document.getElementById("menu" + m).getElementsByTagName("li");
+        var mli = document.getElementById("main" + m).getElementsByTagName("ul");
+        for (i = 0; i < tli.length; i++) {
+        tli[i].className = i == n ? "hover" : "";
+        mli[i].style.display = i == n ? "block" : "none";
+        }
         };
         //**首页合作中心选项卡
         function change(a) {
-            for (i = 1; i <= 2; i++) {
-                document.getElementById("li_" + i).className = "normal1";
-                document.getElementById("li_" + a).className = "selectd1";
-                document.getElementById("div" + i).style.display = "none";
+        for (i = 1; i <= 2; i++) {
+        document.getElementById("li_" + i).className = "normal1";
+        document.getElementById("li_" + a).className = "selectd1";
+        document.getElementById("div" + i).style.display = "none";
 
-            }
-            document.getElementById("div" + a).style.display = "block"
+        }
+        document.getElementById("div" + a).style.display = "block"
 
         };
-        //**自适应宽度切换脚本
-        var oWrap = $("#adaptiveid");
-        var oRoll = oWrap.find("ul");
-        var iStepw = oRoll.find("li").outerWidth(true);
-        var timer = null, speed = 500000;
-        var iUlw; //= $("#adaptiveid ul li").length * iStepw;
-        var oBtnL = $('#bleft'), oBtnR = $('#bright');
-        oRoll.width(iUlw);
-        //*向左切换
-        var i = 0;
-        oWrap.scrollLeft(0);
-        function fscrollL() {
-            i++;
-            if (i > $("#adaptiveid ul li").length / 2 - 1) i = 0;
-            oWrap.stop().animate({ "scrollLeft": iStepw * i }, 1000);
-        }
+//**自适应宽度切换脚本
+var oWrap = $("#adaptiveid");
+var oRoll = oWrap.find("ul");
+var iStepw = oRoll.find("li").outerWidth(true);
+var timer = null, speed = 500000;
+var iUlw; //= $("#adaptiveid ul li").length * iStepw;
+var oBtnL = $('#bleft'), oBtnR = $('#bright');
+oRoll.width(iUlw);
+//*向左切换
+var i = 0;
+oWrap.scrollLeft(0);
+function fscrollL() {
+    i++;
+    if (i > $("#adaptiveid ul li").length / 2 - 1) i = 0;
+    oWrap.stop().animate({ "scrollLeft": iStepw * i }, 1000);
+}
 
 
+if (iUlw > oWrap.width()) { timer = setTimeout(fscrollL, speed); }
+
+oWrap.hover(function () {
+        oWrap.stop(true, true);
+        clearTimeout(timer);
+        }, function () {
         if (iUlw > oWrap.width()) { timer = setTimeout(fscrollL, speed); }
-
-        oWrap.hover(function () {
-            oWrap.stop(true, true);
-            clearTimeout(timer);
-        }, function () {
-            if (iUlw > oWrap.width()) { timer = setTimeout(fscrollL, speed); }
         })
-        //*向右切换
-        function fscrollR() {
-            i--;
-            if (i < 0) i = $("#adaptiveid ul li").length / 2 - 1;
-            oWrap.stop().animate({ "scrollLeft": iStepw * i }, 1000);
-        }
+//*向右切换
+function fscrollR() {
+    i--;
+    if (i < 0) i = $("#adaptiveid ul li").length / 2 - 1;
+    oWrap.stop().animate({ "scrollLeft": iStepw * i }, 1000);
+}
 
 
+if (iUlw > oWrap.width()) { timer = setTimeout(fscrollR, speed); }
+
+oWrap.hover(function () {
+        oWrap.stop(true, true);
+        clearTimeout(timer);
+        }, function () {
         if (iUlw > oWrap.width()) { timer = setTimeout(fscrollR, speed); }
-
-        oWrap.hover(function () {
-            oWrap.stop(true, true);
-            clearTimeout(timer);
-        }, function () {
-            if (iUlw > oWrap.width()) { timer = setTimeout(fscrollR, speed); }
         })
-        //鼠标悬停显示文本
-        $(function () {
-            $(".adaptiveroll ul li").hover(function () {
+//鼠标悬停显示文本
+$(function () {
+        $(".adaptiveroll ul li").hover(function () {
                 $(this).find("div.img a img").animate({ "opacity": "1" }, "slow");
                 $(this).find("div.text").stop(true, false).slideDown("slow");
-            },
-function () {
-    $(this).find("div.img a img").animate({ "opacity": "0.5" }, "slow");
-    $(this).find("div.text").stop(true, false).slideUp("slow");
-})
+                },
+                function () {
+                $(this).find("div.img a img").animate({ "opacity": "0.5" }, "slow");
+                $(this).find("div.text").stop(true, false).slideUp("slow");
+                })
         })
-        //**绑定左右切换按钮
-        oBtnL.bind('click', function () { fscrollL() });
-        oBtnR.bind('click', function () { fscrollR() });
+//**绑定左右切换按钮
+oBtnL.bind('click', function () { fscrollL() });
+oBtnR.bind('click', function () { fscrollR() });
 
-    </script>
+</script>
 </body>
 </html>
