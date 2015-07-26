@@ -12,6 +12,7 @@ urlpatterns = patterns(
     # url(r'^weixin2py/', include('weixin2py.foo.urls')),
     url(r'^$', views.home),
     url(r'^about/$', views.about,name='fumeng-about'),
+    url(r'^service/$', views.fumeng_service),
     url(r'^about/overview/$', views.about_overview,name='about_overview'),
     url(r'^about/strategy/$', views.about_strategy,name='about_strategy'),
     url(r'^about/advantage/$', views.about_advantage,name='about_advantage'),
@@ -25,6 +26,6 @@ urlpatterns = patterns(
     url(r'^culture/$', views.culture,name='fumeng-culture'),
     url(r'^mission/$', views.mission,name='fumeng-mission'),
     url(r'^hr/$', views.hr,name='fumeng-hr'),
-    url(r'^contact/$', views.contact,name='fumeng-contact'),
+    url(r'^contact/$', views.fumeng_contact)
 ) 
 
