@@ -19,7 +19,20 @@ def home(request):
             'home':key,
         })
     return render(request, 'fumeng/fumeng-index.html',context)
-	
+def fumeng_service(request):
+    job_list = {}
+    context = RequestContext(request, {
+    'job_list':job_list,              
+    })  
+    #return HttpResponse(template.render(context))
+    return render(request, 'fumeng/fumeng-service.html',context)
+def fumeng_contact(request):
+    job_list = {}
+    context = RequestContext(request, {
+    'job_list':job_list,              
+    })  
+    #return HttpResponse(template.render(context))
+    return render(request, 'fumeng/fumeng-contact.html',context)
 def get_news_detail(request,title):
     new = News.objects.get(title=title)
     context = RequestContext(request, {
