@@ -22,27 +22,95 @@
             document.getElementById(divDisplay).style.display = "none";
         }
     }
+    var $_GET = (function(){
+        var url = window.document.location.href.toString();
+        var u = url.split("?");
+        if(typeof(u[1]) == "string"){
+            u = u[1].split("&");
+            var get = {};
+            for(var i in u){
+                var j = u[i].split("=");
+                get[j[0]] = j[1];
+            }
+            return get;
+        } else {
+            return {};
+        }
+    })();
+
+    var page = 1;
+    if (typeof($_GET['page']) != "undefined") {
+        var page = parseInt($_GET['page']);
+    }
+
+    function page_index(){
+        page = 1;
+        get_news_page();
+    }
+    function page_next(){
+        page += 1;
+        get_news_page();
+    }
+    function page_pre(){
+        page -= 1
+        get_news_page();
+    }
+    function get_news_page(){
+        var cur_url = document.URL;
+        cur_url = cur_url.split('?')[0];
+        window.location.href=cur_url+"?page="+page;
+    }
+
 </script>
 
 <div class="top_cle">
     <div class="wrap top_ico">
-       <p style="padding-top: 40px;font-size: xx-large;font-family: fantasy;font-weight: bold;color: #ccc;-webkit-box-reflect: below 6px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(black));">Contact Us</p>
+        <h2 class="news_ico">
+            case</h2>
         <ul>
 
-            <li><a class="{{ fumengzongbu }}"
-                   href="/fumeng/contact/fumengzongbu/">
-                福梦总部</a></li>
+            <li><a class="{{ fumengxinwen }}"
+                   href="/fumeng/news/fumengxinwen/">
+                福梦新闻</a></li>
 
-            <li><a class="{{ xiashugongsi }}"
-                   href="/fumeng/contact/xiashugongsi/">
-                下属公司</a></li>
+            <li><a class="{{ diqudongtai }}"
+                   href="/fumeng/news/diqudongtai/">
+                地区动态</a></li>
+
+            <li><a class="{{ meitiguanzhu }}"
+                   href="/fumeng/news/meitiguanzhu/">
+                媒体关注</a></li>
 
         </ul>
     </div>
 </div>
-
-{{about|safe}}
-
+<div class="st_box">
+    <div class="wrap">
+        <div class="newslist" style="word-wrap:break-word;">
+            <ul>
+                {% for item in news%}
+                    <li>
+                        <span>
+                            <h1>
+                                <p>
+                                    <a href="/fumeng/news/list/{{ item.title}}">{{item.title}}</a></p>
+                                <p class="time">{{item.add_time|date:"Y-m-d H:i:s"}}</p>
+                            </h1>
+                            <b>
+                                {{item.content|safe}}
+                            </b>
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="page team_page">
+                <span><a class="hover" onclick="page_index()">首页</a></span>
+                <span class="pre"><a onclick="page_pre()"><</a></span>
+                <span class="next"><a onclick="page_next()">></a></span>
+            </div>
+        </div>
+    </div>
+</div>
 <!--item end-->
 
 {% include "fumeng/footer.html" %}

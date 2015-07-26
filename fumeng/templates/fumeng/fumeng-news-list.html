@@ -37,12 +37,6 @@
             return {};
         }
     })();
-
-    var page = 1;
-    if (typeof($_GET['page']) != "undefined") {
-        var page = parseInt($_GET['page']);
-    }
-
     function page_index(){
         page = 1;
         get_news_page();
@@ -56,8 +50,12 @@
         get_news_page();
     }
     function get_news_page(){
+        if (typeof($_GET['page']) == "undefined") {
+            var page = 1;
+        }else{
+            var page = $_GET['page'];
+        }
         var cur_url = document.URL;
-        cur_url = cur_url.split('?')[0];
         window.location.href=cur_url+"?page="+page;
     }
 
@@ -65,19 +63,18 @@
 
 <div class="top_cle">
     <div class="wrap top_ico">
-        <h2 class="news_ico">
-            case</h2>
+       <p style="padding-top: 40px;font-size: xx-large;font-family: fantasy;font-weight: bold;color: #ccc;-webkit-box-reflect: below 6px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(black));">Fumeng News Center</p>
         <ul>
 
-            <li><a class="{{ fumengxinwen }}"
+            <li><a class="her"
                    href="/fumeng/news/fumengxinwen/">
                 福梦新闻</a></li>
 
-            <li><a class="{{ diqudongtai }}"
+            <li><a class=""
                    href="/fumeng/news/diqudongtai/">
                 地区动态</a></li>
 
-            <li><a class="{{ meitiguanzhu }}"
+            <li><a class=""
                    href="/fumeng/news/meitiguanzhu/">
                 媒体关注</a></li>
 
@@ -104,9 +101,9 @@
                 {% endfor %}
             </ul>
             <div class="page team_page">
-                <span><a class="hover" onclick="page_index()">首页</a></span>
-                <span class="pre"><a onclick="page_pre()"><</a></span>
-                <span class="next"><a onclick="page_next()">></a></span>
+                <span><a class="hover" href="#" onclick="page_index()">首页</a></span>
+                <span class="pre"><a href="#" onclick="page_pre()"><</a></span>
+                <span class="next"><a href="#" onclick="page_next()">></a></span>
             </div>
         </div>
     </div>
