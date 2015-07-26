@@ -3,10 +3,11 @@
 <head>
     {% load staticfiles %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="{% static 'js/Drop_down.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
-    <title>联系我们</title>
+    <title>新闻中心</title>
 </head>
 <body>
 
@@ -21,61 +22,32 @@
             document.getElementById(divDisplay).style.display = "none";
         }
     }
-
 </script>
 
 <div class="top_cle">
     <div class="wrap top_ico">
-        <h2 class="contact_ico">
-            contact</h2>
-    </div>
-</div>
-<div class="st_box">
-    <div class="contact">
-        <div class="m_title d1">
-            <p>
-                深圳市艾肯弘扬咨询管理有限公司</p>
-            <p class="m_titleEn lxf1">
-                shenzhen icon-hy consultant ltd.</p>
-        </div>
-        <div class="wrap contactInfo">
-            <div class="lx_f1">
-                <p>
-                    商务部.Ministry of Commerce<br />
-                    0755——83497735
-                </p>
-                <p>
-                    培训部.training department<br />
-                    0755——86645259
-                </p>
-                <p>
-                    传真.Fax<br />
-                    0755——86644567
-                </p>
-            </div>
-            <div class="lx_f1">
-                <p>
-                    公司官网.official website<br />
-                    http://www.come23.com/
-                </p>
-                <p>
-                    公司地址.Company address<br />
-                    深圳市南山区南山大道3838号深圳设计 产业园水栋5楼
-                </p>
-                <p>
-                    邮政编码.Postal codex<br />
-                    518052
-                </p>
-            </div>
-            </form>
-        </div>
-    </div>
-    <div class="c_map">
-        <a target="_blank" href="http://j.map.baidu.com/JiSv1/"></a>
+        <h2 class="news_ico">
+            case</h2>
+        <ul>
+
+            <li><a class="{{ fumengzongbu }}"
+                   href="/fumeng/contact/fumengzongbu/">
+                福梦总部</a></li>
+
+            <li><a class="{{ xiashugongsi }}"
+                   href="/fumeng/contact/xiashugongsi/">
+                下属公司</a></li>
+
+        </ul>
     </div>
 </div>
 
+{{about|safe}}
+
+<!--item end-->
+
 {% include "fumeng/footer.html" %}
+
 <script type="text/javascript">
     $(function () {
         $("#nav li:last").css("padding", "0")

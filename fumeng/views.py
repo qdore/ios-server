@@ -7,6 +7,11 @@ from django.template import Context
 from fumeng.models.home_page import HomePage
 from fumeng.models.news import News
 from fumeng.models.about_fumeng import AboutFumeng
+from fumeng.models.fumeng_business import FumengBusiness
+from fumeng.models.company_culture import CompanyCulture
+from fumeng.models.human_resources import HumanResource
+from fumeng.models.social_ability import SocialAbility
+from fumeng.models.contact_us import ContactUs
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -19,20 +24,7 @@ def home(request):
             'home':key,
         })
     return render(request, 'fumeng/fumeng-index.html',context)
-def fumeng_service(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-service.html',context)
-def fumeng_contact(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-contact.html',context)
+
 def get_news_detail(request,title):
     new = News.objects.get(title=title)
     context = RequestContext(request, {
@@ -78,97 +70,98 @@ def about(request, about_type):
     })  
     return render(request, 'fumeng/fumeng-about.html',context)
 
-def about_overview(request):
-    job_list = {}
+def fumeng_business(request, about_type):
+    about_list = FumengBusiness.objects.all()
+    if len(about_list) == 0:
+        raise Exception(u"页面还没有配置呢！")
+    about_fumeng = None
+    for about in about_list:
+        about_fumeng = about
+    about_fumeng_map = {
+        'shengtaizhongzhi': about_fumeng.shengtaizhongzhi,
+        'shengtaiyangzhi': about_fumeng.shengtaiyangzhi,
+        'kuangchanziyuan': about_fumeng.kuangchanziyuan,
+    }
     context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
+        'about':about_fumeng_map[about_type],
+        about_type: 'her',
+    }) 
     #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/about_overview.html',context)
-def about_strategy(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/about_strategy.html',context)
-def about_advantage(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/about_advantage.html',context)
-def about_progress(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/about_progress.html',context)
+    return render(request, 'fumeng/fumeng-bus.html',context)
 
-	
-def news_dynamic(request):
-    job_list = {}
+def fumeng_culture(request, about_type):
+    about_list = CompanyCulture.objects.all()
+    if len(about_list) == 0:
+        raise Exception(u"页面还没有配置呢！")
+    about_fumeng = None
+    for about in about_list:
+        about_fumeng = about
+    about_fumeng_map = {
+        'guanlizhidao': about_fumeng.guanlizhidao,
+        'qiyezongzhi': about_fumeng.qiyezongzhi,
+        'qiyejinshen': about_fumeng.qiyejinshen,
+        'qiyezuoyong': about_fumeng.qiyezuoyong,
+    }
     context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/news_dynamic.html',context)
-	
-def news_map(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/news_map.html',context)
-	
-def news_attention(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/news_attention.html',context)
-	
-
-def business(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-business.html',context)
-
-def culture(request):
-    job_list = {}
-    context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
+        'about':about_fumeng_map[about_type],
+        about_type: 'her',
+    }) 
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-culture.html',context)
-	
-def mission(request):
-    job_list = {}
+
+def fumeng_ability(request, about_type):
+    about_list = SocialAbility.objects.all()
+    if len(about_list) == 0:
+        raise Exception(u"页面还没有配置呢！")
+    about_fumeng = None
+    for about in about_list:
+        about_fumeng = about
+    about_fumeng_map = {
+        'gongyilinian': about_fumeng.gongyilinian,
+        'cishanjuanzhu': about_fumeng.cishanjuanzhu,
+        'shehuizanyu': about_fumeng.shehuizanyu,
+    }
     context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
+        'about':about_fumeng_map[about_type],
+        about_type: 'her',
+    }) 
     #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-mission.html',context)
-	
-def hr(request):
-    job_list = {}
+    return render(request, 'fumeng/fumeng-ability.html',context)
+
+def fumeng_resource(request, about_type):
+    about_list = HumanResource.objects.all()
+    if len(about_list) == 0:
+        raise Exception(u"页面还没有配置呢！")
+    about_fumeng = None
+    for about in about_list:
+        about_fumeng = about
+    about_fumeng_map = {
+        'renlilinian': about_fumeng.renlilinian,
+        'shehuizhaopin': about_fumeng.shehuizhaopin,
+        'xiaoyuanzhaopin': about_fumeng.xiaoyuanzhaopin,
+    }
     context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
+        'about':about_fumeng_map[about_type],
+        about_type: 'her',
+    }) 
     #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-hr.html',context)
-	
-def contact(request):
-    job_list = {}
+    return render(request, 'fumeng/fumeng-resource.html',context)
+
+def fumeng_contact(request, about_type):
+    about_list = ContactUs.objects.all()
+    if len(about_list) == 0:
+        raise Exception(u"页面还没有配置呢！")
+    about_fumeng = None
+    for about in about_list:
+        about_fumeng = about
+    about_fumeng_map = {
+        'fumengzongbu': about_fumeng.fumengzongbu,
+        'xiashugongsi': about_fumeng.xiashugongsi,
+    }
     context = RequestContext(request, {
-    'job_list':job_list,              
-    })  
+        'about':about_fumeng_map[about_type],
+        about_type: 'her',
+    }) 
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-contact.html',context)
+
