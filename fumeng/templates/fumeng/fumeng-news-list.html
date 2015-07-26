@@ -97,7 +97,7 @@
                                 <p class="time">{{item.add_time|date:"Y-m-d H:i:s"}}</p>
                             </h1>
                             <b>
-                                {{item.content|safe}}
+                                {{ item.content | striptags | truncatewords:"1" | slice:"500" }}
                             </b>
                         </span>
                     </li>
