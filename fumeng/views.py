@@ -6,6 +6,7 @@ from django.template import RequestContext, loader
 from django.template import Context
 from fumeng.models.home_page import HomePage
 from fumeng.models.news import News
+from django.core.paginator import Paginator
 
 # Create your views here.
 def home(request):
@@ -28,13 +29,18 @@ def get_news_detail(request,title):
 
 def news_list(request, new_type):
     news_list = News.objects.filter(news_type = new_type)
-    print news_list
-    for new in news_list:
-        print new.news_type
-    if len(news_list) == 0:
-        raise Exception(u"新闻还没有配置呢！")
+    page = request.GET.get('page')
+    if page is None:
+        page = 1
+    else:
+        page = int(page)
+    p = Paginator(news_list, 5) 
+    try:
+        page = p.page(page)
+    except:
+        page = None
     context = RequestContext(request, {
-        'news':news_list,
+        'news': page
     })
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-news-list.html',context)

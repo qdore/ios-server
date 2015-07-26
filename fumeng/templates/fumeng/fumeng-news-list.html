@@ -37,6 +37,12 @@
             return {};
         }
     })();
+
+    var page = 1;
+    if (typeof($_GET['page']) != "undefined") {
+        var page = parseInt($_GET['page']);
+    }
+
     function page_index(){
         page = 1;
         get_news_page();
@@ -50,12 +56,8 @@
         get_news_page();
     }
     function get_news_page(){
-        if (typeof($_GET['page']) == "undefined") {
-            var page = 1;
-        }else{
-            var page = $_GET['page'];
-        }
         var cur_url = document.URL;
+        cur_url = cur_url.split('?')[0];
         window.location.href=cur_url+"?page="+page;
     }
 
@@ -102,9 +104,9 @@
                 {% endfor %}
             </ul>
             <div class="page team_page">
-                <span><a class="hover" href="#" onclick="page_index()">首页</a></span>
-                <span class="pre"><a href="#" onclick="page_pre()"><</a></span>
-                <span class="next"><a href="#" onclick="page_next()">></a></span>
+                <span><a class="hover" onclick="page_index()">首页</a></span>
+                <span class="pre"><a onclick="page_pre()"><</a></span>
+                <span class="next"><a onclick="page_next()">></a></span>
             </div>
         </div>
     </div>
