@@ -18,6 +18,27 @@ def home(request):
         })
     return render(request, 'fumeng/fumeng-index.html',context)
 	
+def get_news_detail(request,title):
+    new = News.objects.get(title=title)
+    context = RequestContext(request, {
+    'new':new,              
+    })  
+    #return HttpResponse(template.render(context))
+    return render(request, 'fumeng/fumeng-news-detail.html',context)
+
+def news_list(request, new_type):
+    news_list = News.objects.filter(news_type = new_type)
+    print news_list
+    for new in news_list:
+        print new.news_type
+    if len(news_list) == 0:
+        raise Exception(u"新闻还没有配置呢！")
+    context = RequestContext(request, {
+        'news':news_list,
+    })
+    #return HttpResponse(template.render(context))
+    return render(request, 'fumeng/fumeng-news-list.html',context)
+
 def about(request):
     job_list = {}
     context = RequestContext(request, {
@@ -54,27 +75,6 @@ def about_progress(request):
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/about_progress.html',context)
 
-	
-def get_news_detail(request,title):
-    title = str(title)
-    new = News.objects.get(title=title)
-    print new.content
-    context = RequestContext(request, {
-    'new':new,              
-    })  
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-news-detail.html',context)
-
-def news_list(request):
-    news_list = News.objects.all()
-    print news_list
-    if len(news_list) == 0:
-        raise Exception(u"新闻还没有配置呢！")
-    context = RequestContext(request, {
-        'news':news_list,
-    })
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-news-list.html',context)
 	
 def news_dynamic(request):
     job_list = {}
