@@ -29,7 +29,6 @@ def get_news_detail(request,title):
     new = News.objects.get(title=title)
     context = RequestContext(request, {
         'new':new,              
-        new_type: 'her',
     })  
     return render(request, 'fumeng/fumeng-news-detail.html',context)
 
