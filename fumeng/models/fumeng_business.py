@@ -8,6 +8,6 @@ class FumengBusiness(models.Model):
     kuangchanziyuan = RichTextField(verbose_name = u"核心优势")
 
     class Meta:
-        verbose_name = u'关于福梦'
-        verbose_name_plural = u'关于福梦'
+        verbose_name = u'福梦业务'
+        verbose_name_plural = u'福梦业务'
 

@@ -3,9 +3,9 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 NEWS_TYPES = (
-    ('福梦新闻', '福梦新闻'),
-    ('地区动态', '地区动态'),
-    ('媒体关注', '媒体关注'),
+    ('fumengxinwen', '福梦新闻'),
+    ('diqudongtai', '地区动态'),
+    ('meitiguanzhu', '媒体关注'),
 )
 
 # 新闻
