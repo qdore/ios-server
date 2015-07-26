@@ -6,6 +6,7 @@ from django.template import RequestContext, loader
 from django.template import Context
 from fumeng.models.home_page import HomePage
 from fumeng.models.news import News
+from fumeng.models.about_fumeng import AboutFumeng
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -22,9 +23,9 @@ def home(request):
 def get_news_detail(request,title):
     new = News.objects.get(title=title)
     context = RequestContext(request, {
-    'new':new,              
+        'new':new,              
+        new_type: 'her',
     })  
-    #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-news-detail.html',context)
 
 def news_list(request, new_type):
@@ -40,18 +41,30 @@ def news_list(request, new_type):
     except:
         page = None
     context = RequestContext(request, {
-        'news': page
+        'news': page,
+        new_type: 'her',
     })
-    #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-news-list.html',context)
 
-def about(request):
-    job_list = {}
+def about(request, about_type):
+    about_list = AboutFumeng.objects.all()
+    if len(about_list) == 0:
+        raise Exception(u"关于页面还没有配置呢！")
+    about_fumeng = None
+    for about in about_list:
+        about_fumeng = about
+    about_fumeng_map = {
+        'fumenggaishu': about_fumeng.fumenggaishu,
+        'fumengzhanlve': about_fumeng.fumengzhanlve,
+        'hexinyoushi': about_fumeng.hexinyoushi,
+        'fazhanlicheng': about_fumeng.fazhanlicheng,
+    }
     context = RequestContext(request, {
-    'job_list':job_list,              
+        'about':about_fumeng_map[about_type],
+        about_type: 'her',
     })  
-    #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-about.html',context)
+
 def about_overview(request):
     job_list = {}
     context = RequestContext(request, {

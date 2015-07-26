@@ -1,11 +1,13 @@
 # coding:utf-8
 from django.db import models
-from ckeditor.fields import RichTextField
 
 class FumengBusiness(models.Model):
-    shengtaizhongzhi = RichTextField(verbose_name = u"福梦概述")
-    shengtaiyangzhi = RichTextField(verbose_name = u"福梦战略")
-    kuangchanziyuan = RichTextField(verbose_name = u"核心优势")
+    shengtaizhongzhi = models.TextField(max_length = 10000,
+            verbose_name = u"福梦概述")
+    shengtaiyangzhi = models.TextField(max_length = 10000,
+            verbose_name = u"福梦战略")
+    kuangchanziyuan = models.TextField(max_length = 10000,
+            verbose_name = u"核心优势")
 
     class Meta:
         verbose_name = u'福梦业务'
