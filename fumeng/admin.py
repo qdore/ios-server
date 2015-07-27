@@ -16,5 +16,12 @@ admin.site.register(company_culture.CompanyCulture)
 admin.site.register(contact_us.ContactUs)
 admin.site.register(fumeng_business.FumengBusiness)
 admin.site.register(social_ability.SocialAbility)
-admin.site.register(news.News)
+
+
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ('title', 'news_type')
+    search_fields = ('title',)
+    list_filter = ('news_type',)
+
+admin.site.register(news.News, NewsAdmin)
 admin.site.register(human_resources.HumanResource)
