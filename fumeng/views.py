@@ -50,6 +50,31 @@ def news_list(request, new_type):
     })
     return render(request, 'fumeng/fumeng-news-list.html',context)
 
+def fumeng_business_list(request, new_type):
+    news_list = FumengBusiness.objects.filter(news_type = new_type)
+    page = request.GET.get('page')
+    if page is None:
+        page = 1
+    else:
+        page = int(page)
+    p = Paginator(news_list, 12) 
+    try:
+        page = p.page(page)
+    except:
+        page = None
+    context = RequestContext(request, {
+        'news': page,
+        new_type: 'her',
+    })
+    return render(request, 'fumeng/fumeng-bus-list.html',context)
+
+def get_business_detail(request,title):
+    new = FumengBusiness.objects.get(title=title)
+    context = RequestContext(request, {
+        'new':new,              
+    })  
+    return render(request, 'fumeng/fumeng-bus-detail.html',context)
+
 def about(request, about_type):
     about_list = AboutFumeng.objects.all()
     if len(about_list) == 0:

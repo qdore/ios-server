@@ -17,7 +17,9 @@ urlpatterns = patterns(
 
     url(r'^news/list/(?P<title>\w+)/$', views.get_news_detail),
 
-    url(r'^business/(?P<about_type>\w+)/$', views.fumeng_business),
+    url(r'^business/(?P<new_type>\w+)/$', views.fumeng_business_list),
+
+    url(r'^business/list/(?P<title>\w+)/$', views.get_business_detail),
 
     url(r'^culture/(?P<about_type>\w+)/$', views.fumeng_culture),
     
