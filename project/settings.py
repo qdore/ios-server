@@ -210,9 +210,22 @@ STATIC_PATH = cur_file_dir() + "/static"
 STATIC_ROOT = STATIC_PATH + "/root"
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
+
     'default': {
         'width': 700,
         'language': 'zh-cn',
+        'toolbar': (
+			['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'], 
+			['Form','Checkbox','Radio','TextField','Textarea','Select','Button', 'ImageButton','HiddenField'], 
+			['Bold','Italic','Underline','Strike','-','Subscript','Superscript'], 
+			['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'], 
+			['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'], 
+			['Link','Unlink','Anchor'], 
+			['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'], 
+			['Styles','Format','Font','FontSize'], 
+			['TextColor','BGColor'], 
+			['Maximize','ShowBlocks','-','About', 'pbckcode'],
+		),
     },
 }
 

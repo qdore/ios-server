@@ -7,4 +7,17 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+
+    config.extraPlugins = 'justifycenterimage';
+    config.toolbar = [
+        ['Source'],
+        ['Image'],
+        ['SpecialChar'],
+        ['FontSize'],
+        ['TextColor'],
+        ['Smiley'],
+        ['Code'],
+        ['JustifyCenterImage'],
+    ]
 };
+
