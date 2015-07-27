@@ -29,6 +29,7 @@ def get_news_detail(request,title):
     new = News.objects.get(title=title)
     context = RequestContext(request, {
         'new':new,              
+        new.news_type: 'her',
     })  
     return render(request, 'fumeng/fumeng-news-detail.html',context)
 
@@ -72,6 +73,7 @@ def get_business_detail(request,title):
     new = FumengBusiness.objects.get(title=title)
     context = RequestContext(request, {
         'new':new,              
+        new.news_type: 'her',
     })  
     return render(request, 'fumeng/fumeng-bus-detail.html',context)
 
@@ -93,25 +95,6 @@ def about(request, about_type):
         about_type: 'her',
     })  
     return render(request, 'fumeng/fumeng-about.html',context)
-
-def fumeng_business(request, about_type):
-    about_list = FumengBusiness.objects.all()
-    if len(about_list) == 0:
-        raise Exception(u"页面还没有配置呢！")
-    about_fumeng = None
-    for about in about_list:
-        about_fumeng = about
-    about_fumeng_map = {
-        'shengtaizhongzhi': about_fumeng.shengtaizhongzhi,
-        'shengtaiyangzhi': about_fumeng.shengtaiyangzhi,
-        'kuangchanziyuan': about_fumeng.kuangchanziyuan,
-    }
-    context = RequestContext(request, {
-        'about':about_fumeng_map[about_type],
-        about_type: 'her',
-    }) 
-    #return HttpResponse(template.render(context))
-    return render(request, 'fumeng/fumeng-bus.html',context)
 
 def fumeng_culture(request, about_type):
     about_list = CompanyCulture.objects.all()

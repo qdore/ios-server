@@ -14,7 +14,6 @@ admin.site.register(home_page.HomePage)
 admin.site.register(about_fumeng.AboutFumeng)
 admin.site.register(company_culture.CompanyCulture)
 admin.site.register(contact_us.ContactUs)
-admin.site.register(fumeng_business.FumengBusiness)
 admin.site.register(social_ability.SocialAbility)
 
 
@@ -24,4 +23,5 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ('news_type',)
 
 admin.site.register(news.News, NewsAdmin)
+admin.site.register(fumeng_business.FumengBusiness, NewsAdmin)
 admin.site.register(human_resources.HumanResource)
