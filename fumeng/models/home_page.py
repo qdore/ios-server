@@ -4,7 +4,7 @@ from django.db import models
 # 首页
 class HomePage(models.Model):
     image_1 = models.ImageField(verbose_name="首页海报图1",
-    upload_to="media/%Y/%m/%d",
+            upload_to="media/%Y/%m/%d",
             null=True)
     url_1 = models.CharField(verbose_name="首页海报图1链接", max_length = 1000)
     image_2 = models.ImageField(verbose_name="首页海报图2",

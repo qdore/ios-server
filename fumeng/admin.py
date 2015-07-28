@@ -9,6 +9,7 @@ from fumeng.models import home_page
 from fumeng.models import social_ability
 from fumeng.models import news
 from fumeng.models import human_resources
+from fumeng.models import upload_image
 
 admin.site.register(home_page.HomePage)
 admin.site.register(about_fumeng.AboutFumeng)
@@ -25,3 +26,8 @@ class NewsAdmin(admin.ModelAdmin):
 admin.site.register(news.News, NewsAdmin)
 admin.site.register(fumeng_business.FumengBusiness, NewsAdmin)
 admin.site.register(human_resources.HumanResource)
+
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ('image', )
+    search_field = ('image', )
+admin.site.register(upload_image.UploadImage, ImageAdmin)
