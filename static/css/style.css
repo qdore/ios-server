@@ -205,6 +205,18 @@ a, input {
 	line-height: 28px;
 	margin: 0 0 0 20px;
 }
+.top_ico ul li:hover a, .top_ico ul li a.blue {
+	background: #64adca;
+	border-color: #64adca;
+}
+.top_ico ul li:hover a, .top_ico ul li a.green {
+	background: #0e902e;
+	border-color: #0e902e;
+}
+.top_ico ul li:hover a, .top_ico ul li a.orange {
+	background: #e4861a;
+	border-color: #e4861a;
+}
 .top_ico ul li:hover a, .top_ico ul li a.her {
 	background: #ca0d1a;
 	border-color: #ca0d1a;

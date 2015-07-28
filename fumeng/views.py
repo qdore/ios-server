@@ -29,7 +29,7 @@ def get_news_detail(request,title):
     new = News.objects.get(title=title)
     context = RequestContext(request, {
         'new':new,              
-        new.news_type: 'her',
+        new.news_type: 'blue',
     })  
     return render(request, 'fumeng/fumeng-news-detail.html',context)
 
@@ -47,7 +47,7 @@ def news_list(request, new_type):
         page = None
     context = RequestContext(request, {
         'news': page,
-        new_type: 'her',
+        new_type: 'blue',
     })
     return render(request, 'fumeng/fumeng-news-list.html',context)
 
@@ -65,7 +65,7 @@ def fumeng_business_list(request, new_type):
         page = None
     context = RequestContext(request, {
         'news': page,
-        new_type: 'her',
+        new_type: 'blue',
     })
     return render(request, 'fumeng/fumeng-bus-list.html',context)
 
@@ -73,7 +73,7 @@ def get_business_detail(request,title):
     new = FumengBusiness.objects.get(title=title)
     context = RequestContext(request, {
         'new':new,              
-        new.news_type: 'her',
+        new.news_type: 'blue',
     })  
     return render(request, 'fumeng/fumeng-bus-detail.html',context)
 
@@ -92,7 +92,7 @@ def about(request, about_type):
     }
     context = RequestContext(request, {
         'about':about_fumeng_map[about_type],
-        about_type: 'her',
+        about_type: 'blue',
     })  
     return render(request, 'fumeng/fumeng-about.html',context)
 
@@ -111,7 +111,7 @@ def fumeng_culture(request, about_type):
     }
     context = RequestContext(request, {
         'about':about_fumeng_map[about_type],
-        about_type: 'her',
+        about_type: 'green',
     }) 
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-culture.html',context)
@@ -130,7 +130,7 @@ def fumeng_ability(request, about_type):
     }
     context = RequestContext(request, {
         'about':about_fumeng_map[about_type],
-        about_type: 'her',
+        about_type: 'green',
     }) 
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-ability.html',context)
@@ -149,7 +149,7 @@ def fumeng_resource(request, about_type):
     }
     context = RequestContext(request, {
         'about':about_fumeng_map[about_type],
-        about_type: 'her',
+        about_type: 'green',
     }) 
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-resource.html',context)
@@ -167,7 +167,7 @@ def fumeng_contact(request, about_type):
     }
     context = RequestContext(request, {
         'about':about_fumeng_map[about_type],
-        about_type: 'her',
+        about_type: 'orange',
     }) 
     #return HttpResponse(template.render(context))
     return render(request, 'fumeng/fumeng-contact.html',context)
