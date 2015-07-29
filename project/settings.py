@@ -2,7 +2,6 @@
 # localsettings.py - Django localsettings for weixin2py project.
 
 import sys,os
-from weixin2py import weixin2py_template_dir
 
 PROJECT_ROOT = os.path.join(
     os.path.realpath(os.path.dirname(__file__)), os.pardir).replace('\\', '/')
@@ -137,7 +136,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [weixin2py_template_dir, ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -159,7 +158,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
-    'fumeng',
+    'ios',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

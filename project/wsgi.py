@@ -13,7 +13,15 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-import os
+import os, sys
+app_root = os.path.dirname(os.path.dirname(__file__))
+
+
+if app_root not in sys.path:
+    sys.path.append(app_root)
+third_party = os.path.join(os.path.dirname(os.path.abspath(app_root)), "third-party"    )
+if third_party not in sys.path:
+    sys.path.append(third_party)
 
 # We defer to a DJANGO_SETTINGS_MODULE already in the environment. This breaks
 # if running multiple sites in the same mod_wsgi process. To fix this, use
