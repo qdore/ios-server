@@ -13,6 +13,7 @@ ret_json = {}
 def login(global_params):
     user = Users.objects.filter(
             tel = global_params["tel"],
+            user_type = global_params["user_type"],
             password = global_params["pwd"])
     if user:
         ret_json["is_success"] = True
@@ -26,6 +27,7 @@ def regist(global_params):
     Users.objects.create(
             tel = global_params["tel"],
             password = global_params["pwd"],
+            user_type = global_params["user_type"],
             user_id = global_params["user_id"]
             )
     login(global_params)
