@@ -8,6 +8,10 @@ USER_TYPES = (
     ('1', '制片人'),
 )
 
+GENDER_TYPES = (
+    ('0', '男'),
+    ('1', '女'),
+)
 # 新闻
 class Users(models.Model):
     tel = models.CharField(verbose_name = u"手机号",
@@ -22,6 +26,13 @@ class Users(models.Model):
     user_type = models.CharField(verbose_name = u"用户角色",
             choices = USER_TYPES,
             max_length = 20)
+    name = models.CharField(verbose_name = u"姓名",
+            max_length = 20)
+    gender = models.CharField(verbose_name = u"性别",
+            choices = GENDER_TYPES,
+            max_length = 20)
+    brief =  models.CharField(verbose_name = u"简介",
+            max_length = 500)
     token = models.CharField(verbose_name = u"Token",
             default = ''.join(random.sample(string.letters, 50)),
             unique = True,

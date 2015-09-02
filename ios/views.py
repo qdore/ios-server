@@ -33,6 +33,59 @@ def regist(global_params):
     login(global_params)
     ret_json["is_success"] = True
 
+def changePassword(global_params):
+    user = Users.objects.filter(
+            token = global_params["token"],
+            password = global_params["pwd"]
+            )
+    if user:
+        for use in user:
+            use.password = global_params["new_pwd"]
+            use.save()
+            ret_json["is_success"] = True
+    else:
+        raise Exception('username or password error!')
+
+def updateUserInfor(global_params):
+    user = Users.objects.filter(
+            token = global_params["token"]
+            )
+    if user:
+        for use in user:
+            use.name = global_params["name"]
+            use.gender = global_params["gender"]
+            use.brief = global_params["brief"]
+            use.save()
+            ret_json["is_success"] = True
+    else:
+        raise Exception('token not found')
+        
+def getUserInforByToken(global_params):
+    user = Users.objects.filter(
+            token = global_params["token"]
+            )
+    if user:
+        for use in user:
+            ret_json["value"]["name"] = use.name
+            ret_json["value"]["gender"] = use.gender
+            ret_json["value"]["brief"] = use.brief
+            ret_json["is_success"] = True
+    else:
+        raise Exception('token not found')
+
+def getUserInforByTel(global_params):
+    user = Users.objects.filter(
+            tel = global_params["tel"]
+            )
+    if user:
+        for use in user:
+            ret_json["value"]["name"] = use.name
+            ret_json["value"]["gender"] = use.gender
+            ret_json["value"]["brief"] = use.brief
+            ret_json["is_success"] = True
+    else:
+        raise Exception('tel not found')
+
 def home(request):
     global ret_json
     ret_json = {
