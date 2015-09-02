@@ -13,12 +13,12 @@ ret_json = {}
 def login(global_params):
     user = Users.objects.filter(
             tel = global_params["tel"],
-            user_type = global_params["user_type"],
             password = global_params["pwd"])
     if user:
         ret_json["is_success"] = True
         for use in user:
             ret_json["value"]["token"] = use.token
+            ret_json["value"]["user_type"] = use.user_type
             break
     else:
         raise Exception('username or password error !')
