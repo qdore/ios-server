@@ -4,11 +4,8 @@ from ckeditor.fields import RichTextField
 import string, random
 
 # 动态中的图片
-class PraiseStatus(models.Model):
-    status_openid = models.CharField(verbose_name = u"Token",
-            default = ''.join(random.sample(string.letters, 50)),
-            unique = True,
-            max_length = 50)
+class StatusPics(models.Model):
+    status_id = models.IntegerField(verbose_name = u"状态ID")
     pic = models.ImageField(verbose_name = u"图片")
 
     class Meta:

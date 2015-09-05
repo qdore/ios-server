@@ -2,20 +2,25 @@
 *     File Name           :     test.html
 *     Created By          :     QiangWei
 *     Creation Date       :     [2015-09-03 00:13]
-*     Last Modified       :     [2015-09-03 00:16]
+*     Last Modified       :     [2015-09-03 18:28]
 *     Description         :      
 *********************************************************************************-->
 
-<form action="http://0.0.0.0:8086/ios/" method="post">
+<form action="http://0.0.0.0:8086/ios/" method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td><input type="text" id="txtname" name="method" /></td>
         </tr>
         <tr>
-            <td><input type="text" id="txtname" name="mobile" /></td>
+            <td><input type="text" id="txtname" name="token" /></td>
         </tr>
         <tr>
-            <td><input type="password" id="txtpswd" name="pwd" /></td>
+            <td><input type="text" id="txtname1" name="brief" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="file" name="pic" />
+            </td>
         </tr>
         <tr>
             <td colspan=2>

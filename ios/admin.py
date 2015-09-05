@@ -2,12 +2,18 @@ from django.contrib import admin
 
 # Register your models here.
 from ios.models import user
+from ios.models import status
+from ios.models import praise_status
+from ios.models import status_pic
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel',)
     search_fields = ('tel',)
 
 admin.site.register(user.Users, UserAdmin)
+admin.site.register(status.Status)
+admin.site.register(praise_status.PraiseStatus)
+admin.site.register(status_pic.StatusPics)
 
 #admin.site.register(home_page.HomePage)
 #admin.site.register(about_fumeng.AboutFumeng)

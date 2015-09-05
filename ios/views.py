@@ -5,11 +5,35 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.template import Context
 from ios.models.user import Users
+from ios.models.status import Status
+from ios.models.status_pic import StatusPics
+from ios.models.praise_status import PraiseStatus
+from django.core.files.base import ContentFile
 import json
 
 ret_json = {}
 
-# Create your views here.
+# 发表状态
+def publishStatus(global_params):
+    user = Users.objects.filter(
+            token = global_params["token"],
+            )
+    if user:
+        for use in user:
+            status = Status.objects.create(
+                    tel = use.tel,
+                    brief = global_params["brief"]
+                    )
+            pic = StatusPics.objects.create(
+                    status_id = status.id
+                    );
+            file_content = ContentFile(global_params['pic'].read()) 
+            pic.pic.save(global_params['pic'].name, file_content)
+        ret_json["is_success"] = True
+    else:
+        raise Exception('token not found!')
+
+# 注册及登录
 def login(global_params):
     user = Users.objects.filter(
             tel = global_params["tel"],
@@ -95,6 +119,7 @@ def home(request):
     try:
         global_params = request.GET.copy()
         global_params.update(request.POST)
+        global_params.update(request.FILES)
         exec(global_params["method"].strip() + "(global_params)");
         return HttpResponse(json.dumps(ret_json), content_type="application/json")
     except Exception, e:
