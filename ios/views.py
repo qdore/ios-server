@@ -95,14 +95,15 @@ def publishStatus(global_params, request):
             )
     i = 0
     while i >= 0:
+        pic = StatusPics.objects.create(
+                status_id = status.id
+                );
         try:
-            pic = StatusPics.objects.create(
-                    status_id = status.id
-                    );
             file_content = ContentFile(global_params['pic' + str(i)].read()) 
             pic.pic.save(global_params['pic' + str(i)].name, file_content)
             i = i + 1
         except:
+            pic.delete()
             break
     ret_json["is_success"] = True
 
