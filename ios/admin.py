@@ -7,11 +7,16 @@ from ios.models import praise_status
 from ios.models import status_pic
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('tel',)
-    search_fields = ('tel',)
+    list_display = ('tel', 'user_id', 'name', 'gender')
+    search_fields = ('tel', 'user_id', 'name')
 
 admin.site.register(user.Users, UserAdmin)
-admin.site.register(status.Status)
+
+class StatusAdmin(admin.ModelAdmin):
+    list_display = ('tel', 'brief')
+    search_fields = ('tel',)
+
+admin.site.register(status.Status, StatusAdmin)
 admin.site.register(praise_status.PraiseStatus)
 admin.site.register(status_pic.StatusPics)
 

@@ -79,3 +79,65 @@ return:
     {"is_success": true, "value": {"gender": "0", "name": "kidney", "brief": "xxx"}}
 
 ```
+
+post:
+```
+method: publishStatus
+token: key
+brief: 发表状态的内容
+pic0: 上传的图片0
+pic1: 上传的图片1
+pic2: 上传的图片
+pic3: 上传的图片
+pic4: 上传的图片
+    ...
+
+return:
+    {"is_success": true, "value": {}}
+
+```
+
+get/post:
+```
+method: getMyStatus
+token: key
+例：
+    http://0.0.0.0:8086/ios/?method=getMyStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo
+
+return:
+{"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "xxx", "status_id": 1}, {"praisers": [], "pictures": [], "brief": "xxx", "status_id": 2}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_dULEtZO.png"], "brief": "啊收到就好", "status_id": 3}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/", "0.0.0.0:8086/media/./13712045932161.png"], "brief": "xxxxxxx", "status_id": 4}, {"praisers": [], "pictures": [], "brief": "xxxxxxx", "status_id": 5}, {"praisers": [], "pictures": [], "brief": "xxxxxxx", "status_id": 6}]}}
+
+is_success: true
+value: {
+            status:[
+                   {
+                        status_id:标识状态的状态码（点赞等操作根据status_id）
+                        praisers:点赞者手机号
+                        pictures:状态图片的url
+                        brief:状态发表的言论
+                   },
+                   ...
+            ]
+       }
+```
+
+get/post
+```
+method: praiseStatus
+token: key
+status_id: 要点赞的状态标识码
+例：
+    http://0.0.0.0:8086/ios/?method=praiseStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&status_id=2
+
+return:
+    {"is_success": false, "value": {"error": "重复点赞!"}}
+```
+
+
+
+
+
+
+
+
+
