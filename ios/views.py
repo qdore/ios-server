@@ -74,6 +74,15 @@ def praiseStatus(global_params, request):
     else:
         raise Exception('status not found!')
 
+# 获取最新的n条状态
+def getNStatus(global_params, request):
+    user = getUser(global_params)
+    status = Status.objects.all()
+    status = status[status.count() - min(int(global_params['n']), status.count()):]
+    ret_json['value']['status'] = []
+    for statu in status:
+        ret_json['value']['status'].insert(0, getStatus(statu.id, request))
+    ret_json["is_success"] = True
 
 # 获取我的状态
 def getMyStatus(global_params, request):

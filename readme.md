@@ -136,6 +136,34 @@ return:
     {"is_success": false, "value": {"error": "重复点赞!"}}
 ```
 
+获取最近的n条记录(全局)
+get/post:
+```
+method: getNStatus
+token: key
+n: n条记录的数值
+例：
+    http://0.0.0.0:8086/ios/?method=getNStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&n=2
+
+return:
+{"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "测试", "status_id": 10}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_qFgYqIX.png"], "brief": "xxx", "status_id": 9}]}}
+
+is_success: true
+value: {
+            status:[
+                   {
+                        status_id:标识状态的状态码（点赞等操作根据status_id）
+                        praisers:点赞者手机号
+                        pictures:状态图片的url
+                        brief:状态发表的言论
+                   },
+                   ...
+            ]
+       }
+
+```
+
+
 
 
 
