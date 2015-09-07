@@ -83,7 +83,7 @@ def getMyStatus(global_params, request):
             )
     ret_json['value']['status'] = []
     for statu in status:
-        ret_json['value']['status'].append(getStatus(statu.id, request))
+        ret_json['value']['status'].insert(0, getStatus(statu.id, request))
     ret_json["is_success"] = True
 
 # 发表状态

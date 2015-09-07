@@ -80,6 +80,7 @@ return:
 
 ```
 
+发表状态
 post:
 ```
 method: publishStatus
@@ -97,6 +98,7 @@ return:
 
 ```
 
+获取我发表的状态
 get/post:
 ```
 method: getMyStatus
@@ -121,6 +123,7 @@ value: {
        }
 ```
 
+点赞
 get/post
 ```
 method: praiseStatus
