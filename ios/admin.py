@@ -5,6 +5,7 @@ from ios.models import user
 from ios.models import status
 from ios.models import praise_status
 from ios.models import status_pic
+from ios.models import attention_relation
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
@@ -19,6 +20,7 @@ class StatusAdmin(admin.ModelAdmin):
 admin.site.register(status.Status, StatusAdmin)
 admin.site.register(praise_status.PraiseStatus)
 admin.site.register(status_pic.StatusPics)
+admin.site.register(attention_relation.AttentionRelation)
 
 #admin.site.register(home_page.HomePage)
 #admin.site.register(about_fumeng.AboutFumeng)

@@ -136,7 +136,7 @@ return:
     {"is_success": false, "value": {"error": "重复点赞!"}}
 ```
 
-获取最近的n条记录(全局)
+获取最近的n条状态记录(全局)
 get/post:
 ```
 method: getNStatus
@@ -163,8 +163,67 @@ value: {
 
 ```
 
+获取别人发表的状态
+get/post:
+```
+method: getSomeOneStatusByTel
+tel: 12233334444
+例：
+    http://0.0.0.0:8086/ios/?method=getSomeOneStatusByTel&tel=12233334444
 
+return:
+{"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "xxx", "status_id": 1}, {"praisers": [], "pictures": [], "brief": "xxx", "status_id": 2}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_dULEtZO.png"], "brief": "啊收到就好", "status_id": 3}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/", "0.0.0.0:8086/media/./13712045932161.png"], "brief": "xxxxxxx", "status_id": 4}, {"praisers": [], "pictures": [], "brief": "xxxxxxx", "status_id": 5}, {"praisers": [], "pictures": [], "brief": "xxxxxxx", "status_id": 6}]}}
 
+```
+
+广场找人
+get/post
+```
+method: findSomeOne
+para: 搜索内容(可以是用户名手机号id等)
+
+例:
+    http://0.0.0.0:8086/ios/?method=findSomeOne&para=132132114
+return:
+    {"is_success": true, "value": {"person": [{"gender": "", "tel": "13213211432", "user_id": "test123", "name": "", "brief": ""}, {"gender": "", "tel": "13213211421", "user_id": "test123", "name": "", "brief": ""}]}}
+
+person:搜索结果
+gender：性别
+tel: 搜索到的手机号
+user_id: 身份证号或者工号
+name: 名称
+brief: 简介
+```
+
+加关注
+get/post
+```
+method: addSomeOneAsFriend
+token: key
+attented_tel: 我关注的人的手机号
+
+例：
+    http://0.0.0.0:8086/ios/?method=addSomeOneAsFriend&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&attented_tel=18721919502
+
+return:
+    {"is_success": true, "value": {}}
+```
+
+获取某人的关注信息
+get/post
+```
+method: getAttentRelation
+tel: `某人`的手机号
+
+例：
+
+return:
+    {"is_success": true, "value": {"attent_by_someone": ["18721919502"], "attent_someone": ["18721919502"]}}
+
+attent_by_someone: 被某人关注
+attent_someone：关注的人
+
+```
 
 
 

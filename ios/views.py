@@ -7,8 +7,10 @@ from django.template import Context
 from ios.models.user import Users
 from ios.models.status import Status
 from ios.models.status_pic import StatusPics
+from ios.models.attention_relation import AttentionRelation
 from ios.models.praise_status import PraiseStatus
 from django.core.files.base import ContentFile
+from django.db.models import Q
 import json
 import sys
 
@@ -93,6 +95,57 @@ def getMyStatus(global_params, request):
     ret_json['value']['status'] = []
     for statu in status:
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))
+    ret_json["is_success"] = True
+
+# 获取某人的状态
+def getSomeOneStatusByTel(global_params, request):
+    status = Status.objects.filter(
+            tel = global_params['tel']
+            )
+    ret_json['value']['status'] = []
+    for statu in status:
+        ret_json['value']['status'].insert(0, getStatus(statu.id, request))
+    ret_json["is_success"] = True
+
+# 找人
+def findSomeOne(global_params, request):
+    users = Users.objects.filter(Q(name__icontains = global_params['para']) |
+            Q(user_id__icontains = global_params['para']) |
+            Q(tel__icontains = global_params['para']))
+    ret_json["value"]["person"] = []
+    for user in users:
+        ret_json["value"]["person"].append({
+            "name": user.name,
+            "gender": user.gender,
+            "brief": user.brief,
+            "user_id": user.user_id,
+            "tel": user.tel
+        })
+    ret_json["is_success"] = True
+
+# 加关注
+def addSomeOneAsFriend(global_params, request):
+    user = getUser(global_params)
+    AttentionRelation.objects.create(
+            attent_tel = user.tel,
+            tel_by_attent = global_params['attented_tel']
+            )
+    ret_json["is_success"] = True
+
+# 获取某人的关注信息
+def getAttentRelation(global_params, request):
+    attent_someone = AttentionRelation.objects.filter(
+            attent_tel = global_params['tel']
+            )
+    attent_by_someone = AttentionRelation.objects.filter(
+            tel_by_attent = global_params['tel']
+            )
+    ret_json['value']['attent_someone'] = []
+    ret_json['value']['attent_by_someone'] = []
+    for attent in attent_someone:
+        ret_json['value']['attent_someone'].append(attent.tel_by_attent)
+    for attent in attent_by_someone:
+        ret_json['value']['attent_by_someone'].append(attent.attent_tel)
     ret_json["is_success"] = True
 
 # 发表状态
