@@ -9,6 +9,7 @@ from ios.models.status import Status
 from ios.models.status_pic import StatusPics
 from ios.models.attention_relation import AttentionRelation
 from ios.models.praise_status import PraiseStatus
+from ios.models.chat import Chat
 from django.core.files.base import ContentFile
 from django.db.models import Q
 import json
@@ -54,6 +55,30 @@ def getUser(global_params):
             return use
     else:
         raise Exception('token not found!')
+
+# 发送站内信
+def sendMsg(global_params, request):
+    user = getUser(global_params)
+    Chat.objects.create(
+            sender = user.tel,
+            reciver = global_params['receiver'],
+            content = global_params['content']
+            )
+    ret_json['is_success'] = True
+    
+# 接受站内信
+def getMsg(global_params, request):
+    user = getUser(global_params)
+    msgs = Chat.objects.filter(reciver = user.tel)
+    ret_json['value']['msgs'] = []
+    for msg in msgs:
+        ret_json['value']['msgs'].append({
+                'sender': msg.sender,
+                'content': msg.content,
+                })
+        msg.readed = True
+        msg.save()
+    ret_json['is_success'] = True
 
 # 点赞
 def praiseStatus(global_params, request):
@@ -171,10 +196,15 @@ def publishStatus(global_params, request):
 
 # 注册及登录
 def login(global_params, request):
-    user = getUser(global_params)
-    ret_json["is_success"] = True
-    ret_json["value"]["token"] = user.token
-    ret_json["value"]["user_type"] = user.user_type
+    user = Users.objects.filter(
+            tel = global_params["tel"],
+            password = global_params["pwd"])
+    if not user:
+        raise Exception('username or password error')
+    for use in user:
+        ret_json["value"]["token"] = use.token
+        ret_json["value"]["user_type"] = use.user_type
+        ret_json["is_success"] = True
 
 def regist(global_params, request):
     Users.objects.create(
@@ -183,7 +213,7 @@ def regist(global_params, request):
             user_type = global_params["user_type"],
             user_id = global_params["user_id"]
             )
-    login(global_params)
+    login(global_params, request)
     ret_json["is_success"] = True
 
 def changePassword(global_params, request):

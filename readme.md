@@ -1,6 +1,6 @@
 ##接口文档
 
-注册
+####注册
 get/post:
 返回的token是用户获取数据的凭据（该token与电话一一对应，作为请求用户数据的凭证）
 ```
@@ -15,7 +15,7 @@ return:
     {"is_success": true, "value": {"token": "umjDMLhnwYBTdEUIvcqVCfWgeNtJXaZKoSPOlzQpxbskARFHyG"}}
 ```
 
-登录
+####登录
 get/post:
 返回的token是用户获取数据的凭据（该token与电话一一对应，作为请求用户数据的凭证）
 ```
@@ -29,7 +29,7 @@ return:
     {"is_success": true, "value": {"token": "umjDMLhnwYBTdEUIvcqVCfWgeNtJXaZKoSPOlzQpxbskARFHyG"}}
 ```
 
-修改密码
+####修改密码
 get/post:
 ```
 method: changePassword
@@ -42,7 +42,7 @@ return:
     {"is_success": false, "value": {"error": "username or password error!"}}
 ```
 
-更新用户信息
+####更新用户信息
 get/post:
 ```
 method: updateUserInfor
@@ -57,7 +57,7 @@ return:
 
 ```
 
-获取用户信息
+####获取用户信息
 get/post:
 ```
 method: getUserInforByTel
@@ -68,7 +68,8 @@ return:
     {"is_success": true, "value": {"gender": "0", "name": "kidney", "brief": "xxx"}}
 
 ```
-get/post:
+
+####get/post:
 ```
 method: getUserInforByToken
 token: key
@@ -80,7 +81,7 @@ return:
 
 ```
 
-发表状态
+####发表状态
 post:
 ```
 method: publishStatus
@@ -98,7 +99,7 @@ return:
 
 ```
 
-获取我发表的状态
+####获取我发表的状态
 get/post:
 ```
 method: getMyStatus
@@ -123,7 +124,7 @@ value: {
        }
 ```
 
-点赞
+####点赞
 get/post
 ```
 method: praiseStatus
@@ -136,7 +137,7 @@ return:
     {"is_success": false, "value": {"error": "重复点赞!"}}
 ```
 
-获取最近的n条状态记录(全局)
+####获取最近的n条状态记录(全局)
 get/post:
 ```
 method: getNStatus
@@ -163,7 +164,7 @@ value: {
 
 ```
 
-获取别人发表的状态
+####获取别人发表的状态
 get/post:
 ```
 method: getSomeOneStatusByTel
@@ -176,7 +177,7 @@ return:
 
 ```
 
-广场找人
+####广场找人
 get/post
 ```
 method: findSomeOne
@@ -195,7 +196,7 @@ name: 名称
 brief: 简介
 ```
 
-加关注
+####加关注
 get/post
 ```
 method: addSomeOneAsFriend
@@ -209,7 +210,7 @@ return:
     {"is_success": true, "value": {}}
 ```
 
-获取某人的关注信息
+####获取某人的关注信息
 get/post
 ```
 method: getAttentRelation
@@ -225,6 +226,8 @@ attent_someone：关注的人
 
 ```
 
+发送站内信(Todo)
+接受站内信(Todo)
 
 
 
