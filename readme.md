@@ -226,8 +226,35 @@ attent_someone：关注的人
 
 ```
 
-发送站内信(Todo)
-接受站内信(Todo)
+####发送站内信(Todo)
+get/post
+```
+method: sendMsg
+token: key
+tel: 接收者的手机号
+content: 发送的信息内容
+例:
+    http://0.0.0.0:8086/ios/?method=sendMsg&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&receiver=18392319234&content=test
+
+return:
+    {"is_success": true, "value": {}}
+```
+
+####接受站内信(Todo)
+get/post
+```
+method: getMsg
+token: key
+例:
+    http://0.0.0.0:8086/ios/?method=getMsg&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo
+
+return:
+    {"is_success": true, "value": {"msgs": [{"content": "test", "sender": "18721919502"}]}}
+
+sender:发信人
+content: 内容
+注意：每次获取成功之后未读信息列表自动清空
+```
 
 
 
