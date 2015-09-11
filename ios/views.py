@@ -36,7 +36,7 @@ def getStatus(status_id, request):
         ret_val['pictures'] = []
         for pic in pics:
             ret_val['pictures'].append(
-                request.get_host() + '/media/' + str(pic.pic)
+                'http://' + request.get_host() + '/media/' + str(pic.pic)
                     )
         praises = PraiseStatus.objects.filter(
                 status_id = statu.id
