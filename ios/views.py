@@ -10,6 +10,7 @@ from ios.models.status_pic import StatusPics
 from ios.models.attention_relation import AttentionRelation
 from ios.models.praise_status import PraiseStatus
 from ios.models.chat import Chat
+from ios.models.comment import Comment
 from django.core.files.base import ContentFile
 from django.db.models import Q
 import json
@@ -18,6 +19,17 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 ret_json = {}
+
+def getUserNameByTel(user_tel):
+    user = Users.objects.filter(
+            tel = user_tel
+            )
+    if user:
+        for use in user:
+            return use.name
+        return user_tel
+    else:
+        return user_tel
 
 def getStatus(status_id, request):
     status =  Status.objects.filter(
@@ -44,6 +56,41 @@ def getStatus(status_id, request):
         ret_val['praisers'] = []
         for praise in praises:
             ret_val['praisers'].append(praise.tel)
+
+        ret_val['comment'] = []
+        comments = Comment.objects.filter(
+                status_id = statu.id
+                )
+        for comment in comments:
+            comment_struct = {}
+            comment_struct['comment_id'] = comment.comment_id
+            comment_struct['content'] = comment.comment_content
+            comment_struct['commenter'] = {
+                'tel': comment.commenter,
+                'name': getUserNameByTel(comment.commenter)
+            }
+            comment_struct['comment_by'] = {
+                'tel': comment.comment_by,
+                'name': getUserNameByTel(comment.comment_by)
+            }
+            sub_comments = Comment.objects.filter(
+                comment_id = comment.id
+                    )
+            comment_struct['sub_comments'] = []
+            for sub_comment in sub_comments:
+                sub_comment_struct = {}
+                sub_comment_struct['comment_id'] = comment.comment_id
+                sub_comment_struct['content'] = sub_comment.comment_content
+                sub_comment_struct['commenter'] = {
+                    'tel': sub_comment.commenter,
+                    'name': getUserNameByTel(sub_comment.commenter)
+                }
+                sub_comment_struct['comment_by'] = {
+                    'tel': sub_comment.comment_by,
+                    'name': getUserNameByTel(sub_comment.comment_by)
+                }
+                comment_struct['sub_comments'].insert(0, sub_comment_struct)
+            ret_val['comment'].insert(0, comment_struct)
         return ret_val
 
 def getUser(global_params):
@@ -55,6 +102,38 @@ def getUser(global_params):
             return use
     else:
         raise Exception('token not found!')
+
+# 评论动态
+def commentStatus(global_params, request):
+    user = getUser(global_params)
+    status = Status.objects.filter(
+            id = global_params["status_id"]
+            )
+    if status:
+        for statu in status:
+            Comment.objects.create(status_id = global_params["status_id"],
+                    commenter = user.tel,
+                    comment_by = status.tel,
+                    comment_content = global_params["content"]
+                    )
+    else:
+        raise Exception('status not found!')
+
+# 评论评论
+def commentOtherComment(global_params, request):
+    user = getUser(global_params)
+    comment = Comment.objects.filter(
+            id = global_params["comment_id"]
+            )
+    if comment:
+        for statu in status:
+            Comment.objects.create(comment_id = global_params["comment_id"],
+                    commenter = global_params["commenter"],
+                    comment_by = global_params["commenter_by"],
+                    comment_content = global_params["content"]
+                    )
+    else:
+        raise Exception('comment not found!')
 
 # 发送站内信
 def sendMsg(global_params, request):
@@ -80,6 +159,22 @@ def getMsg(global_params, request):
         msg.save()
     ret_json['is_success'] = True
 
+# 取消赞
+def undoPraise(global_params, request):
+    user = getUser(global_params)
+    status = Status.objects.filter(
+            id = global_params["status_id"]
+            )
+    if status:
+        for statu in status:
+            PraiseStatus.objects.filter(
+                status_id = global_params["status_id"],
+                tel = user.tel
+                ).delete()
+        ret_json["is_success"] = True
+    else:
+        raise Exception('status not found!')
+
 # 点赞
 def praiseStatus(global_params, request):
     user = getUser(global_params)
@@ -101,11 +196,11 @@ def praiseStatus(global_params, request):
     else:
         raise Exception('status not found!')
 
-# 获取最新的n条状态
+# 获取最新的状态, 从n开始
 def getNStatus(global_params, request):
     user = getUser(global_params)
     status = Status.objects.all()
-    status = status[status.count() - min(int(global_params['n']), status.count()):]
+    status = status[max(0, max(status.count() - global_params['n'], status.count()) - 21):  max(0, min(status.count() - global_params['n'], status.count()))]
     ret_json['value']['status'] = []
     for statu in status:
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))

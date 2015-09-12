@@ -118,6 +118,34 @@ value: {
                         praisers:点赞者手机号
                         pictures:状态图片的url
                         brief:状态发表的言论
+                        comment: [
+                            {
+                                comment_id: 标识评论
+                                content: 评论内容
+                                commenter: 评论者 {
+                                    tel: 电话
+                                    name: 用户名
+                                }
+                                comment_by: 被评论者 {
+                                    tel: 电话
+                                    name: 用户名
+                                }
+                                sub_comments: [
+                                    {
+                                        comment_id: 标识评论(与comment_id值相同)
+                                        content: 评论内容
+                                        commenter: 评论者 {
+                                            tel: 电话
+                                            name: 用户名
+                                        }
+                                        comment_by: 被评论者 {
+                                            tel: 电话
+                                            name: 用户名
+                                        }
+                                    },
+                                ]
+                            },
+                        ]
                    },
                    ...
             ]
@@ -137,7 +165,7 @@ return:
     {"is_success": false, "value": {"error": "重复点赞!"}}
 ```
 
-####获取最近的n条状态记录(全局)
+####获取从n条开始的状态记录(全局), 返回21条
 get/post:
 ```
 method: getNStatus
@@ -226,7 +254,7 @@ attent_someone：关注的人
 
 ```
 
-####发送站内信(Todo)
+####发送站内信
 get/post
 ```
 method: sendMsg
@@ -240,7 +268,7 @@ return:
     {"is_success": true, "value": {}}
 ```
 
-####接受站内信(Todo)
+####接受站内信
 get/post
 ```
 method: getMsg
@@ -256,8 +284,46 @@ content: 内容
 注意：每次获取成功之后未读信息列表自动清空
 ```
 
+####取消赞
+get/post
+```
+method: undoPraise
+token: key
+status_id: 要取消赞的状态标识码
+例：
+    http://0.0.0.0:8086/ios/?method=undoPraise&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&status_id=2
 
+return:
+    {"is_success": true, "value": {}}
+```
 
+####评论
+有两级评论：
+1. 评论状态
+get/post
+```
+method: commentStatus
+token: key
+status_id: 评论的状态码
+content: 评论
+例：
+    http://0.0.0.0:8086/ios/?method=commentStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&status_id=2&comment=xxx
 
+return:
+    {"is_success": true, "value": {}}
+```
 
+2. 评论其它评论
+get/post
 
+```
+method: commentOtherComment
+token: key
+comment_id: 评论的状态码
+content: 评论
+例：
+    http://0.0.0.0:8086/ios/?method=commentOtherComment&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&comment_id=2&comment=xxx
+
+return:
+    {"is_success": true, "value": {}}
+```
