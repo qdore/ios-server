@@ -200,6 +200,7 @@ def praiseStatus(global_params, request):
 def getNStatus(global_params, request):
     user = getUser(global_params)
     status = Status.objects.all()
+    global_params['n'] = int(global_params['n'])
     status = status[max(0, max(status.count() - global_params['n'], status.count()) - 21):  max(0, min(status.count() - global_params['n'], status.count()))]
     ret_json['value']['status'] = []
     for statu in status:
