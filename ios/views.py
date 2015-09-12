@@ -41,6 +41,7 @@ def getStatus(status_id, request):
         ret_val = {
             'status_id': statu.id,
             'brief': statu.brief,
+            'name': getUserNameByTel(statu.tel),
         };
         pics = StatusPics.objects.filter(
                 status_id = statu.id

@@ -118,6 +118,7 @@ value: {
                         praisers:点赞者手机号
                         pictures:状态图片的url
                         brief:状态发表的言论
+                        name:发送者的名称
                         comment: [
                             {
                                 comment_id: 标识评论
@@ -178,18 +179,6 @@ return:
 {"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "测试", "status_id": 10}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_qFgYqIX.png"], "brief": "xxx", "status_id": 9}]}}
 
 is_success: true
-value: {
-            status:[
-                   {
-                        status_id:标识状态的状态码（点赞等操作根据status_id）
-                        praisers:点赞者手机号
-                        pictures:状态图片的url
-                        brief:状态发表的言论
-                   },
-                   ...
-            ]
-       }
-
 ```
 
 ####获取别人发表的状态
