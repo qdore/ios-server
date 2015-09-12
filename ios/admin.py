@@ -7,6 +7,7 @@ from ios.models import praise_status
 from ios.models import status_pic
 from ios.models import attention_relation
 from ios.models import chat
+from ios.models import comment
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
@@ -22,6 +23,7 @@ admin.site.register(status.Status, StatusAdmin)
 admin.site.register(praise_status.PraiseStatus)
 admin.site.register(status_pic.StatusPics)
 admin.site.register(attention_relation.AttentionRelation)
+admin.site.register(comment.Comment)
 
 class CharAdmin(admin.ModelAdmin):
     list_display = ('sender', 'reciver', 'content', 'readed')
