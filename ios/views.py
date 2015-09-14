@@ -253,8 +253,8 @@ def findSomeOne(global_params, request):
         user_status = user_status[:3]
         is_friend = False
         relation = AttentionRelation.objects.filter(
-                attent_tel = user.tel,
-                tel_by_attent = me.tel,
+                attent_tel = me.tel,
+                tel_by_attent = user.tel,
                 )
         if relation:
             is_friend = True
