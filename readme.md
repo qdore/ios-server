@@ -123,29 +123,10 @@ value: {
                             {
                                 comment_id: 标识评论
                                 content: 评论内容
-                                commenter: 评论者 {
-                                    tel: 电话
-                                    name: 用户名
-                                }
-                                comment_by: 被评论者 {
-                                    tel: 电话
-                                    name: 用户名
-                                }
-                                sub_comments: [
-                                    {
-                                        comment_id: 标识评论(与comment_id值相同)
-                                        content: 评论内容
-                                        commenter: 评论者 {
-                                            tel: 电话
-                                            name: 用户名
-                                        }
-                                        comment_by: 被评论者 {
-                                            tel: 电话
-                                            name: 用户名
-                                        }
-                                    },
-                                ]
+                                commenter: 评论者
+                                comment_by: 被评论者
                             },
+                            ...
                         ]
                    },
                    ...
@@ -198,6 +179,7 @@ return:
 get/post
 ```
 method: findSomeOne
+token: key
 para: 搜索内容(可以是用户名手机号id等)
 
 例:
@@ -210,7 +192,10 @@ gender：性别
 tel: 搜索到的手机号
 user_id: 身份证号或者工号
 name: 名称
+type: 职业
+is_friend: 是否是好友
 brief: 简介
+status: [] //和getMyStatus返回一样
 ```
 
 ####加关注
@@ -293,7 +278,7 @@ get/post
 ```
 method: commentStatus
 token: key
-status_id: 评论的状态码
+status_id: 状态的标识码
 content: 评论
 例：
     http://0.0.0.0:8086/ios/?method=commentStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&status_id=2&comment=xxx
@@ -316,3 +301,19 @@ content: 评论
 return:
     {"is_success": true, "value": {}}
 ```
+####获取从n条开始的状态记录(朋友圈), 返回21条
+get/post:
+```
+method: getFriendStatus
+token: key
+n: n条记录的数值
+例：
+    http://0.0.0.0:8086/ios/?method=getFriendStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&n=2
+
+return:
+{"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "测试", "status_id": 10}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_qFgYqIX.png"], "brief": "xxx", "status_id": 9}]}}
+
+is_success: true
+```
+
+
