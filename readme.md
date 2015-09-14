@@ -147,7 +147,7 @@ return:
     {"is_success": false, "value": {"error": "重复点赞!"}}
 ```
 
-####获取从n条开始的状态记录(全局), 返回21条
+####获取从n条开始的状态记录(全局), 返回42条
 get/post:
 ```
 method: getNStatus
@@ -301,7 +301,7 @@ content: 评论
 return:
     {"is_success": true, "value": {}}
 ```
-####获取从n条开始的状态记录(朋友圈), 返回21条
+####获取从n条开始的状态记录(朋友圈), 返回42条
 get/post:
 ```
 method: getFriendStatus
@@ -316,4 +316,16 @@ return:
 is_success: true
 ```
 
+####取消关注
+get/post
+```
+method: cancelFriend
+token: key
+tel: 我关注的人的手机号
 
+例：
+    http://0.0.0.0:8086/ios/?method=cancelFriend&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&tel=18721919502
+
+return:
+    {"is_success": true, "value": {}}
+```

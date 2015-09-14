@@ -184,13 +184,13 @@ def getNStatus(global_params, request):
     user = getUser(global_params)
     status = Status.objects.all()
     global_params['n'] = int(global_params['n'])
-    status = status[max(0, max(status.count() - global_params['n'], status.count()) - 21):  max(0, min(status.count() - global_params['n'], status.count()))]
+    status = status[max(0, max(status.count() - global_params['n'], status.count()) - 42):  max(0, min(status.count() - global_params['n'], status.count()))]
     ret_json['value']['status'] = []
     for statu in status:
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))
     ret_json["is_success"] = True
 
-# 获取我的朋友圈状态，从n开始 21条
+# 获取我的朋友圈状态，从n开始 42条
 def getFriendStatus(global_params, request):
     user = getUser(global_params)
     relations = AttentionRelation.objects.filter(
@@ -204,7 +204,7 @@ def getFriendStatus(global_params, request):
             tel = friends
             ))
     global_params['n'] = int(global_params['n'])
-    status = status[max(0, max(len(status) - global_params['n'], len(status) - 21)):  max(0, min(len(status) - global_params['n'], len(status)))]
+    status = status[max(0, max(len(status) - global_params['n'], len(status) - 42)):  max(0, min(len(status) - global_params['n'], len(status)))]
     ret_json['value']['status'] = []
     for statu in status:
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))
@@ -268,6 +268,15 @@ def findSomeOne(global_params, request):
             "is_friend": is_friend,
             "status": user_status,
         })
+    ret_json["is_success"] = True
+
+# 取消关注
+def cancelFriend(global_params, request):
+    user = getUser(global_params)
+    AttentionRelation.objects.filter(
+            attent_tel = user.tel,
+            tel_by_attent = global_params['tel']
+            ).delete()
     ret_json["is_success"] = True
 
 # 加关注
