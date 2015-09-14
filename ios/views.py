@@ -63,35 +63,12 @@ def getStatus(status_id, request):
                 status_id = statu.id
                 )
         for comment in comments:
-            comment_struct = {}
-            comment_struct['comment_id'] = comment.comment_id
-            comment_struct['content'] = comment.comment_content
-            comment_struct['commenter'] = {
-                'tel': comment.commenter,
-                'name': getUserNameByTel(comment.commenter)
-            }
-            comment_struct['comment_by'] = {
-                'tel': comment.comment_by,
-                'name': getUserNameByTel(comment.comment_by)
-            }
-            sub_comments = Comment.objects.filter(
-                comment_id = comment.id
-                    )
-            comment_struct['sub_comments'] = []
-            for sub_comment in sub_comments:
-                sub_comment_struct = {}
-                sub_comment_struct['comment_id'] = comment.comment_id
-                sub_comment_struct['content'] = sub_comment.comment_content
-                sub_comment_struct['commenter'] = {
-                    'tel': sub_comment.commenter,
-                    'name': getUserNameByTel(sub_comment.commenter)
-                }
-                sub_comment_struct['comment_by'] = {
-                    'tel': sub_comment.comment_by,
-                    'name': getUserNameByTel(sub_comment.comment_by)
-                }
-                comment_struct['sub_comments'].insert(0, sub_comment_struct)
-            ret_val['comment'].insert(0, comment_struct)
+            ret_val['comment'].append({
+                'comment_id': comment.id,
+                'content': comment.comment_content,
+                'comment_by': getUserNameByTel(comment.comment_by),
+                'commenter': getUserNameByTel(comment.commenter),
+            })
         return ret_val
 
 def getUser(global_params):
@@ -114,25 +91,30 @@ def commentStatus(global_params, request):
         for statu in status:
             Comment.objects.create(status_id = global_params["status_id"],
                     commenter = user.tel,
-                    comment_by = status.tel,
+                    comment_id = -1,
+                    comment_by = statu.tel,
                     comment_content = global_params["content"]
                     )
+        ret_json['is_success'] = True
     else:
         raise Exception('status not found!')
 
 # 评论评论
 def commentOtherComment(global_params, request):
     user = getUser(global_params)
-    comment = Comment.objects.filter(
+    comments = Comment.objects.filter(
             id = global_params["comment_id"]
             )
-    if comment:
-        for statu in status:
-            Comment.objects.create(comment_id = global_params["comment_id"],
-                    commenter = global_params["commenter"],
-                    comment_by = global_params["commenter_by"],
+    if comments:
+        for comment in comments:
+            Comment.objects.create(
+                    status_id = comment.status_id,
+                    comment_id = global_params["comment_id"],
+                    commenter = user.tel,
+                    comment_by = comment.commenter,
                     comment_content = global_params["content"]
                     )
+        ret_json['is_success'] = True
     else:
         raise Exception('comment not found!')
 
@@ -208,6 +190,26 @@ def getNStatus(global_params, request):
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))
     ret_json["is_success"] = True
 
+# 获取我的朋友圈状态，从n开始 21条
+def getFriendStatus(global_params, request):
+    user = getUser(global_params)
+    relations = AttentionRelation.objects.filter(
+            tel_by_attent = user.tel,
+            )
+    friends = []
+    if relations:
+        for relation in relations:
+            friends.append(relation.attent_tel)
+    status = list(Status.objects.filter(
+            tel = friends
+            ))
+    global_params['n'] = int(global_params['n'])
+    status = status[max(0, max(len(status) - global_params['n'], len(status) - 21)):  max(0, min(len(status) - global_params['n'], len(status)))]
+    ret_json['value']['status'] = []
+    for statu in status:
+        ret_json['value']['status'].insert(0, getStatus(statu.id, request))
+    ret_json["is_success"] = True
+
 # 获取我的状态
 def getMyStatus(global_params, request):
     user = getUser(global_params)
@@ -231,17 +233,40 @@ def getSomeOneStatusByTel(global_params, request):
 
 # 找人
 def findSomeOne(global_params, request):
-    users = Users.objects.filter(Q(name__icontains = global_params['para']) |
-            Q(user_id__icontains = global_params['para']) |
-            Q(tel__icontains = global_params['para']))
+    me = getUser(global_params)
+    if global_params['para'] == "":
+        users = Users.objects.all()[:3]
+    else:
+        users = Users.objects.filter(Q(name__icontains = global_params['para']) |
+                Q(user_id__icontains = global_params['para']) |
+                Q(tel__icontains = global_params['para']))
     ret_json["value"]["person"] = []
     for user in users:
+        if (user.tel == me.tel):
+            continue
+        user_status = []
+        status = Status.objects.filter(
+                tel = user.tel
+                )
+        for statu in status:
+            user_status.insert(0, getStatus(statu.id, request))
+        user_status = user_status[:3]
+        is_friend = False
+        relation = AttentionRelation.objects.filter(
+                attent_tel = user.tel,
+                tel_by_attent = me.tel,
+                )
+        if relation:
+            is_friend = True
         ret_json["value"]["person"].append({
             "name": user.name,
             "gender": user.gender,
             "brief": user.brief,
+            "type": user.user_type,
             "user_id": user.user_id,
-            "tel": user.tel
+            "tel": user.tel,
+            "is_friend": is_friend,
+            "status": user_status,
         })
     ret_json["is_success"] = True
 
