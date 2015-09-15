@@ -32,6 +32,9 @@ def getUserNameByTel(user_tel):
         return user_tel
 
 def getStatus(status_id, request):
+    global_params = request.GET.copy()
+    global_params.update(request.POST)
+    me = getUser(global_params)
     status =  Status.objects.filter(
                 id = status_id
             )
@@ -54,10 +57,13 @@ def getStatus(status_id, request):
         praises = PraiseStatus.objects.filter(
                 status_id = statu.id
                 )
+        is_praise = False
         ret_val['praisers'] = []
         for praise in praises:
+            if me.tel == praise.tel:
+                is_praise = True
             ret_val['praisers'].append(praise.tel)
-
+        ret_val['is_praise'] = is_praise
         ret_val['comment'] = []
         comments = Comment.objects.filter(
                 status_id = statu.id

@@ -119,6 +119,7 @@ value: {
                         pictures:状态图片的url
                         brief:状态发表的言论
                         name:发送者的名称
+                        is_praise:是否点赞
                         comment: [
                             {
                                 comment_id: 标识评论
@@ -167,6 +168,7 @@ get/post:
 ```
 method: getSomeOneStatusByTel
 tel: 12233334444
+token: key
 例：
     http://0.0.0.0:8086/ios/?method=getSomeOneStatusByTel&tel=12233334444
 
