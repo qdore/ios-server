@@ -31,6 +31,18 @@ def getUserNameByTel(user_tel):
     else:
         return user_tel
 
+def getHeadPhotoByTel(user_tel):
+    user = Users.objects.filter(
+            tel = user_tel
+            )
+    if user:
+        for use in user:
+            return "head_photo": 'http://' + request.get_host() + '/media/' + str(use.head_photo),
+        return "" 
+    else:
+        return ""
+
+
 def getStatus(status_id, request):
     global_params = request.GET.copy()
     global_params.update(request.POST)
@@ -45,6 +57,7 @@ def getStatus(status_id, request):
             'status_id': statu.id,
             'brief': statu.brief,
             'name': getUserNameByTel(statu.tel),
+            'head_photo': getHeadPhotoByTel(statu.tel),
         };
         pics = StatusPics.objects.filter(
                 status_id = statu.id
@@ -62,7 +75,7 @@ def getStatus(status_id, request):
         for praise in praises:
             if me.tel == praise.tel:
                 is_praise = True
-            ret_val['praisers'].append(praise.tel)
+            ret_val['praisers'].append({"tel": praise.tel, "head_photo": getHeadPhotoByTel(praise.tel)})
         ret_val['is_praise'] = is_praise
         ret_val['comment'] = []
         comments = Comment.objects.filter(
@@ -73,7 +86,9 @@ def getStatus(status_id, request):
                 'comment_id': comment.id,
                 'content': comment.comment_content,
                 'comment_by': getUserNameByTel(comment.comment_by),
+                'comment_by_head_photo': getHeadPhotoByTel(comment.comment_by),
                 'commenter': getUserNameByTel(comment.commenter),
+                'commenter_head_photo': getHeadPhotoByTel(comment.commenter),
             })
         return ret_val
 
@@ -142,6 +157,7 @@ def getMsg(global_params, request):
     for msg in msgs:
         ret_json['value']['msgs'].append({
                 'sender': msg.sender,
+                'sender_header_photo': getHeadPhotoByTel(msg.sender),
                 'content': msg.content,
                 })
         msg.readed = True
@@ -270,6 +286,7 @@ def findSomeOne(global_params, request):
             "brief": user.brief,
             "type": user.user_type,
             "user_id": user.user_id,
+            "head_photo": 'http://' + request.get_host() + '/media/' + str(user.head_photo),
             "tel": user.tel,
             "is_friend": is_friend,
             "status": user_status,
@@ -368,6 +385,9 @@ def changePassword(global_params, request):
 
 def updateUserInfor(global_params, request):
     user = getUser(global_params)
+
+    file_content = ContentFile(global_params['head_photo'].read()) 
+    user.head_photo.save(global_params['head_photo'], file_content)
     user.name = global_params["name"]
     user.gender = global_params["gender"]
     user.brief = global_params["brief"]
@@ -379,6 +399,7 @@ def getUserInforByToken(global_params, request):
     ret_json["value"]["name"] = user.name
     ret_json["value"]["gender"] = user.gender
     ret_json["value"]["brief"] = user.brief
+    ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(user.head_photo)
     ret_json["is_success"] = True
 
 def getUserInforByTel(global_params, request):
@@ -390,6 +411,7 @@ def getUserInforByTel(global_params, request):
             ret_json["value"]["name"] = use.name
             ret_json["value"]["gender"] = use.gender
             ret_json["value"]["brief"] = use.brief
+            ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(user.head_photo)
             ret_json["is_success"] = True
     else:
         raise Exception('tel not found')

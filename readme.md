@@ -66,6 +66,7 @@ tel: 13111111111
     http://0.0.0.0:8086/ios/?method=getUserInfor&tel=13111111111
 return:
     {"is_success": true, "value": {"gender": "0", "name": "kidney", "brief": "xxx"}}
+    增加了返回 head_photo
 
 ```
 
@@ -78,6 +79,7 @@ token: key
     http://0.0.0.0:8086/ios/?method=getUserInfor&token=xxx
 return:
     {"is_success": true, "value": {"gender": "0", "name": "kidney", "brief": "xxx"}}
+    增加了返回 head_photo
 
 ```
 
@@ -115,17 +117,23 @@ value: {
             status:[
                    {
                         status_id:标识状态的状态码（点赞等操作根据status_id）
-                        praisers:点赞者手机号
+                        praisers: {
+                            tel:点赞者手机号
+                            head_photo: 点赞者头像
+                        }
                         pictures:状态图片的url
                         brief:状态发表的言论
                         name:发送者的名称
+                        head_photo: 发送者头像
                         is_praise:是否点赞
                         comment: [
                             {
                                 comment_id: 标识评论
                                 content: 评论内容
                                 commenter: 评论者
+                                commenter_head_photo: 评论者头像
                                 comment_by: 被评论者
+                                comment_by_head_photo: 被评论者头像
                             },
                             ...
                         ]
@@ -157,10 +165,6 @@ n: n条记录的数值
 例：
     http://0.0.0.0:8086/ios/?method=getNStatus&token=duCpbeUOTRfvhSkZAzXltnENDHMFwPsBIcryWmaxgKiYjQJVLo&n=2
 
-return:
-{"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "测试", "status_id": 10}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_qFgYqIX.png"], "brief": "xxx", "status_id": 9}]}}
-
-is_success: true
 ```
 
 ####获取别人发表的状态
@@ -172,8 +176,6 @@ token: key
 例：
     http://0.0.0.0:8086/ios/?method=getSomeOneStatusByTel&tel=12233334444
 
-return:
-{"is_success": true, "value": {"status": [{"praisers": [], "pictures": [], "brief": "xxx", "status_id": 1}, {"praisers": [], "pictures": [], "brief": "xxx", "status_id": 2}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/./13712045932161_dULEtZO.png"], "brief": "啊收到就好", "status_id": 3}, {"praisers": [], "pictures": ["0.0.0.0:8086/media/", "0.0.0.0:8086/media/./13712045932161.png"], "brief": "xxxxxxx", "status_id": 4}, {"praisers": [], "pictures": [], "brief": "xxxxxxx", "status_id": 5}, {"praisers": [], "pictures": [], "brief": "xxxxxxx", "status_id": 6}]}}
 
 ```
 
@@ -194,6 +196,7 @@ gender：性别
 tel: 搜索到的手机号
 user_id: 身份证号或者工号
 name: 名称
+head_photo: 头像
 type: 职业
 is_friend: 是否是好友
 brief: 简介
