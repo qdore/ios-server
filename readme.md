@@ -49,6 +49,7 @@ method: updateUserInfor
 token: key
 name: 用户名
 gender: 0,1 [0：男， 1：女]
+head_photo: 图片
 brief: 简介
 例:
     http://0.0.0.0:8086/ios/?method=updateUserInfor&token=IxZORjTaDEPdbrWficgJwBheXzYqvGVFKMptuLSQlCyANkHsom&name=kidney&gender=0&brief=xxx
