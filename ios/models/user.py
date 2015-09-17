@@ -35,7 +35,8 @@ class Users(models.Model):
     brief =  models.CharField(verbose_name = u"简介",
             max_length = 500)
     token = models.CharField(verbose_name = u"Token",
-            default = ''.join(random.sample(string.letters, 50)),
+            default = str(time.time()).replace('.', '') + \
+            ''.join(random.sample(string.letters, 38)),
             unique = True,
             max_length = 50)
 
