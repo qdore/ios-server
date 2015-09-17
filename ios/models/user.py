@@ -2,6 +2,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 import string, random
+import time
 
 USER_TYPES = (
     ('0', '摄影师'),
