@@ -31,13 +31,13 @@ def getUserNameByTel(user_tel):
     else:
         return user_tel
 
-def getHeadPhotoByTel(user_tel):
+def getHeadPhotoByTel(user_tel, request):
     user = Users.objects.filter(
             tel = user_tel
             )
     if user:
         for use in user:
-            return "head_photo": 'http://' + request.get_host() + '/media/' + str(use.head_photo),
+            return 'http://' + request.get_host() + '/media/' + str(use.head_photo)
         return "" 
     else:
         return ""
@@ -57,7 +57,7 @@ def getStatus(status_id, request):
             'status_id': statu.id,
             'brief': statu.brief,
             'name': getUserNameByTel(statu.tel),
-            'head_photo': getHeadPhotoByTel(statu.tel),
+            'head_photo': getHeadPhotoByTel(statu.tel, request),
         };
         pics = StatusPics.objects.filter(
                 status_id = statu.id
@@ -75,7 +75,7 @@ def getStatus(status_id, request):
         for praise in praises:
             if me.tel == praise.tel:
                 is_praise = True
-            ret_val['praisers'].append({"tel": praise.tel, "head_photo": getHeadPhotoByTel(praise.tel)})
+            ret_val['praisers'].append({"tel": praise.tel, "head_photo": getHeadPhotoByTel(praise.tel, request)})
         ret_val['is_praise'] = is_praise
         ret_val['comment'] = []
         comments = Comment.objects.filter(
@@ -86,9 +86,9 @@ def getStatus(status_id, request):
                 'comment_id': comment.id,
                 'content': comment.comment_content,
                 'comment_by': getUserNameByTel(comment.comment_by),
-                'comment_by_head_photo': getHeadPhotoByTel(comment.comment_by),
+                'comment_by_head_photo': getHeadPhotoByTel(comment.comment_by, request),
                 'commenter': getUserNameByTel(comment.commenter),
-                'commenter_head_photo': getHeadPhotoByTel(comment.commenter),
+                'commenter_head_photo': getHeadPhotoByTel(comment.commenter, request),
             })
         return ret_val
 
@@ -157,7 +157,7 @@ def getMsg(global_params, request):
     for msg in msgs:
         ret_json['value']['msgs'].append({
                 'sender': msg.sender,
-                'sender_header_photo': getHeadPhotoByTel(msg.sender),
+                'sender_header_photo': getHeadPhotoByTel(msg.sender, request),
                 'content': msg.content,
                 })
         msg.readed = True

@@ -259,6 +259,7 @@ return:
     {"is_success": true, "value": {"msgs": [{"content": "test", "sender": "18721919502"}]}}
 
 sender:发信人
+sender_head_photo:发信人
 content: 内容
 注意：每次获取成功之后未读信息列表自动清空
 ```
