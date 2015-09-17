@@ -23,8 +23,7 @@ class Users(models.Model):
             default = u"admin",
             unique = True,
             max_length = 20)
-    head_photo = models.ImageField(verbose_name = u"头像",
-                default = u"")
+    head_photo = models.ImageField(verbose_name = u"头像")
     user_type = models.CharField(verbose_name = u"用户角色",
             choices = USER_TYPES,
             max_length = 20)
