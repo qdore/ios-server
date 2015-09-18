@@ -385,13 +385,12 @@ def changePassword(global_params, request):
 
 def updateUserInfor(global_params, request):
     user = getUser(global_params)
-
     file_content = ContentFile(global_params['head_photo'].read()) 
-    user.head_photo.save(global_params['head_photo'], file_content)
     user.name = global_params["name"]
     user.gender = global_params["gender"]
     user.brief = global_params["brief"]
     user.save()
+    user.head_photo.save(global_params['head_photo'].name, file_content)
     ret_json["is_success"] = True
         
 def getUserInforByToken(global_params, request):
@@ -411,7 +410,7 @@ def getUserInforByTel(global_params, request):
             ret_json["value"]["name"] = use.name
             ret_json["value"]["gender"] = use.gender
             ret_json["value"]["brief"] = use.brief
-            ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(user.head_photo)
+            ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(use.head_photo)
             ret_json["is_success"] = True
     else:
         raise Exception('tel not found')
