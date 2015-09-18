@@ -336,3 +336,115 @@ tel: 我关注的人的手机号
 return:
     {"is_success": true, "value": {}}
 ```
+
+
+####发起工作(制片人发起)
+post
+```
+method: sponseJob
+title: 工作标题
+job: 工作岗位
+position: 工作地址
+content: 工作内容
+start_time: 工作开始时间
+end_time: 工作结束时间
+pic: 工作图片
+
+例:
+    http://0.0.0.0:8086/ios/?method=sponseJob&token=144250331695tnawWfXvrcFYViyseCplZmNkjEHIdGbUJKSTgR&title=xxx&job=xxx&position=xxx&content=xxx&start_time=2015-09-10&end_time=2015-09-22
+
+```
+
+####申请工作(摄影师发起)
+get/post
+```
+method: applyJob
+job_id: 用来标识job
+
+例: 
+    http://0.0.0.0:8086/ios/?method=applyJob&token=144250497398qfFLDwKcvMEHjrlyXRAhVkzOBmaePiNobuCxUZ&job_id=1
+```
+
+####我申请的/我发布的工作
+```
+method: getMyJob
+
+return:
+[
+    {
+        title: 工作标题
+        job: 工作岗位
+        position: 工作地址
+        content: 工作内容
+        start_time: 工作开始时间
+        end_time: 工作结束时间
+        pic: 工作图片
+        sponsor_name: 发起人名称
+        sponsor_tel: 发起人联系方式
+        sponsor_name_head_photo: 发起人头像
+        status: 状态 '0': '招聘中', '1': '已分配', '2': '已完成',
+        approve_applier_tel: 工作者电话（发起人确认的申请者）
+        approve_applier_name: 工作者名称（发起人确认的申请者）
+        approve_applier_head_photo: 工作者头像（发起人确认的申请者）
+        appliers:[
+            {
+                name: 申请者名称
+                tel: 申请者电话
+                head_photo: 申请者头像
+            },
+        ]
+        is_applyed: 申请者 
+    },
+]
+
+```
+
+####广场中的工作
+```
+method: getSquareJob
+status: 状态 '0': '招聘中', '1': '已分配', '2': '已完成',
+
+return:
+[
+    {
+        title: 工作标题
+        job: 工作岗位
+        position: 工作地址
+        content: 工作内容
+        start_time: 工作开始时间
+        end_time: 工作结束时间
+        pic: 工作图片
+        sponsor_name: 发起人名称
+        sponsor_tel: 发起人联系方式
+        sponsor_name_head_photo: 发起人头像
+        status: 状态 '0': '招聘中', '1': '已分配', '2': '已完成',
+        approve_applier_tel: 工作者电话（发起人确认的申请者）
+        approve_applier_name: 工作者名称（发起人确认的申请者）
+        approve_applier_head_photo: 工作者头像（发起人确认的申请者）
+        appliers:[
+            {
+                name: 申请者名称
+                tel: 申请者电话
+                head_photo: 申请者头像
+            },
+        ]
+        is_applyed: 申请者 
+    },
+]
+
+```
+
+###确认工作（制片人发起）
+get/post
+```
+method: confirmJob
+job_id: 用来标识job
+tel: 讲工作分配给谁的手机号
+```
+
+###删除工作（制片人发起）
+get/post
+```
+method: delJob
+job_id: 用来标识job
+```

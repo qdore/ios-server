@@ -8,6 +8,7 @@ from ios.models import status_pic
 from ios.models import attention_relation
 from ios.models import chat
 from ios.models import comment
+from ios.models import job
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
@@ -30,6 +31,12 @@ class CharAdmin(admin.ModelAdmin):
     search_fields = ('sender', 'reciver', 'content', 'readed')
 
 admin.site.register(chat.Chat, CharAdmin)
+
+class JobAdmin(admin.ModelAdmin):
+    list_display = ('title', 'job', 'position', 'sponsor_name')
+    search_fields = ('title', 'job', 'position', 'sponsor_name')
+
+admin.site.register(job.Job, JobAdmin)
 
 #admin.site.register(home_page.HomePage)
 #admin.site.register(about_fumeng.AboutFumeng)

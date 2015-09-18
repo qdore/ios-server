@@ -11,6 +11,7 @@ from ios.models.attention_relation import AttentionRelation
 from ios.models.praise_status import PraiseStatus
 from ios.models.chat import Chat
 from ios.models.comment import Comment
+from ios.models.job import Job
 from django.core.files.base import ContentFile
 from django.db.models import Q
 import json
@@ -18,7 +19,6 @@ import sys
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-ret_json = {}
 
 def getUserNameByTel(user_tel):
     user = Users.objects.filter(
@@ -102,8 +102,129 @@ def getUser(global_params):
     else:
         raise Exception('token not found!')
 
+
+def getJobInfo(job_id, request):
+    global_params = request.GET.copy()
+    global_params.update(request.POST)
+    user = getUser(global_params)
+    jobs = Job.objects.filter(id = job_id)
+    job_info = {}
+    for job in jobs:
+        job_info = {
+                "title": job.title,
+                "job": job.job,
+                "position": job.position,
+                "content": job.content,
+                "sponsor_name": job.sponsor_name,
+                "sponsor_name_head_photo": getHeadPhotoByTel(job.sponsor_tel, request),
+                "sponsor_tel": job.sponsor_tel,
+                "status": job.status,
+                "start_time": str(job.start_time),
+                "end_time": str(job.end_time),
+                "pic": 'http://' + request.get_host() + '/media/' + str(job.pic),
+                "approve_applier_tel": job.approve_applier,
+                "approve_applier_name": getUserNameByTel(job.approve_applier),
+                "approve_applier_head_photo": getHeadPhotoByTel(job.approve_applier, request),
+        } 
+        job_info["appliers"] = []
+        is_applyed = False
+        for apply in job.appliers.split(';'):
+            brackets = apply.find('(')
+            if brackets < 0:
+                continue
+            if apply.find(user.tel) > 0:
+                is_applyed = True
+            print apply[1:]
+            job_info["appliers"].append({
+                    "name": apply[0: brackets],
+                    "tel": apply[brackets + 1: -1],
+                    "head_photo": getHeadPhotoByTel(apply[brackets + 1: -1], request)
+                    })
+        job_info["is_applyed"] = is_applyed
+    return job_info
+
+# 发起工作
+def sponseJob(global_params, request, ret_json):
+    user = getUser(global_params)
+    if user.user_type == '0':
+        raise Exception('只有制片人才能发布任务！')
+    job = Job.objects.create(
+        title = global_params['title'],
+        job = global_params['job'],
+        position = global_params['position'],
+        content = global_params['content'],
+        sponsor_name = user.name,
+        sponsor_tel = user.tel,
+        status = 0,
+        start_time = global_params['start_time'],
+        end_time = global_params['end_time'],
+        appliers = "",
+        approve_applier = "",
+    )
+    job.save()
+#file_content = ContentFile(global_params['pic'].read()) 
+#job.pic.save(global_params['pic'].name, file_content)
+    ret_json['is_success'] = True
+
+# 申请工作
+def applyJob(global_params, request, ret_json):
+    user = getUser(global_params)
+    if user.user_type == '1':
+        raise Exception('只有摄影师才能申请任务！')
+    jobs = Job.objects.filter(id = int(global_params["job_id"]))
+    if jobs:
+        for job in jobs:
+            job_str = '%s(%s)' % (user.name, user.tel)
+            temp = job.appliers.split(';')
+            temp = list(temp)
+            temp.append(job_str)
+            job.appliers = ';'.join(list(set(temp)))
+            job.save()
+    else:
+        raise Exception("找不到工作！")
+            
+# 我申请的/我发布的工作
+def getMyJob(global_params, request, ret_json):
+    user = getUser(global_params)
+    jobs = Job.objects.filter(Q(appliers__icontains = user.tel) |
+            Q(sponsor_tel = user.tel))
+    ret_json['jobs'] = []
+    if jobs:
+        for job in jobs:
+            ret_json['jobs'].insert(0, getJobInfo(job.id, request))
+
+# 广场中的工作
+def getSquareJob(global_params, request, ret_json):
+    jobs = Job.objects.filter(status = global_params['status'])
+    ret_json['jobs'] = []
+    print list(jobs)
+    global_params['n'] = int(global_params['n'])
+    if jobs:
+        jobs = jobs[max(0, len(jobs) - global_params['n'] - 42):  max(0, min(len(jobs) - global_params['n'], len(jobs)))]
+        print list(jobs)
+        for job in jobs:
+            ret_json['jobs'].insert(0, getJobInfo(job.id, request))
+
+# 确认工作
+def confirmJob(global_params, request, ret_json):
+    user = getUser(global_params)
+    jobs = Job.objects.filter(id= global_params['job_id'],
+            sponsor_tel = user.tel)
+    if jobs:
+        for job in jobs:
+            job.approve_applier = global_params['tel']
+            job.save()
+    else:
+        raise Exception("找不到满足条件的job或者你没有权限！")
+
+# 删除工作
+def delJob(global_params, request, ret_json):
+    user = getUser(global_params)
+    Job.objects.filter(id= global_params['job_id'],
+            sponsor_tel = user.tel).delete()
+
 # 评论动态
-def commentStatus(global_params, request):
+def commentStatus(global_params, request, ret_json):
     user = getUser(global_params)
     status = Status.objects.filter(
             id = global_params["status_id"]
@@ -121,7 +242,7 @@ def commentStatus(global_params, request):
         raise Exception('status not found!')
 
 # 评论评论
-def commentOtherComment(global_params, request):
+def commentOtherComment(global_params, request, ret_json):
     user = getUser(global_params)
     comments = Comment.objects.filter(
             id = global_params["comment_id"]
@@ -140,7 +261,7 @@ def commentOtherComment(global_params, request):
         raise Exception('comment not found!')
 
 # 发送站内信
-def sendMsg(global_params, request):
+def sendMsg(global_params, request, ret_json):
     user = getUser(global_params)
     Chat.objects.create(
             sender = user.tel,
@@ -150,7 +271,7 @@ def sendMsg(global_params, request):
     ret_json['is_success'] = True
     
 # 接受站内信
-def getMsg(global_params, request):
+def getMsg(global_params, request, ret_json):
     user = getUser(global_params)
     msgs = Chat.objects.filter(reciver = user.tel)
     ret_json['value']['msgs'] = []
@@ -165,7 +286,7 @@ def getMsg(global_params, request):
     ret_json['is_success'] = True
 
 # 取消赞
-def undoPraise(global_params, request):
+def undoPraise(global_params, request, ret_json):
     user = getUser(global_params)
     status = Status.objects.filter(
             id = global_params["status_id"]
@@ -181,7 +302,7 @@ def undoPraise(global_params, request):
         raise Exception('status not found!')
 
 # 点赞
-def praiseStatus(global_params, request):
+def praiseStatus(global_params, request, ret_json):
     user = getUser(global_params)
     status = Status.objects.filter(
             id = global_params["status_id"]
@@ -202,18 +323,18 @@ def praiseStatus(global_params, request):
         raise Exception('status not found!')
 
 # 获取最新的状态, 从n开始
-def getNStatus(global_params, request):
+def getNStatus(global_params, request, ret_json):
     user = getUser(global_params)
     status = Status.objects.all()
     global_params['n'] = int(global_params['n'])
-    status = status[max(0, max(status.count() - global_params['n'], status.count()) - 42):  max(0, min(status.count() - global_params['n'], status.count()))]
+    status = status[max(0, status.count() - global_params['n'] - 42):  max(0, min(status.count() - global_params['n'], status.count()))]
     ret_json['value']['status'] = []
     for statu in status:
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))
     ret_json["is_success"] = True
 
 # 获取我的朋友圈状态，从n开始 42条
-def getFriendStatus(global_params, request):
+def getFriendStatus(global_params, request, ret_json):
     user = getUser(global_params)
     relations = AttentionRelation.objects.filter(
             tel_by_attent = user.tel,
@@ -226,14 +347,14 @@ def getFriendStatus(global_params, request):
             tel = friends
             ))
     global_params['n'] = int(global_params['n'])
-    status = status[max(0, max(len(status) - global_params['n'], len(status) - 42)):  max(0, min(len(status) - global_params['n'], len(status)))]
+    status = status[max(0, len(status) - global_params['n'] - 42):  max(0, min(len(status) - global_params['n'], len(status)))]
     ret_json['value']['status'] = []
     for statu in status:
         ret_json['value']['status'].insert(0, getStatus(statu.id, request))
     ret_json["is_success"] = True
 
 # 获取我的状态
-def getMyStatus(global_params, request):
+def getMyStatus(global_params, request, ret_json):
     user = getUser(global_params)
     status = Status.objects.filter(
             tel = user.tel
@@ -244,7 +365,7 @@ def getMyStatus(global_params, request):
     ret_json["is_success"] = True
 
 # 获取某人的状态
-def getSomeOneStatusByTel(global_params, request):
+def getSomeOneStatusByTel(global_params, request, ret_json):
     status = Status.objects.filter(
             tel = global_params['tel']
             )
@@ -254,7 +375,7 @@ def getSomeOneStatusByTel(global_params, request):
     ret_json["is_success"] = True
 
 # 找人
-def findSomeOne(global_params, request):
+def findSomeOne(global_params, request, ret_json):
     me = getUser(global_params)
     if global_params['para'] == "":
         users = Users.objects.all()[:3]
@@ -294,7 +415,7 @@ def findSomeOne(global_params, request):
     ret_json["is_success"] = True
 
 # 取消关注
-def cancelFriend(global_params, request):
+def cancelFriend(global_params, request, ret_json):
     user = getUser(global_params)
     AttentionRelation.objects.filter(
             attent_tel = user.tel,
@@ -303,7 +424,7 @@ def cancelFriend(global_params, request):
     ret_json["is_success"] = True
 
 # 加关注
-def addSomeOneAsFriend(global_params, request):
+def addSomeOneAsFriend(global_params, request, ret_json):
     user = getUser(global_params)
     AttentionRelation.objects.create(
             attent_tel = user.tel,
@@ -312,7 +433,7 @@ def addSomeOneAsFriend(global_params, request):
     ret_json["is_success"] = True
 
 # 获取某人的关注信息
-def getAttentRelation(global_params, request):
+def getAttentRelation(global_params, request, ret_json):
     attent_someone = AttentionRelation.objects.filter(
             attent_tel = global_params['tel']
             )
@@ -328,7 +449,7 @@ def getAttentRelation(global_params, request):
     ret_json["is_success"] = True
 
 # 发表状态
-def publishStatus(global_params, request):
+def publishStatus(global_params, request, ret_json):
     user = getUser(global_params)
     status = Status.objects.create(
             tel = user.tel,
@@ -349,7 +470,7 @@ def publishStatus(global_params, request):
     ret_json["is_success"] = True
 
 # 注册及登录
-def login(global_params, request):
+def login(global_params, request, ret_json):
     user = Users.objects.filter(
             tel = global_params["tel"],
             password = global_params["pwd"])
@@ -360,17 +481,17 @@ def login(global_params, request):
         ret_json["value"]["user_type"] = use.user_type
         ret_json["is_success"] = True
 
-def regist(global_params, request):
+def regist(global_params, request, ret_json):
     Users.objects.create(
             tel = global_params["tel"],
             password = global_params["pwd"],
             user_type = global_params["user_type"],
             user_id = global_params["user_id"]
             )
-    login(global_params, request)
+    login(global_params, request, ret_json)
     ret_json["is_success"] = True
 
-def changePassword(global_params, request):
+def changePassword(global_params, request, ret_json):
     user = Users.objects.filter(
             token = global_params["token"],
             password = global_params["pwd"]
@@ -383,7 +504,7 @@ def changePassword(global_params, request):
     else:
         raise Exception('username or password error!')
 
-def updateUserInfor(global_params, request):
+def updateUserInfor(global_params, reques, ret_json):
     user = getUser(global_params)
     file_content = ContentFile(global_params['head_photo'].read()) 
     user.name = global_params["name"]
@@ -393,7 +514,7 @@ def updateUserInfor(global_params, request):
     user.head_photo.save(global_params['head_photo'].name, file_content)
     ret_json["is_success"] = True
         
-def getUserInforByToken(global_params, request):
+def getUserInforByToken(global_params, request, ret_json):
     user = getUser(global_params)
     ret_json["value"]["name"] = user.name
     ret_json["value"]["gender"] = user.gender
@@ -401,7 +522,7 @@ def getUserInforByToken(global_params, request):
     ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(user.head_photo)
     ret_json["is_success"] = True
 
-def getUserInforByTel(global_params, request):
+def getUserInforByTel(global_params, request, ret_json):
     user = Users.objects.filter(
             tel = global_params["tel"]
             )
@@ -416,16 +537,15 @@ def getUserInforByTel(global_params, request):
         raise Exception('tel not found')
 
 def home(request):
-    global ret_json
     ret_json = {
-        "is_success": False,
+        "is_success": True,
         "value": {}
     }
     try:
         global_params = request.GET.copy()
         global_params.update(request.POST)
         global_params.update(request.FILES)
-        exec(global_params["method"].strip() + "(global_params, request)");
+        exec(global_params["method"].strip() + "(global_params, request, ret_json)");
         return HttpResponse(json.dumps(ret_json, ensure_ascii = False),
                 content_type="application/json")
     except Exception, e:

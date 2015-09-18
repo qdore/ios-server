@@ -29,7 +29,8 @@ class Job(models.Model):
     end_time = models.DateField(verbose_name = u"结束时间")
     pic = models.ImageField(verbose_name = u"工作图片")
     appliers = models.CharField(verbose_name = u"申请者", max_length = 500)
-    approve_applier = models.CharField(verbose_name = u"确认工作者(管理员请填入手机号)", max_length = 11)
+    approve_applier = models.CharField(verbose_name = u"确认工作者(管理员请填入手机号)",
+            max_length = 11)
 
     class Meta:
         verbose_name = u'工作管理'
