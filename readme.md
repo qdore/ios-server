@@ -343,15 +343,21 @@ post
 ```
 method: sponseJob
 title: 工作标题
-job: 工作岗位
-position: 工作地址
-content: 工作内容
-start_time: 工作开始时间
-end_time: 工作结束时间
+user_time: 使用时间
+city: 城市
+authorizer: 批准人
+position： 工作单位
+reason： 申请理由
+details: 设备及人员明细
+opinion: 领导人意见
+memo： 备注
+sponsor_name: 申请人姓名
+studio： 演播室
+job_number: 部门/工号
+time： 申请日期
 pic: 工作图片
 
 例:
-    http://0.0.0.0:8086/ios/?method=sponseJob&token=144250331695tnawWfXvrcFYViyseCplZmNkjEHIdGbUJKSTgR&title=xxx&job=xxx&position=xxx&content=xxx&start_time=2015-09-10&end_time=2015-09-22
 
 ```
 
@@ -373,16 +379,20 @@ return:
 [
     {
         title: 工作标题
-        job: 工作岗位
-        position: 工作地址
-        content: 工作内容
-        start_time: 工作开始时间
-        end_time: 工作结束时间
+        user_time: 使用时间
+        city: 城市
+        authorizer: 批准人
+        position： 工作单位
+        reason： 申请理由
+        details: 设备及人员明细
+        opinion: 领导人意见
+        memo： 备注
+        sponsor_name: 申请人姓名
+        sponsor_tel: 发起者手机号
+        studio： 演播室
+        job_number: 部门/工号
+        time： 申请日期
         pic: 工作图片
-        sponsor_name: 发起人名称
-        sponsor_tel: 发起人联系方式
-        sponsor_name_head_photo: 发起人头像
-        status: 状态 '0': '招聘中', '1': '已分配', '2': '已完成',
         approve_applier_tel: 工作者电话（发起人确认的申请者）
         approve_applier_name: 工作者名称（发起人确认的申请者）
         approve_applier_head_photo: 工作者头像（发起人确认的申请者）
@@ -393,7 +403,7 @@ return:
                 head_photo: 申请者头像
             },
         ]
-        is_applyed: 申请者 
+        is_applyed: 是否申请
     },
 ]
 
@@ -405,33 +415,7 @@ method: getSquareJob
 status: 状态 '0': '招聘中', '1': '已分配', '2': '已完成',
 
 return:
-[
-    {
-        title: 工作标题
-        job: 工作岗位
-        position: 工作地址
-        content: 工作内容
-        start_time: 工作开始时间
-        end_time: 工作结束时间
-        pic: 工作图片
-        sponsor_name: 发起人名称
-        sponsor_tel: 发起人联系方式
-        sponsor_name_head_photo: 发起人头像
-        status: 状态 '0': '招聘中', '1': '已分配', '2': '已完成',
-        approve_applier_tel: 工作者电话（发起人确认的申请者）
-        approve_applier_name: 工作者名称（发起人确认的申请者）
-        approve_applier_head_photo: 工作者头像（发起人确认的申请者）
-        appliers:[
-            {
-                name: 申请者名称
-                tel: 申请者电话
-                head_photo: 申请者头像
-            },
-        ]
-        is_applyed: 申请者 
-    },
-]
-
+    同上
 ```
 
 ###确认工作（制片人发起）

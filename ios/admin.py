@@ -33,8 +33,8 @@ class CharAdmin(admin.ModelAdmin):
 admin.site.register(chat.Chat, CharAdmin)
 
 class JobAdmin(admin.ModelAdmin):
-    list_display = ('title', 'job', 'position', 'sponsor_name')
-    search_fields = ('title', 'job', 'position', 'sponsor_name')
+    list_display = ('title', 'position', 'sponsor_name')
+    search_fields = ('title', 'position', 'sponsor_name')
 
 admin.site.register(job.Job, JobAdmin)
 
