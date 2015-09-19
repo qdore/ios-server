@@ -355,6 +355,9 @@ sponsor_name: 申请人姓名
 studio： 演播室
 job_number: 部门/工号
 time： 申请日期
+camera: 摄影机
+broadcast_car: 转播车
+later_period: 后期
 pic: 工作图片
 
 例:
@@ -393,6 +396,9 @@ return:
         job_number: 部门/工号
         time： 申请日期
         pic: 工作图片
+        camera: 摄影机
+        broadcast_car: 转播车
+        later_period: 后期
         approve_applier_tel: 工作者电话（发起人确认的申请者）
         approve_applier_name: 工作者名称（发起人确认的申请者）
         approve_applier_head_photo: 工作者头像（发起人确认的申请者）

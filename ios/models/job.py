@@ -36,6 +36,12 @@ class Job(models.Model):
             max_length = 20)
     sponsor_tel = models.CharField(verbose_name = u"发起者手机",
             max_length = 11)
+    camera = models.CharField(verbose_name = u"摄影机",
+            max_length = 20)
+    broadcast_car = models.CharField(verbose_name = u"转播车",
+            max_length = 20)
+    later_period = models.CharField(verbose_name = u"后期",
+            max_length = 20)
     status = models.CharField(verbose_name = u"工作状态",
             choices = JOB_STATUS,
             max_length = 30)
