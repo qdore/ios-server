@@ -72,7 +72,7 @@ class Migration(migrations.Migration):
                 ('broadcast_car', models.CharField(max_length=20, verbose_name='\u8f6c\u64ad\u8f66')),
                 ('later_period', models.CharField(max_length=20, verbose_name='\u540e\u671f')),
                 ('status', models.CharField(max_length=30, verbose_name='\u5de5\u4f5c\u72b6\u6001', choices=[(b'0', b'\xe6\x8b\x9b\xe8\x81\x98\xe4\xb8\xad'), (b'1', b'\xe5\xb7\xb2\xe5\x88\x86\xe9\x85\x8d'), (b'2', b'\xe5\xb7\xb2\xe5\xae\x8c\xe6\x88\x90')])),
-                ('time', models.DateField(verbose_name='\u7533\u8bf7\u65e5\u671f')),
+                ('time', models.CharField(max_length=30, verbose_name='\u7533\u8bf7\u65e5\u671f')),
                 ('pic', models.ImageField(upload_to=b'', verbose_name='\u5de5\u4f5c\u56fe\u7247')),
                 ('appliers', models.CharField(max_length=500, verbose_name='\u7533\u8bf7\u8005')),
                 ('approve_applier', models.CharField(max_length=11, verbose_name='\u786e\u8ba4\u5de5\u4f5c\u8005(\u7ba1\u7406\u5458\u8bf7\u586b\u5165\u624b\u673a\u53f7)')),
@@ -130,7 +130,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=20, verbose_name='\u59d3\u540d')),
                 ('gender', models.CharField(max_length=20, verbose_name='\u6027\u522b', choices=[(b'0', b'\xe7\x94\xb7'), (b'1', b'\xe5\xa5\xb3')])),
                 ('brief', models.CharField(max_length=500, verbose_name='\u7b80\u4ecb')),
-                ('token', models.CharField(default=b'144266657369JqxwQCSojrbGhuVYpEOeyagTDdLFMHXPUARzNI', unique=True, max_length=50, verbose_name='Token')),
+                ('token', models.CharField(default=b'144267515821eIRoxnUQfLsJaDrPZVkmvpHMwAgiGXuWhClqFz', unique=True, max_length=50, verbose_name='Token')),
             ],
             options={
                 'verbose_name': '\u7528\u6237\u7ba1\u7406',

@@ -381,6 +381,7 @@ method: getMyJob
 return:
 [
     {
+	job_id: job id
         title: 工作标题
         user_time: 使用时间
         city: 城市

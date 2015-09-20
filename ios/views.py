@@ -111,6 +111,7 @@ def getJobInfo(job_id, request):
     job_info = {}
     for job in jobs:
         job_info = {
+		"job_id": job.id,
                 "title": job.title,
                 "user_time": job.user_time,
                 "city": job.city,
@@ -178,8 +179,8 @@ def sponseJob(global_params, request, ret_json):
         approve_applier = "",
     )
     job.save()
-#file_content = ContentFile(global_params['pic'].read()) 
-#job.pic.save(global_params['pic'].name, file_content)
+    file_content = ContentFile(global_params['pic'].read()) 
+    job.pic.save(global_params['pic'].name, file_content)
     ret_json['is_success'] = True
 
 # 申请工作

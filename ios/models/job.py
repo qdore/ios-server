@@ -45,7 +45,8 @@ class Job(models.Model):
     status = models.CharField(verbose_name = u"工作状态",
             choices = JOB_STATUS,
             max_length = 30)
-    time = models.DateField(verbose_name = u"申请日期")
+    time = models.CharField(verbose_name = u"申请日期",
+            max_length = 30)
     pic = models.ImageField(verbose_name = u"工作图片")
     appliers = models.CharField(verbose_name = u"申请者", max_length = 500)
     approve_applier = models.CharField(verbose_name = u"确认工作者(管理员请填入手机号)",
