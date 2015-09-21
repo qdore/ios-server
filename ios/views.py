@@ -72,10 +72,34 @@ def getStatus(status_id, request):
                 )
         is_praise = False
         ret_val['praisers'] = []
-        for praise in praises:
-            if me.tel == praise.tel:
-                is_praise = True
-            ret_val['praisers'].append({"tel": praise.tel, "head_photo": getHeadPhotoByTel(praise.tel, request)})
+        for user in praises:
+            if (user.tel == me.tel):
+                continue
+            user_status = []
+            status = Status.objects.filter(
+                    tel = user.tel
+                    )
+            for statu in status:
+                user_status.insert(0, getStatus(statu.id, request))
+            user_status = user_status[:3]
+            is_friend = False
+            relation = AttentionRelation.objects.filter(
+                    attent_tel = me.tel,
+                    tel_by_attent = user.tel,
+                    )
+            if relation:
+                is_friend = True
+            ret_val['praisers'].append({
+                "name": user.name,
+                "gender": user.gender,
+                "brief": user.brief,
+                "type": user.user_type,
+                "user_id": user.user_id,
+                "head_photo": 'http://' + request.get_host() + '/media/' + str(user.head_photo),
+                "tel": user.tel,
+                "is_friend": is_friend,
+                "status": user_status,
+            })
         ret_val['is_praise'] = is_praise
         ret_val['comment'] = []
         comments = Comment.objects.filter(

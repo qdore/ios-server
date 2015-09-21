@@ -405,9 +405,14 @@ return:
         approve_applier_head_photo: 工作者头像（发起人确认的申请者）
         appliers:[
             {
-                name: 申请者名称
-                tel: 申请者电话
-                head_photo: 申请者头像
+		gender：性别
+		tel: 搜索到的手机号
+		user_id: 身份证号或者工号
+		name: 名称
+		head_photo: 头像
+		type: 职业
+		is_friend: 是否是好友
+		brief: 简介
             },
         ]
         is_applyed: 是否申请
