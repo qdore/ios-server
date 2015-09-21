@@ -76,11 +76,11 @@ def getStatus(status_id, request):
             if (user.tel == me.tel):
                 continue
             user_status = []
-            status = Status.objects.filter(
+            status2 = Status.objects.filter(
                     tel = user.tel
                     )
-            for statu in status:
-                user_status.insert(0, getStatus(statu.id, request))
+            for statu2 in status2:
+                user_status.insert(0, getStatus(statu2.id, request))
             user_status = user_status[:3]
             is_friend = False
             relation = AttentionRelation.objects.filter(
