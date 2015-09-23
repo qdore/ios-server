@@ -504,4 +504,41 @@ end_time: 结束时间
 reason: 原因
 ```
 
+###获取状态详情
+get/post
+```
+method: getStatusById
+token: key
+status_id: status标识
+
+return：
+
+value: 
+    {
+         status_id:标识状态的状态码（点赞等操作根据status_id）
+         praisers: {
+             tel:点赞者手机号
+             head_photo: 点赞者头像
+             name: 名称
+         }
+         pictures:状态图片的url
+         brief:状态发表的言论
+         name:发送者的名称
+         head_photo: 发送者头像
+         is_praise:是否点赞
+         comment: [
+             {
+                 comment_id: 标识评论
+                 content: 评论内容
+                 commenter: 评论者
+                 commenter_head_photo: 评论者头像
+                 comment_by: 被评论者
+                 comment_by_head_photo: 被评论者头像
+             },
+             ...
+         ]
+    }
+
+```
+
 
