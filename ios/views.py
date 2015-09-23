@@ -352,7 +352,7 @@ def getMsg(global_params, request, ret_json):
                         'tel': status[1]
                     }
                 })
-        else if msg.sender == "_system_comment":
+        elif msg.sender == "_system_comment":
             status = msg.content.split('\b')
             ret_json['value']['msgs'].append({
                     'sender': msg.sender,
@@ -361,7 +361,7 @@ def getMsg(global_params, request, ret_json):
                         'name': getUserNameByTel(status[1]),
                         'head_photo': getHeadPhotoByTel(status[1]),
                         'tel': status[1]
-                    }
+                    },
                     'content': status[2]
                 })
         else:
