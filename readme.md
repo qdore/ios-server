@@ -62,12 +62,14 @@ return:
 get/post:
 ```
 method: getUserInforByTel
+token: key
 tel: 13111111111
 例:
     http://0.0.0.0:8086/ios/?method=getUserInfor&tel=13111111111
 return:
     {"is_success": true, "value": {"gender": "0", "name": "kidney", "brief": "xxx"}}
     增加了返回 head_photo
+    增加了返回 status
 
 ```
 
@@ -81,6 +83,7 @@ token: key
 return:
     {"is_success": true, "value": {"gender": "0", "name": "kidney", "brief": "xxx"}}
     增加了返回 head_photo
+    增加了返回 status
 
 ```
 
@@ -121,6 +124,7 @@ value: {
                         praisers: {
                             tel:点赞者手机号
                             head_photo: 点赞者头像
+                            name: 名称
                         }
                         pictures:状态图片的url
                         brief:状态发表的言论
@@ -400,19 +404,29 @@ return:
         camera: 摄影机
         broadcast_car: 转播车
         later_period: 后期
-        approve_applier_tel: 工作者电话（发起人确认的申请者）
-        approve_applier_name: 工作者名称（发起人确认的申请者）
-        approve_applier_head_photo: 工作者头像（发起人确认的申请者）
+        approve_applier: {
+		        gender：性别
+		        tel: 搜索到的手机号
+		        user_id: 身份证号或者工号
+		        name: 名称
+		        head_photo: 头像
+		        type: 职业
+		        is_friend: 是否是好友
+		        brief: 简介
+                status: 状态
+            }
+
         appliers:[
             {
-		gender：性别
-		tel: 搜索到的手机号
-		user_id: 身份证号或者工号
-		name: 名称
-		head_photo: 头像
-		type: 职业
-		is_friend: 是否是好友
-		brief: 简介
+		        gender：性别
+		        tel: 搜索到的手机号
+		        user_id: 身份证号或者工号
+		        name: 名称
+		        head_photo: 头像
+		        type: 职业
+		        is_friend: 是否是好友
+		        brief: 简介
+                status: 状态
             },
         ]
         is_applyed: 是否申请
@@ -444,3 +458,27 @@ get/post
 method: delJob
 job_id: 用来标识job
 ```
+
+###提交认证
+get/post
+```
+method: submitAuth
+token: key
+true_name: 真实姓名
+identity: 身份证号
+identity_photo: 身份证图
+work_photo: 工作图
+
+```
+
+###外出申请
+get/post
+```
+method: applyOut
+token: key
+start_time: 开始时间
+end_time: 结束时间
+reason: 原因
+```
+
+

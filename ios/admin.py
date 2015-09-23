@@ -9,6 +9,7 @@ from ios.models import attention_relation
 from ios.models import chat
 from ios.models import comment
 from ios.models import job
+from ios.models import apply_out
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
@@ -37,6 +38,7 @@ class JobAdmin(admin.ModelAdmin):
     search_fields = ('title', 'position', 'sponsor_name')
 
 admin.site.register(job.Job, JobAdmin)
+admin.site.register(apply_out.ApplyOut)
 
 #admin.site.register(home_page.HomePage)
 #admin.site.register(about_fumeng.AboutFumeng)

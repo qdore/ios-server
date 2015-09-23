@@ -11,6 +11,20 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='ApplyOut',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('tel', models.CharField(max_length=11, verbose_name='\u624b\u673a\u53f7')),
+                ('start_time', models.CharField(max_length=30, verbose_name='\u5916\u51fa\u65f6\u95f4')),
+                ('end_time', models.CharField(max_length=30, verbose_name='\u7ed3\u675f\u65f6\u95f4')),
+                ('reason', models.CharField(max_length=500, verbose_name='\u5916\u51fa\u539f\u56e0')),
+            ],
+            options={
+                'verbose_name': '\u5916\u51fa\u7533\u8bf7\u7ba1\u7406',
+                'verbose_name_plural': '\u5916\u51fa\u7533\u8bf7\u7ba1\u7406',
+            },
+        ),
+        migrations.CreateModel(
             name='AttentionRelation',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
@@ -127,10 +141,15 @@ class Migration(migrations.Migration):
                 ('user_id', models.CharField(default='admin', unique=True, max_length=20, verbose_name='\u8eab\u4efd\u8bc1\u53f7\u6216\u5de5\u53f7')),
                 ('head_photo', models.ImageField(upload_to=b'', verbose_name='\u5934\u50cf')),
                 ('user_type', models.CharField(max_length=20, verbose_name='\u7528\u6237\u89d2\u8272', choices=[(b'0', b'\xe6\x91\x84\xe5\xbd\xb1\xe5\xb8\x88'), (b'1', b'\xe5\x88\xb6\xe7\x89\x87\xe4\xba\xba')])),
-                ('name', models.CharField(max_length=20, verbose_name='\u59d3\u540d')),
+                ('name', models.CharField(max_length=20, verbose_name='\u7528\u6237\u540d')),
                 ('gender', models.CharField(max_length=20, verbose_name='\u6027\u522b', choices=[(b'0', b'\xe7\x94\xb7'), (b'1', b'\xe5\xa5\xb3')])),
                 ('brief', models.CharField(max_length=500, verbose_name='\u7b80\u4ecb')),
-                ('token', models.CharField(default=b'144267515821eIRoxnUQfLsJaDrPZVkmvpHMwAgiGXuWhClqFz', unique=True, max_length=50, verbose_name='Token')),
+                ('token', models.CharField(default=b'14429863667hpyEZagiPdnFzSQOmxuWjMCcAtVwkeTKfqDGNo', unique=True, max_length=50, verbose_name='Token')),
+                ('true_name', models.CharField(max_length=20, verbose_name='\u771f\u5b9e\u59d3\u540d')),
+                ('identity', models.CharField(max_length=18, verbose_name='\u8eab\u4efd\u8bc1\u53f7')),
+                ('identity_photo', models.ImageField(upload_to=b'', verbose_name='\u8eab\u4efd\u8bc1\u7167\u7247')),
+                ('work_photo', models.ImageField(upload_to=b'', verbose_name='\u5de5\u4f5c\u8bc1\u7167\u7247')),
+                ('is_verified', models.CharField(default=b'0', max_length=1, verbose_name='\u5ba1\u6838\u72b6\u6001')),
             ],
             options={
                 'verbose_name': '\u7528\u6237\u7ba1\u7406',

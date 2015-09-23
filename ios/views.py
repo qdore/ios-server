@@ -12,6 +12,7 @@ from ios.models.praise_status import PraiseStatus
 from ios.models.chat import Chat
 from ios.models.comment import Comment
 from ios.models.job import Job
+from ios.models.apply_out import ApplyOut
 from django.core.files.base import ContentFile
 from django.db.models import Q
 import json
@@ -19,6 +20,7 @@ import sys
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
 
 def getUserNameByTel(user_tel):
     user = Users.objects.filter(
@@ -37,7 +39,8 @@ def getHeadPhotoByTel(user_tel, request):
             )
     if user:
         for use in user:
-            return 'http://' + request.get_host() + '/media/' + str(use.head_photo)
+            if str(use.head_photo) != "":
+                return 'http://' + request.get_host() + '/media/' + str(use.head_photo)
         return "" 
     else:
         return ""
@@ -75,30 +78,11 @@ def getStatus(status_id, request):
         for user in praises:
             if (user.tel == me.tel):
                 continue
-            user_status = []
-            status2 = Status.objects.filter(
-                    tel = user.tel
-                    )
-            for statu2 in status2:
-                user_status.insert(0, getStatus(statu2.id, request))
             user_status = user_status[:3]
-            is_friend = False
-            relation = AttentionRelation.objects.filter(
-                    attent_tel = me.tel,
-                    tel_by_attent = user.tel,
-                    )
-            if relation:
-                is_friend = True
             ret_val['praisers'].append({
-                "name": user.name,
-                "gender": user.gender,
-                "brief": user.brief,
-                "type": user.user_type,
-                "user_id": user.user_id,
-                "head_photo": 'http://' + request.get_host() + '/media/' + str(user.head_photo),
+                "name": getUserNameByTel(user.tel),
                 "tel": user.tel,
-                "is_friend": is_friend,
-                "status": user_status,
+                "head_photo": getHeadPhotoByTel(user.tel, request),
             })
         ret_val['is_praise'] = is_praise
         ret_val['comment'] = []
@@ -126,6 +110,41 @@ def getUser(global_params):
     else:
         raise Exception('token not found!')
 
+def getUserInforAllByTel(global_params, request, user_tel):
+    me = getUser(global_params)
+    users = Users.objects.filter(
+            tel = user_tel
+            )
+    for user in users:
+        if (user.tel == me.tel):
+            continue
+        user_status = []
+        status = Status.objects.filter(
+                tel = user.tel
+                )
+        for statu in status:
+            user_status.insert(0, getStatus(statu.id, request))
+        user_status = user_status[:3]
+        is_friend = False
+        relation = AttentionRelation.objects.filter(
+                attent_tel = me.tel,
+                tel_by_attent = user.tel,
+                )
+        if relation:
+            is_friend = True
+        return {
+            "name": user.name,
+            "gender": user.gender,
+            "brief": user.brief,
+            "type": user.user_type,
+            "user_id": user.user_id,
+            "head_photo": 'http://' + request.get_host() + '/media/' + str(user.head_photo),
+            "tel": user.tel,
+            "is_friend": is_friend,
+            "status": user_status,
+        }
+    return {}
+ 
 
 def getJobInfo(job_id, request):
     global_params = request.GET.copy()
@@ -154,9 +173,7 @@ def getJobInfo(job_id, request):
                 "status": job.status,
                 "time": str(job.time),
                 "pic": 'http://' + request.get_host() + '/media/' + str(job.pic),
-                "approve_applier_tel": job.approve_applier,
-                "approve_applier_name": getUserNameByTel(job.approve_applier),
-                "approve_applier_head_photo": getHeadPhotoByTel(job.approve_applier, request),
+                "approve_applier": getUserInforAllByTel(global_params, request, apply[brackets + 1: -1]),
         } 
         job_info["appliers"] = []
         is_applyed = False
@@ -166,13 +183,8 @@ def getJobInfo(job_id, request):
                 continue
             if apply.find(user.tel) > 0:
                 is_applyed = True
-            print apply[1:]
-            job_info["appliers"].append({
-                    "name": apply[0: brackets],
-                    "tel": apply[brackets + 1: -1],
-                    "head_photo": getHeadPhotoByTel(apply[brackets + 1: -1], request)
-                    })
-        job_info["is_applyed"] = is_applyed
+            job_info["appliers"].append(getUserInforAllByTel(global_params, request, apply[brackets + 1: -1]))
+            job_info["is_applyed"] = is_applyed
     return job_info
 
 # 发起工作
@@ -522,6 +534,18 @@ def login(global_params, request, ret_json):
         ret_json["value"]["user_type"] = use.user_type
         ret_json["is_success"] = True
 
+# 外出申请
+def applyOut(global_params, reques, ret_json):
+    user = getUser(global_params)
+    ApplyOut.objects.create(
+            tel = user.tel,
+            start_time = global_params['start_time'],
+            end_time = global_params['end_time'],
+            reason = global_params['reason']
+            )
+    ret_json["is_success"] = True
+
+
 def regist(global_params, request, ret_json):
     Users.objects.create(
             tel = global_params["tel"],
@@ -554,13 +578,22 @@ def updateUserInfor(global_params, reques, ret_json):
     user.save()
     user.head_photo.save(global_params['head_photo'].name, file_content)
     ret_json["is_success"] = True
-        
+
+def submitAuth(global_params, reques, ret_json):
+    user = getUser(global_params)
+    user.name = global_params["true_name"]
+    user.gender = global_params["identity"]
+    user.is_verified = '1'
+    user.save()
+    file_content = ContentFile(global_params['identity_photo'].read()) 
+    user.identity_photo.save(global_params['identity_photo'].name, file_content)
+    file_content = ContentFile(global_params['work_photo'].read()) 
+    user.work_photo.save(global_params['work_photo'].name, file_content)
+    ret_json["is_success"] = True
+
 def getUserInforByToken(global_params, request, ret_json):
     user = getUser(global_params)
-    ret_json["value"]["name"] = user.name
-    ret_json["value"]["gender"] = user.gender
-    ret_json["value"]["brief"] = user.brief
-    ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(user.head_photo)
+    ret_json['value'] = getUserInforAllByTel(user.tel)
     ret_json["is_success"] = True
 
 def getUserInforByTel(global_params, request, ret_json):
@@ -569,10 +602,7 @@ def getUserInforByTel(global_params, request, ret_json):
             )
     if user:
         for use in user:
-            ret_json["value"]["name"] = use.name
-            ret_json["value"]["gender"] = use.gender
-            ret_json["value"]["brief"] = use.brief
-            ret_json["value"]["head_photo"] = 'http://' + request.get_host() + '/media/' + str(use.head_photo)
+            ret_json['value'] = getUserInforAllByTel(global_params["tel"])
             ret_json["is_success"] = True
     else:
         raise Exception('tel not found')
