@@ -263,10 +263,33 @@ token: key
 return:
     {"is_success": true, "value": {"msgs": [{"content": "test", "sender": "18721919502"}]}}
 
+注意：每次获取成功之后未读信息列表自动清空
+
+注意：这里需要判断一下， 当sender == "_system_praise" 时返回的结构体是：
+sender: _system_praise
+status_id: 状态标识
+praiser: {
+    name
+    head_photo
+    tel
+}
+
+当sender == "_system_comment" 时返回的结构体是：
+sender: _system_comment
+status_id: 状态标识
+commenter: {
+    name
+    head_photo
+    tel
+}
+content: 评论内容
+
+
+其它
 sender:发信人
 sender_head_photo:发信人
 content: 内容
-注意：每次获取成功之后未读信息列表自动清空
+
 ```
 
 ####取消赞

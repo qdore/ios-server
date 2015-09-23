@@ -45,6 +45,15 @@ def getHeadPhotoByTel(user_tel, request):
     else:
         return ""
 
+def getUser(global_params):
+    user = Users.objects.filter(
+            token = global_params["token"],
+            )
+    if user:
+        for use in user:
+            return use
+    else:
+        raise Exception('token not found!')
 
 def getStatus(status_id, request):
     global_params = request.GET.copy()
@@ -100,15 +109,8 @@ def getStatus(status_id, request):
             })
         return ret_val
 
-def getUser(global_params):
-    user = Users.objects.filter(
-            token = global_params["token"],
-            )
-    if user:
-        for use in user:
-            return use
-    else:
-        raise Exception('token not found!')
+def getStatusById(global_params, request, ret_json):
+    ret_json['value'] = getStatus(global_params['status_id'])
 
 def getUserInforAllByTel(global_params, request, user_tel):
     me = getUser(global_params)
@@ -290,6 +292,11 @@ def commentStatus(global_params, request, ret_json):
                     comment_by = statu.tel,
                     comment_content = global_params["content"]
                     )
+            Chat.objects.create(
+                sender = "_system_comment",
+                reciver = statu.tel,
+                content = global_params["status_id"] + '\b' + user.tel + '\b' + global_params['content']
+                )
         ret_json['is_success'] = True
     else:
         raise Exception('status not found!')
@@ -309,6 +316,11 @@ def commentOtherComment(global_params, request, ret_json):
                     comment_by = comment.commenter,
                     comment_content = global_params["content"]
                     )
+            Chat.objects.create(
+                sender = "_system_comment",
+                reciver = comment.commenter,
+                content = comment.status_id + '\b' + user.tel + '\b' + global_params['content']
+                )
         ret_json['is_success'] = True
     else:
         raise Exception('comment not found!')
@@ -329,11 +341,35 @@ def getMsg(global_params, request, ret_json):
     msgs = Chat.objects.filter(reciver = user.tel)
     ret_json['value']['msgs'] = []
     for msg in msgs:
-        ret_json['value']['msgs'].append({
-                'sender': msg.sender,
-                'sender_header_photo': getHeadPhotoByTel(msg.sender, request),
-                'content': msg.content,
+        if msg.sender == "_system_praise":
+            status = msg.content.split('\b')
+            ret_json['value']['msgs'].append({
+                    'sender': msg.sender,
+                    'status_id': status[0],
+                    'praiser': {
+                        'name': getUserNameByTel(status[1]),
+                        'head_photo': getHeadPhotoByTel(status[1]),
+                        'tel': status[1]
+                    }
                 })
+        else if msg.sender == "_system_comment":
+            status = msg.content.split('\b')
+            ret_json['value']['msgs'].append({
+                    'sender': msg.sender,
+                    'status_id': status[0],
+                    'commenter': {
+                        'name': getUserNameByTel(status[1]),
+                        'head_photo': getHeadPhotoByTel(status[1]),
+                        'tel': status[1]
+                    }
+                    'content': status[2]
+                })
+        else:
+            ret_json['value']['msgs'].append({
+                    'sender': msg.sender,
+                    'sender_header_photo': getHeadPhotoByTel(msg.sender, request),
+                    'content': msg.content,
+                    })
         msg.readed = True
         msg.save()
     ret_json['is_success'] = True
@@ -370,6 +406,11 @@ def praiseStatus(global_params, request, ret_json):
             PraiseStatus.objects.create(
                 status_id = global_params["status_id"],
                 tel = user.tel
+                )
+            Chat.objects.create(
+                sender = "_system_praise",
+                reciver = statu.tel,
+                content = global_params["status_id"] + '\b' + user.tel
                 )
         ret_json["is_success"] = True
     else:
