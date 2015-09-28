@@ -541,4 +541,12 @@ value:
 
 ```
 
+###删除状态
+get/post
+```
+method: cancelStatus
+token: key
+status_id: status标识
+```
+
 

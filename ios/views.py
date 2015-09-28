@@ -562,6 +562,15 @@ def publishStatus(global_params, request, ret_json):
             break
     ret_json["is_success"] = True
 
+#删除动态
+def cancelStatus(global_params, request, ret_json):
+    user = getUser(global_params)
+    Status.objects.filter(
+            tel = user.tel,
+            id = global_params['status_id']
+            ).delete()
+    ret_json["is_success"] = True
+
 # 注册及登录
 def login(global_params, request, ret_json):
     user = Users.objects.filter(
