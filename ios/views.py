@@ -69,6 +69,7 @@ def getStatus(status_id, request):
             'status_id': statu.id,
             'brief': statu.brief,
             'name': getUserNameByTel(statu.tel),
+            'tel': statu.tel,
             'head_photo': getHeadPhotoByTel(statu.tel, request),
         };
         pics = StatusPics.objects.filter(
@@ -118,8 +119,6 @@ def getUserInforAllByTel(global_params, request, user_tel):
             tel = user_tel
             )
     for user in users:
-        if (user.tel == me.tel):
-            continue
         user_status = []
         status = Status.objects.filter(
                 tel = user.tel
@@ -438,7 +437,7 @@ def getFriendStatus(global_params, request, ret_json):
         for relation in relations:
             friends.append(relation.attent_tel)
     status = list(Status.objects.filter(
-            tel = friends
+            tel__in = friends
             ))
     global_params['n'] = int(global_params['n'])
     status = status[max(0, len(status) - global_params['n'] - 42):  max(0, min(len(status) - global_params['n'], len(status)))]
@@ -643,7 +642,7 @@ def getUserInforByTel(global_params, request, ret_json):
             )
     if user:
         for use in user:
-            ret_json['value'] = getUserInforAllByTel(global_params["tel"])
+            ret_json['value'] = getUserInforAllByTel(global_params, request, global_params["tel"])
             ret_json["is_success"] = True
     else:
         raise Exception('tel not found')
