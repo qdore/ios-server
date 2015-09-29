@@ -88,7 +88,6 @@ def getStatus(status_id, request):
         for user in praises:
             if (user.tel == me.tel):
                 continue
-            user_status = user_status[:3]
             ret_val['praisers'].append({
                 "name": getUserNameByTel(user.tel),
                 "tel": user.tel,
@@ -337,7 +336,7 @@ def sendMsg(global_params, request, ret_json):
 # 接受站内信
 def getMsg(global_params, request, ret_json):
     user = getUser(global_params)
-    msgs = Chat.objects.filter(reciver = user.tel)
+    msgs = Chat.objects.filter(reciver = user.tel, readed = False)
     ret_json['value']['msgs'] = []
     for msg in msgs:
         if msg.sender == "_system_praise":
@@ -347,7 +346,7 @@ def getMsg(global_params, request, ret_json):
                     'status_id': status[0],
                     'praiser': {
                         'name': getUserNameByTel(status[1]),
-                        'head_photo': getHeadPhotoByTel(status[1]),
+                        'head_photo': getHeadPhotoByTel(status[1], request),
                         'tel': status[1]
                     }
                 })
@@ -358,7 +357,7 @@ def getMsg(global_params, request, ret_json):
                     'status_id': status[0],
                     'commenter': {
                         'name': getUserNameByTel(status[1]),
-                        'head_photo': getHeadPhotoByTel(status[1]),
+                        'head_photo': getHeadPhotoByTel(status[1], request),
                         'tel': status[1]
                     },
                     'content': status[2]
@@ -536,9 +535,9 @@ def getAttentRelation(global_params, request, ret_json):
     ret_json['value']['attent_someone'] = []
     ret_json['value']['attent_by_someone'] = []
     for attent in attent_someone:
-        ret_json['value']['attent_someone'].append(attent.tel_by_attent)
+        ret_json['value']['attent_someone'].append(getUserInforAllByTel(attent.tel_by_attent))
     for attent in attent_by_someone:
-        ret_json['value']['attent_by_someone'].append(attent.attent_tel)
+        ret_json['value']['attent_by_someone'].append(getUserInforAllByTel(attent.attent_tel))
     ret_json["is_success"] = True
 
 # 发表状态
@@ -560,15 +559,6 @@ def publishStatus(global_params, request, ret_json):
         except:
             pic.delete()
             break
-    ret_json["is_success"] = True
-
-#删除动态
-def cancelStatus(global_params, request, ret_json):
-    user = getUser(global_params)
-    Status.objects.filter(
-            tel = user.tel,
-            id = global_params['status_id']
-            ).delete()
     ret_json["is_success"] = True
 
 # 注册及登录
