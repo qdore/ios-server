@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from django.contrib import admin
 
 # Register your models here.
@@ -10,6 +12,7 @@ from ios.models import chat
 from ios.models import comment
 from ios.models import job
 from ios.models import apply_out
+from django.http import *
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
@@ -49,10 +52,45 @@ class CharAdmin(admin.ModelAdmin):
 
 admin.site.register(chat.Chat, CharAdmin)
 
+def export_xls(modeladmin, request, queryset):
+    import xlwt
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename=mymodel.xls'
+    wb = xlwt.Workbook(encoding='utf-8')
+    ws = wb.add_sheet(u"工作表")
+    row_num = 0
+    columns = [
+        (u"ID", 2000),
+        (u"Title", 6000),
+        (u"Description", 8000),
+    ]
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+    for col_num in xrange(len(columns)):
+        ws.write(row_num, col_num, columns[col_num][0], font_style)
+        ws.col(col_num).width = columns[col_num][1]
+    font_style = xlwt.XFStyle()
+    font_style.alignment.wrap = 1
+    print queryset[0].id
+    for obj in queryset:
+        row_num += 1
+        row = [
+            obj.id,
+            obj.title,
+            obj.position,
+        ]
+        for col_num in xrange(len(row)):
+            ws.write(row_num, col_num, row[col_num], font_style)
+    wb.save(response)
+    return response
+
+export_xls.short_description = u"导出Excel表"
+
 class JobAdmin(admin.ModelAdmin):
     list_display = ('title', 'position', 'time', 'user_time', 'appliers', 'approve_applier')
     list_filter = ('title', 'time', 'user_time', 'approve_applier', 'status')
     search_fields = ('title',)
+    actions = [export_xls]
 
 admin.site.register(job.Job, JobAdmin)
 
