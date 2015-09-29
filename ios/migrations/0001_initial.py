@@ -44,6 +44,7 @@ class Migration(migrations.Migration):
                 ('reciver', models.CharField(max_length=11, verbose_name='\u63a5\u53d7\u8005\u624b\u673a\u53f7')),
                 ('content', models.CharField(max_length=1000, verbose_name='\u804a\u5929\u5185\u5bb9')),
                 ('readed', models.BooleanField(default=False, verbose_name='\u5df2\u8bfb')),
+                ('send_time', models.DateTimeField(auto_now_add=True, verbose_name='\u53d1\u9001\u65f6\u95f4')),
             ],
             options={
                 'verbose_name': '\u804a\u5929\u5185\u5bb9\u7ba1\u7406',
@@ -144,12 +145,12 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=20, verbose_name='\u7528\u6237\u540d')),
                 ('gender', models.CharField(max_length=20, verbose_name='\u6027\u522b', choices=[(b'0', b'\xe7\x94\xb7'), (b'1', b'\xe5\xa5\xb3')])),
                 ('brief', models.CharField(max_length=500, verbose_name='\u7b80\u4ecb')),
-                ('token', models.CharField(default=b'14429863667hpyEZagiPdnFzSQOmxuWjMCcAtVwkeTKfqDGNo', unique=True, max_length=50, verbose_name='Token')),
+                ('token', models.CharField(default=b'144353329254HEOLkeCAaIZGBjwQrbhsncUpgmiRWvzSqYylKF', unique=True, max_length=50, verbose_name='Token')),
                 ('true_name', models.CharField(max_length=20, verbose_name='\u771f\u5b9e\u59d3\u540d')),
                 ('identity', models.CharField(max_length=18, verbose_name='\u8eab\u4efd\u8bc1\u53f7')),
                 ('identity_photo', models.ImageField(upload_to=b'', verbose_name='\u8eab\u4efd\u8bc1\u7167\u7247')),
                 ('work_photo', models.ImageField(upload_to=b'', verbose_name='\u5de5\u4f5c\u8bc1\u7167\u7247')),
-                ('is_verified', models.CharField(default=b'0', max_length=1, verbose_name='\u5ba1\u6838\u72b6\u6001')),
+                ('is_verified', models.CharField(default=b'0', max_length=1, verbose_name='\u5ba1\u6838\u72b6\u6001', choices=[(b'0', b'\xe6\x9c\xaa\xe6\x8f\x90\xe4\xba\xa4\xe5\xae\xa1\xe6\xa0\xb8'), (b'1', b'\xe5\xb7\xb2\xe6\x8f\x90\xe4\xba\xa4\xe5\xae\xa1\xe6\xa0\xb8'), (b'2', b'\xe5\xae\xa1\xe6\xa0\xb8\xe9\x80\x9a\xe8\xbf\x87'), (b'3', b'\xe5\xae\xa1\xe6\xa0\xb8\xe4\xb8\x8d\xe9\x80\x9a\xe8\xbf\x87')])),
             ],
             options={
                 'verbose_name': '\u7528\u6237\u7ba1\u7406',

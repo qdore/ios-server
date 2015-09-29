@@ -273,6 +273,7 @@ praiser: {
     head_photo
     tel
 }
+send_time: 发送时间
 
 当sender == "_system_comment" 时返回的结构体是：
 sender: _system_comment
@@ -283,12 +284,15 @@ commenter: {
     tel
 }
 content: 评论内容
+send_time: 发送时间
 
 
 其它
 sender:发信人
+sender_name:发信人名称
 sender_head_photo:发信人
 content: 内容
+send_time: 发送时间
 
 ```
 

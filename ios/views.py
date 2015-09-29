@@ -363,9 +363,11 @@ def getMsg(global_params, request, ret_json):
         else:
             ret_json['value']['msgs'].append({
                     'sender': msg.sender,
+                    'sender_name': getUserNameByTel(msg.sender),
                     'sender_header_photo': getHeadPhotoByTel(msg.sender, request),
                     'content': msg.content,
                     })
+        ret_json['value']['msgs'][-1]['send_time'] = str(msg.send_time)
         msg.readed = True
         msg.save()
     ret_json['is_success'] = True

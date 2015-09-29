@@ -47,7 +47,7 @@ class CommentAdmin(admin.ModelAdmin):
 admin.site.register(comment.Comment, CommentAdmin)
 
 class CharAdmin(admin.ModelAdmin):
-    list_display = ('sender', 'reciver', 'content', 'readed')
+    list_display = ('sender', 'reciver', 'content', 'readed', 'send_time')
     search_fields = ('sender', 'reciver', 'content', 'readed')
 
 admin.site.register(chat.Chat, CharAdmin)

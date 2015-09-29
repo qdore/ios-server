@@ -13,6 +13,7 @@ class Chat(models.Model):
             max_length = 1000)
     readed = models.BooleanField(verbose_name = u"已读",
             default = False)
+    send_time = models.DateTimeField(auto_now_add=True, verbose_name = u"发送时间")
 
     class Meta:
         verbose_name = u'聊天内容管理'
