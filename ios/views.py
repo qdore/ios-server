@@ -173,7 +173,7 @@ def getJobInfo(job_id, request):
                 "status": job.status,
                 "time": str(job.time),
                 "pic": 'http://' + request.get_host() + '/media/' + str(job.pic),
-                "approve_applier": getUserInforAllByTel(global_params, request, apply[brackets + 1: -1]),
+                "approve_applier": getUserInforAllByTel(global_params, request, job.approve_applier),
         } 
         job_info["appliers"] = []
         is_applyed = False
@@ -250,11 +250,9 @@ def getMyJob(global_params, request, ret_json):
 def getSquareJob(global_params, request, ret_json):
     jobs = Job.objects.filter(status = global_params['status'])
     ret_json['jobs'] = []
-    print list(jobs)
     global_params['n'] = int(global_params['n'])
     if jobs:
         jobs = jobs[max(0, len(jobs) - global_params['n'] - 42):  max(0, min(len(jobs) - global_params['n'], len(jobs)))]
-        print list(jobs)
         for job in jobs:
             ret_json['jobs'].insert(0, getJobInfo(job.id, request))
 
@@ -535,9 +533,9 @@ def getAttentRelation(global_params, request, ret_json):
     ret_json['value']['attent_someone'] = []
     ret_json['value']['attent_by_someone'] = []
     for attent in attent_someone:
-        ret_json['value']['attent_someone'].append(getUserInforAllByTel(attent.tel_by_attent))
+        ret_json['value']['attent_someone'].append(getUserInforAllByTel(global_params, request, attent.tel_by_attent))
     for attent in attent_by_someone:
-        ret_json['value']['attent_by_someone'].append(getUserInforAllByTel(attent.attent_tel))
+        ret_json['value']['attent_by_someone'].append(getUserInforAllByTel(global_params, request, attent.attent_tel))
     ret_json["is_success"] = True
 
 # 发表状态
