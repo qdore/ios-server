@@ -87,7 +87,7 @@ def getStatus(status_id, request):
         ret_val['praisers'] = []
         for user in praises:
             if (user.tel == me.tel):
-                continue
+		is_praise = True
             ret_val['praisers'].append({
                 "name": getUserNameByTel(user.tel),
                 "tel": user.tel,
@@ -326,7 +326,7 @@ def sendMsg(global_params, request, ret_json):
     user = getUser(global_params)
     Chat.objects.create(
             sender = user.tel,
-            reciver = global_params['receiver'],
+            reciver = global_params['tel'],
             content = global_params['content']
             )
     ret_json['is_success'] = True
@@ -540,6 +540,14 @@ def getAttentRelation(global_params, request, ret_json):
         ret_json['value']['attent_by_someone'].append(getUserInforAllByTel(global_params, request, attent.attent_tel))
     ret_json["is_success"] = True
 
+# 删除状态
+def cancelStatus(global_params, request, ret_json):
+    user = getUser(global_params)
+    Status.objects.filter(
+            tel = user.tel,
+            id = global_params['status_id'],
+    ).delete()
+    
 # 发表状态
 def publishStatus(global_params, request, ret_json):
     user = getUser(global_params)
