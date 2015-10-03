@@ -60,9 +60,27 @@ def export_xls(modeladmin, request, queryset):
     ws = wb.add_sheet(u"工作表")
     row_num = 0
     columns = [
-        (u"ID", 2000),
-        (u"Title", 6000),
-        (u"Description", 8000),
+        (u"序号", 2000),
+        (u"活动名称", 6000),
+        (u"使用时间", 6000),
+        (u"城市", 2000),
+        (u"批准人", 2000),
+        (u"工作单位", 2000),
+        (u"申请理由", 8000),
+        (u"设备及人员明细", 8000),
+        (u"领导人意见", 8000),
+        (u"备注", 8000),
+        (u"申请人姓名", 2000),
+        (u"演播室", 2000),
+        (u"部门/工号", 2000),
+        (u"发起者手机号", 2000),
+        (u"摄影机", 2000),
+        (u"转播车", 2000),
+        (u"后期", 2000),
+        (u"工作状态", 2000),
+        (u"申请日期", 2000),
+        (u"申请者", 8000),
+        (u"实际工作者", 2000),
     ]
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
@@ -74,10 +92,32 @@ def export_xls(modeladmin, request, queryset):
     print queryset[0].id
     for obj in queryset:
         row_num += 1
+        job_status = ""
+        for id, status in job.JOB_STATUS:
+            if id == obj.status:
+                job_status = status
         row = [
             obj.id,
             obj.title,
+            obj.user_time,
+            obj.city,
+            obj.authorizer,
             obj.position,
+            obj.reason,
+            obj.details,
+            obj.opinion,
+            obj.memo,
+            obj.sponsor_name,
+            obj.studio,
+            obj.job_number,
+            obj.sponsor_tel,
+            obj.camera,
+            obj.broadcast_car,
+            obj.later_period,
+            job_status,
+            obj.time,
+            obj.appliers,
+            obj.approve_applier,
         ]
         for col_num in xrange(len(row)):
             ws.write(row_num, col_num, row[col_num], font_style)
