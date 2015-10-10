@@ -27,7 +27,11 @@ class Users(models.Model):
             max_length = 11)
     password = models.CharField(verbose_name = u"密码",
             max_length = 20)
-    user_id = models.CharField(verbose_name = u"身份证号或工号",
+    user_id = models.CharField(verbose_name = u"身份证号",
+            default = u"admin",
+            unique = True,
+            max_length = 18)
+    work_id = models.CharField(verbose_name = u"工号",
             default = u"admin",
             unique = True,
             max_length = 20)

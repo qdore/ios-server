@@ -8,7 +8,9 @@ import time
 class ApplyOut(models.Model):
     tel = models.CharField(verbose_name = u"手机号",
             max_length = 11)
-    start_time = models.CharField(verbose_name = u"外出时间",
+    start_time = models.CharField(verbose_name = u"开始时间",
+            max_length = 30)
+    out_time = models.CharField(verbose_name = u"外出时间",
             max_length = 30)
     end_time = models.CharField(verbose_name = u"结束时间",
             max_length = 30)

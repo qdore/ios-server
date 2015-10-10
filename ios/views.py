@@ -138,6 +138,7 @@ def getUserInforAllByTel(global_params, request, user_tel):
             "brief": user.brief,
             "type": user.user_type,
             "user_id": user.user_id,
+            "work_id": user.work_id,
             "head_photo": 'http://' + request.get_host() + '/media/' + str(user.head_photo),
             "tel": user.tel,
             "is_friend": is_friend,
@@ -499,6 +500,7 @@ def findSomeOne(global_params, request, ret_json):
             "brief": user.brief,
             "type": user.user_type,
             "user_id": user.user_id,
+            "work_id": user.work_id,
             "head_photo": 'http://' + request.get_host() + '/media/' + str(user.head_photo),
             "tel": user.tel,
             "is_friend": is_friend,
@@ -588,6 +590,7 @@ def applyOut(global_params, reques, ret_json):
             tel = user.tel,
             start_time = global_params['start_time'],
             end_time = global_params['end_time'],
+            out_time = global_params['out_time'],
             reason = global_params['reason']
             )
     ret_json["is_success"] = True
@@ -598,7 +601,8 @@ def regist(global_params, request, ret_json):
             tel = global_params["tel"],
             password = global_params["pwd"],
             user_type = global_params["user_type"],
-            user_id = global_params["user_id"]
+            user_id = global_params["user_id"],
+            work_id = global_params["work_id"]
             )
     login(global_params, request, ret_json)
     ret_json["is_success"] = True
