@@ -21,6 +21,9 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+def checkUserIsAuthed(user):
+    if user.is_verified != '2':
+        raise Exception("您还未提交审核！")
 
 def getUserNameByTel(user_tel):
     user = Users.objects.filter(
@@ -191,6 +194,7 @@ def getJobInfo(job_id, request):
 # 发起工作
 def sponseJob(global_params, request, ret_json):
     user = getUser(global_params)
+    checkUserIsAuthed(user)
     if user.user_type == '0':
         raise Exception('只有制片人才能发布任务！')
     job = Job.objects.create(
@@ -223,6 +227,7 @@ def sponseJob(global_params, request, ret_json):
 # 申请工作
 def applyJob(global_params, request, ret_json):
     user = getUser(global_params)
+    checkUserIsAuthed(user)
     if user.user_type == '1':
         raise Exception('只有摄影师才能申请任务！')
     jobs = Job.objects.filter(id = int(global_params["job_id"]))
@@ -240,6 +245,7 @@ def applyJob(global_params, request, ret_json):
 # 我申请的/我发布的工作
 def getMyJob(global_params, request, ret_json):
     user = getUser(global_params)
+    checkUserIsAuthed(user)
     jobs = Job.objects.filter(Q(appliers__icontains = user.tel) |
             Q(sponsor_tel = user.tel))
     ret_json['jobs'] = []
