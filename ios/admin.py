@@ -19,6 +19,7 @@ from django.db import models
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
     search_fields = ('tel', 'user_id', 'name')
+    list_filter = ('tel','user_id','name','gender','is_verified')
     formfield_overrides = { models.ImageField: {'widget': ImageWidget} }
 
 admin.site.register(user.Users, UserAdmin)
