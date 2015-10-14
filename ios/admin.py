@@ -38,7 +38,9 @@ class PraiseAdmin(admin.ModelAdmin):
 
 admin.site.register(praise_status.PraiseStatus, PraiseAdmin)
 
-admin.site.register(status_pic.StatusPics)
+class StatusPicsAdmin(admin.ModelAdmin):
+    formfield_overrides = { models.ImageField: {'widget': ImageWidget} }
+admin.site.register(status_pic.StatusPics, StatusPicsAdmin)
 
 class AttentAdmin(admin.ModelAdmin):
     list_display = ('attent_tel', 'tel_by_attent')
