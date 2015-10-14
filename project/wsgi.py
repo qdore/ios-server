@@ -14,6 +14,8 @@ framework.
 
 """
 import os, sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 app_root = os.path.dirname(os.path.dirname(__file__))
 
 

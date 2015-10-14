@@ -477,7 +477,7 @@ def getSomeOneStatusByTel(global_params, request, ret_json):
 def findSomeOne(global_params, request, ret_json):
     me = getUser(global_params)
     if global_params['para'] == "":
-        users = Users.objects.all()[:3]
+        users = Users.objects.all()
     else:
         users = Users.objects.filter(Q(name__icontains = global_params['para']) |
                 Q(user_id__icontains = global_params['para']) |
@@ -638,14 +638,14 @@ def updateUserInfor(global_params, reques, ret_json):
 
 def submitAuth(global_params, reques, ret_json):
     user = getUser(global_params)
-    user.name = global_params["true_name"]
-    user.gender = global_params["identity"]
+    user.true_name = global_params["true_name"]
+    user.identity = global_params["identity"]
     user.is_verified = '1'
-    user.save()
     file_content = ContentFile(global_params['identity_photo'].read()) 
     user.identity_photo.save(global_params['identity_photo'].name, file_content)
     file_content = ContentFile(global_params['work_photo'].read()) 
     user.work_photo.save(global_params['work_photo'].name, file_content)
+    user.save()
     ret_json["is_success"] = True
 
 def getUserInforByToken(global_params, request, ret_json):
