@@ -15,11 +15,18 @@ from ios.models import apply_out
 from django.http import *
 from form_utils.widgets import ImageWidget
 from django.db import models
+from widget import AdminImageWidget
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('tel', 'user_id', 'name', 'gender')
     search_fields = ('tel', 'user_id', 'name')
-    formfield_overrides = { models.ImageField: {'widget': ImageWidget} }
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        if "photo" in db_field.name or "image" in db_field.name:
+            request = kwargs.pop("request", None)
+            kwargs['widget'] = AdminImageWidget
+            return db_field.formfield(**kwargs)
+        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+#formfield_overrides = { models.ImageField: {'widget': ImageWidget} }
 
 admin.site.register(user.Users, UserAdmin)
 
