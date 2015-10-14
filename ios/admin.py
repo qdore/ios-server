@@ -22,11 +22,11 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('tel', 'user_id', 'name')
     list_filter = ('tel','user_id','name','gender','is_verified')
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(user.Users, UserAdmin)
 
@@ -34,11 +34,11 @@ class StatusAdmin(admin.ModelAdmin):
     list_display = ('tel', 'brief')
     search_fields = ('tel',)
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(status.Status, StatusAdmin)
 
@@ -46,32 +46,32 @@ class PraiseAdmin(admin.ModelAdmin):
     list_display = ('status_id', 'tel')
     search_fields = ('status_id', 'tel')
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(praise_status.PraiseStatus, PraiseAdmin)
 
 class StatusPicsAdmin(admin.ModelAdmin):
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 admin.site.register(status_pic.StatusPics, StatusPicsAdmin)
 
 class AttentAdmin(admin.ModelAdmin):
     list_display = ('attent_tel', 'tel_by_attent')
     search_fields = ('attent_tel', 'tel_by_attent')
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(attention_relation.AttentionRelation, AttentAdmin)
 
@@ -79,11 +79,11 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('commenter', 'comment_by','comment_content')
     search_fields = ('commenter', 'comment_by','comment_content')
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(comment.Comment, CommentAdmin)
 
@@ -91,11 +91,11 @@ class CharAdmin(admin.ModelAdmin):
     list_display = ('sender', 'reciver', 'content', 'readed', 'send_time')
     search_fields = ('sender', 'reciver', 'content', 'readed')
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(chat.Chat, CharAdmin)
 
@@ -179,11 +179,11 @@ class JobAdmin(admin.ModelAdmin):
     search_fields = ('title',)
     actions = [export_xls]
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(job.Job, JobAdmin)
 
@@ -192,11 +192,11 @@ class ApplyOutAdmin(admin.ModelAdmin):
     search_fields = ('tel','start_time','end_time','reason')
     list_filter = ('tel','start_time','end_time','reason')
     def formfield_for_dbfield(self, db_field, **kwargs):
-        if "photo" in db_field.name or "image" in db_field.name:
+        if "photo" in db_field.name or "image" in db_field.name or "pic" == db_field.name:
             request = kwargs.pop("request", None)
             kwargs['widget'] = AdminImageWidget
             return db_field.formfield(**kwargs)
-        return super(UserAdmin,self).formfield_for_dbfield(db_field, **kwargs)
+        return super(self.__class__,self).formfield_for_dbfield(db_field, **kwargs)
 
 admin.site.register(apply_out.ApplyOut, ApplyOutAdmin)
 
