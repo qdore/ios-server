@@ -188,7 +188,7 @@ class JobAdmin(admin.ModelAdmin):
 admin.site.register(job.Job, JobAdmin)
 
 class ApplyOutAdmin(admin.ModelAdmin):
-    list_display = ('tel','start_time','end_time','reason')
+    list_display = ('tel','user_name', 'true_name','out_time2', 'start_time','end_time','reason')
     search_fields = ('tel','start_time','end_time','reason')
     list_filter = ('tel','start_time','end_time','reason')
     def formfield_for_dbfield(self, db_field, **kwargs):
