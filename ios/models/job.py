@@ -42,6 +42,12 @@ class Job(models.Model):
             max_length = 20)
     later_period = models.CharField(verbose_name = u"后期",
             max_length = 20)
+    shexiang_num = models.IntegerField(verbose_name = u"摄像数量")
+    dengguang_num = models.IntegerField(verbose_name = u"灯光数量")
+    luyin_num = models.IntegerField(verbose_name = u"录音数量")
+    zimu_num = models.IntegerField(verbose_name = u"字幕数量")
+    fangxiang_num = models.IntegerField(verbose_name = u"放像数量")
+    daobo_num = models.IntegerField(verbose_name = u"导播数量")
     status = models.CharField(verbose_name = u"工作状态",
             choices = JOB_STATUS,
             max_length = 30)
